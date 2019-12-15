@@ -1,0 +1,31 @@
+language: en
+pipeline:
+- name: WhitespaceTokenizer
+  intent_split_symbol: _
+- name: RegexFeaturizer
+- name: CRFEntityExtractor
+- name: EntitySynonymMapper
+- name: CountVectorsFeaturizer
+  analyzer: word
+  min_ngram: 1
+  max_ngram: 1
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: ConveRTFeaturizer
+- name: EmbeddingIntentClassifier
+  epochs: 151
+  embed_dim: 20
+- name: ResponseSelector
+  epochs: 100
+policies:
+- name: MemoizationPolicy
+- name: EmbeddingPolicy
+  max_history: 5
+  batch_strategy: balanced
+  epochs: 50
+  random_seed: 666
+  evaluate_on_num_examples: 0
+- name: MappingPolicy
+- name: FormPolicy
