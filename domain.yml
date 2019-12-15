@@ -168,7 +168,7 @@ templates:
   - text: Unfortunately you can't buy offsets here directly, you'll have to follow
       the link.
   utter_explain_offset_calculation:
-  - text: You can find out more about how offsets are calculated at https://www.atmosfair.de/en/standards/emissions_calculation/emissions_calculator/
+  - text: You can find out more about how offsets are calculated at https://www.theguardian.com/travel/2019/jul/31/carbon-calculator-find-out-how-much-co2-your-flight-will-emit
   utter_explain_why_offset_travel:
   - text: Traveling, especially by airplane, usually emits greenhouse gases which
       are causing climate change. If you cannot avoid these emissions, you can buy
