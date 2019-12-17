@@ -209,6 +209,8 @@
 - Sounds fantastic
 - yes I would thanks
 - yep!
+- no doubt
+- without a doubt
 
 ## intent:estimate_emissions
 - does it matter how long the flight is?
