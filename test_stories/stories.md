@@ -122,3 +122,55 @@
     - slot{"travel_flight_class": "economy"}
     - form{"name": null}
     - slot{"requested_slot": null}
+
+
+## Story from conversation with 2852034428186425 on December 13th 2019
+* SCENARIO{"context_scenario":"holiday","holiday_name":"christmas"}
+    - slot{"context_scenario":"holiday"}
+    - slot{"holiday_name":"christmas"}
+    - action_start
+    - slot{"link_1_url":"https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=2852034428186425&destination=https://offset.climateneutralnow.org/allprojects&label=link-1-clicked"}
+    - slot{"link_2_url":"https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=2852034428186425&destination=https://offset.climateneutralnow.org/allprojects&label=link-2-clicked"}
+    - action_disclaimer
+    - utter_holiday-travel_offer_help
+* affirm
+    - utter_explain_why_offset_travel
+    - action_explain_typical_emissions
+    - utter_ask_detailed_estimate
+* affirm
+    - airtravel_form
+    - form{"name":"airtravel_form"}
+    - slot{"requested_slot":"travel_flight_class"}
+* affirm
+    - airtravel_form
+    - slot{"travel_flight_class":"economy"}
+    - slot{"requested_slot":"travel_departure"}
+* inform{"city":"Edinburgh"}
+    - slot{"city":["Edinburgh"]}
+    - airtravel_form
+    - slot{"travel_departure":"Edinburgh Airport"}
+    - slot{"iata_departure":"EDI"}
+    - slot{"requested_slot":"travel_destination"}
+* inform{"city":"Poznań"}
+    - slot{"city":["Poznań"]}
+    - airtravel_form
+    - slot{"travel_destination":"Poznań-Ławica Airport"}
+    - slot{"iata_destination":"POZ"}
+    - slot{"travel_departure":null}
+    - slot{"iata_departure":null}
+    - slot{"travel_destination":null}
+    - slot{"iata_destination":null}
+    - slot{"travel_flight_class":null}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+* express_surprise
+    - utter_explain_offset_calculation
+* thank
+    - utter_express_positive-emo
+    - utter_farewell
+* faq
+    - respond_faq
+* express_positive-emo
+    - utter_express_positive-emo
+* farewell
+    - utter_farewell
