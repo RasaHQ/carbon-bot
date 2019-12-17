@@ -1,0 +1,3 @@
+git+https://github.com/RasaHQ/rasa.git@master#egg=rasa
+pytablewriter
+tensorflow_text==1.15.1

@@ -9,6 +9,7 @@
 - I'll be flying cheap
 - OK
 - Of course
+- yes, of course!
 - Ok
 - Ok, let's do that.
 - SURE!
