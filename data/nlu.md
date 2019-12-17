@@ -1305,6 +1305,7 @@
 - Cool. Thanks.
 - cool, thanks
 - Perfect, thanks
+- Ok thanks
 
 ## intent:why
 - why should I pay?
@@ -1865,9 +1866,9 @@
 - please help here
 
 ## synonym:1
-- one
-- a week
 - first
+- a week
+- one
 
 ## synonym:2
 - second
@@ -1879,8 +1880,8 @@
 - 7 hour
 
 ## synonym:LAST
-- last
 - latter
+- last
 
 ## synonym:LCY
 - London City
@@ -1898,19 +1899,19 @@
 - Luton
 
 ## synonym:Los Angeles
-- LA
 - la
+- LA
 
 ## synonym:Madrid
 - madrid
 
 ## synonym:New Delhi
-- delhi
 - Delhi
+- delhi
 
 ## synonym:SXF
-- Schonefeld
 - Schoenefeld
+- Schonefeld
 
 ## synonym:San Francisco
 - SF
@@ -1924,9 +1925,9 @@
 - first class
 
 ## synonym:economy
-- economy class
 - Economy Class
 - Economy class
+- economy class
 
 ## synonym:premium
 - premium economy
