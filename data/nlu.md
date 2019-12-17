@@ -247,6 +247,7 @@
 - i want to offset my flights
 - yes. I already answered that. Tell me again about the carbon offsets of my particular flight
 - I have another flight
+- Calculate my emissions
 
 ## intent:buy_offsets
 - I wanna purchase
@@ -362,6 +363,7 @@
 - I think I'd rather take the car, actually.
 - I'm not flying.
 - I am deathly afraid of flying, so I don't have this problem
+- I’m not flying for xmas
 
 ## intent:express_negative-emo
 - :/
@@ -1025,6 +1027,8 @@
 - no [first class](travel_flight_class:business)
 - what about a flight from [Dubai](city) to [Singapore](city)
 - [London](city), Gatwick airport
+- [Colombo](city) Sri Lanka
+- [Colombo](city)
 
 ## intent:inquire-ask_clarification
 - ?
