@@ -23,7 +23,7 @@ jobs:
         rasa train
     - name: Run Through Test Stories
       run: |
-        rasa test --stories test_stories/stories.md --fail-on-prediction-errors
+        rasa test --stories --e2e test_stories/stories.md --fail-on-prediction-errors
     - name: Cross-validate NLU model
       run: |
         rasa test nlu -f 5 --cross-validation
