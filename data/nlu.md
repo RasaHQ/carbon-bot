@@ -1027,6 +1027,7 @@
 - no [first class](travel_flight_class:business)
 - what about a flight from [Dubai](city) to [Singapore](city)
 - [London](city), Gatwick airport
+- Flight to [Dubai](city)
 
 ## intent:inquire-ask_clarification
 - ?
@@ -1868,9 +1869,9 @@
 - please help here
 
 ## synonym:1
-- first
-- a week
 - one
+- a week
+- first
 
 ## synonym:2
 - second
@@ -1922,14 +1923,14 @@
 - Tegel
 
 ## synonym:business
-- business class
 - Business class
 - first class
+- business class
 
 ## synonym:economy
-- Economy Class
-- Economy class
 - economy class
+- Economy class
+- Economy Class
 
 ## synonym:premium
 - premium economy
