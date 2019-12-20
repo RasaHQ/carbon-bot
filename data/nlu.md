@@ -211,6 +211,7 @@
 - yep!
 - no doubt
 - without a doubt
+- Ha ok
 
 ## intent:estimate_emissions
 - does it matter how long the flight is?
@@ -1027,6 +1028,23 @@
 - no [first class](travel_flight_class:business)
 - what about a flight from [Dubai](city) to [Singapore](city)
 - [London](city), Gatwick airport
+- [Saint Louis](city)
+- [st louis](city) mo
+- ok fine im flying from [st louis](city)
+- Great, I'm going from [Ben Gurion](iata) to [JFK](iata).
+- [Ben Gurion](iata) Airport
+- [Knoxville](city)
+- Flight to [Dubai](city)
+- [Funchal](city)
+- Right, and I'm flying from Tel Aviv to [NYC](city)
+- [Tel Aviv](city) Israel
+- [Kyiv](city)
+- [Rome](city)
+- [Berlin](city) [SXF](iata)
+- [tunis](city) , tunisia
+- [tunis](city)
+- [TEL AVIV](city)
+- [Israel](country)
 
 ## intent:inquire-ask_clarification
 - ?
@@ -1555,6 +1573,7 @@
 - I don't want to buy offsets. I don't think climate change is a big problem
 - No, I heard it is all a hoax
 - is climate change even real?
+- Oh sure, I'd just love to waste my hard-earned money giving it to the biggest fraud of modern times, endorsed by a socialist UN that seeks a new world order run by religious fanatics - where do I sign? 😂😂😂😂👊
 
 ## intent:faq/layover
 - what if I have a layover
@@ -1657,6 +1676,7 @@
 - I dont really trust the UN
 - buy a flight ticket for me
 - I will consider purchasing offsets next time I fly.
+- תל אביב
 
 ## intent:faq/oos_inquire
 - Great! What is the weather like in Berlin?
@@ -1867,10 +1887,13 @@
 - I don't understand
 - please help here
 
+## intent:faq
+- How about [Yasser Arafat](iata) International Airport?
+
 ## synonym:1
-- first
-- a week
 - one
+- a week
+- first
 
 ## synonym:2
 - second
@@ -1922,14 +1945,14 @@
 - Tegel
 
 ## synonym:business
-- business class
 - Business class
 - first class
+- business class
 
 ## synonym:economy
-- Economy Class
-- Economy class
 - economy class
+- Economy class
+- Economy Class
 
 ## synonym:premium
 - premium economy
