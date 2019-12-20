@@ -7,4 +7,4 @@ To talk to Carbon Bot, go to https://m.me/CarbonBot.from.Rasa
 
 See carbon bot [in the news!](https://www.zdnet.com/article/feel-guilty-about-flying-heres-a-robot-thatll-make-you-feel-better/)
 
-This is a research project from [Rasa](https://rasa.com/research) and it is build with [Rasa Open Source](https://github.com/RasaHQ/rasa) and [Rasa X](https://rasa.com/docs/rasa-x/)
+This is a research project from [Rasa](https://rasa.com/research) and it is built with [Rasa Open Source](https://github.com/RasaHQ/rasa) and [Rasa X](https://rasa.com/docs/rasa-x/)
