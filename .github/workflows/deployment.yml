@@ -1,0 +1,48 @@
+name: Update Rasa X deployment
+
+on:
+  push:
+    # branches:
+    # - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Chart
+      env:
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        RASA_TOKEN: ${{ secrets.RASA_TOKEN }}
+        RASA_X_TOKEN: ${{ secrets.RASA_X_TOKEN }}
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        PASSWORD_SALT: ${{ secrets.PASSWORD_SALT }}
+        REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
+        RABBITMQ_PASSWORD: ${{ secrets.RABBITMQ_PASSWORD }}
+      run: |
+        # Install helm v3
+        curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+        gcloud container clusters get-credentials rasa-bots --zone europe-west1 --project rasa-platform
+        helm repo add rasa-x https://rasahq.github.io/rasa-x-helm
+
+        helm upgrade --install carbon-assistant rasa-x/rasa-x --namespace carbon-assistant \
+            --set global.postgresql.postgresqlPassword="${DB_PASSWORD}" \
+            --set app.tag=$(basename ${{ github.ref }}) \
+            --set rasax.token=${RASA_TOKEN} \
+            --set rasax.jwtSecret=${JWT_SECRET} \
+            --set rasa.token=${RASA_X_TOKEN} \
+            --set rasax.passwordSalt=${PASSWORD_SALT} \
+            --set global.redis.password=${REDIS_PASSWORD} \
+            --set rabbitmq.rabbitmq.password=${RABBITMQ_PASSWORD} \
+            --values helm-values.yml #TODO: specify rasa version! 
+
+        cat <<EOF | kubectl apply -f  -
+        apiVersion: networking.gke.io/v1beta1
+        kind: ManagedCertificate
+        metadata:
+          generation: 1
+          name: rasa-bots-certificate
+        spec:
+          domains:
+          - carbon.rasa-bots.com
+        EOF
