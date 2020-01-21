@@ -6,9 +6,36 @@ on:
     # - master
 
 jobs:
-  deploy:
+  build-images:
+    name: Build and Push Images
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
+    - name: GCP Auth
+      env:
+        GCLOUD_SERVICE_ACCOUNT_KEYFILE: ${{ secrets.GCLOUD_AUTH }}
+      run: |
+        echo "${GCLOUD_SERVICE_ACCOUNT_KEYFILE}" | base64 -d  > gcloud_sa_key.json
+        gcloud auth activate-service-account --key-file=gcloud_sa_key.json
+    - name: Build and push the Docker image
+      run: |
+        docker build . \
+          --file Dockerfile \
+          --tag gcr.io/rasa-platform/carbon-bot-actions:$(basename ${{ github.ref }})
+        gcloud docker -- push gcr.io/rasa-platform/carbon-bot-actions:$(basename ${{ github.ref }})
+
+  deploy:
+    name: Re-deploy the cluster with the latest action server
+    needs: 
+    - build-images
+    runs-on: ubuntu-latest
+    steps:
+    - name: GCP Auth
+      env:
+        GCLOUD_SERVICE_ACCOUNT_KEYFILE: ${{ secrets.GCLOUD_AUTH }}
+      run: |
+        echo "${GCLOUD_SERVICE_ACCOUNT_KEYFILE}" | base64 -d  > gcloud_sa_key.json
+        gcloud auth activate-service-account --key-file=gcloud_sa_key.json
     - name: Install Chart
       env:
         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
