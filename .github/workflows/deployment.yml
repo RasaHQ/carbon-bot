@@ -15,7 +15,7 @@ jobs:
       env:
         GCLOUD_SERVICE_ACCOUNT_KEYFILE: ${{ secrets.GCLOUD_AUTH }}
       run: |
-        echo "${GCLOUD_SERVICE_ACCOUNT_KEYFILE}" | base64 -d  > gcloud_sa_key.json
+        echo "${GCLOUD_SERVICE_ACCOUNT_KEYFILE}" > gcloud_sa_key.json
         gcloud auth activate-service-account --key-file=gcloud_sa_key.json
     - name: Build and push the Docker image
       run: |
@@ -34,7 +34,7 @@ jobs:
       env:
         GCLOUD_SERVICE_ACCOUNT_KEYFILE: ${{ secrets.GCLOUD_AUTH }}
       run: |
-        echo "${GCLOUD_SERVICE_ACCOUNT_KEYFILE}" | base64 -d  > gcloud_sa_key.json
+        echo "${GCLOUD_SERVICE_ACCOUNT_KEYFILE}" > gcloud_sa_key.json
         gcloud auth activate-service-account --key-file=gcloud_sa_key.json
     - name: Install Chart
       env:
