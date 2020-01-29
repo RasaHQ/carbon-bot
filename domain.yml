@@ -86,6 +86,8 @@ slots:
     type: unfeaturized
   iata_destination:
     type: unfeaturized
+  iata_stopover:
+    type: unfeaturized
   incorrect_city:
     type: text
   link_1_url:
@@ -98,9 +100,13 @@ slots:
     type: unfeaturized
   requested_slot:
     type: unfeaturized
+  stored_slots:
+    type: unfeaturized
   travel_departure:
     type: unfeaturized
   travel_destination:
+    type: unfeaturized
+  travel_stopover:
     type: unfeaturized
   travel_flight_class:
     type: unfeaturized

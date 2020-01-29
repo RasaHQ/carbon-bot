@@ -4,7 +4,7 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
 from math import sin, cos, atan2, ceil, sqrt
-from typing import Any, Text, Dict, List, Union, Optional
+from typing import Any, Text, Dict, List, Union, Optional, Tuple
 import logging
 import re
 import requests
@@ -174,6 +174,7 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         departure_iata = tracker.get_slot("iata_departure")
         destination_iata = tracker.get_slot("iata_destination")
         flight_class = tracker.get_slot("travel_flight_class")
+        stopover_iata = tracker.get_slot("iata_stopover")
 
         if not departure_iata:
             raise ValueError("Departure IATA code unknown.")
@@ -184,6 +185,12 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
 
         departure_airport = self.find_airport_by_ref(departure_iata)
         destination_airport = self.find_airport_by_ref(destination_iata)
+        if stopover_iata:
+            stopover_airport = self.find_airport_by_ref(stopover_iata)
+            if not stopover_airport:
+                raise ValueError(f"Could not find stopover airport with IATA code '{stopover_iata}'")
+            lat_stopover = stopover_airport["latitude_deg"]
+            lon_stopover = stopover_airport["longitude_deg"]
 
         if not departure_airport:
             raise ValueError(f"Could not find departure airport with IATA code '{departure_iata}'")
@@ -196,11 +203,21 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         lat_b = destination_airport["latitude_deg"]
         lon_b = destination_airport["longitude_deg"]
         distance_km = self.great_circle_distance_km(lat_a, lon_a, lat_b, lon_b)
+        
+        if stopover_iata:
+            distance_km_leg1 = self.great_circle_distance_km(lat_a, lon_a, lat_stopover, lon_stopover)
+            distance_km_leg2 = self.great_circle_distance_km(lat_stopover, lon_stopover, lat_b, lon_b)
+
 
         co2_kg = self.co2_kg_interpolation(distance_km, flight_class)
-
         if not co2_kg:
             raise ValueError("CO2 amount could not be calculated.")
+        if stopover_iata:
+            co2_kg_leg1 = self.co2_kg_interpolation(distance_km_leg1, flight_class)
+            co2_kg_leg2 = self.co2_kg_interpolation(distance_km_leg2, flight_class)
+            if not co2_kg_leg2 or not co2_kg_leg1:
+                raise ValueError("CO2 amount could not be calculated for one of the legs.")
+
 
         kilos_per_unit = {
             "kilograms": 1.,
@@ -215,6 +232,10 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         unit_string = "kg" if unit == "kilograms" else "tons"
 
         co2 = f"{ceil(10 * co2_kg / kilos_per_unit) * 0.1:.1f} {unit_string}"
+        if stopover_iata:
+            co2_leg1 = f"{ceil(10 * co2_kg_leg1 / kilos_per_unit) * 0.1:.1f} {unit_string}"
+            co2_leg2 = f"{ceil(10 * co2_kg_leg2 / kilos_per_unit) * 0.1:.1f} {unit_string}"
+            co2 = (co2_leg1, co2_leg2, float(co2_leg1[:-len(unit_string)]), float(co2_leg2[:-len(unit_string)]))
         return co2
 
 
@@ -280,6 +301,10 @@ class AirTravelForm(FormAction):
                 self.from_trigger_intent("TRIGGER", intent="inform"),
                 self.from_text(intent="inform"),
             ],
+            "stored_slots": [
+                self.from_trigger_intent("TRIGGER", intent="inform"),
+                self.from_text(intent="inform"),
+            ],
             "travel_flight_class": [
                 self.from_intent(intent="affirm", value="economy"),
                 self.from_intent(intent="deny", value="business"),
@@ -342,6 +367,47 @@ class AirTravelForm(FormAction):
 
         dispatcher.utter_message(explanation)
 
+    @staticmethod
+    def clarify_stopover(departure, stopover, destination, dispatcher, tracker):
+        """
+        informing the user about the discovered stopover trip;
+        will appear right before the offset calculations
+        """
+        explanation=f"So, you'll be flying from {departure} to {destination} via {stopover}."
+        dispatcher.utter_message(explanation)
+
+    def check_stopover(
+        self, 
+        old_departure: Tuple, 
+        old_destination: Tuple, 
+        current_result: Dict, 
+        tracker: Tracker) -> Tuple[bool, Tuple]:
+        """
+        input: departure and destination of the current trip
+        returns: [Bool, Tuple] where: 
+         - boolean -- whether a stopover trip was found; 
+         - Tuple -- (departure airport, stopover airport, destination airport) 
+         of the newly "discovered" trip
+        """
+        departure, destination, stopover = (None, None),(None, None), (None, None)
+
+        if tracker.get_slot("stored_slots")[1][0] in [old_departure[0], current_result.get("travel_departure")]:
+            departure = tracker.get_slot("stored_slots")[0]
+            stopover = tracker.get_slot("stored_slots")[1]
+            if current_result.get("travel_destination"):
+                destination = (current_result["travel_destination"], current_result["iata_destination"])
+            elif old_destination:
+                destination = old_destination    
+        elif tracker.get_slot("stored_slots")[0][0] in [old_destination[0], current_result.get("travel_destination")]:
+            destination = tracker.get_slot("stored_slots")[1]
+            stopover = tracker.get_slot("stored_slots")[0]
+            if current_result.get("travel_departure"):
+                departure = (current_result["travel_departure"], current_result["iata_departure"])
+            elif old_departure:
+                departure = old_departure
+
+        return None not in (departure[0],  destination[0], stopover[0]), (departure, stopover, destination)
+
     def analyze_travel_plan(
             self,
             dispatcher: CollectingDispatcher,
@@ -356,9 +422,13 @@ class AirTravelForm(FormAction):
             result.update({"travel_departure": None, "iata_departure": None})
         if not expected or expected == "destination":
             result.update({"travel_destination": None, "iata_destination": None})
+        if ' via ' in tracker.latest_message["text"]: 
+            result.update({"travel_stopover": None, "iata_stopover": None})
         # Store current belief about departure and destination
         old_departure = (tracker.get_slot("travel_departure"), tracker.get_slot("iata_departure"))
         old_destination = (tracker.get_slot("travel_destination"), tracker.get_slot("iata_destination"))
+        # and information about previous flight
+        stored_slots = tracker.get_slot("stored_slots")
         # The user may have entered multiple cities in one sentence
         msg = tracker.latest_message["text"]
         # Find all the cities that have been mentioned
@@ -374,18 +444,24 @@ class AirTravelForm(FormAction):
         pos_from = match.start() if match else -1
         match = re.search(r"\bto\b", msg, re.IGNORECASE)
         pos_to = match.start() if match else -1
+        match = re.search(r"\bvia\b", msg, re.IGNORECASE)
+        pos_via = match.start() if match else -1
         keyword_positions = [(iata["value"], iata["start"]) for iata in iatas] + \
                             [(city["value"], city["start"]) for city in cities] + [
             ("from", pos_from),
             ("to", pos_to),
+            ("via", pos_via)
         ]
         keyword_positions.sort(key=lambda elem: elem[1])
         keywords = [kp[0] for kp in keyword_positions if kp[1] >= 0]
-
+        # route_changed -- whether route has changed in this turn
+        route_changed = False
         # We expect the departure and destination locations to be the next keywords
         # after 'from' and 'to', respectively
+        stopover = self._pop_next_item(keywords, "via")
         departure = self._pop_next_item(keywords, "from")
         destination = self._pop_next_item(keywords, "to")
+        
 
         # Use remaining locations if departure or destination is still unknown
         if keywords:
@@ -395,20 +471,58 @@ class AirTravelForm(FormAction):
                 departure = keywords[0]
 
         # Fill `result` with all slots that we've learned
-        for kind, value in [("departure", departure), ("destination", destination)]:
-            result.update(
-                self._location_to_slot_dict(
-                    value, kind
+        # for the case when we got the stopover with "via" 
+        if stopover:
+            for kind, value in [("departure", departure), ("destination", destination), ("stopover", stopover)]:
+                result.update(
+                    self._location_to_slot_dict(
+                        value, kind
+                    )
                 )
-            )
+        # for the case when we just got one flight
+        else:
+            for kind, value in [("departure", departure), ("destination", destination)]:
+                result.update(
+                    self._location_to_slot_dict(
+                        value, kind
+                    )
+                )
+
+        # store information about the NEW trip when we have collected the required information in 
+        # the past two turns
+        if None not in (result.get("travel_departure"), result.get("travel_destination")):
+            result["stored_slots"] = ((result["travel_departure"], result["iata_departure"]), (result["travel_destination"], result["iata_destination"]))
+        elif None not in (result.get("travel_departure"), old_destination[0]):
+            result["stored_slots"] = ((result["travel_departure"], result["iata_departure"]), old_destination)
+        elif None not in (old_departure[0], result.get("travel_destination")):
+            result["stored_slots"] = (old_departure, (result["travel_destination"], result["iata_destination"]))
+
+
+        # if the information about one flight has been already provided;
+        # check whether the new flight is the second leg
+        if stored_slots:
+            second_leg_provided, stopover_tuple = self.check_stopover(old_departure, old_destination, result, tracker)
+            # if second leg given, update the result with the new route
+            if second_leg_provided:
+                self.clarify_stopover(stopover_tuple[0][0], stopover_tuple[1][0], stopover_tuple[2][0], dispatcher, tracker)
+                for kind, value in [("departure", stopover_tuple[0][1]),  ("stopover", stopover_tuple[1][1]), ("destination", stopover_tuple[2][1])]:
+                        result.update(
+                            self._location_to_slot_dict(
+                                value, kind
+                            )
+                        )
+
+                route_changed=True
 
         # If the departure or destination has changed,
         # explain the recognized flight plan to the user
-        if (old_departure[0] and result.get("travel_departure") and
-            (result.get("travel_departure"), result.get("iata_departure")) != old_departure) or \
-           (old_destination[0] and result.get("travel_destination") and
-            (result.get("travel_destination"), result.get("iata_destination")) != old_destination):
-            self.explain_travel_plan(result, dispatcher)
+        if not route_changed:
+            if (old_departure[0] and result.get("travel_departure") and
+                (result.get("travel_departure"), result.get("iata_departure")) != old_departure) or \
+               (old_destination[0] and result.get("travel_destination") and
+                (result.get("travel_destination"), result.get("iata_destination")) != old_destination):
+                self.explain_travel_plan(result, dispatcher)    
+            
 
         # Notify user that no airport was found
         if expected and not result.get(f"iata_{expected}"):
@@ -457,6 +571,7 @@ class AirTravelForm(FormAction):
         url = tracker.get_slot("link_2_url")
         try:
             co2_in_tons = self.kb.calculate_emissions(tracker, unit="short_tons")
+
         except ValueError as e:
             logger.error(f"calculate_emissions failed with: {e}")
             dispatcher.utter_message("Sorry, I was unable to calculate that.")
@@ -465,24 +580,50 @@ class AirTravelForm(FormAction):
         departure_iata = tracker.get_slot("iata_departure")
         destination_airport = tracker.get_slot("travel_destination")
         destination_iata = tracker.get_slot("iata_destination")
+        stopover_airport = tracker.get_slot("travel_stopover")
+        stopover_iata = tracker.get_slot("iata_stopover")
+        stored_slots = tracker.get_slot("stored_slots")
 
-        message = f"A one-way flight from {departure_airport} ({departure_iata}) to {destination_airport} ({destination_iata}) "\
-                  f"emits {co2_in_tons} of CO2. " \
-                  f"It would be amazing if you bought offsets for that carbon! " \
-                  f"There are some great, UN-certified projects you can pick from."
+        if not stopover_iata:
+            message = f"A one-way flight from {departure_airport} ({departure_iata}) to {destination_airport} ({destination_iata}) "\
+                      f"emits {co2_in_tons} of CO2. " \
+                      f"It would be amazing if you bought offsets for that carbon! " \
+                      f"There are some great, UN-certified projects you can pick from."
+        else: 
+            message = f"The trip from {departure_airport} ({departure_iata}) to {destination_airport} ({destination_iata}) "\
+                      f"via {stopover_airport} ({stopover_iata}) emits {co2_in_tons[2]+co2_in_tons[3]:.1f} of CO2. " \
+                      f"The first leg emits {co2_in_tons[0]} of CO2. " \
+                      f"The second leg emits {co2_in_tons[1]} of CO2." \
+                      f"It would be amazing if you bought offsets for that carbon! " \
+                      f"There are some great, UN-certified projects you can pick from."
 
         if tracker.get_latest_input_channel() == "facebook":
             payload = hyperlink_payload(tracker, message, "Buy Offsets", url)
             dispatcher.utter_custom_json(payload)
         else:
             dispatcher.utter_message(message + f" [Buy Offsets]({url})")
-        return [
-            SlotSet("travel_departure"),
-            SlotSet("iata_departure"),
-            SlotSet("travel_destination"),
-            SlotSet("iata_destination"),
-            SlotSet("travel_flight_class")
-        ]
+
+        if tracker.get_slot('travel_stopover'):
+            return [
+                SlotSet("travel_departure"),
+                SlotSet("iata_departure"),
+                SlotSet("travel_destination"),
+                SlotSet("iata_destination"),
+                SlotSet("travel_stopover"),
+                SlotSet("iata_stopover"),
+                SlotSet("travel_flight_class"),
+                SlotSet("stored_slots")
+            ]
+        else:
+            return [
+                SlotSet("travel_departure"),
+                SlotSet("iata_departure"),
+                SlotSet("travel_destination"),
+                SlotSet("iata_destination"),
+                SlotSet("travel_stopover"),
+                SlotSet("iata_stopover"),
+                SlotSet("travel_flight_class")
+            ]
 
 
 class ExplainTypicalEmissions(Action):
