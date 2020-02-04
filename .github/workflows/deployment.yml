@@ -61,6 +61,7 @@ jobs:
             --set rasax.passwordSalt=${PASSWORD_SALT} \
             --set global.redis.password=${REDIS_PASSWORD} \
             --set rabbitmq.rabbitmq.password=${RABBITMQ_PASSWORD} \
+            --set rasax.disableTelemetry=True \
             --values helm-values.yml #TODO: specify rasa version! 
 
         cat <<EOF | kubectl apply -f  -
