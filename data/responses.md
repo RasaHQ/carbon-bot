@@ -60,7 +60,7 @@
 
 ## specific project
 * faq/specific-project-details
-    - I'm not sure but hopefully you can find an answer on the project website.
+    - I'm not sure but hopefully you can find an answer at https://offset.earth/projects .
 
 ## do people buy these
 * faq/do-people-buy-offsets
@@ -72,11 +72,11 @@
 
 ## where money goes
 * faq/where-money-goes
-    - When you buy certified emissions reductions (CERs) your payment goes directly to the project offering CERs. Projects have to pass a rigorous verification process managed by the UN Climate Change secretariat
+    - When you buy certified emissions reductions (CERs) your payment goes directly to the project offering CERs. Projects have to pass a rigorous verification process set by https://goldstandard.org .
 
 ## is legit
 * faq/is-this-legit
-    - All projects have to pass a rigorous verification process managed by the UN Climate Change secretariat.
+    - All offset projects have to pass a rigorous verification process set by https://goldstandard.org .
 
 ## deny climate change
 * faq/deny-climate-change
@@ -100,4 +100,4 @@
 
 ## details on purchasing
 * faq/more-details-process
-    - I'd recommend checking out the UN website for those details.
+    - I'd recommend checking out https://offset.earth for those details.
