@@ -16,3 +16,5 @@ To update the used Rasa / Rasa X versions please check the following files:
 
 - `.env`
 - `requirements.txt`
+
+**Be Warned** There is a lot of NSFW content in the training data!
