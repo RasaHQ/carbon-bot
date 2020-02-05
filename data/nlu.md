@@ -2346,7 +2346,6 @@
 - Does she suck cock
 - How about your sister
 
-- what do you do?
 - Discontinue my name. Thank you.
 - you're a bot...yes you do
 
