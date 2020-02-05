@@ -1191,7 +1191,7 @@
 - You called me
 - [Stockholm](city)
 - [Kbp](iata)
-- [Kiev](city), [borispol](iata)
+- [Kiev](city), [borispol](iata:KBP)
 - [London](city), [gatwick](iata)
 - china
 - sl
