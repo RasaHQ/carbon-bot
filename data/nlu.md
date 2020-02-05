@@ -1143,7 +1143,7 @@
 - [Bari](city) palese
 - [Palese](city)
 - [Bari](city)
-- [torino caselle](iata)
+- [torino caselle](iata:TRN)
 - [Caselle](iata:TRN) Turin, Italy
 - [Turin](city), Italy
 - [Ahmedabad](city)
