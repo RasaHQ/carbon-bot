@@ -1309,19 +1309,24 @@
 - Perfect, thanks
 - Ok thanks
 
+
 ## intent:why
 - why should I pay?
 - I don't see how that matters
 - I don't see how that's relevant
-- does that affect how much carbon there is?
 - for what reason?
+- Why does business class emit more CO2 than economy class?
+- why do you need to know what class I'm flying
+- why doesit matter if I fly business
+- Yes, so why is one greater than the other?
+- does that affect how much carbon there is?
+- what does it matter if I fly economy
 - how does that make a difference
 - how is that important
 - ok why tho
 - what are you asking that for
 - what difference does it make
 - what difference does that make
-- what does it matter if I fly economy
 - what for
 - what for?
 - what's it matter?

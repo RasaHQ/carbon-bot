@@ -1613,3 +1613,28 @@
 * why
     - utter_explain_why_offset_travel
     - utter_ask_detailed_estimate
+
+## Story from conversation with 2727546234019098 on December 27th 2019
+* SCENARIO{"context_scenario":"holiday","holiday_name":"christmas"}
+    - slot{"context_scenario":"holiday"}
+    - slot{"holiday_name":"christmas"}
+    - action_start
+    - slot{"link_1_url":"https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=2727546234019098&destination=https://offset.climateneutralnow.org/allprojects&label=link-1-clicked"}
+    - slot{"link_2_url":"https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=2727546234019098&destination=https://offset.climateneutralnow.org/allprojects&label=link-2-clicked"}
+    - action_disclaimer
+    - utter_holiday-travel_offer_help
+* affirm
+    - utter_explain_why_offset_travel
+    - action_explain_typical_emissions
+    - utter_ask_detailed_estimate
+* affirm
+    - airtravel_form
+    - form{"name":"airtravel_form"}
+    - slot{"requested_slot":"travel_flight_class"}
+* affirm
+    - airtravel_form
+    - slot{"travel_flight_class":"economy"}
+    - slot{"requested_slot":"travel_departure"}
+* inquire-ask_clarification
+    - utter_explain_why_offset_travel
+    - airtravel_form
