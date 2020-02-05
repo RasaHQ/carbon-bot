@@ -1246,6 +1246,7 @@
 
 ## intent:inquire-ask_clarification
 - ?
+- Can you give me more information?
 - Fine. What?
 - How?
 - Recently?
@@ -2024,48 +2025,19 @@
 - My name is Andre's gonzalez
 - NO  WAY ,DON'T  BUTTER  ME .LEVY  MY   Mesdager   PAGE.
 
-## intent:faq/oos_inquire
-- Great! What is the weather like in Berlin?
-- What do you know about Chuck Norris?
-- What is the answer to life, the universe, and everything?
+## intent:faq/oos_request
 - make me coffee
 - play the lottery
-- do you have any thanksgiving plans
-- can you suggest some?
 - I want to know name of the flight?
 - Can you get me the specific flight information?
 - Can I give you feedback?
 - I want to pay the money from paypal
 - can I pay with credit card
-- how fast the bot move?
-- Can you give me more information?
-- oh, ok well can you give me more info about my flight then
-- What are we doing here buddy?
-- What is christmas?
-- Can you come with me please
-- Yes can you come with me please meet me in marietta Ohio
-- Hi his me miranda I love tom cruise can you make it happen
 - book flight
-- Can you hep fix it
-- what is the weather ?
-- Have u been drinking today
-- But are you drunk
-- Can u read
-- A t e you board today
-- Have you ever been a fight
-- Habevyou been in s fight
-- Do you smoke or drink
-- Have you got high
-- Have you ever got high
-- Hey carbon bit are u gay
-- Are you sending me things Roy
 - Deliver a pizza
 - How long will it take a letter to get from new milford pa to huntingdon pa
-- What would you suggest where to go for a romance places
-- Are there other alternatives?
-- Give me an example.
-- How is the weather like in [New York](city)?
 - how to implement faq
+- What would you suggest where to go for a romance places
 - Can you fyling him here please i love him so much
 - Can you fyling him here please
 - Can you ask him please to fyling here do you watch underworld movie he in it
@@ -2081,6 +2053,30 @@
 - Can you get him to fyling here please
 - Please can you find out now
 - Can you find out if his real number please
+- Get me coffee
+- i need coffee
+- set alarm
+
+
+## intent:faq/oos_inquire
+- Great! What is the weather like in Berlin?
+- What do you know about Chuck Norris?
+- What is the answer to life, the universe, and everything?
+- do you have any thanksgiving plans
+- can you suggest some?
+- how fast the bot move?
+- oh, ok well can you give me more info about my flight then
+- What are we doing here buddy?
+- What is christmas?
+- Can you come with me please
+- Yes can you come with me please meet me in marietta Ohio
+- Hi his me miranda I love tom cruise can you make it happen
+- Can you hep fix it
+- what is the weather ?
+- Are you sending me things Roy
+- Are there other alternatives?
+- Give me an example.
+- How is the weather like in [New York](city)?
 - What countries are available?
 - CO2 PRICES SHOULD GO DOWN AYE?
 - Meet me at 4900 sepulveda Blvd room 206
@@ -2088,10 +2084,9 @@
 - So you down ?
 - Please tell him i want to meet him soon
 - Can you please tell him i love him so much
-- Get me coffee
 - what type of flight you have
-- i need coffee
-- set alarm
+
+
 
 ## intent:faq/opinion
 - to be honest I hate thanksgiving
@@ -2307,7 +2302,7 @@
 - Please help
 - i do not understand
 
-## intent:faq/other_language
+## intent:faq/other-language
 - vai te pra puta que te pariu bot imundo do caralho
 - vai para o inferno
 - Belém do Pará
@@ -2352,6 +2347,16 @@
 
 ## intent:faq/personal_question_for_bot
 - What model are you using
+- Have u been drinking today
+- But are you drunk
+- Can u read
+- A t e you board today
+- Have you ever been a fight
+- Habevyou been in s fight
+- Do you smoke or drink
+- Have you got high
+- Have you ever got high
+- Hey carbon bit are u gay
 - Did you know that?
 - Does it love?
 - Are you real
