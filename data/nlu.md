@@ -729,7 +729,7 @@
 - How do you calculate this
 - Could you tell me how [business class](travel_flight_class:business) emissions are calculated?
 - How is [business class](travel_flight_class:business) emission calculated?
-- [2](mention) tons per person or total?
+- 2 tons per person or total?
 - Can you find out is that is real number
 
 ## intent:inform
