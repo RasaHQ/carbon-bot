@@ -1868,9 +1868,9 @@
 - please help here
 
 ## synonym:1
+- one
 - first
 - a week
-- one
 
 ## synonym:2
 - second
@@ -1901,8 +1901,8 @@
 - Luton
 
 ## synonym:Los Angeles
-- la
 - LA
+- la
 
 ## synonym:Madrid
 - madrid
@@ -1912,8 +1912,8 @@
 - delhi
 
 ## synonym:SXF
-- Schoenefeld
 - Schonefeld
+- Schoenefeld
 
 ## synonym:San Francisco
 - SF
@@ -1922,13 +1922,13 @@
 - Tegel
 
 ## synonym:business
-- business class
-- Business class
 - first class
+- Business class
+- business class
 
 ## synonym:economy
-- Economy Class
 - Economy class
+- Economy Class
 - economy class
 
 ## synonym:premium

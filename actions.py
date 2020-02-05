@@ -247,7 +247,7 @@ class StartAction(Action):
         url = f"https://rasa.com/carbon/index.html?" \
               f"&rasaxhost=https://carbon.rasa.com" \
               f"&conversationId={tracker.sender_id}" \
-              f"&destination=https://offset.climateneutralnow.org/allprojects"
+              f"&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea"
 
         link_1_url = url + f"&label=link-1-clicked"
         link_2_url = url + f"&label=link-2-clicked"
