@@ -2312,6 +2312,7 @@
 
 ## intent:faq/vulgar
 - In the ass
+- I just farted can you tell me about the admissions coming out of my buttbecause I don't want to make too much of a carbon footprint print coming out of my butt
 - I want to Fuck your mom
 - Oh Baby My Big COCK is deeply rooted in your hot pussy Please I love 💘 you
 - I'm fucking your mom
