@@ -1135,7 +1135,7 @@
 - [London](city), Gatwick airport
 - [new delhi](city)
 - From [Hell](city)
-- [Delux Class](city) please
+- [Delux Class](travel_flight_class:business) please
 - I'll be flying from [Seattle](city)
 - I'll be flying to [Frankfurt](city)
 - [Frankfurt](city). In Germany
