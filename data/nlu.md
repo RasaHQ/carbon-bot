@@ -1144,7 +1144,7 @@
 - [Palese](city)
 - [Bari](city)
 - [torino caselle](iata)
-- [Caselle](iata) Turin, Italy
+- [Caselle](iata:TRN) Turin, Italy
 - [Turin](city), Italy
 - [Ahmedabad](city)
 - [Washington](city) dc
