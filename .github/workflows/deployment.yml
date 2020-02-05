@@ -32,6 +32,8 @@ jobs:
     - build-images
     runs-on: ubuntu-latest
     steps:
+    # Checkout repository because we need the content of the `.env` file later
+    - uses: actions/checkout@v1
     - name: GCP Auth
       env:
         GCLOUD_SERVICE_ACCOUNT_KEYFILE: ${{ secrets.GCLOUD_AUTH }}
