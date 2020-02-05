@@ -1162,7 +1162,7 @@
 - from [Berlin](city) to [London](city)
 - from [Paris](city) to [London](city)
 - [FCO](iata)
-- [Rome](city) [FCO](mention)
+- [Rome](city) [FCO](iata)
 - no I'll be flying from [Berlin](city) to [London](city)
 - from [Rome](city) to [London](city)
 - [Berlin](city) to [London](city)
