@@ -1867,9 +1867,6 @@
 - I don't understand
 - please help here
 
-## intent:faq
-- how can I join you ?
-
 ## synonym:1
 - one
 - first
