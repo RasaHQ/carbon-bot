@@ -609,6 +609,7 @@
 - see you later
 - shut up
 - sleep!
+- Discontinue my name. Thank you.
 - so long
 - stop
 - STOP
@@ -1887,6 +1888,7 @@
 - connecting flight
 - with layover
 
+
 ## intent:faq/other-calculation
 - can you calculate the footprint of all my flights for the year?
 - is it better if I drive?
@@ -2116,16 +2118,17 @@
 - so
 - so...
 - what about you
+- you're a bot...yes you do
 - ok are we done
 - code
 - Same
 - is this done now?
 - What do you want to talk about.
 - Don't worry, it was just a joke
-- [Test](city)
+- Test
 - let me know
 - adasdsa
-- [KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK](iata)
+- KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
 - humm
 - Not good fur me
 - hjmm
@@ -2346,8 +2349,6 @@
 - Does she suck cock
 - How about your sister
 
-- Discontinue my name. Thank you.
-- you're a bot...yes you do
 
 ## intent:faq/personal_question_for_bot
 - What model are you using
