@@ -1502,7 +1502,7 @@
 - Restart
 - get started
 - Let's begin
-- [Start](city)
+- Start
 - Let's start again
 
 ## intent:thank
