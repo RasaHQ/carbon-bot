@@ -13,7 +13,6 @@ This is a research project from [Rasa](https://rasa.com/research) and it is buil
 # Updating the used Rasa Open Source / Rasa X Versions
 
 To update the used Rasa / Rasa X versions please check the following files:
-
 - `.env`
 - `requirements.txt`
 
