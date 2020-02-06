@@ -140,7 +140,7 @@ jobs:
     - name: Upload Model to Rasa
       env:
         RASA_X_PASSWORD: ${{ secrets.RASA_X_ADMIN_PASSWORD }}
-        RASA_X_USERNAME: "admin"
+        RASA_X_USERNAME: admin
       run: |
         sleep 240
         RASA_X_DEPLOYMENT_LABEL="app.kubernetes.io/component=rasa-x"
