@@ -13,8 +13,8 @@ nginx:
 
 ingress:
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: carbon-bot
-    networking.gke.io/managed-certificates: rasa-bots-certificate
+    kubernetes.io/ingress.global-static-ip-name: "carbon-bot"
+    networking.gke.io/managed-certificates: "rasa-bots-certificate"
   hosts:
   - host: carbon.rasa-bots.com
     paths:
