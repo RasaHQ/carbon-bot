@@ -154,8 +154,7 @@ jobs:
           --data "{\"username\":\"${RASA_X_USERNAME}\",\"password\":\"${RASA_X_PASSWORD}\"}" \
           https://carbon.rasa-bots.com/api/auth | jq -r .access_token)
         # Upload model
-        cd model; export MODELNAME=$(ls); curl -k --fail -H "Authorization: Bearer ${RASA_X_TOKEN}" -F "model=@${MODELNAME}" https://carbon.rasa-bots.com/api/projects/default/models
+        cd model; export MODELNAME=$(ls); curl -k --fail -H "Authorization: Bearer ${RASA_X_TOKEN}" -F "model=@${MODELNAME}" http://carbon.rasa-bots.com/api/projects/default/models
         # ensure model is ready and tag as production
         sleep 5
-        ls | xargs -I{} basename {} .tar.gz
         export MODEL=$(ls | xargs -I{} basename {} .tar.gz);curl --fail -XPUT -H "Authorization: Bearer ${RASA_X_TOKEN}" https://carbon.rasa-bots.com/api/projects/default/models/${MODEL}/tags/production
