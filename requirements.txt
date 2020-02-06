@@ -2,5 +2,5 @@
 -r sdk-requirements.txt
 
 rasa==1.6.2
-pytablewriter
+pytablewriter==0.47.0
 tensorflow_text==1.15.1

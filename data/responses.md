@@ -22,6 +22,10 @@
 * faq/oos_inquire
     - I'm afraid I have no idea
 
+## random request
+* faq/oos_request
+    - that's not something I can help with
+
 ## thanks
 * faq/thank
     - You are welcome!
@@ -46,9 +50,13 @@
 * faq/research_project
     - This project is about creating a better AI assistant. Getting people to reduce their carbon footprint is a happy side effect :)
 
-## creators
+## insult
 * faq/insult
     - I don't have to put up with any abuse from you.
+
+## vulgar
+* faq/vulgar
+    - I'm a bot, remember. Trying to shock me is pointless.
 
 ## payment details
 * faq/payment-details
@@ -57,6 +65,10 @@
 ## not responsible
 * faq/not-personally-responsible
     - We are all responsible for the choices we make as consumers. We can choose to fly less often, for example. Some airlines have already responded to consumer pressure and started buying offsets.
+
+## personal question
+* faq/personal_question_for_bot
+    - I love that you want to get to know me, but I don't have much of a personality. I'm just a bot.
 
 ## specific project
 * faq/specific-project-details
@@ -82,6 +94,11 @@
 * faq/deny-climate-change
     - Climate change is absolutely real, and it's caused by humans: https://climate.nasa.gov/evidence/
 
+## deny offsets work
+* faq/deny-offsets-work
+    - By buying certified carbon offsets, you support a project which reduces the total amount of carbon dioxide we put into the atmosphere. Planting trees, installing renewable power, and making buildings more energy efficient are common examples. You can read what the UN says about offsets at https://offset.climateneutralnow.org/faq_offset_footprint#Buyers .
+
+
 ## ask about cost
 * faq/inquire-cost
     - The cost per ton depends on the project you donate to. Some projects can remove a ton of CO2 for less than $1!
@@ -93,6 +110,11 @@
 ## other calculations
 * faq/other-calculation  
     - For now I can only calculate emissions from flying.
+
+## other language
+* faq/other-language  
+    - I can only do English for now.
+
 
 ## general reduction
 * faq/general-emissions-reduction  
