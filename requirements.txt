@@ -1,5 +1,5 @@
 # Requirements for the action server should go in action-server-requirements.txt
--r sdk-requirements.txt
+-r action-server-requirements.txt
 
 rasa==1.7.0
 pytablewriter==0.47.0
