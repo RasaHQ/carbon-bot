@@ -546,6 +546,7 @@
 - wawww
 - wow, is it much?
 - O
+- Wait
 
 ## intent:express_uncertainty
 - I don't know
@@ -1272,6 +1273,11 @@
 - Prag
 - The next class above [Economy](travel_flight_class).
 - Could you estimate for me the cost of offsets for a round-trip flight from [Cincinnati](city) ([CVG](iata))  to [Edinburg](city), Scotland.
+- Departure [NYC](city)
+- dellas
+- Vietnam
+- [Hanoi](city), Vietnam
+- Poland
 
 ## intent:inquire-ask_clarification
 - ?
@@ -1798,6 +1804,8 @@
 - Fuck you you piece of shit
 - You invaded my space. Get the fuck out!
 - Fuck you very much🤭
+- Bend over bitch
+- you idiot!
 
 ## intent:faq/accuse-scam
 - Is this legit
@@ -2087,6 +2095,7 @@
 - Get me coffee
 - i need coffee
 - set alarm
+- Joke
 
 ## intent:faq/oos_inquire
 - Great! What is the weather like in Berlin?
@@ -2115,6 +2124,7 @@
 - Please tell him i want to meet him soon
 - Can you please tell him i love him so much
 - what type of flight you have
+- Rasa
 
 ## intent:faq/opinion
 - to be honest I hate thanksgiving
