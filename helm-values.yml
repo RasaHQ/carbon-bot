@@ -9,6 +9,7 @@ app:
 nginx:
   service:
     port: 80
+    type: NodePort
 
 ingress:
   annotations:
