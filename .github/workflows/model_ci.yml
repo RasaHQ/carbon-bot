@@ -36,7 +36,7 @@ jobs:
       with:
         msg: results.md
     - name: Upload model
-      if: github.ref == 'refs/heads/master'
+      # if: github.ref == 'refs/heads/master'
       uses: actions/upload-artifact@master
       with:
         name: model
@@ -66,6 +66,7 @@ jobs:
     name: Re-deploy the cluster with the latest action server
     needs: 
     - build-images
+    # if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
     # Checkout repository because we need the content of the `.env` file later
