@@ -49,6 +49,7 @@ jobs:
         PASSWORD_SALT: ${{ secrets.PASSWORD_SALT }}
         REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
         RABBITMQ_PASSWORD: ${{ secrets.RABBITMQ_PASSWORD }}
+        RASA_X_ADMIN_PASSWORD: ${{ secrets.RASA_X_ADMIN_PASSWORD }}
       run: |
         # Install helm v3
         curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
@@ -62,6 +63,7 @@ jobs:
         helm upgrade --install carbon-assistant rasa-x/rasa-x --namespace carbon-assistant \
             --set global.postgresql.postgresqlPassword="${DB_PASSWORD}" \
             --set app.tag=$(basename ${{ github.ref }})-${{ github.sha }} \
+            --set rasax.initialUser.password="${RASA_X_ADMIN_PASSWORD}" \
             --set rasax.token=${RASA_TOKEN} \
             --set rasax.jwtSecret=${JWT_SECRET} \
             --set rasa.token=${RASA_X_TOKEN} \
