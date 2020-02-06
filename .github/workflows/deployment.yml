@@ -75,7 +75,7 @@ jobs:
             --set rasa.tag="${RASA_VERSION}-full" \
             --values helm-values.yml
 
-        cat <<EOF | kubectl apply -f  -
+        cat <<EOF | kubectl apply --namespace carbon-assistant -f  -
         apiVersion: networking.gke.io/v1beta1
         kind: ManagedCertificate
         metadata:
