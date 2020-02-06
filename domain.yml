@@ -81,7 +81,7 @@ slots:
   correct_city:
     type: text
   holiday_name:
-    type: text
+    type: unfeaturized
   iata_departure:
     type: unfeaturized
   iata_destination:
@@ -118,8 +118,8 @@ templates:
   utter_SCENARIOCHECK:
   - buttons:
     - payload: '/SCENARIO{"context_scenario": "holiday", "holiday_name": "christmas"}'
-      title: christmas
-    text: Hi. Thanks for testing. Please choose
+      title: start
+    text: Hi, thanks for testing! Please press start.
   utter_about:
   - text: I was built to help you reduce or offset your greenhouse gas emissions.
   utter_acknowledge:
@@ -182,7 +182,7 @@ templates:
   utter_greet:
   - text: Hello!
   utter_holiday-travel_offer_help:
-  - text: I take it you are traveling somewhere for {holiday_name} and cannot avoid
+  - text: I take it you are traveling somewhere and cannot avoid
       flying there. I can help you purchase certified carbon offsets against any
       flights you take. Would you be interested in that?
   utter_inform_flight_emission_single_long:
