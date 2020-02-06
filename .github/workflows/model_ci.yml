@@ -42,3 +42,118 @@ jobs:
         name: model
         path: models
 
+  build-images:
+    name: Build and Push Images
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: GCP Auth
+      env:
+        GCLOUD_SERVICE_ACCOUNT_KEYFILE: ${{ secrets.GCLOUD_AUTH }}
+      run: |
+        echo "${GCLOUD_SERVICE_ACCOUNT_KEYFILE}" | base64 -d  > gcloud_sa_key.json
+        gcloud auth activate-service-account --key-file=gcloud_sa_key.json
+    - name: Build and push the Docker image
+      run: |
+        # Read and export variables from .env file
+        set -o allexport; source .env; set +o allexport
+        docker build . \
+          --build-arg RASA_SDK_IMAGE=rasa/rasa-sdk:${RASA_SDK_VERSION} \
+          --tag gcr.io/rasa-platform/carbon-bot-actions:$(basename ${{ github.ref }})-${{ github.sha }}
+        gcloud docker -- push gcr.io/rasa-platform/carbon-bot-actions:$(basename ${{ github.ref }})-${{ github.sha }}
+
+  deploy-to-cluster:
+    name: Re-deploy the cluster with the latest action server
+    needs: 
+    - build-images
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout repository because we need the content of the `.env` file later
+    - uses: actions/checkout@v1
+    - name: GCP Auth
+      env:
+        GCLOUD_SERVICE_ACCOUNT_KEYFILE: ${{ secrets.GCLOUD_AUTH }}
+      run: |
+        echo "${GCLOUD_SERVICE_ACCOUNT_KEYFILE}" | base64 -d  > gcloud_sa_key.json
+        gcloud auth activate-service-account --key-file=gcloud_sa_key.json
+    - name: Install Chart
+      env:
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        RASA_TOKEN: ${{ secrets.RASA_TOKEN }}
+        RASA_X_TOKEN: ${{ secrets.RASA_X_TOKEN }}
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        PASSWORD_SALT: ${{ secrets.PASSWORD_SALT }}
+        REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
+        RABBITMQ_PASSWORD: ${{ secrets.RABBITMQ_PASSWORD }}
+        RASA_X_ADMIN_PASSWORD: ${{ secrets.RASA_X_ADMIN_PASSWORD }}
+      run: |
+        # Install helm v3
+        curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+        gcloud container clusters get-credentials rasa-bots --zone europe-west1 --project rasa-platform
+        helm repo add rasa-x https://rasahq.github.io/rasa-x-helm
+
+        # Read and export variables from .env file
+        set -o allexport; source .env; set +o allexport
+
+        helm upgrade --install carbon-assistant rasa-x/rasa-x --namespace carbon-assistant \
+            --set global.postgresql.postgresqlPassword="${DB_PASSWORD}" \
+            --set app.tag=$(basename ${{ github.ref }})-${{ github.sha }} \
+            --set rasax.initialUser.password="${RASA_X_ADMIN_PASSWORD}" \
+            --set rasax.token=${RASA_TOKEN} \
+            --set rasax.jwtSecret=${JWT_SECRET} \
+            --set rasa.token=${RASA_X_TOKEN} \
+            --set rasax.passwordSalt=${PASSWORD_SALT} \
+            --set global.redis.password=${REDIS_PASSWORD} \
+            --set rabbitmq.rabbitmq.password=${RABBITMQ_PASSWORD} \
+            --set rasax.disableTelemetry=True \
+            --set rasax.tag="$RASA_X_VERSION" \
+            --set eventService.tag="${RASA_X_VERSION}" \
+            --set nginx.tag="${RASA_X_VERSION}" \
+            --set rasa.tag="${RASA_VERSION}-full" \
+            --values helm-values.yml
+
+        cat <<EOF | kubectl apply --namespace carbon-assistant -f  -
+        apiVersion: networking.gke.io/v1beta1
+        kind: ManagedCertificate
+        metadata:
+          generation: 1
+          name: rasa-bots-certificate
+        spec:
+          domains:
+          - carbon.rasa-bots.com
+        EOF
+
+  upload-model:
+    name: Upload the trained model to Rasa X
+    needs: 
+    - deploy-to-cluster
+    # if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download Model
+      uses: actions/download-artifact@master
+      with:
+        name: model
+    - name: Upload Model to Rasa
+      env:
+        RASA_X_PASSWORD: ${{ secrets.RASA_X_ADMIN_PASSWORD }}
+        RASA_X_USERNAME: "admin"
+      run: |
+        sleep 240
+        RASA_X_DEPLOYMENT_LABEL="app.kubernetes.io/component=rasa-x"
+        # Wait for deployment to be ready
+        kubectl wait --for=condition=available --timeout=420s -l "${RASA_X_DEPLOYMENT_LABEL}" deployment --namespace carbon-assistant
+        # Get rasa-x pod
+        RASA_X_POD=$(kubectl get pods --namespace carbon-assistant -l "${RASA_X_DEPLOYMENT_LABEL}" --no-headers | head -1 | awk '{print $1}')
+        # Get token
+        RASA_X_TOKEN=$(curl -s --header "Content-Type: application/json" \
+          --request POST \
+          --data "{\"username\":\"${RASA_X_USERNAME}\",\"password\":\"${RASA_X_PASSWORD}\"}" \
+          https://carbon.rasa-bots.com/api/auth | jq -r .access_token)
+        # Upload model
+        cd model; export MODELNAME=$(ls); curl -k --fail -H "Authorization: Bearer ${RASA_X_TOKEN}" -F "model=@${MODELNAME}" https://carbon.rasa-bots.com/api/projects/default/models
+        # ensure model is ready and tag as production
+        sleep 5
+        ls | xargs -I{} basename {} .tar.gz
+        export MODEL=$(ls | xargs -I{} basename {} .tar.gz);curl --fail -XPUT -H "Authorization: Bearer ${RASA_X_TOKEN}" https://carbon.rasa-bots.com/api/projects/default/models/${MODEL}/tags/production
