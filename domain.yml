@@ -81,7 +81,7 @@ slots:
   correct_city:
     type: text
   holiday_name:
-    type: text
+    type: unfeaturized
   iata_departure:
     type: unfeaturized
   iata_destination:
@@ -118,8 +118,8 @@ templates:
   utter_SCENARIOCHECK:
   - buttons:
     - payload: '/SCENARIO{"context_scenario": "holiday", "holiday_name": "christmas"}'
-      title: christmas
-    text: Hi. Thanks for testing. Please choose
+      title: start
+    text: Hi, thanks for testing! Please press start.
   utter_about:
   - text: I was built to help you reduce or offset your greenhouse gas emissions.
   utter_acknowledge:
@@ -163,7 +163,7 @@ templates:
   - text: By buying certified carbon offsets, you support a project which reduces
       the total amount of carbon dioxide we put into the atmosphere. Planting trees,
       installing renewable power, and making buildings more energy efficient are common
-      examples. You can read in detail about offsets at https://offset.climateneutralnow.org/faq_offset_footprint#Buyers .
+      examples. You can read what the UN says about offsets at https://offset.climateneutralnow.org/faq_offset_footprint#Buyers .
   utter_explain_no_payment:
   - text: Unfortunately you can't buy offsets here directly, you'll have to follow
       the link.
@@ -182,8 +182,8 @@ templates:
   utter_greet:
   - text: Hello!
   utter_holiday-travel_offer_help:
-  - text: I take it you are traveling somewhere for {holiday_name} and cannot avoid
-      flying there. I can help you purchase UN-certified carbon offsets against any
+  - text: I take it you are traveling somewhere and cannot avoid
+      flying there. I can help you purchase certified carbon offsets against any
       flights you take. Would you be interested in that?
   utter_inform_flight_emission_single_long:
   - text: A single extended flight (longer than 4830 km) typically emits 855 kilograms
