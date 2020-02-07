@@ -5,20 +5,12 @@ pipeline:
 - name: RegexFeaturizer
 - name: CRFEntityExtractor
 - name: EntitySynonymMapper
-- name: CountVectorsFeaturizer
-  analyzer: word
-  min_ngram: 1
-  max_ngram: 1
-- name: CountVectorsFeaturizer
-  analyzer: char_wb
-  min_ngram: 1
-  max_ngram: 4
 - name: ConveRTFeaturizer
 - name: EmbeddingIntentClassifier
-  epochs: 151
-  embed_dim: 20
+  epochs: 251
+  embed_dim: 30
 - name: ResponseSelector
-  epochs: 100
+  epochs: 200
 policies:
 - name: MemoizationPolicy
 - name: EmbeddingPolicy
