@@ -147,7 +147,7 @@
     - slot{"travel_flight_class": "economy"}
     - slot{"requested_slot": "travel_departure"}
 * form: inform{"city": ["Berlin", "Paris", "New York"]}
-    - slot{"city": ["Berlin", "Paris", "New York]}
+    - slot{"city": ["Berlin", "Paris", "New York"]}
     - form: airtravel_form
     - slot{"travel_departure": "Berlin-Schönefeld Airport"}
     - slot{"iata_departure": "SXF"}
