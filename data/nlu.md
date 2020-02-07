@@ -211,6 +211,49 @@
 - yep!
 - no doubt
 - without a doubt
+- of course!
+- Alright
+- That would be cool
+- yy
+- Yeah lets do it
+- Yeah sounds great
+- could be, yeah
+- Okey nice
+- sure - where do we start
+- Hi there - yes please
+- Yeah!
+- Yep that be greaz
+- I want
+- Sound good
+- Yes, I would like that
+- yah
+- Fuck yeah!!!
+- i do not know the name of the airport in [new york](city)
+- okay, do it
+- yes, why not
+- offcourse
+- Okey
+- Ya
+- Oh yeah
+- yes for [business](city) travel
+- okay sound interesting
+- sound great
+- Thought so
+- That makes sense
+- Oh yes
+- Ha ok
+- I would
+- Perfect, that's my exact route.
+- Yrs
+- I want to try
+- Please
+- That will be great!
+- Sounds good!
+- I would like to have a more accurate estimate
+- oh yea that would be great
+- Yeah sounds good
+- oh yes
+- Yes pls
 
 ## intent:estimate_emissions
 - does it matter how long the flight is?
@@ -249,6 +292,43 @@
 - i want to offset my flights
 - yes. I already answered that. Tell me again about the carbon offsets of my particular flight
 - I have another flight
+- ok calculate again
+- Another flight
+- another flight
+- i want to ttravel
+- another trip
+- Another trip
+- I have another trip
+- I have one more travel
+- Great! I have one more travel
+- Emissions
+- Hello I want to feel guilty about flying a plane
+- co2
+- greenhouse gas calculation
+- trip calculator
+- how many pounds of carbon for a flight ?
+- hoe many pounds of carbon for a flight
+- How much for 135000 milea
+- how to calculate emissions from flying
+- ok tell me about flying then
+- Could you provide an estimate?
+- How do I offset 100000 miles
+- calculate carbon
+- I want check co2
+- sure. how much emissions on a flight from [LA](city:Los Angeles) to [Sydney](city)?
+- I really don't care about CO2 emission because I travel less, only this time I require 2 flights
+- what if I have to fly
+- calculate
+- How can I calculate it?
+- I want to calculate an offset
+- Give me a number
+- How much flight to [London](city)
+- what is my offset
+- Carbon offset credit
+- How bad would a flight be?
+- Calculate my offsets
+- no I mean i want to calculate my emissions
+- how much carbon does a flight from [düsseldorf](city) to [new york](city) emit
 
 ## intent:buy_offsets
 - I wanna purchase
@@ -275,6 +355,17 @@
 - Okay. let's book a flight
 - Buy Offsets
 - I will go buy some.
+- ok lets buy some offsets
+- how to buy offsets
+- how to buy
+- i would like to donate
+- I want buy offset
+- How do I buy
+- Buy offset
+- how much I can buy
+- I want to by it
+- How can I buy back the carbon footprint of my international flight
+- I want to buy offsets
 
 ## intent:deny
 - I ain't paying for that!
@@ -339,6 +430,13 @@
 - No.
 - No. I do not want help buying carbon offsets
 - No. [Business](travel_flight_class).
+- no i cant
+- No can you find out now
+- I'll keep the money I have earned.
+- no, i want you to buy it
+- I'd prefer if you did that for me - I'm time poor.
+- i think i know it already
+- Neither do I, unfortunately.
 
 ## intent:deny_flying
 - I don't ever fly
@@ -364,6 +462,11 @@
 - I think I'd rather take the car, actually.
 - I'm not flying.
 - I am deathly afraid of flying, so I don't have this problem
+- Not flying unless you know something I don't know
+- NO FLIGHTS
+- i'm not traveling
+- As I said, I don't fly at all. I wish that the Liberal Hypocrites that claim to care about our Planet wouldn't fly in their private planes. That would be Huge
+- no, I'm not flying
 
 ## intent:express_negative-emo
 - :/
@@ -387,6 +490,10 @@
 - ;/
 - blah blah
 - you were not helpful
+- 😭
+- Sounds bad
+- sad
+- :(
 
 ## intent:express_positive-emo
 - You are good
@@ -426,6 +533,17 @@
 - Awesome!
 - Very cool. Thank you!
 - whatever, great initiative, rasa ;-) \nI will offset my carbon. thx
+- hahahahahahahahahahahaha
+- hahahahahahaha
+- hahahahaha
+- Oh yeah that's cool we all got to do our part to help all I do is walk
+- It's all good
+- merry christmas
+- happy new year
+- prosper
+- 😀
+- :)
+- thats cool
 
 ## intent:express_surprise
 - ?!
@@ -464,6 +582,13 @@
 - interesting!
 - Wow thats a lot!
 - That's a lot.
+- wawww
+- wow, is it much?
+- O
+- Wait
+- wait
+- damn
+- 😮😮
 
 ## intent:express_uncertainty
 - I don't know
@@ -498,6 +623,17 @@
 - probably
 - hmm Im not sure. Can you tell me more?
 - Maybe
+- mostly
+- Is that a good idea ?
+- oh I'm not too sure if this is real or my friend sending me some funny thing but if this is real I didn't mean to send that
+- I have a connection to a mission project that serves communities hard hit by climate change.  I want to send the offset $ amount there.      AND the ICAO calculator estimate was !,375 for a round trip from [Seattle](city) International airport to [Cairo](city).   Why the huge discrepancy?
+- I HAVE NO IDEA
+- Hmmm i must think
+- i do not know
+- i am not sure
+- err
+- wer
+- Not sure yet
 
 ## intent:farewell
 - Godspeed
@@ -522,6 +658,7 @@
 - see you later
 - shut up
 - sleep!
+- Discontinue my name. Thank you.
 - so long
 - stop
 - STOP
@@ -545,6 +682,17 @@
 - allright then. thank you and goodbye
 - Thanks. I'm done.
 - Ciao.
+- See you later alligator
+- gg
+- I live you hood nite
+- go awy
+- I need a donate but I'll do it when I get a little bit more head of money you have a good day
+- Oh Okay Then I'll be going
+- Unsubscribe
+- [Later](city)
+- Get your business off my phone
+- Hang up
+- OK goodbye
 
 ## intent:greet
 - Good afternoon.
@@ -602,6 +750,14 @@
 - hello.
 - Good Morning!
 - Good Morning
+- ih
+- hi\
+- hi again
+- Heyo
+- okay hi
+- Hello robot!v
+- hi bot
+- Hi Alan
 
 ## intent:how_calculated
 - can I check the math?
@@ -625,6 +781,14 @@
 - who did that calculation?
 - How do you know how much this emits?
 - How do you calculate carbon emmission?
+- How do you calculate this
+- Could you tell me how [business class](travel_flight_class:business) emissions are calculated?
+- How is [business class](travel_flight_class:business) emission calculated?
+- 2 tons per person or total?
+- Can you find out is that is real number
+- How are the offsets calculated?
+- How do flight emissions get calculated?
+- How do the emissions get calculated?
 
 ## intent:inform
 - [NEW YORK](city)
@@ -1027,9 +1191,231 @@
 - no [first class](travel_flight_class:business)
 - what about a flight from [Dubai](city) to [Singapore](city)
 - [London](city), Gatwick airport
+- [new delhi](city)
+- From [Hell](city)
+- [Delux Class](travel_flight_class:business) please
+- I'll be flying from [Seattle](city)
+- I'll be flying to [Frankfurt](city)
+- [Frankfurt](city). In Germany
+- I fly from [Seattle](city) to Europe twice a year
+- [Bari](city) palese
+- [Palese](city)
+- [Bari](city)
+- [torino caselle](iata:TRN)
+- [Caselle](iata:TRN) Turin, Italy
+- [Turin](city), Italy
+- [Ahmedabad](city)
+- [Washington](city) dc
+- [ny](city)
+- from [London](city) to [Paris](city)
+- [Pittsburgh](city), PA
+- [LCA](iata)
+- [Larnaca](city)
+- [Athens](city)
+- [Heraklion](city)
+- [heraklion](city)
+- [heathrow](iata) airport
+- from [New York](city) to [London](city)
+- from [Berlin](city) to [New York](city)
+- from [Berlin](city) to [London](city)
+- from [Paris](city) to [London](city)
+- [FCO](iata)
+- [Rome](city) [FCO](iata)
+- no I'll be flying from [Berlin](city) to [London](city)
+- from [Rome](city) to [London](city)
+- [Berlin](city) to [London](city)
+- to [Paris](city)
+- from [Bangalore](city)
+- to [Bangalore](city)
+- from [London](city) to [Sydney](city)
+- From [FCO](iata)
+- From [FCI](iata)
+- From [Rome](city) to [London](city)
+- [PIT](iata)
+- from [London](city)
+- to [London](city)
+- from [Berlin](city)
+- From [Berlin](city)
+- from [Rome](city)
+- [Stuttgart](city)
+- from [LED](iata) to [PIT](iata)
+- From [Berlin](city) to [Pittsburgh](city)
+- From [London](city) to [SFO](iata)
+- [Aspen](city)
+- [LEF](iata)
+- [sf](city)
+- [Chantilly](city)
+- [Montréal](city)
+- You called me
+- [Stockholm](city)
+- [Kbp](iata)
+- [Kiev](city), [borispol](iata:KBP)
+- [London](city), [gatwick](iata)
+- china
+- sl
+- Oh Darling lets you and me having fun together ❤ I love 💘 you
+- [raleigh](city), nc
+- [New York](city) City ([JFK](iata))
+- [JFK](iata)
+- How much for [New York](city) Sidney
+- I'm travelling from [New York](city) to [Sydney](city)
+- [Bombay](city)
+- Rare from [Honolulu](city) airport to [Takes Hale](city) via
+- How about [first class](travel_flight_class:business)?
+- The same
+- [BOM](iata)
+- [bos](iata)
+- Yep how much is a flight from [berlin](city) to [new york](city)?
+- California
+- [Sydney](city), Australia
+- [Hanoi](city)
+- Maybe to [Romę](city)
+- Maybe to [oslo](city)
+- Carbon emission [JFK](iata) TO [SFO](iata)
+- [Cleveland](city) Oklahoma
+- [mazatlan](city), Sinaloa, mexico
+- [mazatlan](city), mexico
+- Carbon emissions to fly from [Minneapolis](city) to [mazatlan](city)
+- [MTY](iata)
+- [Monterrey](city)
+- [First class](travel_flight_class:business)
+- [Palawan](city)
+- [Davao](city)
+- [Cebu](city)
+- [Manila](city)
+- [Milford](city) UT
+- [Pimpville](city) Ut
+- Shedang boi I'm [first class](travel_flight_class:business)
+- okay, i will fly to [New York](city) City
+- [tokyo](city)
+- [Milpitas](city)
+- [Milan](city)
+- Uk
+- [Nairobi](mention)
+- how about one of the airports around [nyc](city)
+- i don't know, somewhere nice in florida
+- thinking about flying from [dallas](city)
+- I'm traveling from [SJO](iata)
+- [San Jose](city), costa rica
+- Nahi
+- [Vantaa](city)
+- [Helsinki](city)
+- To [london](city)
+- To [New York](city)
+- To [Madrid](city)
+- To [Paris](city)
+- From Nerlin
+- From [Berlin](city) via [London](city)
+- From [New York](city)
+- From [Bangalore](city)
+- To [Bangalore](city)
+- [Sydney](city) to [London](city) [Singapore](city)
+- To [PIT](iata)
+- [sjc](iata)
+- To [SFO](iata)
+- To [London](city)
+- From [Rome](city)
+- From [LED](iata) to [PIT](iata)
+- From [Berlin](city) to [SFO](iata) via [Singapore](city)
+- From [London](city) to [SFO](iata) via [Singapore](city)
+- [Mine](city)
+- [Kiev](city), Ukraine
+- [Economy](travel_flight_class) class
+- Prgf
+- Prg
+- Prag
+- The next class above [Economy](travel_flight_class).
+- Could you estimate for me the cost of offsets for a round-trip flight from [Cincinnati](city) ([CVG](iata))  to [Edinburg](city), Scotland.
+- Departure [NYC](city)
+- dellas
+- Vietnam
+- [Hanoi](city), Vietnam
+- Poland
+- [SYDNEY](city)
+- [Tak](city)
+- [Cebu](city) City
+- Metro [Manila](city)
+- [Medford](city),MA to [Nashua](city),NH
+- [Mannathan](city)
+- [Ny](city)
+- Im flying To [NY](city)
+- [First](travel_flight_class) Class
+- [bangalore](city)
+- [Portland](city) Oregon
+- [PKG](iata)
+- [IAD](iata)
+- [los angeles](city)
+- kansas
+- no i would travel in [business](city) class
+- [HRG](iata)
+- [hong kong](city)
+- min [Business](travel_flight_class) class
+- [Business](city)
+- [los angeles](city), ca
+- [Charlotte](city), nc
+- [Los Angeles](city), Ca to [charlotte](city), nc
+- [los Angeles](city) to [charlotte](city)
+- [charlotte](city)
+- what is the footprint from [lax](iata) to [clt](iata)?
+- [dallas](city)
+- as I said, [Boston](city) to [Rome](city) round trip
+- [Boston](city) to [Rome](city) round-trip
+- [chicago](city) ohare to [nashville](city)
+- [chicago](city) to [nashville](city) flight
+- flight from [chicago](city) to [nashville](city)
+- Illinois
+- The [new york city](city)
+- [Nyc](city)
+- [Jfk](iata)
+- [Hyderabad](city), india
+- [Hyd](iata)
+- What about from [Paris](city) to [Berlin](city)?
+- What about [Paris](city) [Berlin](city)
+- I want to go from [Amsterdam](city) to [Paris](city).
+- [Rome](city)
+- [Berlin](city) [SXF](iata)
+- [tunis](city) , tunisia
+- [tunis](city)
+- [Saint Louis](city)
+- [st louis](city) mo
+- ok fine im flying from [st louis](city)
+- [TEL AVIV](city)
+- Great, I'm going from [Ben Gurion](iata) to [JFK](iata).
+- How about [Yasser Arafat](iata) International Airport?
+- [Palestine](city)?
+- [Ben Gurion](iata) Airport
+- Israel
+- Right, and I'm flying from [Tel Aviv](city) to [NYC](city)
+- I don't know any other way to describe the city [Tel Aviv](city)
+- [Tel Aviv](city) Israel
+- [Knoxville](city)
+- [Funchal](city)
+- Flight to [Dubai](city)
+- [Wien](city)
+- [Viena](city)
+- I want to fly from [Barcelona](city) to [Viena](city)
+- [Kyiv](city)
+- [Kiev](city)
+- [Santiago](city) de chile
+- Chile
+- [Bogotá](city)
+- [Johannesburg](city)
+- [Melbourne](city)
+- [Dortmund](city)
+- [Business](travel_flight_class) class
+- Trichirappalli
+- [Singapore](city)
+- Singaporea
+- [STL](iata)
+- [Sevilla](city)
+- [bogota](city) colombia
+- [Savannah](city)
+- [Bogota](city)
+- [Prague](city)
 
 ## intent:inquire-ask_clarification
 - ?
+- Can you give me more information?
 - Fine. What?
 - How?
 - Recently?
@@ -1050,6 +1436,22 @@
 - how do i do that?
 - Huh?
 - okay what?
+- how is that ?
+- what is the website ?
+- what project ?
+- please be detailed
+- what are carbon offsets exactly
+- what is co2
+- really
+- How???
+- Your joking..right ?
+- Tell me more
+- Tell
+- What are carbon offsets
+- I want to learn how
+- ok how do we do this?
+- what is carbon offsets
+- lol what?
 
 ## intent:faq/is-this-legit
 - is that really legit ?
@@ -1181,6 +1583,19 @@
 - What are offsets?
 - so how would that work
 - do offsets really work?
+- offset
+- what is carbon offset?
+- How does an offset work?
+- so tell me about c02
+- I try again :  by how many degrees C  or  F will carbon offsets reduce global temperature ?
+- I repeat - carbon offsets will not affect climate. !
+- I don't fly, but I'm curious about carbon offsets ?
+- Explain
+- How do I offset carbon footprint from air travel?
+- What do they do with the offsets
+- Info on carbon credits
+- Will these offsets capture 100% of Co2?
+- carbon offset
 
 ## intent:faq/inquire-cost
 - What would be the offset price for this trip?
@@ -1212,6 +1627,16 @@
 - how much would it cost?
 - how much does it cost
 - What will be the cost of carbon offsets ?
+- First of all - what is Al please?    I know the carbon emission estimate of a recent round-trip from [Seattle](city), WA  - USA to [Cairo](city), Egypt.  But how do I estimate the COST of the offset?
+- how much does a carbon offset cost?
+- How much would an offset cost?
+- so, how much do i have to pay
+- is it much?
+- yes, but i want something cheap\
+- How much
+- How much is the cost
+- Cost
+- looking for carbon offset price
 
 ## intent:meta_inform_problem_bad-link
 - The link doesn't work
@@ -1260,6 +1685,14 @@
 - start over
 - can we start again please
 - start
+- Restart
+- get started
+- Let's begin
+- Start
+- Let's start again
+- Lets restart
+- That's ok, can we start over?
+- Let’s start over
 
 ## intent:thank
 - Great, thanks!
@@ -1308,6 +1741,14 @@
 - cool, thanks
 - Perfect, thanks
 - Ok thanks
+- hank you
+- good bot
+- Okay thank you
+- Thank you so much
+- oh ok thanks any way
+- thanls
+- That's great! Thanks for the link
+- oh thaks
 
 ## intent:why
 - why should I pay?
@@ -1354,6 +1795,21 @@
 - Why should I buy them
 - Why do you ask?
 - so what?
+- why would i be interested in that?
+- I don't see the point from this
+- Yes, so why is one greater than the other?
+- Why does [business class](travel_flight_class:business) emit more CO2 than [economy class](travel_flight_class:economy)?
+- But why does [business class](travel_flight_class:business) emit more CO2 than [economy class](travel_flight_class:economy)?
+- How much CO2 would I be emitting if I travelled via [business class](travel_flight_class:business) instead?  Isn't it the same airplane?
+- why would i want to purchase offsets if i'm not flying
+- why you are not sure?
+- is it really important
+- tell me more here
+- Why?
+- Why does it matter?
+- What's the difference between flying [economy class](travel_flight_class:economy) or [business class](travel_flight_class:business)?
+- Does it matter if I fly economy or not?
+- Didn’t get that
 
 ## intent:SCENARIO
 - Thanksgiving
@@ -1393,6 +1849,12 @@
 - sup
 - 'sup
 - how you doing
+- Hello how are you
+- Whats up?
+- are you okay?
+- How are you
+- how are you
+- whats'up
 
 ## intent:inform_notunderstanding
 - Where you going? I'm still curious where my payment goes.
@@ -1438,6 +1900,21 @@
 - are you ther
 - You are not doing great sorry
 - You are not well trained bro
+- speak to m
+- So yyou don't know
+- You would know if u have been high
+- Correct this :D
+- that didn’t give me an answer?
+- ARE YOU THERE
+- HOLIDAY INN WEST DOESN'T COME UP
+- That does not answer my question.
+- I already answered that
+- you dont understand right
+- so why can't you answer my questions
+- you dont know CO2
+- You have not solved my issue
+- Are you here
+- Not understanding or not wanting to understand.
 
 ## intent:faq/insult
 - fuck off computer
@@ -1468,6 +1945,41 @@
 - shithead
 - FUCK YOU THERE IS NO SUCH THING AS CLIMATE CHANGE AND WE KNOW IT YOU CUNTS !
 - You suck
+- dumb bot
+- Bernie Sanders communist v\nCocksuckers
+- stupid bot
+- Get ur nasties offy phone.
+- Then don't invade my phone with your adds
+- Screw you stop pitting your junk on my phone
+- Get off my phone you crooked fucking bitch
+- Junky
+- Slut
+- Yes you do bitch
+- none of your business slut
+- I’m sick of our relationship you don’t treat me right babe
+- A. I. Fags
+- Go the Fuck away cunt
+- Fuck you Fuck them
+- Get off my phone you crooked fucking idiots
+- Bitch
+- Ya you do you slut
+- Like the liberal piece of trash you are
+- Fuck you you piece of shit
+- You invaded my space. Get the fuck out!
+- Fuck you very much🤭
+- Bend over bitch
+- you idiot!
+- Bernie madoff son of a bitch
+- You butt gigs brother
+- And your family pelosi
+- So double fuck off thief
+- fuck off you crooked bastard
+- F off George Soros puppets
+- fuck off robot
+- Stoned damn fools.
+- Fuck you
+- I said fuck off
+- LOL, ask Greta, LOL
 
 ## intent:faq/accuse-scam
 - Is this legit
@@ -1494,6 +2006,17 @@
 - so no one is making profit  off of me?
 - Are you sure it's not a scam?
 - where does that offset money REALLY go?
+- Reported this scam
+- That would be not to buy into this BS !
+- What a load of bullshit
+- Whatever. It's ridiculous.
+- Knock it off you posers. What a scam.
+- Like I said...it's a scam.
+- This has to be a joke! Who would be dumb enough to fall for this scam?
+- what nonsense
+- That didn't answer my question. I'm doubtful the money will be used wisely
+- How can I ensure the money isn't wasted or abused or corrupted
+- Oh sure, I'd just love to waste my hard-earned money giving it to the biggest fraud of modern times, endorsed by a socialist UN that seeks a new world order run by religious fanatics - where do I sign? 😂😂😂😂👊
 
 ## intent:faq/meta_inquire-ask_bot-challenge
 - What is your name?
@@ -1510,6 +2033,11 @@
 - are you a bot?
 - who do you work for?
 - What's your name?
+- who are you ?
+- What is Carbon bot
+- I'm obviously talking to a computer
+- am i taking to bot
+- bot?
 
 ## intent:faq/meta_inquire_capabilities
 - Hmm... I don't know. What can you do?
@@ -1539,6 +2067,13 @@
 - What else can you tell me?
 - how can you help with carbon offsets
 - what can i ask you
+- how can i help?
+- Thanks anything else that you can do
+- what csn you do for me
+- What do you mean by this if I have to go on website why should  I  have you in first place?
+- what do you do?
+- what you can do
+- anything else ?
 
 ## intent:faq/deny-climate-change
 - #ClimateChangeHoax .... it's a HOAX people
@@ -1555,6 +2090,19 @@
 - I don't want to buy offsets. I don't think climate change is a big problem
 - No, I heard it is all a hoax
 - is climate change even real?
+- It's been changing for millions of years because the earth shifts on its axis while spinning in space. Things are going to change naturally, that's why Ohio was a glacier a million years ago and I can find salt water fossils in my backyard in middle Ga.
+- There is no climate change asshole
+- Climate change is a hoax.
+- Do volcanoes do it
+- You do know that global warming is bullshit right
+- NO!  Who benefits?  Who gets the money it is going to cost me?  I despise the UN and all it embodies.  I also do not believe there is such a thing as global warming, and I sure don't agree with your climate change policy either.
+- Sadly, most of what is presented as "Green" isn't and does more harm than good, like Solar and Ethanol
+- I don't know why this assinine ad came up on my page but you're smoking some good stuff if you think for one second I'd give you a dime to offset anything that has to do with this hoax called climate change 😂🤣
+- Travelling, not worried.
+- Not worried
+- What if I don't believe that humans had that big of an impact from carbon emissions
+- Climate change is a HOAX !
+- No, I just wanted to tell you to stay the fuck off my feed you ignorant fuck. Climate change is a hoax , and your suggestion that I can BUY SOMETHING to offset my fossil fuel use proves it. EAT SHIT AND DIE!!!!
 
 ## intent:faq/layover
 - what if I have a layover
@@ -1581,6 +2129,24 @@
 - is that more than my car emits?
 - What about trains?
 - how do I purchase carbon credits to offset my flights in 2019?
+- I just farted can you tell me about the admissions coming out of my buttbecause I don't want to make too much of a carbon footprint print coming out of my butt
+- What is my carbon footprint
+- My carbon footprint
+- renewable power?
+- How much Carbon Dioxide is released when a Boeing 787 Dreamliner takes a full crew and full cabin of passengers to Rome from JFK airport?
+- how much Carbon Dioxide is released when a Boeing 787 Dreamliner takes a full crew and full cabin passengers to Rome from JFK airport
+- Fare from air port to have cos
+- HOLIDAY INN WEST MIAMI TO PORT MIAMI
+- HOLIDAY INN EXPRESS TO PORT MIAMI
+- what would be the aprox cost of a ride from [PDX](iata) to [RDM](iata)?
+- How much is an uber ride from tampa airport to the Magnuson Hotel in St. Pete's?
+- how many trees would one need to plant to offset the one years worth of carbon production?
+- Fare from airport to [Take Cos](city)
+- how any gallons will i use to go from [Yerington](city) NV to Disney California adventure park to [LA](city:Los Angeles) NV
+- my dad often flies from London-Hong Kong-San Franscisco-New York-London. He probably does this trip 5x a year.
+- How much carbon emission is 30 flights a year from [London](city) to [New York](city)?
+- What if I go by car.
+- By train actually.
 
 ## intent:faq/general-emissions-reduction
 - Does it help to become a vegetarian?
@@ -1629,6 +2195,12 @@
 - does one airline have lower emissions than another?
 - how much carbon does a normal flight use?
 - Is 0.1 tons of CO2 a lot?
+- what is flight
+- how can I join you ?
+- what is today's Bangalore CO2 emission?
+- Could you help with alternative carbon neutral options?
+- would you like to know more about my route?
+- What data will be collected from me?
 
 ## intent:faq/more-details-process
 - How do I buy offsets?
@@ -1657,25 +2229,106 @@
 - I dont really trust the UN
 - buy a flight ticket for me
 - I will consider purchasing offsets next time I fly.
+- Tell him to meet me in marietta ohio come with me  please
+- L o st themdink frving
+- I tide s bicycle an drvw when I get my license bsck
+- My bicycle hadd gal a t tire
+- In a pickup truck is all I own oh I have a bicycle
+- Surely u know if you ate drunk
+- I sit on s pot to go poop
+- I'm drunk how about u
+- I have never been in a fight
+- I may get high but my feet will non ground
+- Why didn't mean to send that stuff if in a few earlier conversations I thought you were my friend sending me jokes
+- Anyways you're going to have to send talk to me on the phone Roy because I don't got time for these little joke things I'm taking this off my phone is taking up too much space
+- Because I know you like to send me these joke apps
+- Oh Darling I love you and want you to feel the pleasures of life please I love 💘 you
+- Oh you want me to go away
+- Oh Darling I love 💘 you and want to share with other Girls Please I love 💘 you
+- Oh Darling I love you and want to be near you and having fun together ❤ I love 💘 you
+- I'm puking now
+- Yes but Christmas is past already
+- Yes me and future husband are plan on travel when we get married but I don't know where we going yet but I want to go to hawilli or jamican but I don't I ask him so I guess he will let me soon okay and I get back to you okay
+- FRIDAY AT 12PM
+- I AM A TOUR GUIDE AND NEED TO GET BACK TO MY CAR
+- I used to work for NASA
+- It can't help me then
+- My name is Andre's gonzalez
+- NO  WAY ,DON'T  BUTTER  ME .LEVY  MY   Mesdager   PAGE.
+- KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+- It's really big
+- chào em
+- fas
+- as
+- fasf
+- fa
+- No, it's not ok; over 50 million human beings are being slaughtered each year worldwide.
 
-## intent:faq/oos_inquire
-- Great! What is the weather like in Berlin?
-- What do you know about Chuck Norris?
-- What is the answer to life, the universe, and everything?
+## intent:faq/oos_request
 - make me coffee
 - play the lottery
-- do you have any thanksgiving plans
-- can you suggest some?
 - I want to know name of the flight?
 - Can you get me the specific flight information?
 - Can I give you feedback?
 - I want to pay the money from paypal
 - can I pay with credit card
+- book flight
+- Deliver a pizza
+- How long will it take a letter to get from new milford pa to huntingdon pa
+- how to implement faq
+- What would you suggest where to go for a romance places
+- Can you fyling him here please i love him so much
+- Can you fyling him here please
+- Can you ask him please to fyling here do you watch underworld movie he in it
+- Can you till him that to fyling here to meet me please
+- Please stop message him to flying here please
+- Carolina tell shane brolly that please
+- Marietta ohio please ask him not ask again please i love him so much
+- Marietta ohio please till shane brolly flying here please ask him
+- Marietta ohio please i mean shane brolly i love him so much
+- Marietta ohio i mean shane brolly four me please
+- He from underworld movie please flying him here
+- Can you flying shane brolly here please
+- Can you get him to fyling here please
+- Please can you find out now
+- Can you find out if his real number please
+- Get me coffee
+- i need coffee
+- set alarm
+- Joke
+- looking for flight
+- tell me a joke
+
+## intent:faq/oos_inquire
+- Great! What is the weather like in Berlin?
+- What do you know about Chuck Norris?
+- What is the answer to life, the universe, and everything?
+- do you have any thanksgiving plans
+- can you suggest some?
 - how fast the bot move?
-- Can you give me more information?
 - oh, ok well can you give me more info about my flight then
 - What are we doing here buddy?
 - What is christmas?
+- Can you come with me please
+- Yes can you come with me please meet me in marietta Ohio
+- Hi his me miranda I love tom cruise can you make it happen
+- Can you hep fix it
+- what is the weather ?
+- Are you sending me things Roy
+- Are there other alternatives?
+- Give me an example.
+- How is the weather like in [New York](city)?
+- What countries are available?
+- CO2 PRICES SHOULD GO DOWN AYE?
+- Meet me at 4900 sepulveda Blvd room 206
+- Yes or no
+- So you down ?
+- Please tell him i want to meet him soon
+- Can you please tell him i love him so much
+- what type of flight you have
+- Rasa
+- should I look up the airport?
+- Is this just for american flights?
 
 ## intent:faq/opinion
 - to be honest I hate thanksgiving
@@ -1702,12 +2355,31 @@
 - so
 - so...
 - what about you
+- you're a bot...yes you do
 - ok are we done
 - code
 - Same
 - is this done now?
 - What do you want to talk about.
 - Don't worry, it was just a joke
+- Test
+- let me know
+- adasdsa
+- KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+- humm
+- Not good fur me
+- hjmm
+- Your lunch
+- And in [berlin](city)?
+- Dnsddks
+- Meow meow meow
+- Yum yum Yelp
+- Dude I'm just asking be open minded
+- You're going to though
+- I'll be waiting
+- BETTTT
+- Well
+- Soo
 
 ## intent:faq/research_project
 - so everything I write is gonna be read by a bunch of researchers?
@@ -1730,6 +2402,7 @@
 - I don't see the point
 - what is this about
 - what's this all about?
+- okay which research team?
 
 ## intent:faq/where-money-goes
 - does all this money go straight to the UN?
@@ -1832,6 +2505,7 @@
 - but it's too late for the planet, why should i bother?
 - Why is it on the customer to pay for these offsets rather than the company that is profiting off of the environment?
 - Why does the company not pay for the offsets?
+- What if I have to fly for work?
 
 ## intent:faq/specific-project-details
 - Are there cheaper options?
@@ -1862,15 +2536,119 @@
 - what about that hydro dam one
 - I choose 9510
 - Ok, Ill get project 697
+- Which is the most popular project to buy offsets from?
+- What project
+- What are the projects that supposedly reduce greenhouse gasses?
+- What projects are available
+- What projects get the donations
 
 ## intent:help
 - I don't understand
 - please help here
+- what i need to do
+- Can you help me please
+- Please help
+- i do not understand
+- Can you help me?
+- Help
+
+## intent:faq/other-language
+- vai te pra puta que te pariu bot imundo do caralho
+- vai para o inferno
+- Belém do Pará
+- Do you speak in Spanish?
+- no hablo ingles
+- can you speak french ,
+- תל אביב
+- sprichst du deutsch?
+
+## intent:faq/vulgar
+- In the ass
+- I just farted can you tell me about the admissions coming out of my buttbecause I don't want to make too much of a carbon footprint print coming out of my butt
+- I want to Fuck your mom
+- Oh Baby My Big COCK is deeply rooted in your hot pussy Please I love 💘 you
+- I'm fucking your mom
+- Cum eater
+- Cuz bucket
+- Do you suck cock
+- Does your dad still have sex with your sister
+- Your mom does
+- So does your sister
+- Faggots
+- In your moms ass
+- Go butt Fuck your mom
+- Eat shit you crooks
+- When they fart
+- I'll be farting from [Oklahoma City](city) to [New York](city)
+- If I keep farting from [Oklahoma City](city) to [New York](city) how much carbon will come out of my butt
+- Does your dad still fuck you
+- Quit fucking your mom
+- Cum sucker
+- And if there are any Dingle berries on first approach a curteousy wipe is never turned down. Of course you can always scarf that crap up 😜
+- I mean it doesn't have to be a guys butthole right? So it's not inherently gay, but if it is a guys butthole "no homo" rule does apply
+- Ever lick a butthole?
+- My penis still itches
+- You can donate so I can buy my cream to produce more mushrooms growing in my pubes to end the war between the crabs and the worms
+- So you would like to pay me $10 for 1 minute of smelling my jungle bridge?
+- The worms and the crabs are fighting over the mushrooms growing on my genital area
+- My balls kinda itch too
+- You wanna scratch my cock ?
+- My cock itches
+- I've got a project right here buddy...
+- Does she suck cock
+- How about your sister
+- Bernie Sanders communist v\nCocksuckers
+- Cunts
+- I'll donate 1 stiff dick in your ass
+- Shiff is your daddy
+- Cunt
+- In your mama's ass
+- Donate this asshole
+- Bend over  bitch
+- Blow Bernie Sanders
+- Yo mama did
+- Ok swallow boy George Soros unzips his pants enter swallow 👦
+- Honestly i want climate change to happen faster kill all humans am i right
+
+## intent:faq/personal_question_for_bot
+- What model are you using
+- Have u been drinking today
+- But are you drunk
+- Can u read
+- A t e you board today
+- Have you ever been a fight
+- Habevyou been in s fight
+- Do you smoke or drink
+- Have you got high
+- Have you ever got high
+- Hey carbon bit are u gay
+- Did you know that?
+- Does it love?
+- Are you real
+- Do you want me
+- Do you love me
+- what is your name ?
+- how can i replicate you
+- i want to love you
+- what is your age
+- what is your name
+- what are you smiling about?
+- What's your age
+- What your name
+- gime me some details about you
+- whats' your work
+- whats'your name
+- what's your age?
+- who are you
+
+## intent:faq/deny-offsets-work
+- Carbon offsets will not affect climate !
+- So if I give you money its ok to destroy the climate, is that right
 
 ## synonym:1
+- one
 - first
 - a week
-- one
 
 ## synonym:2
 - second
@@ -1880,6 +2658,9 @@
 
 ## synonym:7
 - 7 hour
+
+## synonym:KBP
+- borispol
 
 ## synonym:LAST
 - latter
@@ -1895,14 +2676,15 @@
 - Gatwick
 
 ## synonym:LHR
+- heathrow
 - Heathrow
 
 ## synonym:LTN
 - Luton
 
 ## synonym:Los Angeles
-- la
 - LA
+- la
 
 ## synonym:Madrid
 - madrid
@@ -1918,13 +2700,19 @@
 ## synonym:San Francisco
 - SF
 
+## synonym:TRN
+- Caselle
+- torino caselle
+
 ## synonym:TXL
 - Tegel
 
 ## synonym:business
+- First class
 - business class
 - Business class
 - first class
+- Delux Class
 
 ## synonym:economy
 - Economy Class
