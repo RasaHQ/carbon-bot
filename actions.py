@@ -9,6 +9,7 @@ import logging
 import re
 import requests
 import csv
+import collections
 
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
@@ -366,24 +367,6 @@ class AirTravelForm(FormAction):
 
         dispatcher.utter_message(explanation)
 
-    @staticmethod
-    def clarify_stopover(departure, stopover, destination, dispatcher, tracker):
-        """
-        Informs the user about the discovered stopover trip;
-        Appears right before the offset calculations
-
-        Args:
-            departure: departure airport
-            stopover: stopover airport
-            destination: destination airport
-            dispatcher: dispatcher to present the message
-            tracker: state tracker containing current dialog state
-        """
-        explanation = (
-            f"So, you'll be flying from {departure} to {destination} via {stopover}."
-        )
-        dispatcher.utter_message(explanation)
-
     def check_stopover(
         self,
         old_departure: Tuple,
@@ -403,12 +386,13 @@ class AirTravelForm(FormAction):
             tracker: state tracker containing current dialog state
 
         Returns: 
-            a boolean flag of whether a connecting flight was found;
-            if it was found:
-                a tuple of ((departure airport name, departure IATA code), (stopover airport name, stopover IATA code), 
-                (destination airport name, destination IATA code))
+            second_leg_provided: a boolean flag of whether a connecting flight was found;
+            stopover_tuple: if it was found:
+                                a tuple of ((departure airport name, departure IATA code), (stopover airport name, stopover IATA code), 
+                                (destination airport name, destination IATA code))
          
         """
+        stopover_info = collections.namedtuple('Stopover_Info', ['second_leg_provided', 'stopover_tuple'])
         departure, destination, stopover = (None, None), (None, None), (None, None)
 
         if tracker.get_slot("previous_entered_flight")[1][0] in [
@@ -438,9 +422,9 @@ class AirTravelForm(FormAction):
             elif old_departure:
                 departure = old_departure
 
-        return (
-            None not in (departure[0], destination[0], stopover[0]),
-            (departure, stopover, destination),
+        return stopover_info(
+            second_leg_provided = None not in (departure[0], destination[0], stopover[0]),
+            stopover_tuple = (departure, stopover, destination),
         )
 
     def departure_changed(self, old_departure, result):
@@ -570,13 +554,6 @@ class AirTravelForm(FormAction):
             )
             # if second leg given, update the result with the new route
             if second_leg_provided:
-                self.clarify_stopover(
-                    stopover_tuple[0][0],
-                    stopover_tuple[1][0],
-                    stopover_tuple[2][0],
-                    dispatcher,
-                    tracker,
-                )
                 for kind, value in [
                     ("departure", stopover_tuple[0][1]),
                     ("stopover", stopover_tuple[1][1]),
@@ -674,28 +651,21 @@ class AirTravelForm(FormAction):
         else:
             dispatcher.utter_message(message + f" [Buy Offsets]({url})")
 
-        if tracker.get_slot("travel_stopover"):
-            return [
-                SlotSet("travel_departure"),
-                SlotSet("iata_departure"),
+        slots_to_set = [SlotSet("travel_departure"), 
+                SlotSet("iata_departure"), 
                 SlotSet("travel_destination"),
                 SlotSet("iata_destination"),
                 SlotSet("travel_stopover"),
                 SlotSet("iata_stopover"),
                 SlotSet("travel_flight_class"),
+                ]
+
+        if tracker.get_slot("travel_stopover"):
+            return slots_to_set + [
                 SlotSet("previous_entered_flight"),
             ]
         else:
-            return [
-                SlotSet("travel_departure"),
-                SlotSet("iata_departure"),
-                SlotSet("travel_destination"),
-                SlotSet("iata_destination"),
-                SlotSet("travel_stopover"),
-                SlotSet("iata_stopover"),
-                SlotSet("travel_flight_class"),
-            ]
-
+            return slots_to_set
 
 class ExplainTypicalEmissions(Action):
     def name(self):
