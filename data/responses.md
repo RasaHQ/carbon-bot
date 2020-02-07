@@ -111,6 +111,18 @@
 * faq/other-calculation  
     - For now I can only calculate emissions from flying.
 
+## whole footprint
+* faq/calculate-footprint
+    - I can't calculate your whole carbon footprint. But for many of us, flying is the biggest chunk!
+
+## habitual travel
+* faq/travel-habit-calculation
+    - If you travel regularly, I can recommend checking out that link I sent and setting up a recurring donation.
+
+## driving instead
+* faq/car_alternative
+    - If you're driving, I can't calculate that for you. But carpool if you can!
+
 ## other language
 * faq/other-language  
     - I can only do English for now.
