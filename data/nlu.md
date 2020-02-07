@@ -2531,7 +2531,7 @@
 - Do people usually buy offsets?
 - does anyone actually buy them?
 
-##faq/cant-afford-offsets
+## intent: faq/cant-afford-offsets
 - I can barely afford my ticket how am I supposed to buy offsets as well
 - i can hardly take my fare. how do i buy offsets?
 - i can hardly pay a damn what i can buy offsets.
