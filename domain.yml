@@ -80,11 +80,15 @@ slots:
     type: list
   correct_city:
     type: text
+  explanation:
+    type: unfeaturized
   holiday_name:
     type: unfeaturized
   iata_departure:
     type: unfeaturized
   iata_destination:
+    type: unfeaturized
+  iata_stopover:
     type: unfeaturized
   incorrect_city:
     type: text
@@ -98,9 +102,13 @@ slots:
     type: unfeaturized
   requested_slot:
     type: unfeaturized
+  previous_entered_flight:
+    type: unfeaturized
   travel_departure:
     type: unfeaturized
   travel_destination:
+    type: unfeaturized
+  travel_stopover:
     type: unfeaturized
   travel_flight_class:
     type: unfeaturized
