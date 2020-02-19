@@ -1412,6 +1412,7 @@
 - [Savannah](city)
 - [Bogota](city)
 - [Prague](city)
+- [Dallas](city) to [London](city)
 
 ## intent:inquire-ask_clarification
 - ?
@@ -2646,9 +2647,9 @@
 - So if I give you money its ok to destroy the climate, is that right
 
 ## synonym:1
-- one
 - first
 - a week
+- one
 
 ## synonym:2
 - second
@@ -2690,34 +2691,34 @@
 - madrid
 
 ## synonym:New Delhi
-- Delhi
 - delhi
+- Delhi
 
 ## synonym:SXF
-- Schoenefeld
 - Schonefeld
+- Schoenefeld
 
 ## synonym:San Francisco
 - SF
 
 ## synonym:TRN
-- Caselle
 - torino caselle
+- Caselle
 
 ## synonym:TXL
 - Tegel
 
 ## synonym:business
-- First class
-- business class
-- Business class
 - first class
+- business class
 - Delux Class
+- First class
+- Business class
 
 ## synonym:economy
+- economy class
 - Economy Class
 - Economy class
-- economy class
 
 ## synonym:premium
 - premium economy
