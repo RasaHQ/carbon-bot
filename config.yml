@@ -6,9 +6,13 @@ pipeline:
 - name: CRFEntityExtractor
 - name: EntitySynonymMapper
 - name: ConveRTFeaturizer
-- name: EmbeddingIntentClassifier
-  epochs: 251
-  embed_dim: 30
+- name: DIETClassifier
+  hidden_layers_sizes: {text: [256, 128]}
+  intent_classification: True
+  entity_recognition: False
+  use_masked_language_model: False
+  BILOU_flag: False
+  number_of_transformer_layers: 0
 - name: ResponseSelector
   epochs: 200
 policies:
