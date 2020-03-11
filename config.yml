@@ -1,13 +1,14 @@
 language: en
 pipeline:
-- name: WhitespaceTokenizer
-  intent_split_symbol: _
+- name: ConveRTTokenizer  
 - name: RegexFeaturizer
 - name: CRFEntityExtractor
 - name: EntitySynonymMapper
 - name: ConveRTFeaturizer
 - name: DIETClassifier
-  hidden_layers_sizes: {text: [256, 128]}
+  hidden_layers_sizes:
+    text: [256, 128]
+    label: []
   intent_classification: True
   entity_recognition: False
   use_masked_language_model: False
