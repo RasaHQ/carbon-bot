@@ -10,10 +10,10 @@ pipeline:
     text: [256, 128]
     label: []
   intent_classification: True
-  entity_recognition: False
+  entity_recognition: True
   use_masked_language_model: False
   BILOU_flag: False
-  number_of_transformer_layers: 0
+  number_of_transformer_layers: 2
 - name: ResponseSelector
   epochs: 200
 policies:
