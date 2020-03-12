@@ -11,6 +11,7 @@ cols = ["support", "f1-score", "confused_with"]
 writer.headers = ["class"] + cols
 
 classes = list(data.keys())
+classes.remove('accuracy')
 classes.sort(key = lambda x: data[x]['support'], reverse=True)
 
 def format_cell(data, c, k):
