@@ -1348,7 +1348,7 @@
 - [HRG](iata)
 - [hong kong](city)
 - min [Business](travel_flight_class) class
-- [Business](city)
+- [Business](travel_flight_class)
 - [los angeles](city), ca
 - [Charlotte](city), nc
 - [Los Angeles](city), Ca to [charlotte](city), nc
