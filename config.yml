@@ -13,7 +13,7 @@ pipeline:
   entity_recognition: True
   use_masked_language_model: False
   BILOU_flag: False
-  number_of_transformer_layers: 2
+  number_of_transformer_layers: 0
   epochs: 50
 - name: ResponseSelector
   epochs: 200
