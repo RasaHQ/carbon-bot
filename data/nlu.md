@@ -235,7 +235,7 @@
 - Okey
 - Ya
 - Oh yeah
-- yes for [business](city) travel
+- yes for [business](travel_flight_class) travel
 - okay sound interesting
 - sound great
 - Thought so
@@ -689,7 +689,7 @@
 - I need a donate but I'll do it when I get a little bit more head of money you have a good day
 - Oh Okay Then I'll be going
 - Unsubscribe
-- [Later](city)
+- Later
 - Get your business off my phone
 - Hang up
 - OK goodbye
@@ -987,13 +987,13 @@
 - we take [economy class](travel_flight_class:economy)
 - 8 Rivers edge dr
 - [Mexico City](city)
-- [mexico](city) [city](city)
+- [mexico city](city)
 - What would my carbon emissions be if I flew from [Philadelphia](city) airport to [YUL](iata) IN [MONTREAL](city)?
 - [london](city)
 - united states
 - [business class](travel_flight_class:business)
-- what about a flight to [san](city) [francisco](city)
-- [las](city) [vegas](city)
+- what about a flight to [san francisco](city)
+- [las vegas](city)
 - [NewYork](city)
 - [newyork](city)
 - for [Boston](city) to [NY](city)?
@@ -1021,7 +1021,7 @@
 - Yes, [Economy Class](travel_flight_class).
 - Yes! I am planning to fly from [Boston](city) to [New York](city). I would like to fly [Economy Class](city:economy).
 - I'm flying from [Boston](city) to [New York](city) in [economy class](travel_flight_class:economy) on thanksgiving.  What is the environmental effects?
-- [To Seattle](city)
+- To [Seattle](city)
 - [boston](city) to [new york](city)
 - I will be flying to [NYC](city), NY
 - I will be leaving from [Boston](city), MA
@@ -1034,7 +1034,7 @@
 - going to [Vancouver](city) from [Pittsburgh](city)
 - [yvr](iata)
 - I'm flying [business](travel_flight_class) actually
-- i want to go from [san](city) [francisco](city) to [los angeles](city)
+- i want to go from [san francisco](city) to [los angeles](city)
 - Pittsurgh
 - [BOS](iata)
 - [SFO](iata)
@@ -1065,7 +1065,7 @@
 - probably [Leipzig](city)
 - no I am heading out in [first class](travel_flight_class:business)
 - [new york](city)
-- [san](city) [francisco](city)
+- [san francisco](city)
 - [san fran](city)
 - [berlin](city)
 - [Shanghai](city)
@@ -1110,7 +1110,6 @@
 - What are my carbon emissions from [Berlin](city) to [Krakow](city)?
 - Hello I would like to fly to [boston](city) to visit famil.y
 - Sao Paulo
-- [Rio](city) [de](city) [Janeiro](city)
 - [Rio de Janerio](city)
 - [Pittsburgh](city) to [Rio de Janerio](city)
 - [Pittsburgh](city) to [Dubai](city)
@@ -1120,7 +1119,7 @@
 - [Paris](city)
 - Probably the United States
 - [Toronto](city)
-- [san](city) [diego](city)
+- [san diego](city)
 - [new york](city) city
 - I'm flying from [Boston](city) to [New York](city).
 - Hello. I am flying from [Boston](city) to [New York](city) on Thanksgiving day at 1 p.m. and I would like to get information on about the carbon offsets of this flight.
@@ -1246,7 +1245,6 @@
 - [sf](city)
 - [Chantilly](city)
 - [Montréal](city)
-- You called me
 - [Stockholm](city)
 - [Kbp](iata)
 - [Kiev](city), [borispol](iata:KBP)
@@ -1346,7 +1344,7 @@
 - [IAD](iata)
 - [los angeles](city)
 - kansas
-- no i would travel in [business](city) class
+- no i would travel in [business](travel_flight_class) class
 - [HRG](iata)
 - [hong kong](city)
 - min [Business](travel_flight_class) class
