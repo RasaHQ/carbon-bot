@@ -315,7 +315,7 @@
 - How do I offset 100000 miles
 - calculate carbon
 - I want check co2
-- sure. how much emissions on a flight from [LA](city:Los Angeles) to [Sydney](city.to)?
+- sure. how much emissions on a flight from [LA](city.from:Los Angeles) to [Sydney](city.to)?
 - I really don't care about CO2 emission because I travel less, only this time I require 2 flights
 - what if I have to fly
 - calculate
@@ -980,7 +980,7 @@
 - my grandparents are from texas so I'm heading there like every year
 - my husband and I take turns and this year we'll see my folks
 - my journey starts in [Moscow](city.from)
-- sure. I'll fly from [SF](city:San Francisco) to [madrid](city:Madrid)
+- sure. I'll fly from [SF](city.from:San Francisco) to [madrid](city.to:Madrid)
 - that'll be [business class](travel_flight_class:business)
 - this thanksgiving I'm going to my girlfriend's family
 - we always spend thanksgiving and christmas in oklahoma
@@ -1104,7 +1104,7 @@
 - [SF](city:San Francisco)
 - [taipei](city)
 - [kathmandu](city)
-- I'm going from [Boston](city.from) to [LA](city:Los Angeles)
+- I'm going from [Boston](city.from) to [LA](city.to:Los Angeles)
 - yes. i am flying from [Boston](city.from) to [New York](city.to) in [economy class](travel_flight_class:economy)
 - [Berlin](city.from) Tegal to [krakow](city.to)
 - What are my carbon emissions from [Berlin](city.from) to [Krakow](city.to)?
