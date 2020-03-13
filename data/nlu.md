@@ -235,7 +235,7 @@
 - Okey
 - Ya
 - Oh yeah
-- yes for [business](city) travel
+- yes for [business](travel_flight_class) travel
 - okay sound interesting
 - sound great
 - Thought so
@@ -282,7 +282,7 @@
 - estimates
 - my flight CO2
 - how much carbon will a one way flight from [new york](city.from) to california produce
-- Can I have the information on the flight to [New York](city)?
+- Can I have the information on the flight to [New York](city.to)?
 - Could you give me an estimate of my flight's emissions?
 - Can you tell me about the effects on the environment this flight will have?
 - Can I estimate my flight’s emissions?
@@ -315,20 +315,20 @@
 - How do I offset 100000 miles
 - calculate carbon
 - I want check co2
-- sure. how much emissions on a flight from [LA](city:Los Angeles) to [Sydney](city)?
+- sure. how much emissions on a flight from [LA](city:Los Angeles) to [Sydney](city.to)?
 - I really don't care about CO2 emission because I travel less, only this time I require 2 flights
 - what if I have to fly
 - calculate
 - How can I calculate it?
 - I want to calculate an offset
 - Give me a number
-- How much flight to [London](city)
+- How much flight to [London](city.to)
 - what is my offset
 - Carbon offset credit
 - How bad would a flight be?
 - Calculate my offsets
 - no I mean i want to calculate my emissions
-- how much carbon does a flight from [düsseldorf](city.from) to [new york](city) emit
+- how much carbon does a flight from [düsseldorf](city.from) to [new york](city.to) emit
 
 ## intent:buy_offsets
 - I wanna purchase
@@ -616,7 +616,7 @@
 - possibly
 - i guess
 - well, that is a very good question - I don't know
-- i don't know yet. If I visit my aunt, I'll fly to [Munich](city), but if I visit my other aunt, I'd fly to Johannisburg...
+- i don't know yet. If I visit my aunt, I'll fly to [Munich](city.to), but if I visit my other aunt, I'd fly to Johannisburg...
 - I haven't decided yet. Do you partner with airlines?
 - i dont know yet
 - i don't know yet
@@ -626,7 +626,7 @@
 - mostly
 - Is that a good idea ?
 - oh I'm not too sure if this is real or my friend sending me some funny thing but if this is real I didn't mean to send that
-- I have a connection to a mission project that serves communities hard hit by climate change.  I want to send the offset $ amount there.      AND the ICAO calculator estimate was !,375 for a round trip from [Seattle](city.from) International airport to [Cairo](city).   Why the huge discrepancy?
+- I have a connection to a mission project that serves communities hard hit by climate change.  I want to send the offset $ amount there.      AND the ICAO calculator estimate was !,375 for a round trip from [Seattle](city.from) International airport to [Cairo](city.to).   Why the huge discrepancy?
 - I HAVE NO IDEA
 - Hmmm i must think
 - i do not know
@@ -689,7 +689,7 @@
 - I need a donate but I'll do it when I get a little bit more head of money you have a good day
 - Oh Okay Then I'll be going
 - Unsubscribe
-- [Later](city)
+- Later
 - Get your business off my phone
 - Hang up
 - OK goodbye
@@ -792,23 +792,23 @@
 
 ## intent:inform
 - [NEW YORK](city)
-- I am going home to [Detroit](city)
+- I am going home to [Detroit](city.to)
 - I depart in [Berlin](city.from)
 - I fly with [economy class](travel_flight_class:economy)
 - I have relatives in michigan I will see them
-- I said I'm going to [Boston](city)
-- I'll be flying from [Berlin](city.from) to [San Francisco](city), taking the bus afterwards to Dunedin.
+- I said I'm going to [Boston](city.to)
+- I'll be flying from [Berlin](city.from) to [San Francisco](city.to), taking the bus afterwards to Dunedin.
 - I'll depart in [Berlin](city.from)
 - I'll fly [economy](travel_flight_class)
 - I'll fly [premium economy](travel_flight_class:premium)
 - I'll go and see my parents in Arizona
 - I'll take [premium economy](travel_flight_class:premium)
-- I'm going to [Berlin](city)
-- I'm heading to [Berlin](city)
-- I'm taking my family on a trip to [Las Vegas](city)
-- I'm traveling to [Boston](city)
-- My conference is in [Berlin](city), and I am flying in from [Stockholm](city.from)
-- My conference is in [New York](city), and I am coming from [San Francisco](city.from)
+- I'm going to [Berlin](city.to)
+- I'm heading to [Berlin](city.to)
+- I'm taking my family on a trip to [Las Vegas](city.to)
+- I'm traveling to [Boston](city.to)
+- My conference is in [Berlin](city.to), and I am flying in from [Stockholm](city.from)
+- My conference is in [New York](city.to), and I am coming from [San Francisco](city.from)
 - Texas
 - [AOA](iata)
 - [AOB](iata)
@@ -961,13 +961,13 @@
 - [Washington](city)
 - [Wichita](city)
 - [alberquerque](city) nm
-- [la](city.from:Los Angeles) to [boston](city)
+- [la](city.from:Los Angeles) to [boston](city.to)
 - always [first class](travel_flight_class:business) for me!
 - florida
 - for thanksgiving we always go to see family
 - get in to [SAD](iata)
-- going to [Houston](city) TX
-- going to [new york](city) to see family
+- going to [Houston](city.to) TX
+- going to [new york](city.to) to see family
 - gonna see my aunt and uncle in texas
 - hawaii
 - heading to [SFO](iata)
@@ -987,54 +987,54 @@
 - we take [economy class](travel_flight_class:economy)
 - 8 Rivers edge dr
 - [Mexico City](city)
-- [mexico](city) [city](city)
-- What would my carbon emissions be if I flew from [Philadelphia](city.from) airport to [YUL](iata) IN [MONTREAL](city)?
+- [mexico city](city)
+- What would my carbon emissions be if I flew from [Philadelphia](city.from) airport to [YUL](iata.to) IN [MONTREAL](city.to)?
 - [london](city)
 - united states
 - [business class](travel_flight_class:business)
-- what about a flight to [san](city) [francisco](city)
+- what about a flight to [san francisco](city.to)
 - [las vegas](city)
 - [NewYork](city)
 - [newyork](city)
-- for [Boston](city.from) to [NY](city)?
+- for [Boston](city.from) to [NY](city.to)?
 - [economy class](travel_flight_class:economy)
 - [NY](city)
-- I want to fly from [Boston](city.from) to [NY](city) in [economy class](travel_flight_class:economy)
+- I want to fly from [Boston](city.from) to [NY](city.to) in [economy class](travel_flight_class:economy)
 - [delhi](city:New Delhi)
-- I want to go from [boston](city.from) to [new york](city)
-- I would like to travel from [boston](city.from) to [new york](city)
+- I want to go from [boston](city.from) to [new york](city.to)
+- I would like to travel from [boston](city.from) to [new york](city.to)
 - fly from [BOSTON](city.from)
 - leave from [Chicago](city.from)
 - united states of america
 - [paris](city)
 - chicaco
 - i already said [Los Angeles](city)
-- I'm traveling to [CHICAGO](city)
-- ok, I’m going to [Los Angeles](city)
+- I'm traveling to [CHICAGO](city.to)
+- ok, I’m going to [Los Angeles](city.to)
 - I would like to depart from [Boston](city.from)
 - I want to leave from [Boston](city.from)
 - [CHICAGO](city)
 - [BOSTON](city)
 - I want to leave from [Boston](city.from).
-- [Boston](city.from) to [New York](city)
+- [Boston](city.from) to [New York](city.to)
 - I'm flying from [Boston](city.from).
 - Yes, [Economy Class](travel_flight_class).
-- Yes! I am planning to fly from [Boston](city.from) to [New York](city). I would like to fly [Economy Class](city:economy).
-- I'm flying from [Boston](city.from) to [New York](city) in [economy class](travel_flight_class:economy) on thanksgiving.  What is the environmental effects?
-- To [Seattle](city)
-- [boston](city.from) to [new york](city)
-- I will be flying to [NYC](city), NY
+- Yes! I am planning to fly from [Boston](city.from) to [New York](city.to). I would like to fly [Economy Class](city:economy).
+- I'm flying from [Boston](city.from) to [New York](city.to) in [economy class](travel_flight_class:economy) on thanksgiving.  What is the environmental effects?
+- To [Seattle](city.to)
+- [boston](city.from) to [new york](city.to)
+- I will be flying to [NYC](city.to), NY
 - I will be leaving from [Boston](city.from), MA
 - [773](number)[773](mention)
 - [New York](city).
-- I need an [economy class](travel_flight_class:economy) ticket from [boston](city.from) to [new york](city), please.
+- I need an [economy class](travel_flight_class:economy) ticket from [boston](city.from) to [new york](city.to), please.
 - yes, [economy class](travel_flight_class:economy)
-- tell me about carbon offsets from [boston](city.from) to [new york](city)
+- tell me about carbon offsets from [boston](city.from) to [new york](city.to)
 - [chicago](city)
-- going to [Vancouver](city) from [Pittsburgh](city.from)
+- going to [Vancouver](city.to) from [Pittsburgh](city.from)
 - [yvr](iata)
 - I'm flying [business](travel_flight_class) actually
-- i want to go from [san francisco](city.from) to [los angeles](city)
+- i want to go from [san francisco](city.from) to [los angeles](city.to)
 - Pittsurgh
 - [BOS](iata)
 - [SFO](iata)
@@ -1048,14 +1048,14 @@
 - what's my carbon use to fly from [sea](iata) to [sfo](iata)
 - [singapore](city)
 - [Beijing](city), as I said!
-- I'm flying from [TXL](iata.from) to [Beijing](city)
-- let's say I'm flying from [TXL](iata.from) to [beijing](city). How much does this emit?
+- I'm flying from [TXL](iata.from) to [Beijing](city.to)
+- let's say I'm flying from [TXL](iata.from) to [beijing](city.to). How much does this emit?
 - [BOSTON](city) damn it!
 - [SEATTLE](city)
 - [boston](city)
-- [Seattle](city). And from there to [Madrid](city)
-- ok, so I'll fly from [Seattle](city.from) to [Madrid](city)
-- Yes. I'll fly from [Seattle](city.from) to [Madrid](city)
+- [Seattle](city). And from there to [Madrid](city.to)
+- ok, so I'll fly from [Seattle](city.from) to [Madrid](city.to)
+- Yes. I'll fly from [Seattle](city.from) to [Madrid](city.to)
 - [New york](city)
 - [Hong Kong](city)
 - [Beijing](city)
@@ -1072,17 +1072,17 @@
 - no, [business class](travel_flight_class:business)
 - sure, I'll fly [business class](travel_flight_class) though
 - [LA](city)
-- Yes, I am flying from [Berlin](city.from) to [Detroit](city).
-- I am flying to [Detroit](city)
+- Yes, I am flying from [Berlin](city.from) to [Detroit](city.to).
+- I am flying to [Detroit](city.to)
 - Amsterda
-- I am flying from [Amsterdam](city.from) to [Detroit](city).
-- [Detroit](city), with layover in [Amsterdam](city)
+- I am flying from [Amsterdam](city.from) to [Detroit](city.to).
+- [Detroit](city.to), with layover in [Amsterdam](city)
 - Bad Tölz
-- Im flying from [San Francisco](city.from) to [Phoenix](city)
+- Im flying from [San Francisco](city.from) to [Phoenix](city.to)
 - [Munich](city)
-- How about [berlin](city.from) to [Munich](city)?
+- How about [berlin](city.from) to [Munich](city.to)?
 - I'll be flying from [Berlin](city.from)
-- to [Copenhagen](city)
+- to [Copenhagen](city.to)
 - [rome](city)
 - [moscow](city)
 - [detroit](city)
@@ -1095,38 +1095,38 @@
 - [Ontario](city)
 - [stockholm](city)
 - [Abu Dhabi](city)
-- I have a flight from [Berlin](city.from) to [Abu Dhabi](city)
+- I have a flight from [Berlin](city.from) to [Abu Dhabi](city.to)
 - I just need an [economy](travel_flight_class) ticket.
 - I am flying from [Boston](city.from).
 - [Dublin](city)
 - [vancouver](city)
-- i'm going to [new york](city)
+- i'm going to [new york](city.to)
 - [SF](city:San Francisco)
 - [taipei](city)
 - [kathmandu](city)
 - I'm going from [Boston](city.from) to [LA](city:Los Angeles)
-- yes. i am flying from [Boston](city.from) to [New York](city) in [economy class](travel_flight_class:economy)
-- [Berlin](city.from) Tegal to [krakow](city)
-- What are my carbon emissions from [Berlin](city.from) to [Krakow](city)?
-- Hello I would like to fly to [boston](city) to visit famil.y
+- yes. i am flying from [Boston](city.from) to [New York](city.to) in [economy class](travel_flight_class:economy)
+- [Berlin](city.from) Tegal to [krakow](city.to)
+- What are my carbon emissions from [Berlin](city.from) to [Krakow](city.to)?
+- Hello I would like to fly to [boston](city.to) to visit famil.y
 - Sao Paulo
 - [Rio de Janerio](city)
-- [Pittsburgh](city.from) to [Rio de Janerio](city)
-- [Pittsburgh](city.from) to [Dubai](city)
-- A flight from [Pittsburgh](city.from) to [Detroit](city)?
-- A flight from [Miami](city.from) to [Hong Kong](city)
-- What if I want to fly to [Miami](city)
+- [Pittsburgh](city.from) to [Rio de Janerio](city.to)
+- [Pittsburgh](city.from) to [Dubai](city.to)
+- A flight from [Pittsburgh](city.from) to [Detroit](city.to)?
+- A flight from [Miami](city.from) to [Hong Kong](city.to)
+- What if I want to fly to [Miami](city.to)
 - [Paris](city)
 - Probably the United States
 - [Toronto](city)
 - [san diego](city)
 - [new york](city) city
-- I'm flying from [Boston](city.from) to [New York](city).
-- Hello. I am flying from [Boston](city.from) to [New York](city) on Thanksgiving day at 1 p.m. and I would like to get information on about the carbon offsets of this flight.
+- I'm flying from [Boston](city.from) to [New York](city.to).
+- Hello. I am flying from [Boston](city.from) to [New York](city.to) on Thanksgiving day at 1 p.m. and I would like to get information on about the carbon offsets of this flight.
 - [New York](city) City
 - Yes, [Economy class](travel_flight_class:economy)
-- Yes, I am flying from [Boston](city.from) to [New York](city) and would like to understand the carbon offsets that I can take
-- yes from [Boston](city.from) to [New york](city)
+- Yes, I am flying from [Boston](city.from) to [New York](city.to) and would like to understand the carbon offsets that I can take
+- yes from [Boston](city.from) to [New york](city.to)
 - from [boston](city.from)
 - [Boston](city).
 - [denver](city)
@@ -1134,19 +1134,19 @@
 - [Los Angels](city)
 - [tampa](city)
 - albuquerqhi
-- what if I fly from [Paris](city.from) to [Seattle](city)
-- and from [Seattle](city.from) to [Dallas](city)?
+- what if I fly from [Paris](city.from) to [Seattle](city.to)
+- and from [Seattle](city.from) to [Dallas](city.to)?
 - yes I'm going from [Chicago](city.from) to [EWR](iata)
 - ok what about from [EWR](iata.from) back?
-- back to [Chicago](city)
-- what about a flight from [New York](city.from) to [Singapore](city)?
+- back to [Chicago](city.to)
+- what about a flight from [New York](city.from) to [Singapore](city.to)?
 - send location
 - [frankfurt](city), germany
 - [frankfurt](city) germanh
 - i'm flying from [seattle](city.from)
 - [fra](iata)
 - [frankfurt](city)
-- what is the carbon cost of flying from [seattle](city.from) to [frankfurt](city)?
+- what is the carbon cost of flying from [seattle](city.from) to [frankfurt](city.to)?
 - burlingron, VT (btv)
 - btv
 - BtV
@@ -1155,25 +1155,25 @@
 - destination vermont
 - [albuquerque](city)
 - albuquer
-- round trip flight [Santa Fe](city.from) nm to [Burlington](city) vt
+- round trip flight [Santa Fe](city.from) nm to [Burlington](city.to) vt
 - What if i'm in [first class](travel_flight_class:business)?
-- I want to fly to [NY](city)
-- Hi. I'm considering going to [New York](city) from [Boston](city.from) for the holidays. I'd be flying [economy class](travel_flight_class:economy). Can you tell me information concerning carbon offsets, please?
-- I would like a flight from [Fort Lauderdale](city.from) FL to [Aguadilla](city) PR.
+- I want to fly to [NY](city.to)
+- Hi. I'm considering going to [New York](city.to) from [Boston](city.from) for the holidays. I'd be flying [economy class](travel_flight_class:economy). Can you tell me information concerning carbon offsets, please?
+- I would like a flight from [Fort Lauderdale](city.from) FL to [Aguadilla](city.to) PR.
 - Yes, I will be traveling in [Economy Class](city:economy).
-- I'm sorry. I would like to travel to [New York](city) from [Boston](city.from).
+- I'm sorry. I would like to travel to [New York](city.to) from [Boston](city.from).
 - [Santa Fe](city.from) New Mexico to vermont
-- need to book a flight for christmas from [boston](city.from) to [new york](city), [economy class](travel_flight_class:economy) but i need to know about carbon offsets
-- Yes, I'd like information on a flight from [Boston](city.from) to [New York](city)
-- How about from [Boston](city.from) to [New York](city)?
+- need to book a flight for christmas from [boston](city.from) to [new york](city.to), [economy class](travel_flight_class:economy) but i need to know about carbon offsets
+- Yes, I'd like information on a flight from [Boston](city.from) to [New York](city.to)
+- How about from [Boston](city.from) to [New York](city.to)?
 - [Seattle](city).
 - [Palm Springs](city).
-- [NYC](city.from) to [LAX](iata)
+- [NYC](city.from) to [LAX](iata.to)
 - [Portland](city), Oregon
 - [Corvallis](city)
-- Yes, I will be flying from [Boston](city.from) to [New York](city) in [economy](travel_flight_class).
+- Yes, I will be flying from [Boston](city.from) to [New York](city.to) in [economy](travel_flight_class).
 - [NEw york](city)
-- I need a flight to [New York](city)
+- I need a flight to [New York](city.to)
 - [Buenos Aires](city)
 - [LHR](iata)
 - No.  [Business class](travel_flight_class:business).
@@ -1186,15 +1186,15 @@
 - yes, I'm flying from [Berlin](city.from) to Duesseldorf
 - [Vilnius](city)
 - As I said before, [Austin](city)
-- Oh cool but actually I'm flying to [Newark](city). Is it the same emissions?
+- Oh cool but actually I'm flying to [Newark](city.to). Is it the same emissions?
 - no [first class](travel_flight_class:business)
-- what about a flight from [Dubai](city.from) to [Singapore](city)
+- what about a flight from [Dubai](city.from) to [Singapore](city.to)
 - [London](city), Gatwick airport
 - [new delhi](city)
 - From [Hell](city)
 - [Delux Class](travel_flight_class:business) please
 - I'll be flying from [Seattle](city.from)
-- I'll be flying to [Frankfurt](city)
+- I'll be flying to [Frankfurt](city.to)
 - [Frankfurt](city). In Germany
 - I fly from [Seattle](city.from) to Europe twice a year
 - [Bari](city) palese
@@ -1206,7 +1206,7 @@
 - [Ahmedabad](city)
 - [Washington](city) dc
 - [ny](city)
-- from [London](city.from) to [Paris](city)
+- from [London](city.from) to [Paris](city.to)
 - [Pittsburgh](city), PA
 - [LCA](iata)
 - [Larnaca](city)
@@ -1214,31 +1214,31 @@
 - [Heraklion](city)
 - [heraklion](city)
 - [heathrow](iata) airport
-- from [New York](city.from) to [London](city)
-- from [Berlin](city.from) to [New York](city)
-- from [Berlin](city.from) to [London](city)
-- from [Paris](city.from) to [London](city)
+- from [New York](city.from) to [London](city.to)
+- from [Berlin](city.from) to [New York](city.to)
+- from [Berlin](city.from) to [London](city.to)
+- from [Paris](city.from) to [London](city.to)
 - [FCO](iata)
 - [Rome](city) [FCO](iata)
-- no I'll be flying from [Berlin](city.from) to [London](city)
-- from [Rome](city.from) to [London](city)
-- [Berlin](city.from) to [London](city)
-- to [Paris](city)
+- no I'll be flying from [Berlin](city.from) to [London](city.to)
+- from [Rome](city.from) to [London](city.to)
+- [Berlin](city.from) to [London](city.to)
+- to [Paris](city.to)
 - from [Bangalore](city.from)
-- to [Bangalore](city)
-- from [London](city.from) to [Sydney](city)
+- to [Bangalore](city.to)
+- from [London](city.from) to [Sydney](city.to)
 - From [FCO](iata)
 - From [FCI](iata)
-- From [Rome](city.from) to [London](city)
+- From [Rome](city.from) to [London](city.to)
 - [PIT](iata)
 - from [London](city.from)
-- to [London](city)
+- to [London](city.to)
 - from [Berlin](city.from)
 - From [Berlin](city.from)
 - from [Rome](city.from)
 - [Stuttgart](city)
 - from [LED](iata.from) to [PIT](iata.to)
-- From [Berlin](city.from) to [Pittsburgh](city)
+- From [Berlin](city.from) to [Pittsburgh](city.to)
 - From [London](city.from) to [SFO](iata)
 - [Aspen](city)
 - [LEF](iata)
@@ -1256,14 +1256,14 @@
 - [New York](city) City ([JFK](iata))
 - [JFK](iata)
 - How much for [New York](city) Sidney
-- I'm travelling from [New York](city.from) to [Sydney](city)
+- I'm travelling from [New York](city.from) to [Sydney](city.to)
 - [Bombay](city)
-- Rare from [Honolulu](city.from) airport to [Takes Hale](city) via
+- Rare from [Honolulu](city.from) airport to [Takes Hale](city.to) via
 - How about [first class](travel_flight_class:business)?
 - The same
 - [BOM](iata)
 - [bos](iata)
-- Yep how much is a flight from [berlin](city.from) to [new york](city)?
+- Yep how much is a flight from [berlin](city.from) to [new york](city.to)?
 - California
 - [Sydney](city), Australia
 - [Hanoi](city)
@@ -1273,7 +1273,7 @@
 - [Cleveland](city) Oklahoma
 - [mazatlan](city), Sinaloa, mexico
 - [mazatlan](city), mexico
-- Carbon emissions to fly from [Minneapolis](city.from) to [mazatlan](city)
+- Carbon emissions to fly from [Minneapolis](city.from) to [mazatlan](city.to)
 - [MTY](iata)
 - [Monterrey](city)
 - [First class](travel_flight_class:business)
@@ -1284,7 +1284,7 @@
 - [Milford](city) UT
 - [Pimpville](city) Ut
 - Shedang boi I'm [first class](travel_flight_class:business)
-- okay, i will fly to [New York](city) City
+- okay, i will fly to [New York](city.to) City
 - [tokyo](city)
 - [Milpitas](city)
 - [Milan](city)
@@ -1306,16 +1306,16 @@
 - From [Berlin](city.from) via [London](city)
 - From [New York](city.from)
 - From [Bangalore](city.from)
-- To [Bangalore](city)
-- [Sydney](city.from) to [London](city) [Singapore](city)
+- To [Bangalore](city.to)
+- [Sydney](city.from) to [London](city.to) [Singapore](city)
 - To [PIT](iata)
 - [sjc](iata)
 - To [SFO](iata)
-- To [London](city)
+- To [London](city.to)
 - From [Rome](city.from)
 - From [LED](iata) to [PIT](iata)
-- From [Berlin](city.from) to [SFO](iata) via [Singapore](city)
-- From [London](city.from) to [SFO](iata) via [Singapore](city)
+- From [Berlin](city.from) to [SFO](iata.to) via [Singapore](city)
+- From [London](city.from) to [SFO](iata.to) via [Singapore](city)
 - [Mine](city)
 - [Kiev](city), Ukraine
 - [Economy](travel_flight_class) class
@@ -1323,7 +1323,7 @@
 - Prg
 - Prag
 - The next class above [Economy](travel_flight_class).
-- Could you estimate for me the cost of offsets for a round-trip flight from [Cincinnati](city.from) ([CVG](iata))  to [Edinburg](city), Scotland.
+- Could you estimate for me the cost of offsets for a round-trip flight from [Cincinnati](city.from) ([CVG](iata))  to [Edinburg](city.to), Scotland.
 - Departure [NYC](city.from)
 - dellas
 - Vietnam
@@ -1333,7 +1333,7 @@
 - [Tak](city)
 - [Cebu](city) City
 - Metro [Manila](city)
-- [Medford](city.from),MA to [Nashua](city),NH
+- [Medford](city.from),MA to [Nashua](city.to),NH
 - [Mannathan](city)
 - [Ny](city)
 - Im flying To [NY](city)
@@ -1344,32 +1344,32 @@
 - [IAD](iata)
 - [los angeles](city)
 - kansas
-- no i would travel in [business](city) class
+- no i would travel in [business](travel_flight_class) class
 - [HRG](iata)
 - [hong kong](city)
 - min [Business](travel_flight_class) class
 - [Business](city)
 - [los angeles](city), ca
 - [Charlotte](city), nc
-- [Los Angeles](city.from), Ca to [charlotte](city), nc
-- [los Angeles](city.from) to [charlotte](city)
+- [Los Angeles](city.from), Ca to [charlotte](city.to), nc
+- [los Angeles](city.from) to [charlotte](city.to)
 - [charlotte](city)
-- what is the footprint from [lax](iata) to [clt](iata)?
+- what is the footprint from [lax](iata.from) to [clt](iata.to)?
 - [dallas](city)
-- as I said, [Boston](city.from) to [Rome](city) round trip
-- [Boston](city.from) to [Rome](city) round-trip
-- [chicago](city.from) ohare to [nashville](city)
-- [chicago](city.from) to [nashville](city) flight
-- flight from [chicago](city.from) to [nashville](city)
+- as I said, [Boston](city.from) to [Rome](city.to) round trip
+- [Boston](city.from) to [Rome](city.to) round-trip
+- [chicago](city.from) ohare to [nashville](city.to)
+- [chicago](city.from) to [nashville](city.to) flight
+- flight from [chicago](city.from) to [nashville](city.to)
 - Illinois
 - The [new york city](city)
 - [Nyc](city)
 - [Jfk](iata)
 - [Hyderabad](city), india
 - [Hyd](iata)
-- What about from [Paris](city.from) to [Berlin](city)?
-- What about [Paris](city.from) [Berlin](city)
-- I want to go from [Amsterdam](city.from) to [Paris](city).
+- What about from [Paris](city.from) to [Berlin](city.to)?
+- What about [Paris](city.from) [Berlin](city.to)
+- I want to go from [Amsterdam](city.from) to [Paris](city.to).
 - [Rome](city)
 - [Berlin](city) [SXF](iata)
 - [tunis](city) , tunisia
@@ -1383,15 +1383,15 @@
 - [Palestine](city)?
 - [Ben Gurion](iata) Airport
 - Israel
-- Right, and I'm flying from [Tel Aviv](city.from) to [NYC](city)
+- Right, and I'm flying from [Tel Aviv](city.from) to [NYC](city.to)
 - I don't know any other way to describe the city [Tel Aviv](city)
 - [Tel Aviv](city) Israel
 - [Knoxville](city)
 - [Funchal](city)
-- Flight to [Dubai](city)
+- Flight to [Dubai](city.to)
 - [Wien](city)
 - [Viena](city)
-- I want to fly from [Barcelona](city.from) to [Viena](city)
+- I want to fly from [Barcelona](city.from) to [Viena](city.to)
 - [Kyiv](city)
 - [Kiev](city)
 - [Santiago](city) de chile
@@ -1625,7 +1625,7 @@
 - how much would it cost?
 - how much does it cost
 - What will be the cost of carbon offsets ?
-- First of all - what is Al please?    I know the carbon emission estimate of a recent round-trip from [Seattle](city.from), WA  - USA to [Cairo](city), Egypt.  But how do I estimate the COST of the offset?
+- First of all - what is Al please?    I know the carbon emission estimate of a recent round-trip from [Seattle](city.from), WA  - USA to [Cairo](city.to), Egypt.  But how do I estimate the COST of the offset?
 - how much does a carbon offset cost?
 - How much would an offset cost?
 - so, how much do i have to pay
@@ -2116,10 +2116,10 @@
 ## intent:faq/other-calculation
 - can you calculate the footprint of all my flights for the year?
 - is it better if I drive?
-- How much gas does it take to get from [Tallahassee](city.from) Florida to [Oakland](city) California in a [2016](number) Kia soul
+- How much gas does it take to get from [Tallahassee](city.from) Florida to [Oakland](city.to) California in a [2016](number) Kia soul
 - How many trees need to be planted to off set [2200](number) miles of flying?
 - ok.  How many trees need to be planted to off set [2200](number) miles of flying?
-- What would be my yearly carbon emissions if I flew once a week to [Abu Dhabi](city) from [Berlin](city.from)
+- What would be my yearly carbon emissions if I flew once a week to [Abu Dhabi](city.to) from [Berlin](city.from)
 - mmmm, that is only for flights. I was hoping you could also help me out with car rides.
 - Would it be better if I went by car?
 - I want to know if my train trip is bad for the environment
@@ -2139,10 +2139,10 @@
 - what would be the aprox cost of a ride from [PDX](iata) to [RDM](iata)?
 - How much is an uber ride from tampa airport to the Magnuson Hotel in St. Pete's?
 - how many trees would one need to plant to offset the one years worth of carbon production?
-- Fare from airport to [Take Cos](city)
+- Fare from airport to [Take Cos](city.to)
 - how any gallons will i use to go from [Yerington](city.from) NV to Disney California adventure park to [LA](city:Los Angeles) NV
 - my dad often flies from London-Hong Kong-San Franscisco-New York-London. He probably does this trip 5x a year.
-- How much carbon emission is 30 flights a year from [London](city.from) to [New York](city)?
+- How much carbon emission is 30 flights a year from [London](city.from) to [New York](city.to)?
 - What if I go by car.
 - By train actually.
 
