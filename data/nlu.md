@@ -254,6 +254,7 @@
 - Yeah sounds good
 - oh yes
 - Yes pls
+- I will be
 
 ## intent:estimate_emissions
 - does it matter how long the flight is?
@@ -2561,6 +2562,8 @@
 - can you speak french ,
 - תל אביב
 - sprichst du deutsch?
+- Привет
+- нет
 
 ## intent:faq/vulgar
 - In the ass
@@ -2646,9 +2649,9 @@
 - So if I give you money its ok to destroy the climate, is that right
 
 ## synonym:1
-- one
-- first
 - a week
+- first
+- one
 
 ## synonym:2
 - second
@@ -2663,8 +2666,8 @@
 - borispol
 
 ## synonym:LAST
-- latter
 - last
+- latter
 
 ## synonym:LCY
 - London City
@@ -2690,34 +2693,34 @@
 - madrid
 
 ## synonym:New Delhi
-- Delhi
 - delhi
+- Delhi
 
 ## synonym:SXF
-- Schoenefeld
 - Schonefeld
+- Schoenefeld
 
 ## synonym:San Francisco
 - SF
 
 ## synonym:TRN
-- Caselle
 - torino caselle
+- Caselle
 
 ## synonym:TXL
 - Tegel
 
 ## synonym:business
-- First class
-- business class
 - Business class
-- first class
 - Delux Class
+- first class
+- business class
+- First class
 
 ## synonym:economy
-- Economy Class
-- Economy class
 - economy class
+- Economy class
+- Economy Class
 
 ## synonym:premium
 - premium economy
