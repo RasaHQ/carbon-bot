@@ -2199,6 +2199,7 @@
 - Could you help with alternative carbon neutral options?
 - would you like to know more about my route?
 - What data will be collected from me?
+- This is Ty
 
 ## intent:faq/more-details-process
 - How do I buy offsets?
@@ -2644,9 +2645,9 @@
 - So if I give you money its ok to destroy the climate, is that right
 
 ## synonym:1
-- one
-- first
 - a week
+- first
+- one
 
 ## synonym:2
 - second
@@ -2661,8 +2662,8 @@
 - borispol
 
 ## synonym:LAST
-- latter
 - last
+- latter
 
 ## synonym:LCY
 - London City
@@ -2688,34 +2689,34 @@
 - madrid
 
 ## synonym:New Delhi
-- Delhi
 - delhi
+- Delhi
 
 ## synonym:SXF
-- Schoenefeld
 - Schonefeld
+- Schoenefeld
 
 ## synonym:San Francisco
 - SF
 
 ## synonym:TRN
-- Caselle
 - torino caselle
+- Caselle
 
 ## synonym:TXL
 - Tegel
 
 ## synonym:business
-- First class
-- business class
 - Business class
-- first class
 - Delux Class
+- first class
+- business class
+- First class
 
 ## synonym:economy
-- Economy Class
-- Economy class
 - economy class
+- Economy class
+- Economy Class
 
 ## synonym:premium
 - premium economy
