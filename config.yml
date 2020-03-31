@@ -15,7 +15,8 @@ pipeline:
   number_of_transformer_layers: 0
   epochs: 30
 - name: ResponseSelector
-  epochs: 200
+  epochs: 50
+  weight_sparsity: 0
 policies:
 - name: MemoizationPolicy
 - name: EmbeddingPolicy
