@@ -122,7 +122,7 @@ slots:
     - unknown
   travel_flight_km:
     type: text
-templates:
+responses:
   utter_SCENARIOCHECK:
   - buttons:
     - payload: '/SCENARIO{"context_scenario": "holiday", "holiday_name": "christmas"}'
