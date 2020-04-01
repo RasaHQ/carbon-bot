@@ -1323,7 +1323,7 @@
 - Prg
 - Prag
 - The next class above [Economy](travel_flight_class).
-- Could you estimate for me the cost of offsets for a round-trip flight from [Cincinnati]{"entity": "city.from) ([CVG]{"entity": "iata", "role"", "value": " "from"}"}  to [Edinburg]{"entity": "city", "role": "to"}, Scotland.
+- Could you estimate for me the cost of offsets for a round-trip flight from [Cincinnati]{"entity": "city.from"} ([CVG]{"entity": "iata", "role": "from"})  to [Edinburg]{"entity": "city", "role": "to", "value": "Edinburgh"}, Scotland.
 - Departure [NYC]{"entity": "city", "role": "from"}
 - dellas
 - Vietnam
@@ -1796,17 +1796,17 @@
 - why would i be interested in that?
 - I don't see the point from this
 - Yes, so why is one greater than the other?
-- Why does [business class](travel_flight_class:business) emit more CO2 than [economy class]{"entity": "travel_flight_class", "value": "economy"}?
-- But why does [business class](travel_flight_class:business) emit more CO2 than [economy class]{"entity": "travel_flight_class", "value": "economy"}?
-- How much CO2 would I be emitting if I travelled via [business class]{"entity": "travel_flight_class", "value": "business"} instead?  Isn't it the same airplane?
+- Why does [business](travel_flight_class) class emit more CO2 than [economy](travel_flight_class) class?
+- But why does [business](travel_flight_class) class emit more CO2 than [economy](travel_flight_class) class?
+- How much CO2 would I be emitting if I travelled via [business](travel_flight_class) class instead?  Isn't it the same airplane?
 - why would i want to purchase offsets if i'm not flying
 - why you are not sure?
 - is it really important
 - tell me more here
 - Why?
 - Why does it matter?
-- What's the difference between flying [economy class](travel_flight_class:economy) or [business class]{"entity": "travel_flight_class", "value": "business"}?
-- Does it matter if I fly economy or not?
+- What's the difference between flying [economy](travel_flight_class) class or [business](travel_flight_class) class?
+- Does it matter if I fly [economy](travel_flight_class) or not?
 - Didn’t get that
 
 ## intent:SCENARIO
