@@ -1,21 +1,20 @@
 language: en
 pipeline:
 - name: ConveRTTokenizer  
-- name: RegexFeaturizer
-- name: CRFEntityExtractor
-- name: EntitySynonymMapper
 - name: ConveRTFeaturizer
 - name: DIETClassifier
   hidden_layers_sizes:
-    text: [256, 128]
+    text: [30, 30]
     label: []
   intent_classification: True
-  entity_recognition: False
+  entity_recognition: True
   use_masked_language_model: False
   BILOU_flag: False
-  number_of_transformer_layers: 0
+  number_of_transformer_layers: 1
+  epochs: 20
+- name: EntitySynonymMapper  
 - name: ResponseSelector
-  epochs: 200
+  epochs: 50
 policies:
 - name: MemoizationPolicy
 - name: EmbeddingPolicy
