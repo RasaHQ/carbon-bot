@@ -7,6 +7,7 @@ pipeline:
 - name: DIETClassifier
   BILOU_flag: False
   epochs: 50
+  batch_size: 64
 - name: ResponseSelector
   epochs: 200
 policies:
