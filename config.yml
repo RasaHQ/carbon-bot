@@ -10,6 +10,7 @@ pipeline:
   batch_size: 64
 - name: ResponseSelector
   epochs: 200
+  scale_loss: False
 policies:
 - name: MemoizationPolicy
 - name: EmbeddingPolicy
