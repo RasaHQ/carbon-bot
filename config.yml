@@ -1,16 +1,25 @@
 language: en
 pipeline:
-- name: ConveRTTokenizer  
+# - name: ConveRTTokenizer
+- name: HFTransformersNLP
+  model_name: "bert"
+  model_weights: "bert-base-multilingual-cased"
+- name: LanguageModelTokenizer
 - name: RegexFeaturizer
 - name: EntitySynonymMapper
-- name: ConveRTFeaturizer
+# - name: ConveRTFeaturizer
+- name: LanguageModelFeaturizer
+# - name: EmbeddingIntentClassifier
+#   epochs: 200
+#   scale_loss: False
 - name: DIETClassifier
   BILOU_flag: False
   epochs: 50
   batch_size: 64
-- name: ResponseSelector
-  epochs: 200
-  scale_loss: False
+  entity_recognition: False
+# - name: ResponseSelector
+#   epochs: 200
+#   scale_loss: False
 policies:
 - name: MemoizationPolicy
 - name: EmbeddingPolicy

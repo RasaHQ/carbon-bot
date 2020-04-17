@@ -1,0 +1,440 @@
+## intent:affirm
+- Sí
+- por supuesto
+- Sí por favor me proporcione una estimación
+- Sí, en realidad
+- Suena bien.
+- cierto :)
+- interesado
+- Bueno
+- sigue adelante
+- ok estoy tengo
+- _SI_!
+- Voy a estar volando barato
+- si perfecto
+- Sí que sea greaz
+- Suena bien para mi
+- bien, vamos a hacer eso!
+- ¡Si!
+- Si. Eso estaría bien.
+- Como he dicho, sí
+- Yeah Yo supongo
+- bien vale
+- Totalmente
+- suena bien. Gracias
+- Sí, lo haría. gracias
+- ¿Si, Por qué no?
+- Me gustaría tener una estimación más precisa
+- ¡Absolutamente!
+- Sí, dígame en detalle
+- ¡sí, por supuesto!
+- Por qué no
+- Ok, vamos a hacer eso.
+- Eso suena genial.
+- ok, entonces sí vamos a hacerlo!
+- sí que es cierto
+- suena genial
+- hazlo
+- mmm si
+- ES
+- Si, seguro
+- si seguro
+- YESSS
+- si, eso suena bien
+- sí por favor
+- sí lo haré
+- Oh si
+- doke OKI
+- Si está interesado
+- aite
+- seguro
+- Creo que sí
+- def
+
+## intent:estimate_emissions
+- ¿Puedo estimar las emisiones de mi vuelo?
+- ¿y si tengo que volar
+- la cantidad de CO2 que el uso?
+- ¿Cómo puedo calcularlo?
+- dime acerca de mis vuelos compensar las emisiones
+- co2
+- ¿Cómo puedo Offset 100000 millas
+- mi vuelo de CO2
+- Calcular carbono
+- por qué es importante el tiempo que el vuelo es?
+- cálculo gas de efecto invernadero
+- Claro, pero se puede calcular por mí? Tengo otro vuelo.
+- ¿qué pasa con las compensaciones
+- otro viaje
+- ¿cuánto mi vuelo emiten exactamente?
+
+## intent:buy_offsets
+- Comprar compensado
+- ok quiero comprar algunos
+- ok así que puedo comprar compensaciones?
+- de lo mucho que se puede comprar
+- compensaciones de compra
+- cómo comprar compensaciones
+- Quiero por ella
+
+## intent:deny
+- no, no en este momento. ¡Gracias!
+- ¡no, gracias!
+- No no no. Sólo dije que no quiero hacer nada más.
+- Probablemente no
+- eso no es una pregunta
+- no, gracias
+- no quieren
+- no, no lo hará
+- No, soy demasiado sofisticado para que
+- No está pagando por eso!
+- de ninguna manera
+- nah
+- No, gracias
+- No quiero comprar compensaciones
+
+## intent:deny_flying
+- no, yo no voy a ninguna parte de acción de gracias
+- no va a ver a la familia este año
+- Me voy a quedar en Portland
+- no, no estoy volando
+- no va a ninguna parte
+- Como ya he dicho, no vuelo en absoluto. Me gustaría que los hipócritas liberal que dicen que se preocupan por nuestro planeta no sería volar en sus aviones privados. Eso sería enorme
+
+## intent:express_negative-emo
+- no eres agradable
+- :(
+- usted es tonto
+- : /
+- usted no era útil
+
+## intent:express_positive-emo
+- Coolio
+- De nada
+- bien. Gracias, entonces. ¡Buena suerte!
+- ¡Muy fresco!
+- Feliz año nuevo
+- prosperar
+- eso ya no es tan malo!
+- Eso es ordenada.
+- Muy genial. Yo lo comprobaré.
+- que tengas un buen día
+
+## intent:express_surprise
+- ¡interesante!
+- Me parece difícil de creer
+- Oh, eso es donde su nombre proviene de! Pensé que se construyeron a partir de carbono.
+- Guau
+- Yo no lo creo
+- Eso es mucho.
+- No te creo
+- woah!
+- ¿es realmente cierto?
+
+## intent:express_uncertainty
+- sorta
+- Soy escéptico de que realmente puede trabajar
+- así, es una muy buena pregunta - No sé
+- Hmmm tengo que pensar
+- uh
+- más o menos
+- errar
+- No sé todavía
+- quizás
+
+## intent:farewell
+- de acuerdo entonces. gracias y adiós
+- adiós
+- vete
+- OK, Adios
+- Más tarde
+- Colgar
+- ¡Adiós!
+- Os vivo noche capó
+- ¡dormir!
+- fin
+- Adiós
+- Adiós.
+
+## intent:greet
+- heyo
+- Hai
+- hiyy
+- Hola. /acción de gracias
+- Hola
+- Hola mi nombre es Eric
+- Hoi
+- Buenos días
+- hola de carbono
+- Hola, y feliz de Acción de Gracias.
+- ¿Hola?
+- Hola robot! V
+
+## intent:how_calculated
+- ¿Cómo se consiguen calculan las emisiones de vuelo?
+- ¿cómo se calcula eso?
+- ¿cómo se consigue esa respuesta?
+- ¿de dónde sacaste ese número de
+- ¿Cómo se consiguen calculan las emisiones?
+- ¿Cómo se te ocurrió con eso?
+
+## intent:inform
+- Kiev
+- De Nueva York
+- Chicago
+- los Angeles
+- Nueva York
+- Los Ángeles, California
+- a Copenhague
+- Aberdeen
+- San Diego
+- clase de negocios
+- Primera clase
+- San Jose
+- Abbotsford
+- Los Angeles
+- Berlina
+- Medford, MA a Nashua, NH
+- mi vuelo se inicia en Moscú
+- JFK
+- Chicago O'Hare a Nashville
+- Auckland
+- PKG
+- Little Rock AR
+- Voy a estar volando desde Seattle
+- Estoy yendo a Berlín
+- Voy a volar desde Seattle
+- ¿Palestina?
+- Düsseldorf
+- NYC a LAX
+- ¿qué pasa con un vuelo de Dubai a Singapur
+- PNK
+- No sé de ninguna otra manera de describir la ciudad de Tel Aviv
+- Cleveland
+- Vantaa
+- Roma
+- Londres Heathrow
+- Anchorage, Alaska
+- volar de Boston
+- Clase de economia
+- BOS
+- Michigan
+- Chula Vista
+- Quiero volar de Boston a Nueva York en clase económica
+- Santiago de chile
+- Nueva Orleans
+- Heraklion
+- OFS
+- Wien
+- Colón
+- Texas
+- a Seattle
+- Reno
+- Estoy volando de Boston a Nueva York.
+- Frankfurt
+- BtV
+- Anaheim
+- Sí, estoy volando de Berlín a Detroit.
+- BOM
+- Me gustaría viajar de Boston a Nueva York
+- Israel
+- Nashville
+- Estoy volando de Boston.
+- San Petersburgo
+- quiero ir desde San Francisco a Los Angeles
+- ciudad Cebu
+- Oakland
+- A Londres
+- De Londres a SFO
+- Anchorage, AK
+- Como he dicho antes, Austin
+- Wichita
+- Estoy viajando a Boston
+- Desde Roma a Londres
+- Bogotá
+- Vancouver
+- de Berlín a Nueva York
+- Munich
+- Quiero dejar de Boston.
+- SEATTLE
+- deje de Chicago
+- Anclaje
+- Estoy viajando a Chicago
+- DFW
+- Ámsterdam
+- Mi conferencia se encuentra en Berlín, y yo estoy volando desde Estocolmo
+- Roma FCO
+- PRGF
+- ¿Cuáles serían mis emisiones de carbono si se volaba desde el aeropuerto de Filadelfia a YUL en Montreal?
+- a SFO
+- Polonia
+- mi marido y yo se turnan y este año vamos a ver a mis padres
+- bien qué pasa de vuelta EWR?
+- LEF
+- sin primera clase
+- STL
+- mi hermano y sus hijos están viniendo a verme
+- Clase de negocios
+- desde Nueva York a Londres
+- Aurora
+- Albuquerque nM
+- Frankfurt, Alemania
+- RDU
+- Delhi
+- Hola me gustaría volar a Boston para visitar la familia
+- Estados Unidos de America
+- probablemente Leipzig
+- salida NYC
+- jfk
+- Berlín Schoenefeld
+- Milpitas
+- Túnez
+- cualquier otro negocio
+- de Roma a Londres
+- Londres, Gatwick
+- fra
+- Boston a Nueva York
+- Sí, voy a viajar en Clase Turista.
+- Voy a volar economía
+- No estoy de salir en primera clase
+- Sevilla
+
+## intent:inquire-ask_clarification
+- De Verdad
+- lo que está disponible?
+- ¿Cuál es Rasa?
+- ¿cuáles son las compensaciones de carbono
+- ?
+- ¿Como que?
+- ¿cómo?
+- Su joking..right?
+
+## intent:faq
+- ¿En qué proyectos reciben las donaciones
+- Ok, enfermedad consigue proyecto 697
+- ¿Los volcanes hacen
+- ¿Por qué la empresa no pagar por las compensaciones?
+- ¿Dónde compensar dinero?
+- wtf
+- ¿Qué hay de que una presa hidráulica
+- Un efecto secundario feliz para mí sería tener las aerolíneas compran compensaciones y pago retroactivo de todo el daño causado pasado y presente
+- ninguno de su negocio zorra
+- ¿Cuáles serían mis emisiones de carbono anuales si volé una vez por semana a Abu Dhabi desde Berlín
+- ¡Excelente! ¿Qué es el clima en Berlín?
+- quién recibe el dinero?
+- lo que produce CO2?
+- fas
+- así, ¿cuánto tengo que pagar
+- wassup
+- ¿cómo selecciono uno
+- Cómo hacer compensaciones de trabajo
+- Así que vamos a ver si lo entiendo. Si cree que el cambio climático perorata, puede comprar su camino fuera de su hipocresía para volar en los contenedores de carbono pedos por llenar los bolsillos de los corruptos de la ONU para los "créditos"? ¿Seriamente? Las personas realmente creen esta basura?
+- ¿Eres un bot?
+- Yo mama hizo
+- ¿Me puede obtener la información de vuelo específica?
+- Quiero saber el nombre del vuelo?
+- Qué estás haciendo
+- Dime lo que puede hacer
+- lo que es una estafa gigantesca esto es
+- Me quieres
+- ¿es mejor si manejo?
+- ¿Es usted un robot rasa?
+- Dame un ejemplo.
+- ¿Puede decirle que a volar aquí para satisfacer por favor
+- Puedes hablar francés ,
+- ¿Cual es el precio?
+- Algo más ?
+- Estaré esperando
+- ¿Hay otras alternativas?
+- bien, que la investigación en equipo?
+- sucia puta escoria
+- Cual es tu edad
+- ¿Sabía usted que?
+- Marietta Ohio i Shane media de cuatro paraguas conmigo por favor
+- siguiente
+- ¿Qué porcentaje de los viajeros hacen de esta compra?
+- hay demasiados vuelos
+- ¿Cómo funciona el programa de sostenerse a sí mismo?
+- ¿Cuál es el precio?
+- entonces
+- ¿Quieres rasca mi pene?
+- ¿Cuáles son las fuentes más importantes de emisiones de gases de efecto invernadero?
+- Costo
+- puedo confiar en este sitio web?
+- si o no
+- ¿Cuántos árboles necesitan ser plantadas en off establecidos 2200 millas de vuelo?
+- ¿Cómo puedo reducir las emisiones de CO2?
+- ¿Qué es eso me va a costar?
+- ¿Cuál es el presupuesto total?
+- ¿Qué pasa si tengo que volar para el trabajo?
+- le gustaría saber más acerca de mi ruta?
+- ¿Cuál es tu nombre?
+- Okay. Cuánto costaría eso?
+- Entonces esto es de fiar?
+- Estoy harto de nuestra relación que no me trata de chicas derecha
+- Tiene que haber una trampa
+- Granja eólica
+- A dónde va el dinero
+- que es esto
+- Bernie Sanders v \ comunista nCocksuckers
+- ¿Puedo dar feedback?
+- El mundo subterráneo de la película complacerlo volar aquí
+- Soy lo borracho sobre U
+- tu apestas
+- Humm
+- ¿Su papá todavía jódete
+- Usted sabe que el calentamiento global es una mierda derecha
+- Lo que sea. Es ridículo.
+- más detalles acerca de las compensaciones de carbono para mi vuelo?
+- Ve el culo de distancia de la cogida
+- Sí pero la Navidad es ya hecha
+- ¿Qué pasa?
+- Hola me miranda su amor me crucero tom puede hacer que suceda
+- Hola. ¿Usted sabe sobre el cambio climático?
+- Puedes por favor decirle que lo amo tanto
+- Sod off pantanosa.
+- lo que haría que para mí>?
+- Mi nombre es González de Andre
+- ¿Qué tanto los costes compensaciones?
+- quiero amarte
+- ¿qué vas a hacer con estos datos?
+- ¿Dónde va el dinero para la compensación de carbono?
+- Pero no tengo suficiente dinero para comprar compensaciones
+- ¿Cuánto sería un costo de compensación?
+- ¿Qué es el cambio climático?
+- Estoy esperando con impaciencia a que el calentamiento global a patada en.
+- ¿Cuáles son las emisiones de gases de efecto invernadero?
+- Ha ido cambiando durante millones de años debido a los cambios de la Tierra sobre su eje, mientras que girando en el espacio. Las cosas van a cambiar de forma natural, por eso Ohio fue un glaciar hace un millón de años y pueden encontrar fósiles de agua salada en mi patio trasero en Ga medio.
+- buscando el precio de compensación de carbono
+- Nunca he estado en una pelea
+- ¿y si tengo que poner sobre
+- ninguna prueba de que funciona?
+- ¿Puedo indicar la razón por la que estoy comprando RCE en el certificado?
+- Las compensaciones de carbono no afectarán el clima!
+- Estúpido
+- Fuera de mi teléfono que torcida idiotas de mierda
+- ¿En qué proyectos están disponibles
+- Hazme café
+- ¿Necesita un paseo de 75 Beekman St Plattsburgh NY a
+- así que dime más acerca de este proyecto de investigación
+- quien lo patrocinó?
+- No veo el punto
+- ¿Cómo puedo ayudar?
+- tienes más información?
+- Cuando pedo
+- conectando
+- jódete
+- ¿Quién tiene mi dinero vaya a?
+- Me gustaría saber qué puedo hacer para reducir mi huella de carbono.
+- Soo
+- No, sólo quería decirle a permanecer a la mierda mi feed de mierda ignorante. El cambio climático es un engaño, y su sugerencia de que puedo comprar algo para compensar mi uso de combustibles fósiles demuestra. Coma la mierda y DIE !!!!
+- quién eres tú
+- ¿estás bien?
+- De todas formas vas a tener que enviar a hablar conmigo por teléfono Roy porque no tengo tiempo para estas pequeñas cosas broma que estoy tomando esto de mi teléfono está tomando demasiado espacio
+- Quiero pagar el dinero de PayPal
+- Ceran de Monte Claro de ejecución de la Actividad río Hidroeléctrica Proyecto MDL de plantas
+- nada bien otro sitio?
+- ¿Me puede dar un enlace, por lo que puedo compartir?
+- cuál es tu nombre
+- que construyó esto?
+- ¿Qué diablos - Voy a dar el doble del crédito por la mitad del precio!
