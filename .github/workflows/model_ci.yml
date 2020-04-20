@@ -37,7 +37,7 @@ jobs:
 
     - name: Run Through Test Stories
       run: |
-        rasa test --stories test_stories/stories.md --fail-on-prediction-errors
+        rasa test core --stories test_stories/stories.md --fail-on-prediction-errors
 
     # - name: Cross-validate NLU model
     #   run: |
