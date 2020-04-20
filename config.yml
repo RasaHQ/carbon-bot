@@ -1,24 +1,16 @@
 language: en
 pipeline:
-- name: WhitespaceTokenizer
-  intent_split_symbol: _
+- name: ConveRTTokenizer  
 - name: RegexFeaturizer
-- name: CRFEntityExtractor
 - name: EntitySynonymMapper
-- name: CountVectorsFeaturizer
-  analyzer: word
-  min_ngram: 1
-  max_ngram: 1
-- name: CountVectorsFeaturizer
-  analyzer: char_wb
-  min_ngram: 1
-  max_ngram: 4
 - name: ConveRTFeaturizer
-- name: EmbeddingIntentClassifier
-  epochs: 151
-  embed_dim: 20
+- name: DIETClassifier
+  BILOU_flag: False
+  epochs: 50
+  batch_size: 64
 - name: ResponseSelector
-  epochs: 100
+  epochs: 200
+  scale_loss: False
 policies:
 - name: MemoizationPolicy
 - name: EmbeddingPolicy
