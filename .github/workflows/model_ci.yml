@@ -39,10 +39,36 @@ jobs:
       run: |
         rasa test core --stories test_stories/stories.md --fail-on-prediction-errors
 
-    # - name: Cross-validate NLU model
-    #   run: |
-    #     rasa test nlu -f 5 --cross-validation
-    #     python format_results.py
+    - name: Cross-validate NLU model
+      run: |
+        rasa test nlu -f 2 --cross-validation # TODO: Change folds to back to 5
+        python format_results.py
+
+    - name: Upload Cross Validation Results
+      uses: actions/upload-artifact@master
+      with:
+        name: cross-validation-result
+        path: results.md
+
+    - name: Upload model
+      # if: env.IS_MASTER_BRANCH == 'true'
+      uses: actions/upload-artifact@master
+      with:
+        name: model
+        path: models
+
+  share_cross_validation_result:
+    # Separate job to avoid expired GitHub token
+    name: Share cross validation results
+    runs-on: ubuntu-latest
+    needs: [build-model]
+
+    steps:
+    - name: Download Cross Validation Results
+      uses: actions/download-artifact@master
+      with:
+        name: cross-validation-result
+        path: results.md
 
     - name: post cross-val results to PR
       uses: amn41/comment-on-pr@comment-file-contents
@@ -51,13 +77,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         msg: results.md
-
-    - name: Upload model
-      # if: env.IS_MASTER_BRANCH == 'true'
-      uses: actions/upload-artifact@master
-      with:
-        name: model
-        path: models
 
   build-images:
     name: Build and Push Images
