@@ -616,7 +616,7 @@
 - possibly
 - i guess
 - well, that is a very good question - I don't know
-- i don't know yet. If I visit my aunt, I'll fly to [Munich]{"entity": "city", "role": "to"}, but if I visit my other aunt, I'd fly to Johannisburg...
+- i don't know yet. If I visit my aunt, I'll fly to [Munich]{"entity": "city", "role": "to"}, but if I visit my other aunt, I'd fly to [Johannisburg]{"entity": "city", "role": "to"}...
 - I haven't decided yet. Do you partner with airlines?
 - i dont know yet
 - i don't know yet
@@ -797,7 +797,7 @@
 - I fly with [economy class]{"entity": "travel_flight_class", "value": "economy"}
 - I have relatives in michigan I will see them
 - I said I'm going to [Boston]{"entity": "city", "role": "to"}
-- I'll be flying from [Berlin]{"entity": "city", "role": "from"} to [San Francisco]{"entity": "city", "role": "to"}, taking the bus afterwards to Dunedin.
+- I'll be flying from [Berlin]{"entity": "city", "role": "from"} to [San Francisco]{"entity": "city", "role": "to"}, taking the bus afterwards to [Dunedin]{"entity": "city", "role": "to"}.
 - I'll depart in [Berlin]{"entity": "city", "role": "from"}
 - I'll fly [economy](travel_flight_class)
 - I'll fly [premium economy]{"entity": "travel_flight_class", "value": "premium"}
@@ -892,10 +892,10 @@
 - [London](city)
 - [London](city) [Heathrow]{"entity": "iata", "value": "LHR"}
 - [Heathrow]{"entity": "iata", "value": "LHR"}
-- to [Heathrow]{"entity": "iata", "value": "LHR"}
+- to [Heathrow]{"entity": "iata", "value": "LHR", "role": "to"}
 - [London](city) [Gatwick]{"entity": "iata", "value": "LGW"}
 - [Gatwick]{"entity": "iata", "value": "LGW"}
-- to [Gatwick]{"entity": "iata", "value": "LGW"}
+- to [Gatwick]{"entity": "iata", "value": "LGW", "role": "to"}
 - [London City]{"entity": "iata", "value": "LCY"}
 - [Berlin](city) [Schonefeld]{"entity": "iata", "value": "SXF"}
 - [Berlin](city) [Schoenefeld]{"entity": "iata", "value": "SXF"}
@@ -1109,7 +1109,7 @@
 - [Berlin]{"entity": "city", "role": "from"} Tegal to [krakow]{"entity": "city", "role": "to"}
 - What are my carbon emissions from [Berlin]{"entity": "city", "role": "from"} to [Krakow]{"entity": "city", "role": "to"}?
 - Hello I would like to fly to [boston]{"entity": "city", "role": "to"} to visit famil.y
-- Sao Paulo
+- [Sao Paulo](city)
 - [Rio de Janerio](city)
 - [Pittsburgh]{"entity": "city", "role": "from"} to [Rio de Janerio]{"entity": "city", "role": "to"}
 - [Pittsburgh]{"entity": "city", "role": "from"} to [Dubai]{"entity": "city", "role": "to"}
@@ -1162,7 +1162,7 @@
 - I would like a flight from [Fort Lauderdale]{"entity": "city", "role": "from"} FL to [Aguadilla]{"entity": "city", "role": "to"} PR.
 - Yes, I will be traveling in [Economy Class]{"entity": "city", "value": "economy"}.
 - I'm sorry. I would like to travel to [New York]{"entity": "city", "role": "to"} from [Boston]{"entity": "city", "role": "from"}.
-- [Santa Fe]{"entity": "city", "role": "from"} New Mexico to vermont
+- [Santa Fe]{"entity": "city", "role": "from"} New Mexico to [vermont]{"entity": "city", "role": "to"}
 - need to book a flight for christmas from [boston]{"entity": "city", "role": "from"} to [new york]{"entity": "city", "role": "to"}, [economy class]{"entity": "travel_flight_class", "value": "economy"} but i need to know about carbon offsets
 - Yes, I'd like information on a flight from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}
 - How about from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}?
@@ -1178,7 +1178,7 @@
 - [LHR](iata)
 - No.  [Business class]{"entity": "travel_flight_class", "value": "business"}.
 - [RDU](iata)
-- Gatwick
+- [Gatwick]{"entity": "iata", "value": "LGW"}
 - ah, no I'll fly from [seattle]{"entity": "city", "role": "from"}
 - [Raleigh](city) NC
 - [Kaunas](city)
@@ -1189,9 +1189,9 @@
 - Oh cool but actually I'm flying to [Newark]{"entity": "city", "role": "to"}. Is it the same emissions?
 - no [first class]{"entity": "travel_flight_class", "value": "business"}
 - what about a flight from [Dubai]{"entity": "city", "role": "from"} to [Singapore]{"entity": "city", "role": "to"}
-- [London](city), Gatwick airport
+- [London](city), [Gatwick]{"entity": "iata", "value": "LGW"} airport
 - [new delhi](city)
-- From [Hell](city)
+- From [Hell]{"entity": "city", "role": "from"}
 - [Delux Class]{"entity": "travel_flight_class", "value": "business"} please
 - I'll be flying from [Seattle]{"entity": "city", "role": "from"}
 - I'll be flying to [Frankfurt]{"entity": "city", "role": "to"}
@@ -1227,8 +1227,8 @@
 - from [Bangalore]{"entity": "city", "role": "from"}
 - to [Bangalore]{"entity": "city", "role": "to"}
 - from [London]{"entity": "city", "role": "from"} to [Sydney]{"entity": "city", "role": "to"}
-- From [FCO](iata)
-- From [FCI](iata)
+- From [FCO]{"entity": "iata", "role": "from"}
+- From [FCI]{"entity": "iata", "role": "from"}
 - From [Rome]{"entity": "city", "role": "from"} to [London]{"entity": "city", "role": "to"}
 - [PIT](iata)
 - from [London]{"entity": "city", "role": "from"}
@@ -1248,7 +1248,7 @@
 - [Stockholm](city)
 - [Kbp](iata)
 - [Kiev](city), [borispol]{"entity": "iata", "value": "KBP"}
-- [London](city), [gatwick](iata)
+- [London](city), [gatwick]{"entity": "iata", "value": "LGW"}
 - china
 - sl
 - Oh Darling lets you and me having fun together ❤ I love 💘 you
@@ -1267,8 +1267,8 @@
 - California
 - [Sydney](city), Australia
 - [Hanoi](city)
-- Maybe to [Romę](city)
-- Maybe to [oslo](city)
+- Maybe to [Romę]{"entity": "city", "role": "to"}
+- Maybe to [oslo]{"entity": "city", "role": "to"}
 - Carbon emission [JFK]{"entity": "iata", "role": "from"} TO [SFO]{"entity": "iata", "role": "to"}
 - [Cleveland](city) Oklahoma
 - [mazatlan](city), Sinaloa, mexico
@@ -1298,10 +1298,10 @@
 - Nahi
 - [Vantaa](city)
 - [Helsinki](city)
-- To [london](city)
-- To [New York](city)
-- To [Madrid](city)
-- To [Paris](city)
+- To [london]{"entity": "city", "role": "to"}
+- To [New York]{"entity": "city", "role": "to"}
+- To [Madrid]{"entity": "city", "role": "to"}
+- To [Paris]{"entity": "city", "role": "to"}
 - From Nerlin
 - From [Berlin]{"entity": "city", "role": "from"} via [London](city)
 - From [New York]{"entity": "city", "role": "from"}
@@ -1336,7 +1336,7 @@
 - [Medford]{"entity": "city", "role": "from"},MA to [Nashua]{"entity": "city", "role": "to"},NH
 - [Mannathan](city)
 - [Ny](city)
-- Im flying To [NY](city)
+- Im flying To [NY]{"entity": "city", "role": "to"}
 - [First](travel_flight_class) Class
 - [bangalore](city)
 - [Portland](city) Oregon
@@ -1669,7 +1669,7 @@
 - take the [second]{"entity": "mention", "value": "2"} one
 - that [last]{"entity": "mention", "value": "LAST"} one is right
 - the [first]{"entity": "mention", "value": "1"} one
-- the last one
+- the [last]{"entity": "mention", "value": "LAST"} one
 - yeah the [last]{"entity": "mention", "value": "LAST"} one
 
 ## intent:restart
@@ -1760,7 +1760,7 @@
 - what are you asking that for
 - what difference does it make
 - what difference does that make
-- what does it matter if I fly economy
+- what does it matter if I fly [economy](travel_flight_class)
 - what for
 - what for?
 - what's it matter?
@@ -2253,7 +2253,6 @@
 - It can't help me then
 - My name is Andre's gonzalez
 - NO  WAY ,DON'T  BUTTER  ME .LEVY  MY   Mesdager   PAGE.
-- KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
 - It's really big
 - chào em
 - fas
@@ -2272,7 +2271,7 @@
 - can I pay with credit card
 - book flight
 - Deliver a pizza
-- How long will it take a letter to get from new milford pa to huntingdon pa
+- How long will it take a letter to get from [new milford]{"entity": "city", "role": "from"} pa to [huntingdon]{"entity": "city", "role": "to"} pa
 - how to implement faq
 - What would you suggest where to go for a romance places
 - Can you fyling him here please i love him so much
@@ -2298,7 +2297,7 @@
 - tell me a joke
 
 ## intent:faq/oos_inquire
-- Great! What is the weather like in Berlin?
+- Great! What is the weather like in [Berlin](city)?
 - What do you know about Chuck Norris?
 - What is the answer to life, the universe, and everything?
 - do you have any thanksgiving plans
@@ -2308,7 +2307,7 @@
 - What are we doing here buddy?
 - What is christmas?
 - Can you come with me please
-- Yes can you come with me please meet me in marietta Ohio
+- Yes can you come with me please meet me in [marietta](city) Ohio
 - Hi his me miranda I love tom cruise can you make it happen
 - Can you hep fix it
 - what is the weather ?
