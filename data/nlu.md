@@ -315,7 +315,7 @@
 - How do I offset 100000 miles
 - calculate carbon
 - I want check co2
-- sure. how much emissions on a flight from [LA]{"entity": "city", "role": "from:Los Angeles"} to [Sydney]{"entity": "city", "role": "to"}?
+- sure. how much emissions on a flight from [LA]{"entity": "city", "role": "from", "synonym": "Los Angeles"} to [Sydney]{"entity": "city", "role": "to"}?
 - I really don't care about CO2 emission because I travel less, only this time I require 2 flights
 - what if I have to fly
 - calculate
@@ -961,7 +961,7 @@
 - [Washington](city)
 - [Wichita](city)
 - [alberquerque](city) nm
-- [la]{"entity": "city", "role": "from:Los Angeles"} to [boston]{"entity": "city", "role": "to"}
+- [la]{"entity": "city", "role": "from"} to [boston]{"entity": "city", "role": "to"}
 - always [first class]{"entity": "travel_flight_class", "value": "business"} for me!
 - florida
 - for thanksgiving we always go to see family
@@ -980,7 +980,7 @@
 - my grandparents are from texas so I'm heading there like every year
 - my husband and I take turns and this year we'll see my folks
 - my journey starts in [Moscow]{"entity": "city", "role": "from"}
-- sure. I'll fly from [SF]{"entity": "city", "role": "from:San Francisco"} to [madrid]{"entity": "city", "role": "to:Madrid"}
+- sure. I'll fly from [SF]{"entity": "city", "role": "from"} to [madrid]{"entity": "city", "role": "to"}
 - that'll be [business class]{"entity": "travel_flight_class", "value": "business"}
 - this thanksgiving I'm going to my girlfriend's family
 - we always spend thanksgiving and christmas in oklahoma
@@ -988,7 +988,7 @@
 - 8 Rivers edge dr
 - [Mexico City](city)
 - [mexico city](city)
-- What would my carbon emissions be if I flew from [Philadelphia](city.from) airport to [YUL]{"entity": "iata", "role": "to"} IN [MONTREAL]{"entity": "city", "role": "to"}?
+- What would my carbon emissions be if I flew from [Philadelphia]{"entity": "city", "role": "from"} airport to [YUL]{"entity": "iata", "role": "to"} IN [MONTREAL]{"entity": "city", "role": "to"}?
 - [london](city)
 - united states
 - [business class]{"entity": "travel_flight_class", "value": "business"}
@@ -1104,7 +1104,7 @@
 - [SF]{"entity": "city", "value": "San Francisco"}
 - [taipei](city)
 - [kathmandu](city)
-- I'm going from [Boston]{"entity": "city", "role": "from"} to [LA]{"entity": "city", "role": "to:Los Angeles"}
+- I'm going from [Boston]{"entity": "city", "role": "from"} to [LA]{"entity": "city", "role": "to"}
 - yes. i am flying from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"} in [economy class]{"entity": "travel_flight_class", "value": "economy"}
 - [Berlin]{"entity": "city", "role": "from"} Tegal to [krakow]{"entity": "city", "role": "to"}
 - What are my carbon emissions from [Berlin]{"entity": "city", "role": "from"} to [Krakow]{"entity": "city", "role": "to"}?
@@ -1323,7 +1323,7 @@
 - Prg
 - Prag
 - The next class above [Economy](travel_flight_class).
-- Could you estimate for me the cost of offsets for a round-trip flight from [Cincinnati]{"entity": "city.from"} ([CVG]{"entity": "iata", "role": "from"})  to [Edinburg]{"entity": "city", "role": "to", "value": "Edinburgh"}, Scotland.
+- Could you estimate for me the cost of offsets for a round-trip flight from [Cincinnati]{"entity": "city", "role": "from"} ([CVG]{"entity": "iata", "role": "from"})  to [Edinburg]{"entity": "city", "role": "to", "value": "Edinburgh"}, Scotland.
 - Departure [NYC]{"entity": "city", "role": "from"}
 - dellas
 - Vietnam
