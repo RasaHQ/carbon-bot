@@ -294,10 +294,16 @@ class AirTravelForm(FormAction):
         return {
             "travel_departure": [
                 self.from_entity(entity="city", role="from"),
+                self.from_entity(entity="iata", role="from"),
+                self.from_entity(entity="city"),
+                self.from_entity(entity="iata"),
                 self.from_text(intent="inform"),
             ],
             "travel_destination": [
-                self.from_entity(entity="city", role="to"),                
+                self.from_entity(entity="city", role="to"),
+                self.from_entity(entity="iata", role="to"),
+                self.from_entity(entity="city"),
+                self.from_entity(entity="iata"),
                 self.from_text(intent="inform"),
             ],
             "previous_entered_flight": [
@@ -309,6 +315,12 @@ class AirTravelForm(FormAction):
                 self.from_entity("travel_flight_class"),
             ],
         }
+
+    def validate_travel_departure(self, value, dispatcher, tracker, domain):
+        return self._location_to_slot_dict(value, "departure")
+
+    def validate_travel_destination(self, value, dispatcher, tracker, domain):
+        return self._location_to_slot_dict(value, "destination")
 
     @staticmethod
     def _location_to_slot_dict(location: Text, kind: Text) -> Dict:
@@ -332,39 +344,6 @@ class AirTravelForm(FormAction):
             result = {f"travel_{kind}": None, f"iata_{kind}": None}
         return result
 
-    @staticmethod
-    def _pop_next_item(items: List[Text], key: Text) -> Optional[Text]:
-        """
-        Returns items[i + 1], where i is the index of key, and
-        deletes items[i] and items[i + 1] from `items`.
-        :param items: List of things
-        :param key: Item left of the item of interest
-        :return: items[i + 1] or None
-        """
-        try:
-            i = items.index(key)
-        except ValueError:
-            return None
-        if i < len(items) - 1:
-            next_key = items[i + 1]
-            items.remove(key)
-            items.remove(next_key)
-            return next_key
-        else:
-            items.remove(key)
-            return None
-
-    @staticmethod
-    def explain_travel_plan(plan, dispatcher):
-        explanation = None
-        if plan.get("travel_departure") and plan.get("travel_destination"):
-            explanation = f"Ok, so you'll be flying from {plan['travel_departure']} to {plan['travel_destination']}."
-        elif plan.get("travel_departure"):
-            explanation = f"So you'll be flying from {plan['travel_departure']}."
-        elif plan.get("travel_destination"):
-            explanation = f"So you'll be flying to {plan['travel_destination']}."
-
-        dispatcher.utter_message(explanation)
 
     def check_stopover(
         self,
