@@ -11,7 +11,7 @@ pipeline:
   use_masked_language_model: False
   BILOU_flag: False
   number_of_transformer_layers: 1
-  epochs: 20
+  epochs: 80
 - name: EntitySynonymMapper  
 - name: ResponseSelector
   epochs: 50
