@@ -5,10 +5,12 @@ pipeline:
   model_name: "bert"
   model_weights: "bert-base-multilingual-cased"
 - name: LanguageModelTokenizer
-- name: RegexFeaturizer
-- name: EntitySynonymMapper
+# - name: WhitespaceTokenizer
+# - name: RegexFeaturizer
+# - name: EntitySynonymMapper
 # - name: ConveRTFeaturizer
 - name: LanguageModelFeaturizer
+# - name: SentBERTFeaturizer
 # - name: EmbeddingIntentClassifier
 #   epochs: 200
 #   scale_loss: False

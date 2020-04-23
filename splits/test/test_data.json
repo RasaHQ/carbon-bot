@@ -1,0 +1,3360 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "affirm",
+        "text": "Yep"
+      },
+      {
+        "intent": "affirm",
+        "text": "of course"
+      },
+      {
+        "intent": "affirm",
+        "text": "Yes please provide me an estimate"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes, actually"
+      },
+      {
+        "intent": "affirm",
+        "text": "Sounds good."
+      },
+      {
+        "intent": "affirm",
+        "text": "true :)"
+      },
+      {
+        "intent": "affirm",
+        "text": "interested"
+      },
+      {
+        "intent": "affirm",
+        "text": "Okay"
+      },
+      {
+        "intent": "affirm",
+        "text": "keep going"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok i am got it"
+      },
+      {
+        "intent": "affirm",
+        "text": "_YES_!"
+      },
+      {
+        "intent": "affirm",
+        "text": "I'll be flying cheap"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes perfect"
+      },
+      {
+        "intent": "affirm",
+        "text": "Yep that be greaz"
+      },
+      {
+        "intent": "affirm",
+        "text": "that sounds good to me"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok, let's do that!"
+      },
+      {
+        "intent": "affirm",
+        "text": "Yeah!"
+      },
+      {
+        "intent": "affirm",
+        "text": "Yes. That would be nice."
+      },
+      {
+        "intent": "affirm",
+        "text": "as i've said, yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yeah i guess"
+      },
+      {
+        "intent": "affirm",
+        "text": "okay fine"
+      },
+      {
+        "intent": "affirm",
+        "text": "Totally"
+      },
+      {
+        "intent": "affirm",
+        "text": "sounds good. thanks"
+      },
+      {
+        "intent": "affirm",
+        "text": "Yes, I would. thank you"
+      },
+      {
+        "intent": "affirm",
+        "text": "yeah why not?"
+      },
+      {
+        "intent": "affirm",
+        "text": "I would like to have a more accurate estimate"
+      },
+      {
+        "intent": "affirm",
+        "text": "Absolutely!"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes, tell me in detail"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes, of course!"
+      },
+      {
+        "intent": "affirm",
+        "text": "why not"
+      },
+      {
+        "intent": "affirm",
+        "text": "Ok, let's do that."
+      },
+      {
+        "intent": "affirm",
+        "text": "That sounds great."
+      },
+      {
+        "intent": "affirm",
+        "text": "ok, then yes let's do it!"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes that's right"
+      },
+      {
+        "intent": "affirm",
+        "text": "sounds great"
+      },
+      {
+        "intent": "affirm",
+        "text": "do it"
+      },
+      {
+        "intent": "affirm",
+        "text": "mmm yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "es"
+      },
+      {
+        "intent": "affirm",
+        "text": "ya sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "yeah sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "YESSS"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes, that sounds good"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes, please"
+      },
+      {
+        "intent": "affirm",
+        "text": "Yes I will"
+      },
+      {
+        "intent": "affirm",
+        "text": "oh yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "oki doke"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes interested"
+      },
+      {
+        "intent": "affirm",
+        "text": "aite"
+      },
+      {
+        "intent": "affirm",
+        "text": "sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "I think yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "def"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "Can I estimate my flight’s emissions?"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "what if I have to fly"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "how much CO2 will that use?"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "How can I calculate it?"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "tell me about my flights offset emissions"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "co2"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "How do I offset 100000 miles"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "my flight CO2"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "calculate carbon"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "why does it matter how long the flight is?"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "greenhouse gas calculation"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "Sure, but can you calculate it for me? I have another flight."
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "what about the offsets"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "Another trip"
+      },
+      {
+        "intent": "estimate_emissions",
+        "text": "hwo much will my flight emit exactly?"
+      },
+      {
+        "intent": "buy_offsets",
+        "text": "Buy offset"
+      },
+      {
+        "intent": "buy_offsets",
+        "text": "ok i want to buy some"
+      },
+      {
+        "intent": "buy_offsets",
+        "text": "ok so can I buy offsets?"
+      },
+      {
+        "intent": "buy_offsets",
+        "text": "how much I can buy"
+      },
+      {
+        "intent": "buy_offsets",
+        "text": "buy offsets"
+      },
+      {
+        "intent": "buy_offsets",
+        "text": "how to buy offsets"
+      },
+      {
+        "intent": "buy_offsets",
+        "text": "I want to by it"
+      },
+      {
+        "intent": "deny",
+        "text": "no, not right now. thanks!"
+      },
+      {
+        "intent": "deny",
+        "text": "no thanks!"
+      },
+      {
+        "intent": "deny",
+        "text": "No no no. I just said I don't want to do anything else."
+      },
+      {
+        "intent": "deny",
+        "text": "Probably not"
+      },
+      {
+        "intent": "deny",
+        "text": "that's not a question"
+      },
+      {
+        "intent": "deny",
+        "text": "no, thanks"
+      },
+      {
+        "intent": "deny",
+        "text": "do not want"
+      },
+      {
+        "intent": "deny",
+        "text": "no, I won't"
+      },
+      {
+        "intent": "deny",
+        "text": "No, I'm too fancy for that"
+      },
+      {
+        "intent": "deny",
+        "text": "I ain't paying for that!"
+      },
+      {
+        "intent": "deny",
+        "text": "no way"
+      },
+      {
+        "intent": "deny",
+        "text": "nah"
+      },
+      {
+        "intent": "deny",
+        "text": "No thanks"
+      },
+      {
+        "intent": "deny",
+        "text": "I dont want to buy offsets"
+      },
+      {
+        "intent": "deny_flying",
+        "text": "no I'm not going anywhere for thanksgiving"
+      },
+      {
+        "intent": "deny_flying",
+        "text": "not going to see family this year"
+      },
+      {
+        "intent": "deny_flying",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "Portland",
+            "entity": "city"
+          }
+        ],
+        "text": "I'm staying in Portland"
+      },
+      {
+        "intent": "deny_flying",
+        "text": "no, I'm not flying"
+      },
+      {
+        "intent": "deny_flying",
+        "text": "not going anywhere"
+      },
+      {
+        "intent": "deny_flying",
+        "text": "As I said, I don't fly at all. I wish that the Liberal Hypocrites that claim to care about our Planet wouldn't fly in their private planes. That would be Huge"
+      },
+      {
+        "intent": "express_negative-emo",
+        "text": "you are not nice"
+      },
+      {
+        "intent": "express_negative-emo",
+        "text": ":("
+      },
+      {
+        "intent": "express_negative-emo",
+        "text": "you are dumb"
+      },
+      {
+        "intent": "express_negative-emo",
+        "text": ":/"
+      },
+      {
+        "intent": "express_negative-emo",
+        "text": "you were not helpful"
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "coolio"
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "you're welcome"
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "ok, good. Thanks then. Good luck!"
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "Soo cool!"
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "happy new year"
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "prosper"
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "thats already not too bad!"
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "That is neat."
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "Very cool. I will check it out."
+      },
+      {
+        "intent": "express_positive-emo",
+        "text": "have a nice day"
+      },
+      {
+        "intent": "express_surprise",
+        "text": "interesting!"
+      },
+      {
+        "intent": "express_surprise",
+        "text": "I find that hard to believe"
+      },
+      {
+        "intent": "express_surprise",
+        "text": "Oh that's where your name comes from! I thought you were built from carbon."
+      },
+      {
+        "intent": "express_surprise",
+        "text": "Wow"
+      },
+      {
+        "intent": "express_surprise",
+        "text": "I don't buy it"
+      },
+      {
+        "intent": "express_surprise",
+        "text": "That's a lot."
+      },
+      {
+        "intent": "express_surprise",
+        "text": "I don't believe you"
+      },
+      {
+        "intent": "express_surprise",
+        "text": "woah!"
+      },
+      {
+        "intent": "express_surprise",
+        "text": "is that really right?"
+      },
+      {
+        "intent": "express_uncertainty",
+        "text": "sorta"
+      },
+      {
+        "intent": "express_uncertainty",
+        "text": "I'm skeptical that can really work"
+      },
+      {
+        "intent": "express_uncertainty",
+        "text": "well, that is a very good question - I don't know"
+      },
+      {
+        "intent": "express_uncertainty",
+        "text": "Hmmm i must think"
+      },
+      {
+        "intent": "express_uncertainty",
+        "text": "Uh"
+      },
+      {
+        "intent": "express_uncertainty",
+        "text": "more or less"
+      },
+      {
+        "intent": "express_uncertainty",
+        "text": "err"
+      },
+      {
+        "intent": "express_uncertainty",
+        "text": "i dont know yet"
+      },
+      {
+        "intent": "express_uncertainty",
+        "text": "perhaps"
+      },
+      {
+        "intent": "farewell",
+        "text": "allright then. thank you and goodbye"
+      },
+      {
+        "intent": "farewell",
+        "text": "bye"
+      },
+      {
+        "intent": "farewell",
+        "text": "go awy"
+      },
+      {
+        "intent": "farewell",
+        "text": "ok bye"
+      },
+      {
+        "intent": "farewell",
+        "text": "Later"
+      },
+      {
+        "intent": "farewell",
+        "text": "Hang up"
+      },
+      {
+        "intent": "farewell",
+        "text": "Goodbye!"
+      },
+      {
+        "intent": "farewell",
+        "text": "I live you hood nite"
+      },
+      {
+        "intent": "farewell",
+        "text": "sleep!"
+      },
+      {
+        "intent": "farewell",
+        "text": "end"
+      },
+      {
+        "intent": "farewell",
+        "text": "Goodbye"
+      },
+      {
+        "intent": "farewell",
+        "text": "Good bye."
+      },
+      {
+        "intent": "greet",
+        "text": "Heyo"
+      },
+      {
+        "intent": "greet",
+        "text": "hai"
+      },
+      {
+        "intent": "greet",
+        "text": "hiyy"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello. /thanksgiving"
+      },
+      {
+        "intent": "greet",
+        "text": "hallo"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi my name is Eric"
+      },
+      {
+        "intent": "greet",
+        "text": "hoi"
+      },
+      {
+        "intent": "greet",
+        "text": "Good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there carbon"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello, and happy Thanksgiving."
+      },
+      {
+        "intent": "greet",
+        "text": "Hello?"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello robot!v"
+      },
+      {
+        "intent": "greet",
+        "text": "hEllo"
+      },
+      {
+        "intent": "how_calculated",
+        "text": "How do flight emissions get calculated?"
+      },
+      {
+        "intent": "how_calculated",
+        "text": "how do you calculate that?"
+      },
+      {
+        "intent": "how_calculated",
+        "text": "how do you get that answer?"
+      },
+      {
+        "intent": "how_calculated",
+        "text": "where did you get that number from"
+      },
+      {
+        "intent": "how_calculated",
+        "text": "How do the emissions get calculated?"
+      },
+      {
+        "intent": "how_calculated",
+        "text": "how did you come up with that?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Kyiv",
+            "entity": "city"
+          }
+        ],
+        "text": "Kyiv"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "New York",
+            "entity": "city"
+          }
+        ],
+        "text": "From New York"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chicago",
+            "entity": "city"
+          }
+        ],
+        "text": "chicago"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Los Angels",
+            "entity": "city"
+          }
+        ],
+        "text": "Los Angels"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "newyork",
+            "entity": "city"
+          }
+        ],
+        "text": "newyork"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "los angeles",
+            "entity": "city"
+          }
+        ],
+        "text": "los angeles, ca"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 13,
+            "value": "Copenhagen",
+            "entity": "city"
+          }
+        ],
+        "text": "to Copenhagen"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Aberdeen",
+            "entity": "city"
+          }
+        ],
+        "text": "Aberdeen"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "san diego",
+            "entity": "city"
+          }
+        ],
+        "text": "san diego"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "business",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "business class"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "First",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "First Class"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "San Jose",
+            "entity": "city"
+          }
+        ],
+        "text": "San Jose"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Abbotsford",
+            "entity": "city"
+          }
+        ],
+        "text": "Abbotsford"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Los angeles",
+            "entity": "city"
+          }
+        ],
+        "text": "Los angeles"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "berlin",
+            "entity": "city"
+          }
+        ],
+        "text": "berlin"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Medford",
+            "entity": "city"
+          },
+          {
+            "start": 14,
+            "end": 20,
+            "value": "Nashua",
+            "entity": "city"
+          }
+        ],
+        "text": "Medford,MA to Nashua,NH"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Moscow",
+            "entity": "city"
+          }
+        ],
+        "text": "my flight starts in Moscow"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "JFK",
+            "entity": "iata"
+          }
+        ],
+        "text": "JFK"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chicago",
+            "entity": "city"
+          },
+          {
+            "start": 17,
+            "end": 26,
+            "value": "nashville",
+            "entity": "city"
+          }
+        ],
+        "text": "chicago ohare to nashville"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "auckland",
+            "entity": "city"
+          }
+        ],
+        "text": "auckland"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "PKG",
+            "entity": "iata"
+          }
+        ],
+        "text": "PKG"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Little Rock",
+            "entity": "city"
+          }
+        ],
+        "text": "Little Rock AR"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "Seattle",
+            "entity": "city"
+          }
+        ],
+        "text": "I'll be flying from Seattle"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "Berlin",
+            "entity": "city"
+          }
+        ],
+        "text": "I'm heading to Berlin"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "seattle",
+            "entity": "city"
+          }
+        ],
+        "text": "I'll fly from seattle"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Palestine",
+            "entity": "city"
+          }
+        ],
+        "text": "Palestine?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Düsseldorf",
+            "entity": "city"
+          }
+        ],
+        "text": "Düsseldorf"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "NYC",
+            "entity": "city"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "value": "LAX",
+            "entity": "iata"
+          }
+        ],
+        "text": "NYC to LAX"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 25,
+            "end": 30,
+            "value": "Dubai",
+            "entity": "city"
+          },
+          {
+            "start": 34,
+            "end": 43,
+            "value": "Singapore",
+            "entity": "city"
+          }
+        ],
+        "text": "what about a flight from Dubai to Singapore"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "KNP",
+            "entity": "iata"
+          }
+        ],
+        "text": "KNP"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 48,
+            "end": 56,
+            "value": "Tel Aviv",
+            "entity": "city"
+          }
+        ],
+        "text": "I don't know any other way to describe the city Tel Aviv"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Cleveland",
+            "entity": "city"
+          }
+        ],
+        "text": "Cleveland"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Vantaa",
+            "entity": "city"
+          }
+        ],
+        "text": "Vantaa"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Rome",
+            "entity": "city"
+          }
+        ],
+        "text": "Rome"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "London",
+            "entity": "city"
+          },
+          {
+            "start": 7,
+            "end": 15,
+            "value": "LHR",
+            "entity": "iata"
+          }
+        ],
+        "text": "London Heathrow"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "ny",
+            "entity": "city"
+          }
+        ],
+        "text": "ny"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Anchorage",
+            "entity": "city"
+          }
+        ],
+        "text": "Anchorage Alaska"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "BOSTON",
+            "entity": "city"
+          }
+        ],
+        "text": "fly from BOSTON"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Economy",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "Economy class"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "BOS",
+            "entity": "iata"
+          }
+        ],
+        "text": "BOS"
+      },
+      {
+        "intent": "inform",
+        "text": "michigan"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Chula Vista",
+            "entity": "city"
+          }
+        ],
+        "text": "Chula Vista"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "Boston",
+            "entity": "city"
+          },
+          {
+            "start": 29,
+            "end": 31,
+            "value": "NY",
+            "entity": "city"
+          },
+          {
+            "start": 35,
+            "end": 48,
+            "value": "economy",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "I want to fly from Boston to NY in economy class"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Santiago",
+            "entity": "city"
+          }
+        ],
+        "text": "Santiago de chile"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "New Orleans",
+            "entity": "city"
+          }
+        ],
+        "text": "New Orleans"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "heraklion",
+            "entity": "city"
+          }
+        ],
+        "text": "heraklion"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "SFO",
+            "entity": "iata"
+          }
+        ],
+        "text": "SFO"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Wien",
+            "entity": "city"
+          }
+        ],
+        "text": "Wien"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Columbus",
+            "entity": "city"
+          }
+        ],
+        "text": "Columbus"
+      },
+      {
+        "intent": "inform",
+        "text": "Texas"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 10,
+            "value": "Seattle",
+            "entity": "city"
+          }
+        ],
+        "text": "To Seattle"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Reno",
+            "entity": "city"
+          }
+        ],
+        "text": "Reno"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "Boston",
+            "entity": "city"
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "value": "New York",
+            "entity": "city"
+          }
+        ],
+        "text": "I'm flying from Boston to New York."
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Frankfurt",
+            "entity": "city"
+          }
+        ],
+        "text": "Frankfurt"
+      },
+      {
+        "intent": "inform",
+        "text": "BtV"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Anaheim",
+            "entity": "city"
+          }
+        ],
+        "text": "Anaheim"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "Berlin",
+            "entity": "city"
+          },
+          {
+            "start": 32,
+            "end": 39,
+            "value": "Detroit",
+            "entity": "city"
+          }
+        ],
+        "text": "Yes, I am flying from Berlin to Detroit."
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "BOM",
+            "entity": "iata"
+          }
+        ],
+        "text": "BOM"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "boston",
+            "entity": "city"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "new york",
+            "entity": "city"
+          }
+        ],
+        "text": "I would like to travel from boston to new york"
+      },
+      {
+        "intent": "inform",
+        "text": "Israel"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Nashville",
+            "entity": "city"
+          }
+        ],
+        "text": "Nashville"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "Boston",
+            "entity": "city"
+          }
+        ],
+        "text": "I am flying from Boston."
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "St. Petersburg",
+            "entity": "city"
+          }
+        ],
+        "text": "St. Petersburg"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 18,
+            "end": 31,
+            "value": "san francisco",
+            "entity": "city"
+          },
+          {
+            "start": 35,
+            "end": 46,
+            "value": "los angeles",
+            "entity": "city"
+          }
+        ],
+        "text": "i want to go from san francisco to los angeles"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Cebu",
+            "entity": "city"
+          }
+        ],
+        "text": "Cebu City"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "oakland",
+            "entity": "city"
+          }
+        ],
+        "text": "oakland"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "london",
+            "entity": "city"
+          }
+        ],
+        "text": "To london"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "London",
+            "entity": "city"
+          },
+          {
+            "start": 15,
+            "end": 18,
+            "value": "SFO",
+            "entity": "iata"
+          }
+        ],
+        "text": "From London to SFO"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Anchorage",
+            "entity": "city"
+          }
+        ],
+        "text": "Anchorage AK"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "Austin",
+            "entity": "city"
+          }
+        ],
+        "text": "As I said before, Austin"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Wichita",
+            "entity": "city"
+          }
+        ],
+        "text": "Wichita"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "Boston",
+            "entity": "city"
+          }
+        ],
+        "text": "I'm traveling to Boston"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "Rome",
+            "entity": "city"
+          },
+          {
+            "start": 13,
+            "end": 19,
+            "value": "London",
+            "entity": "city"
+          }
+        ],
+        "text": "From Rome to London"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Bogotá",
+            "entity": "city"
+          }
+        ],
+        "text": "Bogotá"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "vancouver",
+            "entity": "city"
+          }
+        ],
+        "text": "vancouver"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "Berlin",
+            "entity": "city"
+          },
+          {
+            "start": 15,
+            "end": 23,
+            "value": "New York",
+            "entity": "city"
+          }
+        ],
+        "text": "from Berlin to New York"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "new york",
+            "entity": "city"
+          }
+        ],
+        "text": "new york"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Munich",
+            "entity": "city"
+          }
+        ],
+        "text": "Munich"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "Boston",
+            "entity": "city"
+          }
+        ],
+        "text": "I want to leave from Boston."
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "SEATTLE",
+            "entity": "city"
+          }
+        ],
+        "text": "SEATTLE"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 11,
+            "end": 18,
+            "value": "Chicago",
+            "entity": "city"
+          }
+        ],
+        "text": "leave from Chicago"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Anchorage",
+            "entity": "city"
+          }
+        ],
+        "text": "Anchorage"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "Ny",
+            "entity": "city"
+          }
+        ],
+        "text": "Ny"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "CHICAGO",
+            "entity": "city"
+          }
+        ],
+        "text": "I'm traveling to CHICAGO"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "DFW",
+            "entity": "iata"
+          }
+        ],
+        "text": "DFW"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Amsterdam",
+            "entity": "city"
+          }
+        ],
+        "text": "Amsterdam"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "Berlin",
+            "entity": "city"
+          },
+          {
+            "start": 52,
+            "end": 61,
+            "value": "Stockholm",
+            "entity": "city"
+          }
+        ],
+        "text": "My conference is in Berlin, and I am flying in from Stockholm"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Rome",
+            "entity": "city"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "value": "FCO",
+            "entity": "iata"
+          }
+        ],
+        "text": "Rome FCO"
+      },
+      {
+        "intent": "inform",
+        "text": "Prgf"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 49,
+            "end": 61,
+            "value": "Philadelphia",
+            "entity": "city"
+          },
+          {
+            "start": 73,
+            "end": 76,
+            "value": "YUL",
+            "entity": "iata"
+          },
+          {
+            "start": 80,
+            "end": 88,
+            "value": "MONTREAL",
+            "entity": "city"
+          }
+        ],
+        "text": "What would my carbon emissions be if I flew from Philadelphia airport to YUL IN MONTREAL?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 6,
+            "value": "SFO",
+            "entity": "iata"
+          }
+        ],
+        "text": "To SFO"
+      },
+      {
+        "intent": "inform",
+        "text": "Poland"
+      },
+      {
+        "intent": "inform",
+        "text": "my husband and I take turns and this year we'll see my folks"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 19,
+            "end": 22,
+            "value": "EWR",
+            "entity": "iata"
+          }
+        ],
+        "text": "ok what about from EWR back?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "LEF",
+            "entity": "iata"
+          }
+        ],
+        "text": "LEF"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 3,
+            "end": 14,
+            "value": "business",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "no first class"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "STL",
+            "entity": "iata"
+          }
+        ],
+        "text": "STL"
+      },
+      {
+        "intent": "inform",
+        "text": "my brother and his kids are coming to see me"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Business",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "Business class"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "New York",
+            "entity": "city"
+          },
+          {
+            "start": 17,
+            "end": 23,
+            "value": "London",
+            "entity": "city"
+          }
+        ],
+        "text": "from New York to London"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Aurora",
+            "entity": "city"
+          }
+        ],
+        "text": "Aurora"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "alberquerque",
+            "entity": "city"
+          }
+        ],
+        "text": "alberquerque nm"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "frankfurt",
+            "entity": "city"
+          }
+        ],
+        "text": "frankfurt germanh"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "RDU",
+            "entity": "iata"
+          }
+        ],
+        "text": "RDU"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "New Delhi",
+            "entity": "city"
+          }
+        ],
+        "text": "Delhi"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 29,
+            "end": 35,
+            "value": "boston",
+            "entity": "city"
+          }
+        ],
+        "text": "Hello I would like to fly to boston to visit famil.y"
+      },
+      {
+        "intent": "inform",
+        "text": "united states of america"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 9,
+            "end": 16,
+            "value": "Leipzig",
+            "entity": "city"
+          }
+        ],
+        "text": "probably Leipzig"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 10,
+            "end": 13,
+            "value": "NYC",
+            "entity": "city"
+          }
+        ],
+        "text": "Departure NYC"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "Jfk",
+            "entity": "iata"
+          }
+        ],
+        "text": "Jfk"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Berlin",
+            "entity": "city"
+          },
+          {
+            "start": 7,
+            "end": 18,
+            "value": "SXF",
+            "entity": "iata"
+          }
+        ],
+        "text": "Berlin Schoenefeld"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Milpitas",
+            "entity": "city"
+          }
+        ],
+        "text": "Milpitas"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Auckland",
+            "entity": "city"
+          }
+        ],
+        "text": "Auckland"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "tunis",
+            "entity": "city"
+          }
+        ],
+        "text": "tunis"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "AOB",
+            "entity": "iata"
+          }
+        ],
+        "text": "AOB"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "Rome",
+            "entity": "city"
+          },
+          {
+            "start": 13,
+            "end": 19,
+            "value": "London",
+            "entity": "city"
+          }
+        ],
+        "text": "from Rome to London"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "London",
+            "entity": "city"
+          },
+          {
+            "start": 8,
+            "end": 15,
+            "value": "gatwick",
+            "entity": "iata"
+          }
+        ],
+        "text": "London, gatwick"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "fra",
+            "entity": "iata"
+          }
+        ],
+        "text": "fra"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Boston",
+            "entity": "city"
+          },
+          {
+            "start": 10,
+            "end": 18,
+            "value": "New York",
+            "entity": "city"
+          }
+        ],
+        "text": "Boston to New York"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "New York",
+            "entity": "city"
+          }
+        ],
+        "text": "New York City"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 41,
+            "value": "economy",
+            "entity": "city"
+          }
+        ],
+        "text": "Yes, I will be traveling in Economy Class."
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 9,
+            "end": 16,
+            "value": "economy",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "I'll fly economy"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 23,
+            "end": 34,
+            "value": "business",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "no I am heading out in first class"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Sevilla",
+            "entity": "city"
+          }
+        ],
+        "text": "Sevilla"
+      },
+      {
+        "intent": "inquire-ask_clarification",
+        "text": "really"
+      },
+      {
+        "intent": "inquire-ask_clarification",
+        "text": "what is available?"
+      },
+      {
+        "intent": "inquire-ask_clarification",
+        "text": "What is Rasa?"
+      },
+      {
+        "intent": "inquire-ask_clarification",
+        "text": "what are carbon offsets"
+      },
+      {
+        "intent": "inquire-ask_clarification",
+        "text": "?"
+      },
+      {
+        "intent": "inquire-ask_clarification",
+        "text": "Like what?"
+      },
+      {
+        "intent": "inquire-ask_clarification",
+        "text": "how?"
+      },
+      {
+        "intent": "inquire-ask_clarification",
+        "text": "Your joking..right ?"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "What projects get the donations"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "Ok, Ill get project 697"
+      },
+      {
+        "intent": "faq/deny-climate-change",
+        "text": "Do volcanoes do it"
+      },
+      {
+        "intent": "faq/not-personally-responsible",
+        "text": "Why does the company not pay for the offsets?"
+      },
+      {
+        "intent": "faq/where-money-goes",
+        "text": "Where does offset money go?"
+      },
+      {
+        "intent": "faq/research_project",
+        "text": "wtf"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "what about that hydro dam one"
+      },
+      {
+        "intent": "faq/not-personally-responsible",
+        "text": "A happy side effect for me would be to have the airlines buy offsets and pay back for all the damage caused past and present"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "none of your business slut"
+      },
+      {
+        "intent": "faq/other-calculation",
+        "entities": [
+          {
+            "start": 66,
+            "end": 75,
+            "value": "Abu Dhabi",
+            "entity": "city"
+          },
+          {
+            "start": 81,
+            "end": 87,
+            "value": "Berlin",
+            "entity": "city"
+          }
+        ],
+        "text": "What would be my yearly carbon emissions if I flew once a week to Abu Dhabi from Berlin"
+      },
+      {
+        "intent": "faq/oos_inquire",
+        "text": "Great! What is the weather like in Berlin?"
+      },
+      {
+        "intent": "faq/where-money-goes",
+        "text": "who gets the money?"
+      },
+      {
+        "intent": "faq/oos-future_inquire-ask",
+        "text": "what produces CO2?"
+      },
+      {
+        "intent": "faq/oos_inform",
+        "text": "fas"
+      },
+      {
+        "intent": "faq/inquire-cost",
+        "text": "so, how much do i have to pay"
+      },
+      {
+        "intent": "faq/ask_howdoing",
+        "text": "wassup"
+      },
+      {
+        "intent": "faq/more-details-process",
+        "text": "how do i choose one"
+      },
+      {
+        "intent": "faq/where-money-goes",
+        "text": "How do offsets work"
+      },
+      {
+        "intent": "faq/accuse-scam",
+        "text": "So let me see if I understand this. If you believe the climate change spiel, you can buy your way out of your hypocrisy for flying in those carbon farting containers by lining the pockets of the corrupt UN for \"credits\"? Seriously? People actually believe this crap?"
+      },
+      {
+        "intent": "faq/meta_inquire-ask_bot-challenge",
+        "text": "are you a bot?"
+      },
+      {
+        "intent": "faq/vulgar",
+        "text": "Yo mama did"
+      },
+      {
+        "intent": "faq/oos_request",
+        "text": "Can you get me the specific flight information?"
+      },
+      {
+        "intent": "faq/oos_request",
+        "text": "I want to know name of the flight?"
+      },
+      {
+        "intent": "faq/oos-future_inquire-ask",
+        "text": "what are you doing"
+      },
+      {
+        "intent": "faq/meta_inquire_capabilities",
+        "text": "Tell me what you can do"
+      },
+      {
+        "intent": "faq/accuse-scam",
+        "text": "what a gigantic scam this is"
+      },
+      {
+        "intent": "faq/personal_question_for_bot",
+        "text": "Do you want me"
+      },
+      {
+        "intent": "faq/other-calculation",
+        "text": "is it better if I drive?"
+      },
+      {
+        "intent": "faq/meta_inquire-ask_bot-challenge",
+        "text": "Are you a rasa bot?"
+      },
+      {
+        "intent": "faq/oos_inquire",
+        "text": "Give me an example."
+      },
+      {
+        "intent": "faq/oos_request",
+        "text": "Can you till him that to fyling here to meet me please"
+      },
+      {
+        "intent": "faq/other-language",
+        "text": "can you speak french ,"
+      },
+      {
+        "intent": "faq/inquire-cost",
+        "text": "What's the price?"
+      },
+      {
+        "intent": "faq/meta_inquire_capabilities",
+        "text": "anything else ?"
+      },
+      {
+        "intent": "faq/placeholder",
+        "text": "I'll be waiting"
+      },
+      {
+        "intent": "faq/oos_inquire",
+        "text": "Are there other alternatives?"
+      },
+      {
+        "intent": "faq/research_project",
+        "text": "okay which research team?"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "dirty fucking scum"
+      },
+      {
+        "intent": "faq/personal_question_for_bot",
+        "text": "What's your age"
+      },
+      {
+        "intent": "faq/personal_question_for_bot",
+        "text": "Did you know that?"
+      },
+      {
+        "intent": "faq/oos_request",
+        "text": "Marietta ohio i mean shane brolly four me please"
+      },
+      {
+        "intent": "faq/placeholder",
+        "text": "next"
+      },
+      {
+        "intent": "faq/do-people-buy-offsets",
+        "text": "What percentage of travelers make this purchase?"
+      },
+      {
+        "intent": "faq/oos_inform",
+        "text": "there are way too many flights"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "How does the program sustain itself?"
+      },
+      {
+        "intent": "faq/inquire-cost",
+        "text": "what is the price?"
+      },
+      {
+        "intent": "faq/placeholder",
+        "text": "so"
+      },
+      {
+        "intent": "faq/vulgar",
+        "text": "You wanna scratch my cock ?"
+      },
+      {
+        "intent": "faq/oos-future_inquire-ask",
+        "text": "What are the most important sources of greenhouse gas emissions?"
+      },
+      {
+        "intent": "faq/inquire-cost",
+        "text": "Cost"
+      },
+      {
+        "intent": "faq/is-this-legit",
+        "text": "can I trust this website?"
+      },
+      {
+        "intent": "faq/oos_inquire",
+        "text": "Yes or no"
+      },
+      {
+        "intent": "faq/other-calculation",
+        "entities": [
+          {
+            "start": 45,
+            "end": 49,
+            "value": "2200",
+            "entity": "number"
+          }
+        ],
+        "text": "How many trees need to be planted to off set 2200 miles of flying?"
+      },
+      {
+        "intent": "faq/general-emissions-reduction",
+        "text": "How can I reduce CO2 emissions?"
+      },
+      {
+        "intent": "faq/inquire-cost",
+        "text": "what's that going to cost me?"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "What is the overall budget?"
+      },
+      {
+        "intent": "faq/not-personally-responsible",
+        "text": "What if I have to fly for work?"
+      },
+      {
+        "intent": "faq/oos-future_inquire-ask",
+        "text": "would you like to know more about my route?"
+      },
+      {
+        "intent": "faq/meta_inquire-ask_bot-challenge",
+        "text": "What's your name?"
+      },
+      {
+        "intent": "faq/inquire-cost",
+        "text": "Ok.  How much would that cost?"
+      },
+      {
+        "intent": "faq/accuse-scam",
+        "text": "So is this legit ?"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "I’m sick of our relationship you don’t treat me right babe"
+      },
+      {
+        "intent": "faq/takeacut",
+        "text": "there must be a catch"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "wind farm"
+      },
+      {
+        "intent": "faq/where-money-goes",
+        "text": "where does the money go"
+      },
+      {
+        "intent": "faq/research_project",
+        "text": "wtf is this"
+      },
+      {
+        "intent": "faq/vulgar",
+        "text": "Bernie Sanders communist v\\nCocksuckers"
+      },
+      {
+        "intent": "faq/oos_request",
+        "text": "Can I give you feedback?"
+      },
+      {
+        "intent": "faq/oos_request",
+        "text": "He from underworld movie please flying him here"
+      },
+      {
+        "intent": "faq/oos_inform",
+        "text": "I'm drunk how about u"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "u suk"
+      },
+      {
+        "intent": "faq/placeholder",
+        "text": "humm"
+      },
+      {
+        "intent": "faq/vulgar",
+        "text": "Does your dad still fuck you"
+      },
+      {
+        "intent": "faq/deny-climate-change",
+        "text": "You do know that global warming is bullshit right"
+      },
+      {
+        "intent": "faq/accuse-scam",
+        "text": "Whatever. It's ridiculous."
+      },
+      {
+        "intent": "faq/more-details-process",
+        "text": "any more details about the carbon offsets for my flight?"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "Go the Fuck away cunt"
+      },
+      {
+        "intent": "faq/oos_inform",
+        "text": "Yes but Christmas is past already"
+      },
+      {
+        "intent": "faq/ask_howdoing",
+        "text": "what's up?"
+      },
+      {
+        "intent": "faq/oos_inquire",
+        "text": "Hi his me miranda I love tom cruise can you make it happen"
+      },
+      {
+        "intent": "faq/oos-future_inquire-ask",
+        "text": "Hi. Do you know about climate change?"
+      },
+      {
+        "intent": "faq/oos_inquire",
+        "text": "Can you please tell him i love him so much"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "Sod off swampy."
+      },
+      {
+        "intent": "faq/not-personally-responsible",
+        "text": "what would they do for me>?"
+      },
+      {
+        "intent": "faq/oos_inform",
+        "text": "My name is Andre's gonzalez"
+      },
+      {
+        "intent": "faq/inquire-cost",
+        "text": "How much do the offsets costs?"
+      },
+      {
+        "intent": "faq/personal_question_for_bot",
+        "text": "i want to love you"
+      },
+      {
+        "intent": "faq/research_project",
+        "text": "what are you going to do with this data?"
+      },
+      {
+        "intent": "faq/where-money-goes",
+        "text": "Where does the money go for carbon ofsetting?"
+      },
+      {
+        "intent": "faq/not-personally-responsible",
+        "text": "But I don't have enough money to buy offsets"
+      },
+      {
+        "intent": "faq/inquire-cost",
+        "text": "How much would an offset cost?"
+      },
+      {
+        "intent": "faq/oos-future_inquire-ask",
+        "text": "What is climate change?"
+      },
+      {
+        "intent": "faq/deny-climate-change",
+        "text": "I'm waiting impatiently for global warming to kick in."
+      },
+      {
+        "intent": "faq/oos-future_inquire-ask",
+        "text": "What are greenhouse gas emissions?"
+      },
+      {
+        "intent": "faq/deny-climate-change",
+        "text": "It's been changing for millions of years because the earth shifts on its axis while spinning in space. Things are going to change naturally, that's why Ohio was a glacier a million years ago and I can find salt water fossils in my backyard in middle Ga."
+      },
+      {
+        "intent": "faq/inquire-cost",
+        "text": "looking for carbon offset price"
+      },
+      {
+        "intent": "faq/oos_inform",
+        "text": "I have never been in a fight"
+      },
+      {
+        "intent": "faq/layover",
+        "text": "what if I need to lay over"
+      },
+      {
+        "intent": "faq/is-this-legit",
+        "text": "any proof that it works?"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "Can I indicate the reason why I am purchasing CERs in the certificate?"
+      },
+      {
+        "intent": "faq/deny-offsets-work",
+        "text": "Carbon offsets will not affect climate !"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "asshole"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "Get off my phone you crooked fucking idiots"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "What projects are available"
+      },
+      {
+        "intent": "faq/oos_request",
+        "text": "make me coffee"
+      },
+      {
+        "intent": "faq/oos_inform",
+        "entities": [
+          {
+            "start": 31,
+            "end": 42,
+            "value": "Plattsburgh",
+            "entity": "city"
+          }
+        ],
+        "text": "Need a ride from 75 Beekman st Plattsburgh ny to"
+      },
+      {
+        "intent": "faq/research_project",
+        "text": "so tell me more about this research project"
+      },
+      {
+        "intent": "faq/where-money-goes",
+        "text": "who sponsored it?"
+      },
+      {
+        "intent": "faq/research_project",
+        "text": "I don't see the point"
+      },
+      {
+        "intent": "faq/meta_inquire_capabilities",
+        "text": "how can i help?"
+      },
+      {
+        "intent": "faq/oos-future_inquire-ask",
+        "text": "do you have anymore information?"
+      },
+      {
+        "intent": "faq/vulgar",
+        "text": "When they fart"
+      },
+      {
+        "intent": "faq/layover",
+        "text": "connecting"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "fuck you"
+      },
+      {
+        "intent": "faq/where-money-goes",
+        "text": "Who does my money go to?"
+      },
+      {
+        "intent": "faq/general-emissions-reduction",
+        "text": "I'd like to know what I can do to reduce my carbon footprint."
+      },
+      {
+        "intent": "faq/placeholder",
+        "text": "Soo"
+      },
+      {
+        "intent": "faq/deny-climate-change",
+        "text": "No, I just wanted to tell you to stay the fuck off my feed you ignorant fuck. Climate change is a hoax , and your suggestion that I can BUY SOMETHING to offset my fossil fuel use proves it. EAT SHIT AND DIE!!!!"
+      },
+      {
+        "intent": "faq/personal_question_for_bot",
+        "text": "who are you"
+      },
+      {
+        "intent": "faq/ask_howdoing",
+        "text": "are you okay?"
+      },
+      {
+        "intent": "faq/oos_inform",
+        "text": "Anyways you're going to have to send talk to me on the phone Roy because I don't got time for these little joke things I'm taking this off my phone is taking up too much space"
+      },
+      {
+        "intent": "faq/oos_request",
+        "text": "I want to pay the money from paypal"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "Ceran's Monte Claro Run of River Hydropower Plant CDM Project Activity"
+      },
+      {
+        "intent": "faq/meta_inquire_capabilities",
+        "text": "alright anything else?"
+      },
+      {
+        "intent": "faq/oos-future_inquire-ask",
+        "text": "Could you give me a link, so I can share you?"
+      },
+      {
+        "intent": "faq/personal_question_for_bot",
+        "text": "whats'your name"
+      },
+      {
+        "intent": "faq/ask_creators",
+        "text": "who built this?"
+      },
+      {
+        "intent": "faq/accuse-scam",
+        "text": "What the heck - I'll give you double the credit for half the price!"
+      },
+      {
+        "intent": "faq/meta_inquire_capabilities",
+        "text": "can you do anything?"
+      },
+      {
+        "intent": "faq/meta_inquire-ask_bot-challenge",
+        "text": "So you can't tell if you're doing well?"
+      },
+      {
+        "intent": "faq/oos_inquire",
+        "text": "So you down ?"
+      },
+      {
+        "intent": "faq/personal_question_for_bot",
+        "text": "Have you ever been a fight"
+      },
+      {
+        "intent": "faq/where-money-goes",
+        "text": "where does the money go?"
+      },
+      {
+        "intent": "faq/where-money-goes",
+        "text": "Where exactly does the money go?"
+      },
+      {
+        "intent": "faq/placeholder",
+        "text": "ok so same"
+      },
+      {
+        "intent": "faq/other-calculation",
+        "text": "I want to know if my train trip is bad for the environment"
+      },
+      {
+        "intent": "faq/deny-climate-change",
+        "text": "I don't want to buy offsets. I don't think climate change is a big problem"
+      },
+      {
+        "intent": "faq/ask_howdoing",
+        "text": "how are you?"
+      },
+      {
+        "intent": "faq/specific-project-details",
+        "text": "Can I purchase CERs for purposes other than voluntary cancellation?"
+      },
+      {
+        "intent": "faq/general-emissions-reduction",
+        "text": "What if I plant a tree on my backyard?"
+      },
+      {
+        "intent": "faq/personal_question_for_bot",
+        "text": "Can u read"
+      },
+      {
+        "intent": "faq/oos_inform",
+        "text": "it's warm outside"
+      },
+      {
+        "intent": "faq/oos_request",
+        "text": "tell me a joke"
+      },
+      {
+        "intent": "faq/layover",
+        "text": "it's more than one flight though"
+      },
+      {
+        "intent": "faq/placeholder",
+        "text": "something thing"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "So double fuck off thief"
+      },
+      {
+        "intent": "faq/insult",
+        "text": "FUCK YOU THERE IS NO SUCH THING AS CLIMATE CHANGE AND WE KNOW IT YOU CUNTS !"
+      },
+      {
+        "intent": "faq/general-emissions-reduction",
+        "text": "what's the best way for me to reduce my carbon footprint?"
+      },
+      {
+        "intent": "faq/is-this-legit",
+        "text": "Who controls these?"
+      },
+      {
+        "intent": "faq/placeholder",
+        "text": "Meow meow meow"
+      },
+      {
+        "intent": "faq/deny-climate-change",
+        "text": "Climate change is debunked, it is a natural change that has been happening since the beginning of the planet"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "how do they work"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "but can you explain what carbon offsets are"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "What is the purpose of carbon offset?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "how do i off set plane flights"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "i dont understand how the flight offsets work but im interested"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "how does the offset work"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "tell me why offsets are worth it"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "are offsets better than not flying?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "how does it actually offset?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "carbon offsets aren't real"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "Does that mean if I pay this, then the plane doesn't pollute the air?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "what are carbon offsets?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "What are carbon offsets?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "So what benefit is thee in buying carbon offsets?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "How much does it help the environment/"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "Do offsets really work?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "do you want me to feel guilty about flying?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "how does it even work?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "How do we know they are causing climate change?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "Yes but how does it work?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "How offsets works usually ?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "but how does $1 actually offset a ton?"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "carbon offset"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "so tell me about c02"
+      },
+      {
+        "intent": "inquire-ask_clarification-offsets",
+        "text": "offsets don't really work"
+      },
+      {
+        "intent": "meta_inform_problem_bad-link",
+        "text": "The webpage has been moved"
+      },
+      {
+        "intent": "meta_inform_problem_bad-link",
+        "text": "link doesn't work"
+      },
+      {
+        "intent": "meta_inform_problem_bad-link",
+        "text": "That link is not working for me."
+      },
+      {
+        "intent": "resolve_entity",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "2",
+            "entity": "mention"
+          }
+        ],
+        "text": "2"
+      },
+      {
+        "intent": "resolve_entity",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "4",
+            "entity": "mention"
+          }
+        ],
+        "text": "4"
+      },
+      {
+        "intent": "resolve_entity",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "5",
+            "entity": "mention"
+          }
+        ],
+        "text": "5"
+      },
+      {
+        "intent": "resolve_entity",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "3",
+            "entity": "mention"
+          }
+        ],
+        "text": "3"
+      },
+      {
+        "intent": "restart",
+        "text": "Let's begin"
+      },
+      {
+        "intent": "restart",
+        "text": "Restart"
+      },
+      {
+        "intent": "restart",
+        "text": "start"
+      },
+      {
+        "intent": "restart",
+        "text": "That's ok, can we start over?"
+      },
+      {
+        "intent": "thank",
+        "text": "Thank you."
+      },
+      {
+        "intent": "thank",
+        "text": "awesome, thanks!"
+      },
+      {
+        "intent": "thank",
+        "text": "yes really thank you for sharing this information"
+      },
+      {
+        "intent": "thank",
+        "text": "thanls"
+      },
+      {
+        "intent": "thank",
+        "text": "Thank you, you are a good bot!"
+      },
+      {
+        "intent": "thank",
+        "text": "Okay thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "Thats great thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "Ok, thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "Thank you for the information."
+      },
+      {
+        "intent": "thank",
+        "text": "Cool. Thanks."
+      },
+      {
+        "intent": "thank",
+        "text": "cheers thanks"
+      },
+      {
+        "intent": "why",
+        "text": "what for"
+      },
+      {
+        "intent": "why",
+        "text": "why is there a difference?"
+      },
+      {
+        "intent": "why",
+        "text": "tell me more"
+      },
+      {
+        "intent": "why",
+        "text": "why should I?"
+      },
+      {
+        "intent": "why",
+        "text": "what's it matter?"
+      },
+      {
+        "intent": "why",
+        "entities": [
+          {
+            "start": 13,
+            "end": 27,
+            "value": "business",
+            "entity": "travel_flight_class"
+          },
+          {
+            "start": 47,
+            "end": 60,
+            "value": "economy",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "But why does business class emit more CO2 than economy class?"
+      },
+      {
+        "intent": "why",
+        "text": "why would i want to purchase offsets if i'm not flying"
+      },
+      {
+        "intent": "why",
+        "text": "Why should I buy them"
+      },
+      {
+        "intent": "why",
+        "text": "what difference does that make"
+      },
+      {
+        "intent": "why",
+        "text": "So what?"
+      },
+      {
+        "intent": "why",
+        "text": "Didn’t get that"
+      },
+      {
+        "intent": "why",
+        "entities": [
+          {
+            "start": 52,
+            "end": 66,
+            "value": "business",
+            "entity": "travel_flight_class"
+          }
+        ],
+        "text": "How much CO2 would I be emitting if I travelled via business class instead?  Isn't it the same airplane?"
+      },
+      {
+        "intent": "SCENARIO",
+        "text": "Thankgiving"
+      },
+      {
+        "intent": "SCENARIO",
+        "text": "christmas"
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "again, you just said that"
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "that doesn't make any sense"
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "That's not what I asked."
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "Where you going? I'm still curious where my payment goes."
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "Not understanding or not wanting to understand."
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "no you're not getting me"
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "I said new york, not bye"
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "no no, the offset project on that website you sent me"
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "No, it is a car!"
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "you're not getting me"
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "are you still there?"
+      },
+      {
+        "intent": "inform_notunderstanding",
+        "text": "are you going to ask me about buying carbon offsets?"
+      },
+      {
+        "intent": "help",
+        "text": "I don't understand"
+      },
+      {
+        "intent": "help",
+        "text": "Help"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": [
+      {
+        "value": "1",
+        "synonyms": [
+          "one",
+          "first",
+          "a week"
+        ]
+      },
+      {
+        "value": "Los Angeles",
+        "synonyms": [
+          "LA",
+          "la"
+        ]
+      },
+      {
+        "value": "business",
+        "synonyms": [
+          "business class",
+          "first class",
+          "Business class",
+          "Delux Class",
+          "First class"
+        ]
+      },
+      {
+        "value": "economy",
+        "synonyms": [
+          "economy class",
+          "Economy Class",
+          "Economy class"
+        ]
+      },
+      {
+        "value": "premium",
+        "synonyms": [
+          "premium economy"
+        ]
+      },
+      {
+        "value": "New Delhi",
+        "synonyms": [
+          "Delhi",
+          "delhi"
+        ]
+      },
+      {
+        "value": "LHR",
+        "synonyms": [
+          "Heathrow",
+          "heathrow"
+        ]
+      },
+      {
+        "value": "LGW",
+        "synonyms": [
+          "Gatwick"
+        ]
+      },
+      {
+        "value": "LCY",
+        "synonyms": [
+          "London City"
+        ]
+      },
+      {
+        "value": "SXF",
+        "synonyms": [
+          "Schonefeld",
+          "Schoenefeld"
+        ]
+      },
+      {
+        "value": "TXL",
+        "synonyms": [
+          "Tegel"
+        ]
+      },
+      {
+        "value": "LTN",
+        "synonyms": [
+          "Luton"
+        ]
+      },
+      {
+        "value": "LGA",
+        "synonyms": [
+          "La Guardia"
+        ]
+      },
+      {
+        "value": "San Francisco",
+        "synonyms": [
+          "SF"
+        ]
+      },
+      {
+        "value": "Madrid",
+        "synonyms": [
+          "madrid"
+        ]
+      },
+      {
+        "value": "TRN",
+        "synonyms": [
+          "torino caselle",
+          "Caselle"
+        ]
+      },
+      {
+        "value": "KBP",
+        "synonyms": [
+          "borispol"
+        ]
+      },
+      {
+        "value": "LAST",
+        "synonyms": [
+          "last",
+          "latter"
+        ]
+      },
+      {
+        "value": "2",
+        "synonyms": [
+          "second"
+        ]
+      },
+      {
+        "value": "3",
+        "synonyms": [
+          "third"
+        ]
+      },
+      {
+        "value": "7",
+        "synonyms": [
+          "7 hour"
+        ]
+      }
+    ]
+  }
+}
