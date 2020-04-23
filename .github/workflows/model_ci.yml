@@ -6,9 +6,6 @@ on:
   pull_request:
     types: [opened, synchronize]
 
-env:
-  IS_MASTER_BRANCH: ${{ github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master') }}
-
 jobs:
   build-model:
     name: Build, test, and upload model
@@ -51,7 +48,7 @@ jobs:
         path: results.md
 
     - name: Upload model
-      if: env.IS_MASTER_BRANCH == 'true'
+      if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
       uses: actions/upload-artifact@master
       with:
         name: model
@@ -80,6 +77,8 @@ jobs:
   build-images:
     name: Build and Push Images
     runs-on: ubuntu-latest
+    env:
+      IS_MASTER_BRANCH: ${{ github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master') }}
 
     steps:
     - uses: actions/checkout@v2
@@ -91,6 +90,7 @@ jobs:
           IMAGE_TAG=${{ github.head_ref }}
         else
           IMAGE_TAG=$(basename ${{ github.ref }})
+        fi
 
         echo "::set-env name=IMAGE_TAG::${IMAGE_NAME}-${{ github.sha }}"
 
@@ -116,7 +116,8 @@ jobs:
 
     needs: 
     - build-images
-    if: env.IS_MASTER_BRANCH == 'true'
+
+    if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
 
     steps:
     # Checkout repository because we need the content of the `.env` file later
@@ -129,6 +130,7 @@ jobs:
           IMAGE_TAG=${{ github.head_ref }}
         else
           IMAGE_TAG=$(basename ${{ github.ref }})
+        fi
 
         echo "::set-env name=IMAGE_TAG::${IMAGE_NAME}-${{ github.sha }}"
 
@@ -194,7 +196,7 @@ jobs:
     - deploy-to-cluster
     - build-model
 
-    if: env.IS_MASTER_BRANCH == 'true'
+    if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
     runs-on: ubuntu-latest
 
     steps:
