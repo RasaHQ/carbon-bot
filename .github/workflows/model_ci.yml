@@ -84,6 +84,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Set image tag
+      run: |
+        if [[ $IS_MASTER_BRANCH == "false" ]]
+        then
+          IMAGE_TAG=${{ github.head_ref }}
+        else
+          IMAGE_TAG=$(basename ${{ github.ref }})
+
+        echo "::set-env name=IMAGE_TAG::${IMAGE_NAME}-${{ github.sha }}"
+
     - name: GCP Auth
       env:
         GCLOUD_SERVICE_ACCOUNT_KEYFILE: ${{ secrets.GCLOUD_AUTH }}
@@ -97,8 +107,8 @@ jobs:
         set -o allexport; source .env; set +o allexport
         docker build . \
           --build-arg RASA_SDK_IMAGE=rasa/rasa-sdk:${RASA_SDK_VERSION} \
-          --tag gcr.io/rasa-platform/carbon-bot-actions:$(basename ${{ github.ref }})-${{ github.sha }}
-        gcloud docker -- push gcr.io/rasa-platform/carbon-bot-actions:$(basename ${{ github.ref }})-${{ github.sha }}
+          --tag gcr.io/rasa-platform/carbon-bot-actions:$IMAGE_TAG
+        gcloud docker -- push gcr.io/rasa-platform/carbon-bot-actions:$IMAGE_TAG
 
   deploy-to-cluster:
     name: Re-deploy the cluster with the latest action server
@@ -111,6 +121,16 @@ jobs:
     steps:
     # Checkout repository because we need the content of the `.env` file later
     - uses: actions/checkout@v2
+
+    - name: Set image tag
+      run: |
+        if [[ $IS_MASTER_BRANCH == "false" ]]
+        then
+          IMAGE_TAG=${{ github.head_ref }}
+        else
+          IMAGE_TAG=$(basename ${{ github.ref }})
+
+        echo "::set-env name=IMAGE_TAG::${IMAGE_NAME}-${{ github.sha }}"
 
     - name: GCP Auth
       env:
@@ -142,7 +162,7 @@ jobs:
 
         helm upgrade --install carbon-assistant rasa-x/rasa-x --namespace carbon-assistant \
             --set global.postgresql.postgresqlPassword="${DB_PASSWORD}" \
-            --set app.tag=$(basename ${{ github.ref }})-${{ github.sha }} \
+            --set app.tag=$IMAGE_TAG \
             --set rasax.initialUser.password="${RASA_X_ADMIN_PASSWORD}" \
             --set rasax.token=${RASA_TOKEN} \
             --set rasax.jwtSecret=${JWT_SECRET} \
