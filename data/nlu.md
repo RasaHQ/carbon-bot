@@ -34,7 +34,7 @@
 - fine
 - fine let's do that
 - fine lets go
-- gotta love economy
+- gotta love [economy](travel_flight_class)
 - i think so
 - i think so yea
 - i will
@@ -86,8 +86,8 @@
 - yep
 - yes
 - yes I will
-- yes business class is too expensive
-- yes economy all the way
+- yes [business class]{"entity": "travel_flight_class", "value": "business"} is too expensive
+- yes [economy](travel_flight_class) all the way
 - yes i do think so
 - yes it is
 - yes let's do that
@@ -906,7 +906,7 @@
 - [Long Beach](city)
 - [Los Angele](city)
 - [Los Angeles](city)
-- [Los Angeles](city) LAX(iata)
+- [Los Angeles](city) [LAX](iata) (iata)
 - [Louisville](city)
 - [Lubbock](city)
 - [Madison](city)
@@ -1018,7 +1018,7 @@
 - I want to leave from [Boston]{"entity": "city", "role": "from"}.
 - [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}
 - I'm flying from [Boston]{"entity": "city", "role": "from"}.
-- Yes, [Economy Class](travel_flight_class).
+- Yes, [Economy Class]{"entity": "travel_flight_class", "value": "economy"}.
 - Yes! I am planning to fly from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}. I would like to fly [Economy Class]{"entity": "city", "value": "economy"}.
 - I'm flying from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"} in [economy class]{"entity": "travel_flight_class", "value": "economy"} on thanksgiving.  What is the environmental effects?
 - To [Seattle]{"entity": "city", "role": "to"}
@@ -1070,7 +1070,7 @@
 - [berlin](city)
 - [Shanghai](city)
 - no, [business class]{"entity": "travel_flight_class", "value": "business"}
-- sure, I'll fly [business class](travel_flight_class) though
+- sure, I'll fly [business class]{"entity": "travel_flight_class", "value": "business"} though
 - [LA](city)
 - Yes, I am flying from [Berlin]{"entity": "city", "role": "from"} to [Detroit]{"entity": "city", "role": "to"}.
 - I am flying to [Detroit]{"entity": "city", "role": "to"}
@@ -1318,7 +1318,7 @@
 - From [London]{"entity": "city", "role": "from"} to [SFO]{"entity": "iata", "role": "to"} via [Singapore](city)
 - [Mine](city)
 - [Kiev](city), Ukraine
-- [Economy](travel_flight_class) class
+- [Economy class]{"entity": "travel_flight_class", "value": "economy"}
 - Prgf
 - Prg
 - Prag
@@ -1344,10 +1344,10 @@
 - [IAD](iata)
 - [los angeles](city)
 - kansas
-- no i would travel in [business](travel_flight_class) class
+- no i would travel in [business class]{"entity": "travel_flight_class", "value": "business"}
 - [HRG](iata)
 - [hong kong](city)
-- min [Business](travel_flight_class) class
+- min [Business class]{"entity": "travel_flight_class", "value": "business"}
 - [Business](city)
 - [los angeles](city), ca
 - [Charlotte](city), nc
@@ -1400,7 +1400,7 @@
 - [Johannesburg](city)
 - [Melbourne](city)
 - [Dortmund](city)
-- [Business](travel_flight_class) class
+- [Business class]{"entity": "travel_flight_class", "value": "business"}
 - Trichirappalli
 - [Singapore](city)
 - Singaporea
@@ -1796,16 +1796,16 @@
 - why would i be interested in that?
 - I don't see the point from this
 - Yes, so why is one greater than the other?
-- Why does [business](travel_flight_class) class emit more CO2 than [economy](travel_flight_class) class?
-- But why does [business](travel_flight_class) class emit more CO2 than [economy](travel_flight_class) class?
-- How much CO2 would I be emitting if I travelled via [business](travel_flight_class) class instead?  Isn't it the same airplane?
+- Why does [business class]{"entity": "travel_flight_class", "value": "business"} emit more CO2 than [economy class]{"entity": "travel_flight_class", "value": "economy"}?
+- But why does [business class]{"entity": "travel_flight_class", "value": "business"} emit more CO2 than [economy class]{"entity": "travel_flight_class", "value": "economy"}?
+- How much CO2 would I be emitting if I travelled via [business class]{"entity": "travel_flight_class", "value": "business"} instead?  Isn't it the same airplane?
 - why would i want to purchase offsets if i'm not flying
 - why you are not sure?
 - is it really important
 - tell me more here
 - Why?
 - Why does it matter?
-- What's the difference between flying [economy](travel_flight_class) class or [business](travel_flight_class) class?
+- What's the difference between flying [economy class]{"entity": "travel_flight_class", "value": "economy"} or [business class]{"entity": "travel_flight_class", "value": "business"}?
 - Does it matter if I fly [economy](travel_flight_class) or not?
 - Didn’t get that
 
