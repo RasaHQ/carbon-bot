@@ -92,7 +92,7 @@ jobs:
           IMAGE_TAG=$(basename ${{ github.ref }})
         fi
 
-        echo "::set-env name=IMAGE_TAG::${IMAGE_NAME}-${{ github.sha }}"
+        echo "::set-env name=IMAGE_TAG::${IMAGE_TAG}-${{ github.sha }}"
 
     - name: GCP Auth
       env:
@@ -132,7 +132,7 @@ jobs:
           IMAGE_TAG=$(basename ${{ github.ref }})
         fi
 
-        echo "::set-env name=IMAGE_TAG::${IMAGE_NAME}-${{ github.sha }}"
+        echo "::set-env name=IMAGE_TAG::${IMAGE_TAG}-${{ github.sha }}"
 
     - name: GCP Auth
       env:
