@@ -578,7 +578,7 @@
 - wow
 - wow!
 - wtf
-- that's alot of CO[2](number)
+- that's alot of CO2
 - interesting!
 - Wow thats a lot!
 - That's a lot.
@@ -1025,7 +1025,7 @@
 - [boston]{"entity": "city", "role": "from"} to [new york]{"entity": "city", "role": "to"}
 - I will be flying to [NYC]{"entity": "city", "role": "to"}, NY
 - I will be leaving from [Boston]{"entity": "city", "role": "from"}, MA
-- [773](number)[773](mention)
+- [773773](number)
 - [New York](city).
 - I need an [economy class]{"entity": "travel_flight_class", "value": "economy"} ticket from [boston]{"entity": "city", "role": "from"} to [new york]{"entity": "city", "role": "to"}, please.
 - yes, [economy class]{"entity": "travel_flight_class", "value": "economy"}
@@ -1501,7 +1501,7 @@
 - Yes but how does it work?
 - how do the carbon offsets work?
 - How can paying money to offset help?
-- How can buying offsets eliminate CO[2](number)?
+- How can buying offsets eliminate CO2?
 - If I buy an offset, where does the money go?
 - what are carbon offsets?
 - How does offset work?
