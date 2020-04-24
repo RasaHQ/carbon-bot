@@ -1,16 +1,18 @@
 language: en
 pipeline:
-- name: ConveRTTokenizer  
-- name: RegexFeaturizer
+- name: HFTransformersNLP
+  model_name: gpt2
+  model_weights: gpt2
+- name: LanguageModelTokenizer
+- name: LanguageModelFeaturizer
 - name: EntitySynonymMapper
-- name: ConveRTFeaturizer
 - name: DIETClassifier
-  BILOU_flag: False
+  BILOU_flag: false
   epochs: 50
   batch_size: 64
 - name: ResponseSelector
   epochs: 200
-  scale_loss: False
+  scale_loss: false
 policies:
 - name: MemoizationPolicy
 - name: EmbeddingPolicy

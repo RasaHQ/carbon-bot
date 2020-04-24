@@ -1410,6 +1410,7 @@
 - [Savannah](city)
 - [Bogota](city)
 - [Prague](city)
+- [colombo](city)
 
 ## intent:inquire-ask_clarification
 - ?
@@ -2661,8 +2662,8 @@
 - borispol
 
 ## synonym:LAST
-- latter
 - last
+- latter
 
 ## synonym:LCY
 - London City
@@ -2674,8 +2675,8 @@
 - Gatwick
 
 ## synonym:LHR
-- heathrow
 - Heathrow
+- heathrow
 
 ## synonym:LTN
 - Luton
@@ -2692,30 +2693,30 @@
 - delhi
 
 ## synonym:SXF
-- Schoenefeld
 - Schonefeld
+- Schoenefeld
 
 ## synonym:San Francisco
 - SF
 
 ## synonym:TRN
-- Caselle
 - torino caselle
+- Caselle
 
 ## synonym:TXL
 - Tegel
 
 ## synonym:business
-- First class
 - business class
-- Business class
 - first class
+- Business class
 - Delux Class
+- First class
 
 ## synonym:economy
+- economy class
 - Economy Class
 - Economy class
-- economy class
 
 ## synonym:premium
 - premium economy
