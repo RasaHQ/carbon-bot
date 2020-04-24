@@ -1,20 +1,25 @@
 language: en
+
 pipeline:
-- name: ConveRTTokenizer  
+- name: ConveRTTokenizer
 - name: ConveRTFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
 - name: DIETClassifier
-  hidden_layers_sizes:
-    text: [30, 30]
-    label: []
-  intent_classification: True
-  entity_recognition: True
-  use_masked_language_model: False
-  BILOU_flag: False
-  number_of_transformer_layers: 1
   epochs: 80
-- name: EntitySynonymMapper  
+  scale_loss: False
+  weight_sparsity: 0.3
+  transformer_size: 512
+  BILOU_flag: True
 - name: ResponseSelector
   epochs: 50
+- name: EntitySynonymMapper
+
 policies:
 - name: MemoizationPolicy
 - name: EmbeddingPolicy
