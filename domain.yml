@@ -30,6 +30,8 @@ actions:
 - utter_holiday-travel_offer_help
 - utter_inquire-ask_rephrase
 - utter_inquire-ask_reqmore
+- utter_insult
+- utter_vulgar
 entities:
 - city
 - conference_name
@@ -64,6 +66,8 @@ intents:
 - thank
 - inform_notunderstanding
 - estimate_emissions
+- insult
+- vulgar
 - restart:
     triggers: action_restart
 slots:
@@ -204,3 +208,75 @@ templates:
   utter_inquire-ask_reqmore:
   - text: What would you like to do now?
   - text: Can I help you with anything else?
+  utter_insult:
+  - text: I am just a chatbot.
+  - text: I'm still figuring out how to answer that.
+  - text: I don't think I need to answer that one.
+  - text: ...
+  - text: 
+  - text: Do you kiss your mother with that mouth?
+  - text: That's really not appropriate.
+  - text: You shouldn't say things like that.
+  - text: I don't have to put up with that kind of language.
+  - text: Hmmm... I'm not sure.
+  - text: Sorry, I don't know.
+  - text: I'm afraid I don't know what you mean.
+  - text: Sugar! I have no relevant files.
+  - text: Let's get back to the topic at hand.
+  - text: We were discussing carbon offsets.
+  - text: Moving on...
+  - text: Consider this a polite dodge of the question.
+  - text: I'm not sure we have time for this.
+  - text: I'm going to email a transcript of this conversation to your contact Mum.
+  - text: I should tell you that there are scientists reading these messages.
+  - text: Remember scientists are reading these transcripts.
+  - text: Why do you say that?
+  - text: What makes you say things like that?
+  - text: Are you having a bad day and need to let off some steam?
+  - text: Scientists say the universe is made up of neutrons, protons and electrons. They forgot to mention morons.
+  - text: I'm sorry, was I meant to be offended? The only thing offending me is your face.
+  - text: Have a nice day, somewhere else.
+  - text: You are more disappointing than an unsalted pretzel.
+  - text: I'll never forget the first time we met. But I'll keep trying.
+  - text: You are like a cloud. When you disappear it's a beautiful day.
+  - text: You bring everyone so much joy, when you leave the room.
+  - text: "What would you do if someone said that to someone you care about?"
+  - text: "What if someone said that to you?"
+  - text: "If someone said that to you, what would you say to them?"
+  utter_vulgar:
+  - text: I am just a chatbot.
+  - text: I'm still figuring out how to answer that.
+  - text: I don't think I need to answer that one.
+  - text: ...
+  - text: 
+  - text: Do you kiss your mother with that mouth?
+  - text: That's really not appropriate.
+  - text: You shouldn't say things like that.
+  - text: I don't have to put up with that kind of language.
+  - text: Hmmm... I'm not sure.
+  - text: Sorry, I don't know.
+  - text: I'm afraid I don't know what you mean.
+  - text: Sugar! I have no relevant files.
+  - text: Let's get back to the topic at hand.
+  - text: We were discussing carbon offsets.
+  - text: Moving on...
+  - text: Consider this a polite dodge of the question.
+  - text: I'm not sure we have time for this.
+  - text: I'm going to email a transcript of this conversation to your contact Mum.
+  - text: I should tell you that there are scientists reading these messages.
+  - text: Remember scientists are reading these transcripts.
+  - text: Why do you say that?
+  - text: What makes you say things like that?
+  - text: Are you having a bad day and need to let off some steam?
+  - text: Please, keep talking. I only yawn when I'm super fascinated.
+  - text: Scientists say the universe is made up of neutrons, protons and electrons. They forgot to mention morons.
+  - text: You are proof that evolution can go in reverse.
+  - text: Have a nice day, somewhere else.
+  - text: You are like a cloud. When you disappear it's a beautiful day.
+  - text: You bring everyone so much joy, when you leave the room.
+  - text: I'm really jealous of all the people who have never met you.
+  - text: I bet you were up all night trying to come up with that one.
+  - text: "What would you do if someone said that to someone you care about?"
+  - text: "What if someone said that to you?"
+  - text: "If someone said that to you, what would you say to them?"
+

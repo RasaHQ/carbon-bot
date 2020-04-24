@@ -1613,3 +1613,11 @@
 * why
     - utter_explain_why_offset_travel
     - utter_ask_detailed_estimate
+
+## RUDE USER 1
+* insult
+    - utter_insult
+
+## RUDE USER 2
+* vulgar
+    - utter_vulgar
