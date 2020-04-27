@@ -222,8 +222,8 @@ jobs:
       env:
         RASA_X_PASSWORD: ${{ secrets.RASA_X_ADMIN_PASSWORD }}
         RASA_X_USERNAME: admin
+        RASA_X_DEPLOYMENT_LABEL: "app.kubernetes.io/component=rasa-x"
       run: |
-        RASA_X_DEPLOYMENT_LABEL="app.kubernetes.io/component=rasa-x"
         # Wait for deployment to be ready
         kubectl wait --for=condition=available --timeout=10m -l "${RASA_X_DEPLOYMENT_LABEL}" deployment --namespace carbon-assistant
 
