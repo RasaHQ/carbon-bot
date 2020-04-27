@@ -1333,7 +1333,7 @@
 - [Tak](city)
 - [Cebu](city) City
 - Metro [Manila](city)
-- [Medford]{"entity": "city", "role": "from"},MA to [Nashua]{"entity": "city", "role": "to"},NH
+- [Medford]{"entity": "city", "role": "from"}, MA to [Nashua]{"entity": "city", "role": "to"}, NH
 - [Mannathan](city)
 - [Ny](city)
 - Im flying To [NY]{"entity": "city", "role": "to"}
