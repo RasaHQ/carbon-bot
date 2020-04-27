@@ -21,6 +21,3 @@ ingress:
   - host: carbon.rasa-bots.com
     paths:
     - /*
-
-securityContext:
-  fsGroup: 0
