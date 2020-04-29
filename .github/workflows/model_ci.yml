@@ -204,6 +204,8 @@ jobs:
     needs: 
     - deploy-to-cluster
     - build-model
+    env:
+      MODEL_DIRECTORY: "models"
 
     if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
     runs-on: ubuntu-latest
@@ -213,12 +215,12 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: model
-        path: models
+        path: $ {{ env.MODEL_DIRECTORY }}
 
     - name: Get path to model
       run: |
         ls -R
-        echo "::set-env name=MODELNAME::$(ls models)"
+        echo "::set-env name=MODELNAME::${{ env.MODEL_DIRECTORY }}/$(ls ${{ env.MODEL_DIRECTORY }})"
 
     - name: GCP Auth
       env:
