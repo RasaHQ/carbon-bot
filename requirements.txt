@@ -1,3 +1,2 @@
-rasa==1.8.1
+rasa[convert]==1.10.0
 pytablewriter==0.47.0
-tensorflow_text==2.1.0rc0
