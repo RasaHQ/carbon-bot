@@ -9,4 +9,11 @@ See carbon bot [in the news!](https://www.zdnet.com/article/feel-guilty-about-fl
 
 This is a research project from [Rasa](https://rasa.com/research) and it is built with [Rasa Open Source](https://github.com/RasaHQ/rasa) and [Rasa X](https://rasa.com/docs/rasa-x/)
 
+
+# Updating the used Rasa Open Source / Rasa X Versions
+
+To update the used Rasa / Rasa X versions please check the following files:
+- `.env`
+- `requirements.txt`
+
 **Be Warned** There is a lot of NSFW content in the training data!
