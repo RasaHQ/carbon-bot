@@ -293,15 +293,20 @@ class AirTravelForm(FormAction):
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
             "travel_departure": [
-                self.from_trigger_intent("TRIGGER", intent="inform"),
+                self.from_entity(entity="city", role="from"),
+                self.from_entity(entity="iata", role="from"),
+                self.from_entity(entity="city"),
+                self.from_entity(entity="iata"),
                 self.from_text(intent="inform"),
             ],
             "travel_destination": [
-                self.from_trigger_intent("TRIGGER", intent="inform"),
+                self.from_entity(entity="city", role="to"),
+                self.from_entity(entity="iata", role="to"),
+                self.from_entity(entity="city"),
+                self.from_entity(entity="iata"),
                 self.from_text(intent="inform"),
             ],
             "previous_entered_flight": [
-                self.from_trigger_intent("TRIGGER", intent="inform"),
                 self.from_text(intent="inform"),
             ],
             "travel_flight_class": [
@@ -310,6 +315,12 @@ class AirTravelForm(FormAction):
                 self.from_entity("travel_flight_class"),
             ],
         }
+
+    def validate_travel_departure(self, value, dispatcher, tracker, domain):
+        return self._location_to_slot_dict(value, "departure")
+
+    def validate_travel_destination(self, value, dispatcher, tracker, domain):
+        return self._location_to_slot_dict(value, "destination")
 
     @staticmethod
     def _location_to_slot_dict(location: Text, kind: Text) -> Dict:
@@ -333,39 +344,6 @@ class AirTravelForm(FormAction):
             result = {f"travel_{kind}": None, f"iata_{kind}": None}
         return result
 
-    @staticmethod
-    def _pop_next_item(items: List[Text], key: Text) -> Optional[Text]:
-        """
-        Returns items[i + 1], where i is the index of key, and
-        deletes items[i] and items[i + 1] from `items`.
-        :param items: List of things
-        :param key: Item left of the item of interest
-        :return: items[i + 1] or None
-        """
-        try:
-            i = items.index(key)
-        except ValueError:
-            return None
-        if i < len(items) - 1:
-            next_key = items[i + 1]
-            items.remove(key)
-            items.remove(next_key)
-            return next_key
-        else:
-            items.remove(key)
-            return None
-
-    @staticmethod
-    def explain_travel_plan(plan, dispatcher):
-        explanation = None
-        if plan.get("travel_departure") and plan.get("travel_destination"):
-            explanation = f"Ok, so you'll be flying from {plan['travel_departure']} to {plan['travel_destination']}."
-        elif plan.get("travel_departure"):
-            explanation = f"So you'll be flying from {plan['travel_departure']}."
-        elif plan.get("travel_destination"):
-            explanation = f"So you'll be flying to {plan['travel_destination']}."
-
-        dispatcher.utter_message(explanation)
 
     def check_stopover(
         self,
@@ -446,164 +424,6 @@ class AirTravelForm(FormAction):
         )
         return destination_change
 
-    def analyze_travel_plan(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        expected: Optional[Text],
-    ):
-        # Set the slots that we expect to `None` for now
-        # The user might provide the destination despite being asked for the
-        # departure, or vice versa
-        result = {}
-        if not expected or expected == "departure":
-            result.update({"travel_departure": None, "iata_departure": None})
-        if not expected or expected == "destination":
-            result.update({"travel_destination": None, "iata_destination": None})
-        if " via " in tracker.latest_message["text"]:
-            result.update({"travel_stopover": None, "iata_stopover": None})
-        # Store current belief about departure and destination
-        old_departure = (
-            tracker.get_slot("travel_departure"),
-            tracker.get_slot("iata_departure"),
-        )
-        old_destination = (
-            tracker.get_slot("travel_destination"),
-            tracker.get_slot("iata_destination"),
-        )
-        # and information about previous flight
-        previous_entered_flight = tracker.get_slot("previous_entered_flight")
-        # The user may have entered multiple cities in one sentence
-        msg = tracker.latest_message["text"]
-        # Find all the cities that have been mentioned
-        cities = [
-            ent for ent in tracker.latest_message["entities"] if ent["entity"] == "city"
-        ]
-        # Find all IATA codes
-        iatas = [
-            ent for ent in tracker.latest_message["entities"] if ent["entity"] == "iata"
-        ]
-
-        # Create a list of "from", "to", and locations, such as
-        # ["from", "TXL", "Singapore", "to", "Hong Kong"]
-        match = re.search(r"\bfrom\b", msg, re.IGNORECASE)
-        pos_from = match.start() if match else -1
-        match = re.search(r"\bto\b", msg, re.IGNORECASE)
-        pos_to = match.start() if match else -1
-        match = re.search(r"\bvia\b", msg, re.IGNORECASE)
-        pos_via = match.start() if match else -1
-        keyword_positions = (
-            [(iata["value"], iata["start"]) for iata in iatas]
-            + [(city["value"], city["start"]) for city in cities]
-            + [("from", pos_from), ("to", pos_to), ("via", pos_via)]
-        )
-        keyword_positions.sort(key=lambda elem: elem[1])
-        keywords = [kp[0] for kp in keyword_positions if kp[1] >= 0]
-        # route_changed -- whether route has changed in this turn
-        route_changed_this_turn = False
-        # We expect the departure and destination locations to be the next keywords
-        # after 'from' and 'to', respectively
-        stopover = self._pop_next_item(keywords, "via")
-        departure = self._pop_next_item(keywords, "from")
-        destination = self._pop_next_item(keywords, "to")
-
-        # Use remaining locations if departure or destination is still unknown
-        if keywords:
-            if not destination and (departure or expected != "departure"):
-                destination = keywords[0]
-            elif not departure and (destination or expected == "departure"):
-                departure = keywords[0]
-
-        # Fill `result` with all slots that we've learned
-        # for the case when we got the stopover with "via"
-        if stopover:
-            for kind, value in [
-                ("departure", departure),
-                ("destination", destination),
-                ("stopover", stopover),
-            ]:
-                result.update(self._location_to_slot_dict(value, kind))
-        # for the case when we just got one flight
-        else:
-            for kind, value in [("departure", departure), ("destination", destination)]:
-                result.update(self._location_to_slot_dict(value, kind))
-
-        # store information about the NEW trip when we have collected the required information in
-        # the past two turns
-        if result.get("travel_departure") and result.get("travel_destination"):
-            result["previous_entered_flight"] = (
-                (result["travel_departure"], result["iata_departure"]),
-                (result["travel_destination"], result["iata_destination"]),
-            )
-        elif result.get("travel_departure") and old_destination[0]:
-            result["previous_entered_flight"] = (
-                (result["travel_departure"], result["iata_departure"]),
-                old_destination,
-            )
-        elif old_departure[0] and result.get("travel_destination"):
-            result["previous_entered_flight"] = (
-                old_departure,
-                (result["travel_destination"], result["iata_destination"]),
-            )
-
-        # if the information about one flight has been already provided;
-        # check whether the new flight is the second leg
-        if previous_entered_flight:
-            second_leg_provided, stopover_tuple = self.check_stopover(
-                old_departure, old_destination, result, tracker
-            )
-            # if second leg given, update the result with the new route
-            if second_leg_provided:
-                for kind, value in [
-                    ("departure", stopover_tuple[0][1]),
-                    ("stopover", stopover_tuple[1][1]),
-                    ("destination", stopover_tuple[2][1]),
-                ]:
-                    result.update(self._location_to_slot_dict(value, kind))
-
-                route_changed_this_turn = True
-
-        # If the departure or destination has changed,
-        # explain the recognized flight plan to the user
-        if not route_changed_this_turn:
-            if self.departure_changed(
-                old_departure, result
-            ) or self.destination_changed(old_destination, result):
-                self.explain_travel_plan(result, dispatcher)
-
-        # Notify user that no airport was found
-        if expected and not result.get(f"iata_{expected}"):
-            # dispatcher.utter_template("utter_could_not_find_airport", tracker)
-            if result.get(f"travel_{expected}") is not None:
-                dispatcher.utter_message(
-                    f"I couldn't find your {expected} airport in {result.get(f'travel_{expected}')}."
-                )
-            else:
-                dispatcher.utter_message(f"I'm not sure about your {expected} airport.")
-
-        return result
-
-    def validate_travel_departure(
-        self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> Dict[Text, Any]:
-        return self.analyze_travel_plan(
-            dispatcher, tracker, None if value == "TRIGGER" else "departure"
-        )
-
-    def validate_travel_destination(
-        self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> Dict[Text, Any]:
-        return self.analyze_travel_plan(
-            dispatcher, tracker, None if value == "TRIGGER" else "destination"
-        )
 
     def submit(
         self,

@@ -1,6 +1,4 @@
 # Requirements for the action server should go in action-server-requirements.txt
 -r action-server-requirements.txt
+rasa[convert]==1.10.0
 
-rasa==1.9.6
-pytablewriter==0.47.0
-tensorflow_text==2.1.0rc0
