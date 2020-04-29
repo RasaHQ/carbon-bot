@@ -109,7 +109,6 @@
     - action_explain_typical_emissions
     - utter_ask_detailed_estimate
 * inform{"city": "Berlin"}
-    - slot{"city": ["Berlin", "San Francisco"]}
     - airtravel_form
     - form{"name": "airtravel_form"}
     - form{"name": null}
@@ -173,7 +172,6 @@
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * inform{"city": "vancouver"}
-    - slot{"city": ["london", "vancouver"]}
     - airtravel_form
     - slot{"travel_departure":"London"}
     - slot{"requested_slot":"travel_destination"}
@@ -183,7 +181,6 @@
     - form{"name":null}
     - slot{"requested_slot":null}
 * inform{"city": "vancouver"}
-    - slot{"city": ["london", "vancouver"]}
     - airtravel_form
     - form{"name":"airtravel_form"}
     - slot{"requested_slot":"travel_flight_class"}
@@ -192,12 +189,10 @@
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * inform{"city": "berlin"}
-    - slot{"city": ["london", "berlin"]}
     - airtravel_form
     - slot{"travel_departure":"London"}
     - slot{"requested_slot":"travel_destination"}
 * inform{"city": "seattle"}
-    - slot{"city": ["seattle"]}
     - airtravel_form
     - slot{"travel_destination":"Berlin"}
     - form{"name":null}
@@ -219,7 +214,6 @@
     - slot{"holiday_name":"thanksgiving"}
     - utter_ask_detailed_estimate
 * inform{"city": "seattle"}
-    - slot{"city": ["seattle"]}
     - airtravel_form
     - form{"name":"airtravel_form"}
     - slot{"requested_slot":"travel_flight_class"}
@@ -243,12 +237,10 @@
     - form{"name":null}
     - slot{"requested_slot":null}
 * inform{"city": "seattle"}
-    - slot{"city": ["seattle"]}
     - airtravel_form
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * inform{"city": "Paris"}
-    - slot{"city": ["Prague", "Paris"]}
     - airtravel_form
     - slot{"travel_departure":"London"}
     - slot{"requested_slot":"travel_destination"}
@@ -291,14 +283,11 @@
     - utter_explain_why_offset_travel
     - slot{"context_scenario":"holiday"}
     - slot{"holiday_name":"thanksgiving"}
-    - slot{"city": ["Berlin"]}
     - action_explain_typical_emissions
     - slot{"context_scenario":"holiday"}
     - slot{"holiday_name":"thanksgiving"}
-    - slot{"city": ["Berlin"]}
     - utter_ask_detailed_estimate
 * inform{"city":"Berlin"}
-    - slot{"city": ["Berlin"]}
     - airtravel_form
     - form{"name":"airtravel_form"}
     - slot{"requested_slot":"travel_flight_class"}
@@ -307,7 +296,6 @@
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * inform{"city":"Berlin"}
-    - slot{"city": ["Berlin"]}
     - airtravel_form
     - slot{"travel_departure":"Berlin"}
     - slot{"requested_slot":"travel_destination"}
@@ -317,7 +305,6 @@
     - form{"name":null}
     - slot{"requested_slot":null}
 * inform{"city": "new york"}
-    - slot{"city": ["new york"]}
     - airtravel_form
     - slot{"travel_destination":"Dublin"}
     - form{"name":null}
@@ -381,7 +368,6 @@
     - slot{"travel_departure":"Seattle"}
     - slot{"requested_slot":"travel_destination"}
 * inform{"city":"Grand Rapids"}
-    - slot{"city":["Grand Rapids"]}
     - airtravel_form
     - slot{"travel_destination":"Grand Rapids"}
     - form{"name":null}
@@ -480,7 +466,6 @@
     - slot{"travel_destination": null}
     - slot{"requested_slot": "travel_destination"}
 * form: inform{"city": "San Diego"}
-    - slot{"city": "San Diego"}
     - form: airtravel_form
     - slot{"travel_destination": "San Diego International Airport"}
     - slot{"iata_destination": "SAN"}
@@ -510,12 +495,10 @@
     - form{"name": "airtravel_form"}
     - slot{"requested_slot": "travel_flight_class"}
 * form: inform{"city": "boston"}
-    - slot{"city": ["boston"]}
     - form: airtravel_form
     - slot{"travel_flight_class": "economy"}
     - slot{"requested_slot": "travel_departure"}
 * form: inform{"city": "Los Angeles"}
-    - slot{"city": "Los Angeles"}
     - form: airtravel_form
     - slot{"travel_departure": "Los Angeles International Airport"}
     - slot{"iata_departure": "LAX"}
@@ -525,7 +508,6 @@
     - airtravel_form
     - slot{"requested_slot": "travel_destination"}
 * form: inform{"city": "Pittsburgh"}
-    - slot{"city": ["Pittsburgh"]}
     - form: airtravel_form
     - slot{"travel_destination": "Pittsburgh International Airport"}
     - slot{"iata_destination": "PIT"}
@@ -559,12 +541,10 @@
     - form{"name": "airtravel_form"}
     - slot{"requested_slot": "travel_flight_class"}
 * form: inform{"city": "boston"}
-    - slot{"city": ["boston"]}
     - form: airtravel_form
     - slot{"travel_flight_class": "economy"}
     - slot{"requested_slot": "travel_departure"}
 * form: inform{"city": "Los Angeles"}
-    - slot{"city": "Los Angeles"}
     - form: airtravel_form
     - slot{"travel_departure": "Los Angeles International Airport"}
     - slot{"iata_departure": "LAX"}
@@ -576,7 +556,6 @@
     - airtravel_form
     - slot{"requested_slot": "travel_destination"}
 * form: inform{"city": "Pittsburgh"}
-    - slot{"city": ["Pittsburgh"]}
     - form: airtravel_form
     - slot{"travel_destination": "Pittsburgh International Airport"}
     - slot{"iata_destination": "PIT"}
@@ -612,7 +591,6 @@
     - slot{"travel_flight_class": "economy"}
     - slot{"requested_slot": "travel_departure"}
 * form: inform{"city": "Detroit"}
-    - slot{"city": ["Detroit"]}
     - form: airtravel_form
     - slot{"travel_departure": "Detroit Metropolitan Wayne County Airport"}
     - slot{"iata_departure": "DTW"}
@@ -652,7 +630,6 @@
 * affirm
     - utter_acknowledge
 * inform{"city": "Boston"}
-    - slot{"city": ["Boston"]}
     - airtravel_form
     - form{"name": "airtravel_form"}
     - slot{"requested_slot": "travel_flight_class"}
@@ -661,13 +638,11 @@
     - slot{"travel_flight_class": "economy"}
     - slot{"requested_slot": "travel_departure"}
 * form: inform{"city": "Austin"}
-    - slot{"city": ["Austin"]}
     - form: airtravel_form
     - slot{"travel_departure": "Austin Bergstrom International Airport"}
     - slot{"iata_departure": "AUS"}
     - slot{"requested_slot": "travel_destination"}
 * form: inform{"city": "Boston"}
-    - slot{"city": ["Boston"]}
     - form: airtravel_form
 
 ## interactive_story_12
@@ -874,14 +849,11 @@
     - utter_explain_why_offset_travel
     - slot{"context_scenario":"holiday"}
     - slot{"holiday_name":"thanksgiving"}
-    - slot{"city": ["Berlin"]}
     - action_explain_typical_emissions
     - slot{"context_scenario":"holiday"}
     - slot{"holiday_name":"thanksgiving"}
-    - slot{"city": ["Berlin"]}
     - utter_ask_detailed_estimate
 * inform{"city":"Berlin"}
-    - slot{"city": ["Berlin"]}
     - airtravel_form
     - form{"name":"airtravel_form"}
     - slot{"requested_slot":"travel_flight_class"}
@@ -890,7 +862,6 @@
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * inform{"city":"Berlin"}
-    - slot{"city": ["Berlin"]}
     - airtravel_form
     - slot{"travel_departure":"Berlin"}
     - slot{"requested_slot":"travel_destination"}
@@ -941,13 +912,11 @@
     - slot{"travel_flight_class": "economy"}
     - slot{"requested_slot": "travel_departure"}
 * form: inform{"city": "Berlin"}
-    - slot{"city": ["Berlin"]}
     - form: airtravel_form
     - slot{"travel_departure": "Berlin-Schönefeld Airport"}
     - slot{"iata_departure": "SXF"}
     - slot{"requested_slot": "travel_destination"}
 * form: inform{"city": "new york"}
-    - slot{"city": ["new york"]}
     - form: airtravel_form
     - slot{"travel_destination": "John F Kennedy International Airport"}
     - slot{"iata_destination": "JFK"}
@@ -959,7 +928,6 @@
     - form{"name": null}
     - slot{"requested_slot": null}
 * inform{"city": "vancouver"}
-    - slot{"city": ["london", "vancouver"]}
     - airtravel_form
     - form{"name": "airtravel_form"}
     - slot{"travel_departure": "London Airport"}
@@ -994,7 +962,6 @@
     - slot{"holiday_name":"thanksgiving"}
     - utter_ask_detailed_estimate
 * inform{"city": "seattle"}
-    - slot{"city": ["seattle"]}
     - airtravel_form
     - form{"name":"airtravel_form"}
     - slot{"requested_slot":"travel_flight_class"}
@@ -1018,12 +985,10 @@
     - form{"name":null}
     - slot{"requested_slot":null}
 * inform{"city": "seattle"}
-    - slot{"city": ["seattle"]}
     - airtravel_form
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * inform{"city": "Paris"}
-    - slot{"city": ["Prague", "Paris"]}
     - airtravel_form
     - slot{"travel_departure":"London"}
     - slot{"requested_slot":"travel_destination"}
@@ -1164,7 +1129,6 @@
     - slot{"travel_destination": null}
     - slot{"requested_slot": "travel_destination"}
 * form: inform{"city": "San Diego"}
-    - slot{"city": "San Diego"}
     - form: airtravel_form
     - slot{"travel_destination": "San Diego International Airport"}
     - slot{"iata_destination": "SAN"}
@@ -1202,13 +1166,11 @@
     - slot{"travel_flight_class": "economy"}
     - slot{"requested_slot": "travel_departure"}
 * form: inform{"city": "Berlin"}
-    - slot{"city": ["Berlin"]}
     - form: airtravel_form
     - slot{"travel_departure": "Berlin-Schönefeld Airport"}
     - slot{"iata_departure": "SXF"}
     - slot{"requested_slot": "travel_destination"}
 * form: inform{"city": "Paris"}
-    - slot{"city": ["Paris"]}
     - form: airtravel_form
     - slot{"travel_destination": "Charles de Gaulle International Airport"}
     - slot{"iata_destination": "CDG"}
@@ -1220,7 +1182,6 @@
     - form{"name": null}
     - slot{"requested_slot": null}
 * inform{"city": "Seattle"}
-    - slot{"city": ["Paris", "Seattle"]}
     - airtravel_form
     - form{"name": "airtravel_form"}
     - slot{"travel_departure": "Charles de Gaulle International Airport"}
@@ -1241,7 +1202,6 @@
 * affirm
     - utter_acknowledge
 * inform{"city": "Dallas"}
-    - slot{"city": ["Seattle", "Dallas"]}
     - airtravel_form
     - form{"name": "airtravel_form"}
     - slot{"travel_departure": "Boeing Field King County International Airport"}
@@ -1277,7 +1237,6 @@
     - action_disclaimer
     - utter_holiday-travel_offer_help
 * inform{"city": "Chicago", "iata": "EWR"}
-    - slot{"city": ["Chicago"]}
     - airtravel_form
     - form{"name": "airtravel_form"}
     - slot{"travel_departure": "Chicago Midway International Airport"}
@@ -1308,7 +1267,6 @@
     - slot{"travel_flight_class": "economy"}
     - slot{"requested_slot": "travel_destination"}
 * form: inform{"city": "Chicago"}
-    - slot{"city": ["Chicago"]}
     - form: airtravel_form
     - slot{"travel_destination": "Chicago Midway International Airport"}
     - slot{"iata_destination": "MDW"}
@@ -1324,7 +1282,6 @@
 * faq
     - respond_faq
 * inform{"city": "Singapore"}
-    - slot{"city": ["New York", "Singapore"]}
     - airtravel_form
     - form{"name": "airtravel_form"}
     - slot{"travel_departure": "John F Kennedy International Airport"}
@@ -1411,13 +1368,11 @@
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * inform{"city":"Los Angeles"}
-    - slot{"city":"Los Angeles"}
     - airtravel_form
     - slot{"travel_departure":"Los Angeles International Airport"}
     - slot{"iata_departure":"LAX"}
     - slot{"requested_slot":"travel_destination"}
 * inform{"city":"Chicago"}
-    - slot{"city":"Chicago"}
     - airtravel_form
     - slot{"travel_destination":"Chicago Midway International Airport"}
     - slot{"iata_destination":"MDW"}
@@ -1447,7 +1402,6 @@
 * affirm
     - utter_acknowledge
 * inform{"city":"Los Angeles"}
-    - slot{"city":["Boston","Los Angeles"]}
     - airtravel_form
     - slot{"travel_departure":"General Edward Lawrence Logan International Airport"}
     - slot{"iata_departure":"BOS"}
@@ -1473,7 +1427,6 @@
 
 ## Story from conversation with 3afca642-97d5-4197-9252-a738c40604f1 on December 2nd 2019
 * inform{"city":"new york","travel_flight_class":"economy"}
-    - slot{"city":["boston","new york"]}
     - slot{"travel_flight_class":"economy"}
     - airtravel_form
     - form{"name":"airtravel_form"}
@@ -1505,13 +1458,11 @@
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * form: inform{"city":"boston"}
-    - slot{"city":["boston"]}
     - airtravel_form
     - slot{"travel_departure":"General Edward Lawrence Logan International Airport"}
     - slot{"iata_departure":"BOS"}
     - slot{"requested_slot":"travel_destination"}
 * form: inform{"city":"new york"}
-    - slot{"city":["new york"]}
     - airtravel_form
     - slot{"travel_destination":"John F Kennedy International Airport"}
     - slot{"iata_destination":"JFK"}
@@ -1550,13 +1501,11 @@
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * inform{"city":"Austin"}
-    - slot{"city":["Austin"]}
     - airtravel_form
     - slot{"travel_departure":"Austin Bergstrom International Airport"}
     - slot{"iata_departure":"AUS"}
     - slot{"requested_slot":"travel_destination"}
 * inform{"city":"New York"}
-    - slot{"city":["New York"]}
     - airtravel_form
     - slot{"travel_destination":"John F Kennedy International Airport"}
     - slot{"iata_destination":"JFK"}
@@ -1568,7 +1517,6 @@
     - form{"name":null}
     - slot{"requested_slot":null}
 * inform{"city":"Newark"}
-    - slot{"city":["Newark"]}
     - airtravel_form
     - form{"name":"airtravel_form"}
     - slot{"travel_departure":null}
@@ -1581,7 +1529,6 @@
     - slot{"travel_flight_class":"economy"}
     - slot{"requested_slot":"travel_departure"}
 * inform{"city":"Austin"}
-    - slot{"city":["Austin"]}
     - airtravel_form
     - slot{"travel_departure":"Austin Bergstrom International Airport"}
     - slot{"iata_departure":"AUS"}
