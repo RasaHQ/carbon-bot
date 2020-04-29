@@ -7,15 +7,16 @@ pipeline:
 - name: ConveRTFeaturizer
 - name: DIETClassifier
   hidden_layers_sizes:
-    text: [256, 128]
+    text: [64, 32]
     label: []
   intent_classification: True
   entity_recognition: False
   use_masked_language_model: False
   BILOU_flag: False
   number_of_transformer_layers: 0
+  epochs: 30
 - name: ResponseSelector
-  epochs: 200
+  epochs: 100
 policies:
 - name: MemoizationPolicy
 - name: EmbeddingPolicy
