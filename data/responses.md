@@ -66,6 +66,11 @@
 * faq/not-personally-responsible
     - We are all responsible for the choices we make as consumers. We can choose to fly less often, for example. Some airlines have already responded to consumer pressure and started buying offsets.
 
+## no money
+* faq/cant-afford-offsets
+    - We are all responsible for the choices we make as consumers. We can choose to fly less often, for example. Some airlines have already responded to consumer pressure and started buying offsets.
+    
+
 ## personal question
 * faq/personal_question_for_bot
     - I love that you want to get to know me, but I don't have much of a personality. I'm just a bot.
