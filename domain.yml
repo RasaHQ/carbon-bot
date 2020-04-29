@@ -71,10 +71,6 @@ intents:
 - restart:
     triggers: action_restart
 slots:
-  city:
-    type: list
-  conference_name:
-    type: text
   context_scenario:
     type: categorical
     values:
