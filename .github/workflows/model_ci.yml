@@ -213,12 +213,12 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: model
+        path: models
 
     - name: Get path to model
       run: |
-        ls 
-        ls model
-        echo "::set-env name=MODELNAME::$(ls model)"
+        ls -R
+        echo "::set-env name=MODELNAME::$(ls models)"
 
     - name: GCP Auth
       env:
