@@ -41,7 +41,7 @@ jobs:
 
     - name: Cross-validate NLU model
       run: |
-        rasa test nlu -f 5 --cross-validation
+        rasa test nlu -f 2 --cross-validation
         python format_results.py
 
     - name: Upload Cross Validation Results
