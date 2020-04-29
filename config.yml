@@ -11,7 +11,7 @@ pipeline:
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: DIETClassifier
-  epochs: 20
+  epochs: 60
   scale_loss: False
   weight_sparsity: 0.3
   transformer_size: 512
