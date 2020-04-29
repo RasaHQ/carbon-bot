@@ -40,21 +40,21 @@ jobs:
         rasa test core --stories test_stories/stories.md --fail-on-prediction-errors
 
     - name: Cross-validate NLU model
-      if: github.event_name == 'push' && github.ref != 'refs/heads/master'
+      if: github.event_name == 'pull_request'
       run: |
         rasa test nlu -f 5 --cross-validation
         python format_results.py
 
     - name: Upload Cross Validation Results
-      if: github.event_name == 'push' && github.ref != 'refs/heads/master'
-      uses: actions/upload-artifact@master
+      if: github.event_name == 'pull_request'
+      uses: actions/upload-artifact@v2
       with:
         name: cross-validation-result
         path: results.md
 
     - name: Upload model
       if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v2
       with:
         name: model
         path: models
@@ -65,16 +65,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-model]
 
+    if: github.event_name == 'pull_request'
+
     steps:
     - name: Download Cross Validation Results
-      uses: actions/download-artifact@master
+      uses: actions/download-artifact@v2
       continue-on-error: true
       with:
         name: cross-validation-result
 
     - name: post cross-val results to PR
       uses: amn41/comment-on-pr@comment-file-contents
-      continue-on-error: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -209,9 +210,15 @@ jobs:
 
     steps:
     - name: Download Model
-      uses: actions/download-artifact@master
+      uses: actions/download-artifact@v2
       with:
         name: model
+        path: models
+
+    - name: Get path to model
+      run: |
+        ls -R
+        echo "::set-env name=MODELNAME::$(ls models)"
 
     - name: GCP Auth
       env:
@@ -240,7 +247,7 @@ jobs:
           https://${{ env.DOMAIN }}/api/auth | jq -r .access_token)
 
         # Upload model
-        cd model; export MODELNAME=$(ls); curl -k --fail -H "Authorization: Bearer ${RASA_X_TOKEN}" -F "model=@${MODELNAME}" http://${{ env.DOMAIN }}/api/projects/default/models
+        curl -k --fail -H "Authorization: Bearer ${RASA_X_TOKEN}" -F "model=@${MODELNAME}" http://${{ env.DOMAIN }}/api/projects/default/models
         # ensure model is ready and tag as production
         sleep 5
         export MODEL=$(ls | xargs -I{} basename {} .tar.gz);curl --fail -XPUT -H "Authorization: Bearer ${RASA_X_TOKEN}" https://${{ env.DOMAIN }}/api/projects/default/models/${MODEL}/tags/production
