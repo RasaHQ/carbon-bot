@@ -37,7 +37,7 @@ jobs:
 
     - name: Run Through Test Stories
       run: |
-        rasa test core --stories test_stories/stories.md --fail-on-prediction-errors
+        rasa test
 
     - name: Cross-validate NLU model
       if: github.event_name == 'pull_request'
