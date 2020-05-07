@@ -5,7 +5,6 @@
 - I think so
 - I think yes
 - I'd like to do that
-- I'll be flying cheap
 - OK
 - Of course
 - yes, of course!
@@ -798,9 +797,10 @@
 - I'll be flying from [Berlin]{"entity": "city", "role": "from"} to [San Francisco]{"entity": "city", "role": "to"}, taking the bus afterwards to [Dunedin]{"entity": "city", "role": "to"}.
 - I'll depart in [Berlin]{"entity": "city", "role": "from"}
 - I'll fly [economy](travel_flight_class)
-- I'll fly [premium economy]{"entity": "travel_flight_class", "value": "premium"}
+- I'll be flying [cheap]{"entity": "travel_flight_class", "value": "economy"}
+- I'll fly [premium economy]{"entity": "travel_flight_class", "value": "economy"}
 - I'll go and see my parents in Arizona
-- I'll take [premium economy]{"entity": "travel_flight_class", "value": "premium"}
+- I'll take [premium economy]{"entity": "travel_flight_class", "value": "economy"}
 - I'm going to [Berlin]{"entity": "city", "role": "to"}
 - I'm heading to [Berlin]{"entity": "city", "role": "to"}
 - I'm taking my family on a trip to [Las Vegas]{"entity": "city", "role": "to"}
@@ -2712,6 +2712,3 @@
 - Economy Class
 - Economy class
 - economy class
-
-## synonym:premium
-- premium economy
