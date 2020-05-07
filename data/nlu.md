@@ -4,7 +4,6 @@
 - As I've said, yes.
 - I think so
 - I think yes
-- I'd just forward them the link
 - I'd like to do that
 - I'll be flying cheap
 - OK
@@ -2210,6 +2209,7 @@
 
 ## intent:faq/oos_inform
 - Chuck Norris can stop climate change with one hand.
+- I'd just forward them the link
 - It's cold outside.
 - it's warm outside
 - Bacor
@@ -2392,8 +2392,6 @@
 - so what's the point of this?
 - what is the point of this
 - wtf is this
-- wtf
-- what the hell
 - ok but what's the point
 - I don't see the point
 - what is this about
