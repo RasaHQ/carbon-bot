@@ -34,7 +34,6 @@
 - fine
 - fine let's do that
 - fine lets go
-- gotta love [economy](travel_flight_class)
 - i think so
 - i think so yea
 - i will
@@ -228,7 +227,6 @@
 - Yes, I would like that
 - yah
 - Fuck yeah!!!
-- i do not know the name of the airport in [new york](city)
 - okay, do it
 - yes, why not
 - offcourse
@@ -592,6 +590,7 @@
 
 ## intent:express_uncertainty
 - I don't know
+- i do not know the name of the airport in [new york](city)
 - is it really true?
 - I guess that's a good thing?
 - I'm not so sure
@@ -792,6 +791,7 @@
 
 ## intent:inform
 - [NEW YORK](city)
+- gotta love [economy](travel_flight_class)
 - I am going home to [Detroit]{"entity": "city", "role": "to"}
 - I depart in [Berlin]{"entity": "city", "role": "from"}
 - I fly with [economy class]{"entity": "travel_flight_class", "value": "economy"}
@@ -1425,7 +1425,6 @@
 - what are carbon offsets
 - what is it?
 - what?
-- why?
 - with what?
 - Like what?
 - what is available?
