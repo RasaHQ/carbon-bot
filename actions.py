@@ -14,7 +14,7 @@ import collections
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from rasa_sdk import Action, Tracker
-from rasa_sdk.events import SlotSet, Restarted
+from rasa_sdk.events import SlotSet, Restarted, Form
 from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
 
 
@@ -553,3 +553,123 @@ class ActionRestart(Action):
     ):  # type: (...) -> List[Dict[Text, Any]]
         dispatcher.utter_message("Let's start over.")
         return [Restarted()]
+
+
+class ActivateAirtravelForm(Action):
+
+    def name(self):
+        return "activate_airtravel_form"
+
+    def run(
+        self,
+        dispatcher,  # type: CollectingDispatcher
+        tracker,  # type: Tracker
+        domain,  # type:  Dict[Text, Any]
+    ):  # type: (...) -> List[Dict[Text, Any]]
+        dispatcher.utter_message("activate_airtravel_form")
+        return [Form("airtravel_form")]
+
+
+class AskTravelFlightClass(Action):
+
+    def name(self):
+        return "ask_travel_flight_class"
+
+    def run(
+        self,
+        dispatcher,  # type: CollectingDispatcher
+        tracker,  # type: Tracker
+        domain,  # type:  Dict[Text, Any]
+    ):  # type: (...) -> List[Dict[Text, Any]]
+        dispatcher.utter_message(template="utter_ask_travel_flight_class")
+        return [SlotSet("requested_slot", "travel_flight_class")]
+
+
+class ValidateFlightClass(Action):
+
+    def name(self):
+        return "validate_travel_flight_class"
+
+    def run(
+        self,
+        dispatcher,  # type: CollectingDispatcher
+        tracker,  # type: Tracker
+        domain,  # type:  Dict[Text, Any]
+    ):  # type: (...) -> List[Dict[Text, Any]]
+        dispatcher.utter_message("validate_travel_flight_class")
+        return [SlotSet("travel_flight_class", "economy")]
+
+
+class AskTravelDeparture(Action):
+
+    def name(self):
+        return "ask_travel_departure"
+
+    def run(
+            self,
+            dispatcher,  # type: CollectingDispatcher
+            tracker,  # type: Tracker
+            domain,  # type:  Dict[Text, Any]
+    ):  # type: (...) -> List[Dict[Text, Any]]
+        dispatcher.utter_message(template="utter_ask_travel_departure")
+        return [SlotSet("requested_slot", "travel_departure")]
+
+
+class ValidateTravelDeparture(Action):
+
+    def name(self):
+        return "validate_travel_departure"
+
+    def run(
+        self,
+        dispatcher,  # type: CollectingDispatcher
+        tracker,  # type: Tracker
+        domain,  # type:  Dict[Text, Any]
+    ):  # type: (...) -> List[Dict[Text, Any]]
+        dispatcher.utter_message("validate_travel_departure")
+        return [SlotSet("travel_departure", "travel_departure")]
+
+
+class AskTravelDestination(Action):
+
+    def name(self):
+        return "ask_travel_destination"
+
+    def run(
+            self,
+            dispatcher,  # type: CollectingDispatcher
+            tracker,  # type: Tracker
+            domain,  # type:  Dict[Text, Any]
+    ):  # type: (...) -> List[Dict[Text, Any]]
+        dispatcher.utter_message(template="utter_ask_travel_destination")
+        return [SlotSet("requested_slot", "travel_destination")]
+
+
+class ValidateTravelDestination(Action):
+
+    def name(self):
+        return "validate_travel_destination"
+
+    def run(
+        self,
+        dispatcher,  # type: CollectingDispatcher
+        tracker,  # type: Tracker
+        domain,  # type:  Dict[Text, Any]
+    ):  # type: (...) -> List[Dict[Text, Any]]
+        dispatcher.utter_message("validate_travel_destination")
+        return [SlotSet("travel_destination", "travel_destination")]
+
+
+class SubmitAirtravelForm(Action):
+
+    def name(self):
+        return "submit_airtravel_form"
+
+    def run(
+        self,
+        dispatcher,  # type: CollectingDispatcher
+        tracker,  # type: Tracker
+        domain,  # type:  Dict[Text, Any]
+    ):  # type: (...) -> List[Dict[Text, Any]]
+        dispatcher.utter_message("submit_airtravel_form")
+        return [Form(None), SlotSet("requested_slot", None)]

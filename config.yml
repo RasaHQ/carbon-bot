@@ -21,12 +21,13 @@ pipeline:
 - name: EntitySynonymMapper
 
 policies:
-- name: MemoizationPolicy
+#- name: RulePolicy
+#- name: MemoizationPolicy
 - name: EmbeddingPolicy
   max_history: 5
   batch_strategy: balanced
   epochs: 50
   random_seed: 666
   evaluate_on_num_examples: 0
-- name: MappingPolicy
-- name: FormPolicy
+#- name: MappingPolicy
+#- name: FormPolicy
