@@ -1017,7 +1017,7 @@
 - [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}
 - I'm flying from [Boston]{"entity": "city", "role": "from"}.
 - Yes, [Economy Class]{"entity": "travel_flight_class", "value": "economy"}.
-- Yes! I am planning to fly from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}. I would like to fly [Economy Class]{"entity": "city", "value": "economy"}.
+- Yes! I am planning to fly from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}. I would like to fly [Economy Class]{"entity": "travel_flight_class", "value": "economy"}.
 - I'm flying from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"} in [economy class]{"entity": "travel_flight_class", "value": "economy"} on thanksgiving.  What is the environmental effects?
 - To [Seattle]{"entity": "city", "role": "to"}
 - [boston]{"entity": "city", "role": "from"} to [new york]{"entity": "city", "role": "to"}
