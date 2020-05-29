@@ -1,33 +1,33 @@
-## SCENARIO CHECK
+>> SCENARIO CHECK
 * greet
   - utter_SCENARIOCHECK
 
-## faq
+>> faq
     - ...
 * faq
   - respond_faq
 
 
-## thank
+>> thank
     - ...
 * thank
     - utter_express_positive-emo
     - ...
 
 
-## greet
+>> greet
     - ...
 * greet
     - utter_greet
     - ...
 
 
-## not understand
+>> not understand
     - ...
 * inform_notunderstanding
     - utter_acknowledge_notunderstanding
   
-## not understand restart
+>> not understand restart
     - ...
 * inform_notunderstanding
     - utter_acknowledge_notunderstanding
@@ -35,7 +35,7 @@
     - action_restart
 
 
-## scenario holiday
+>> scenario holiday
     - ...
 * SCENARIO{"context_scenario":"holiday","holiday_name":"bla"}
     - slot{"context_scenario":"holiday"}
@@ -47,7 +47,7 @@
     - utter_holiday-travel_offer_help
 
 
-## holiday affirm
+>> holiday affirm
     - ...
     - utter_holiday-travel_offer_help
 * affirm
@@ -56,7 +56,7 @@
     - utter_ask_detailed_estimate
 
 
-## deny
+>> deny
     - ...
     - utter_holiday-travel_offer_help
 * deny OR deny_flying
@@ -64,55 +64,30 @@
     - action_explain_typical_emissions
 
 
-## start airtravel form
+>> start airtravel form
     - ...
     - utter_ask_detailed_estimate
 * inform OR affirm
-    - activate_airtravel_form
-    - ...
-
-
-## loop airtravel form
-    - ...
-    - activate_airtravel_form
+    - airtravel_form
     - form{"name":"airtravel_form"}
-    - ask_travel_flight_class
-    - slot{"requested_slot":"travel_flight_class"}
-    
-## loop airtravel form
-    - form{"name":"airtravel_form"}
-    - slot{"requested_slot":"travel_flight_class"}
-    - ...
-* affirm
-    - validate_travel_flight_class
-    - ask_travel_departure
-    - slot{"requested_slot":"travel_departure"}
 
-## loop airtravel form
+>> submit airtravel form
     - form{"name":"airtravel_form"}
-    - slot{"requested_slot":"travel_departure"}
     - ...
-* inform
-    - validate_travel_departure
-    - ask_travel_destination
-    - slot{"requested_slot":"travel_destination"}
-
-## loop airtravel form
-    - form{"name":"airtravel_form"}
-    - slot{"requested_slot":"travel_destination"}
-    - ...
-* inform
-    - validate_travel_destination
+    - airtravel_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
     - submit_airtravel_form
-    - form{"name":null}
-    - slot{"requested_slot":null}
-    
 
-## after form
+>> after airtravel form
     - ...
     - submit_airtravel_form
-    - form{"name":null}
-    - slot{"requested_slot":null}
 * thank
     - utter_express_positive-emo
     - utter_farewell
+
+
+>> restart
+    - ...
+* restart
+    - action_restart

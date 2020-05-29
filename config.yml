@@ -21,9 +21,9 @@ pipeline:
 - name: EntitySynonymMapper
 
 policies:
-#- name: RulePolicy
+- name: RulePolicy
 #- name: MemoizationPolicy
-- name: EmbeddingPolicy
+- name: TEDPolicy
   max_history: 5
   batch_strategy: balanced
   epochs: 50

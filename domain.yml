@@ -30,17 +30,51 @@ actions:
 - utter_holiday-travel_offer_help
 - utter_inquire-ask_rephrase
 - utter_inquire-ask_reqmore
-- activate_airtravel_form
-- ask_travel_flight_class
-- validate_travel_flight_class
-- ask_travel_departure
 - validate_travel_departure
-- ask_travel_destination
 - validate_travel_destination
 - submit_airtravel_form
-- ...
 forms:
-- airtravel_form
+- airtravel_form:
+      travel_flight_class:
+        # Slot mappings can be defined in the domain.
+        # There will be an option in the future to overwrite this from the custom action
+        # server.
+        # The slot mappings follow the same syntax as currently in the SDK implementation
+        - type: from_intent
+          intent: affirm
+          value: economy
+        - type: from_intent
+          intent: deny
+          value: business
+        - type: from_entity
+          entity: travel_flight_class
+      travel_departure:
+        - type: from_entity
+          entity: city
+          role: from
+        - type: from_entity
+          entity: iata
+          role: from
+        - type: from_entity
+          entity: city
+        - type: from_entity
+          entity: iata
+        - type: from_text
+          intent: inform
+      travel_destination:
+        - type: from_entity
+          entity: city
+          role: to
+        - type: from_entity
+          entity: iata
+          role: to
+        - type: from_entity
+          entity: city
+        - type: from_entity
+          entity: iata
+        - type: from_text
+          intent: inform
+
 entities:
 - city
 - conference_name
@@ -73,6 +107,7 @@ intents:
 - thank
 - inform_notunderstanding
 - estimate_emissions
+- restart
 slots:
   context_scenario:
     type: categorical

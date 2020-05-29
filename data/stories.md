@@ -16,8 +16,8 @@
 * express_uncertainty
     - utter_explain_how_offsets_work
 * affirm
-    - activate_airtravel_form
-    - ...
+    - airtravel_form
+    - form{"name":"airtravel_form"}
 
 
 ## interactive_story_19
@@ -40,8 +40,8 @@
 * faq
     - respond_faq
 * buy_offsets
-    - activate_airtravel_form
-    - ...
+    - airtravel_form
+    - form{"name":"airtravel_form"}
 
 
 ## interactive_story_14
@@ -83,8 +83,8 @@
 * faq
     - respond_faq
 * buy_offsets
-    - activate_airtravel_form
-    - ...
+    - airtravel_form
+    - form{"name":"airtravel_form"}
 
 ## Story from conversation with 2524603660920240 on December 12th 2019
 * SCENARIO{"context_scenario":"holiday","holiday_name":"christmas"}
