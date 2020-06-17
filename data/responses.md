@@ -50,14 +50,6 @@
 * faq/research_project
     - This project is about creating a better AI assistant. Getting people to reduce their carbon footprint is a happy side effect :)
 
-## insult
-* faq/insult
-    - I don't have to put up with any abuse from you.
-
-## vulgar
-* faq/vulgar
-    - I'm a bot, remember. Trying to shock me is pointless.
-
 ## payment details
 * faq/payment-details
     - I'm afraid I can't help you with payment details.

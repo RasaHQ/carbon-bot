@@ -1914,7 +1914,7 @@
 - Are you here
 - Not understanding or not wanting to understand.
 
-## intent:faq/insult
+## intent:insult
 - fuck off computer
 - good stay of my page
 - how about you eat shit
@@ -2559,7 +2559,7 @@
 - תל אביב
 - sprichst du deutsch?
 
-## intent:faq/vulgar
+## intent:vulgar
 - In the ass
 - I just farted can you tell me about the admissions coming out of my buttbecause I don't want to make too much of a carbon footprint print coming out of my butt
 - I want to Fuck your mom
