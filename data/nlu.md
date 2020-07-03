@@ -589,6 +589,7 @@
 - wait
 - damn
 - 😮😮
+- 🤔
 
 ## intent:express_uncertainty
 - I don't know
@@ -1178,7 +1179,6 @@
 - [LHR](iata)
 - No.  [Business class]{"entity": "travel_flight_class", "value": "business"}.
 - [RDU](iata)
-- [Gatwick]{"entity": "iata", "value": "LGW"}
 - ah, no I'll fly from [seattle]{"entity": "city", "role": "from"}
 - [Raleigh](city) NC
 - [Kaunas](city)
