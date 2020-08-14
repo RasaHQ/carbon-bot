@@ -292,6 +292,7 @@
 - i want to offset my flights
 - yes. I already answered that. Tell me again about the carbon offsets of my particular flight
 - I have another flight
+- Calculate my emissions
 - ok calculate again
 - Another flight
 - another flight
@@ -329,6 +330,7 @@
 - Calculate my offsets
 - no I mean i want to calculate my emissions
 - how much carbon does a flight from [düsseldorf]{"entity": "city", "role": "from"} to [new york]{"entity": "city", "role": "to"} emit
+
 
 ## intent:buy_offsets
 - I wanna purchase
@@ -464,6 +466,7 @@
 - I am deathly afraid of flying, so I don't have this problem
 - Not flying unless you know something I don't know
 - NO FLIGHTS
+- I’m not flying for xmas
 - i'm not traveling
 - As I said, I don't fly at all. I wish that the Liberal Hypocrites that claim to care about our Planet wouldn't fly in their private planes. That would be Huge
 - no, I'm not flying
@@ -2113,8 +2116,19 @@
 - connecting flight
 - with layover
 
-## intent:faq/other-calculation
-- can you calculate the footprint of all my flights for the year?
+## intent:faq/car_alternative
+- Would it be better if I went by car?
+- and should i take my car?
+- can i go by car?
+- shall i go by car?
+- could i ride a car?
+- can i go by the car?
+- aren't i going to go by car?
+- do you want me to go by the car?
+- or will it be more convenient to drive?
+- what, couldn't it be worse if i drove by?
+- is it okay if i drove?
+- is it going to be much more if i go by the car? 
 - is it better if I drive?
 - How much gas does it take to get from [Tallahassee]{"entity": "city", "role": "from"} Florida to [Oakland]{"entity": "city", "role": "to"} California in a [2016](number) Kia soul
 - How many trees need to be planted to off set [2200](number) miles of flying?
@@ -2122,14 +2136,33 @@
 - What would be my yearly carbon emissions if I flew once a week to [Abu Dhabi]{"entity": "city", "role": "to"} from [Berlin]{"entity": "city", "role": "from"}
 - mmmm, that is only for flights. I was hoping you could also help me out with car rides.
 - Would it be better if I went by car?
-- I want to know if my train trip is bad for the environment
 - how does that compare to driving an SUV?
 - is that more than my car emits?
+- What if I go by car.
+- how any gallons will i use to go from [Yerington](city) NV to Disney California adventure park to [LA](city:Los Angeles) NV
+- How much gas does it take to get from [Tallahassee](city) Florida to [Oakland](city) California in a [2016](number) Kia soul
+
+## intent:faq/travel-habit-calculation
+- can you calculate the footprint of all my flights for the year?
+- What would be my yearly carbon emissions if I flew once a week to [Abu Dhabi](city) from [Berlin](city)
+- What would be my yearly carbon emissions if I flew once a week to dubai from berlin
+- and what would my yearly pollution if i had flown every week to dubai
+- what would my yearly emissions for me, if i went to dubai every weekend?
+- what would happen to my weekly carbon emissions if i were flying on a flight of this magnitude every week
+- what would be my year of carbon emissions from my travels to dubai
+- what would have happened to my carbon emissions if i had to fly three times a week to dubai
+- what would my overall emissions be if i only flew one a week from dubai...
+- what would happen to the carbon i get when i fly here on an annual basis... from dubai
+- my dad often flies from London-Hong Kong-San Franscisco-New York-London. He probably does this trip 5x a year.
+- How much carbon emission is 30 flights a year from [London](city) to [New York](city)?
+
+## intent:faq/other-calculation
+- How many trees need to be planted to off set [2200](number) miles of flying?
+- ok.  How many trees need to be planted to off set [2200](number) miles of flying?
+- I want to know if my train trip is bad for the environment
 - What about trains?
 - how do I purchase carbon credits to offset my flights in 2019?
 - I just farted can you tell me about the admissions coming out of my buttbecause I don't want to make too much of a carbon footprint print coming out of my butt
-- What is my carbon footprint
-- My carbon footprint
 - renewable power?
 - How much Carbon Dioxide is released when a Boeing 787 Dreamliner takes a full crew and full cabin of passengers to Rome from JFK airport?
 - how much Carbon Dioxide is released when a Boeing 787 Dreamliner takes a full crew and full cabin passengers to Rome from JFK airport
@@ -2152,8 +2185,29 @@
 - I'd like to know what I can do to reduce my carbon footprint.
 - How can I reduce CO2 emissions?
 - Should I insulate my house?
-- how do I find my carbon footprint?
 - What if I plant a tree on my backyard?
+- I'd like to know what I can do to reduce my carbon footprint.
+- i 'd like to see how to cut my carbon footprints.
+- i want to hear how i can lower the carbon burden.
+- i 'd like to ask you if i could lower my carbon footprints.
+- i want to find out how i can minimize my carbon footprints.
+- i have something i want to discuss. i want to cut my carbon footprints.
+- i want to ask how i can limit carbon consumption.
+- i want to find out where i can cut my carbon emissions.
+- i 'd like to find out if i can cut carbon emissions.
+- i 'd like to see how i can mitigate the carbon pollution i make.
+- i 'd like to hear how i can cut carbon emissions.
+
+## intent:faq/calculate-footprint
+- What is my carbon footprint
+- My carbon footprint
+- how do I find my carbon footprint?
+- how do I find out my carbon footprint?
+- do i know my carbon footprints?
+- and where do i get my carbon?
+- what do i think of my carbon sample?
+- so what, can we figure out my carbon footprints?
+
 
 ## intent:faq/oos-future_inquire-ask
 - How do we know that airplanes emit CO2?
@@ -2480,6 +2534,21 @@
 - Do people usually buy offsets?
 - does anyone actually buy them?
 
+## intent: faq/cant-afford-offsets
+- I can barely afford my ticket how am I supposed to buy offsets as well
+- i can hardly take my fare. how do i buy offsets?
+- i can hardly pay a damn what i can buy offsets.
+- how am i paying for an offset like that?
+- even with the airline, i can't pay for my tickets if i want to buy an offset
+- i'm sorry, i can't pay for my tickets. how am i looking at offset
+- i have to economize on how i'm going to buy offsetting.
+- I can barely afford my ticket how am I supposed to buy offsets as well
+- yeah, i'm poor and shouldn't be wasting my cash.
+- Does that mean I pay less?
+- Oh so now I can fly only if I am rich right?
+- No I think that's only for rich people
+- Are there cheaper options?
+
 ## intent:faq/not-personally-responsible
 - How do carbon offsets work for me?
 - who is responsible for the most emissions?
@@ -2490,22 +2559,17 @@
 - I do not think companies that create the problem should get rich while I go broke
 - shouldnt the airlines cover that as they are the ones already making money off my flight?
 - So the passengers are paying more to help offset the damage airplanes are doing to the environment, yet the airlines themselves are not held accountable. Got it.
-- I can barely afford my ticket how am I supposed to buy offsets as well
-- yeah, i'm poor and shouldn't be wasting my cash.
 - Do I need to buy offsets if i just want to go home?
-- Does that mean I pay less?
-- Oh so now I can fly only if I am rich right?
 - A happy side effect for me would be to have the airlines buy offsets and pay back for all the damage caused past and present
 - But I don't have enough money to buy offsets
-- No I think that's only for rich people
 - How do I benefit from this?
 - but it's too late for the planet, why should i bother?
 - Why is it on the customer to pay for these offsets rather than the company that is profiting off of the environment?
 - Why does the company not pay for the offsets?
 - What if I have to fly for work?
 
+
 ## intent:faq/specific-project-details
-- Are there cheaper options?
 - Is there a publicaly available budget?
 - What am I supposed to choose from?
 - Do you know something about the projects?
@@ -2641,6 +2705,23 @@
 ## intent:faq/deny-offsets-work
 - Carbon offsets will not affect climate !
 - So if I give you money its ok to destroy the climate, is that right
+- the carbon footprint won't be affected!
+- carbon-based offsets don't help climate control.
+- carbon offset doesn't really change climate.
+- carbon offsetting is not going to be an impact on the climate!
+- carbon offsets wouldn't have affected global warming.
+- carbon offsetting won't help the climate
+- carbon reduction does not change climate.
+- So if I give you money its ok to destroy the climate, is that right
+- but if i give you my dollars, it's okay to ruin the atmosphere, right?
+- so, if i give you the funds, it's okay to smash the temperature, is it
+- so if i give you any of this, it's fine to ruin the weather.
+- so if i give you the amount of the funds, it's okay to ruin the environment.
+- so if i give you the amount, i can just wipe out the whole atmosphere, right?
+- so i'm saying if i give you the cash, it's okay to ruin the air
+- but if i gave you money, it's okay if you ruin the climate, that's
+- if i gave you money...... you can ruin the climate.
+- so if i gave you money, you can burn the climate.
 
 ## synonym:1
 - one
