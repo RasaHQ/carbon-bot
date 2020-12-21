@@ -11,12 +11,14 @@ import requests
 import csv
 import collections
 
-from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.forms import FormAction
-from rasa_sdk import Action, Tracker
-from rasa_sdk.events import SlotSet, Restarted
-from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
+from typing import Text, List, Any, Dict
 
+from rasa_sdk import Tracker, FormValidationAction
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.types import DomainDict
+from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
+from rasa_sdk.events import SlotSet
+from rasa_sdk import Action
 
 logger = logging.getLogger(__name__)
 
@@ -278,43 +280,14 @@ class StartAction(Action):
 AIRPORT_KB = AirportsKnowledgeBase("data/airports.csv")
 
 
-class AirTravelForm(FormAction):
+class ValidateAirtravelForm(FormValidationAction):
+
     def __init__(self):
         self.kb = AIRPORT_KB
-        super(AirTravelForm, self).__init__()
+        super(ValidateAirtravelForm, self).__init__()
 
     def name(self) -> Text:
-        return "airtravel_form"
-
-    @staticmethod
-    def required_slots(tracker: Tracker) -> List[Text]:
-        return ["travel_flight_class", "travel_departure", "travel_destination"]
-
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        return {
-            "travel_departure": [
-                self.from_entity(entity="city", role="from"),
-                self.from_entity(entity="iata", role="from"),
-                self.from_entity(entity="city"),
-                self.from_entity(entity="iata"),
-                self.from_text(intent="inform"),
-            ],
-            "travel_destination": [
-                self.from_entity(entity="city", role="to"),
-                self.from_entity(entity="iata", role="to"),
-                self.from_entity(entity="city"),
-                self.from_entity(entity="iata"),
-                self.from_text(intent="inform"),
-            ],
-            "previous_entered_flight": [
-                self.from_text(intent="inform"),
-            ],
-            "travel_flight_class": [
-                self.from_intent(intent="affirm", value="economy"),
-                self.from_intent(intent="deny", value="business"),
-                self.from_entity("travel_flight_class"),
-            ],
-        }
+        return "validate_airtravel_form"
 
     def validate_travel_departure(self, value, dispatcher, tracker, domain):
         return self._location_to_slot_dict(value, "departure")
@@ -344,92 +317,17 @@ class AirTravelForm(FormAction):
             result = {f"travel_{kind}": None, f"iata_{kind}": None}
         return result
 
+class CalculateOffsetsAction(Action):
 
-    def check_stopover(
-        self,
-        old_departure: Tuple,
-        old_destination: Tuple,
-        current_result: Dict,
-        tracker: Tracker,
-    ) -> Tuple[bool, Tuple]:
-        """
-        Checks whether the most recent trip is a connecting flight with the previous one;
+    def __init__(self):
+        self.kb = AIRPORT_KB
+        super(ValidateAirtravelForm, self).__init__()
+    
+    def name(self) -> Text:
+        return "action_calculate_offsets"
 
-        Args: 
-            old_departure: (departure airport name, departure IATA code) tuple with departure airport
-            entered within this form
-            old destination: (destination airport name, destination IATA code) tuple with destination airport
-            entered within this form
-            current_result: dictionary with slot values provided in the last utterance
-            tracker: state tracker containing current dialog state
-
-        Returns: 
-            second_leg_provided: a boolean flag of whether a connecting flight was found;
-            stopover_tuple: if it was found:
-                                a tuple of ((departure airport name, departure IATA code), (stopover airport name, stopover IATA code), 
-                                (destination airport name, destination IATA code))
-         
-        """
-        stopover_info = collections.namedtuple('Stopover_Info', ['second_leg_provided', 'stopover_tuple'])
-        departure, destination, stopover = (None, None), (None, None), (None, None)
-
-        if tracker.get_slot("previous_entered_flight")[1][0] in [
-            old_departure[0],
-            current_result.get("travel_departure"),
-        ]:
-            departure = tracker.get_slot("previous_entered_flight")[0]
-            stopover = tracker.get_slot("previous_entered_flight")[1]
-            if current_result.get("travel_destination"):
-                destination = (
-                    current_result["travel_destination"],
-                    current_result["iata_destination"],
-                )
-            elif old_destination:
-                destination = old_destination
-        elif tracker.get_slot("previous_entered_flight")[0][0] in [
-            old_destination[0],
-            current_result.get("travel_destination"),
-        ]:
-            destination = tracker.get_slot("previous_entered_flight")[1]
-            stopover = tracker.get_slot("previous_entered_flight")[0]
-            if current_result.get("travel_departure"):
-                departure = (
-                    current_result["travel_departure"],
-                    current_result["iata_departure"],
-                )
-            elif old_departure:
-                departure = old_departure
-
-        return stopover_info(
-            second_leg_provided = None not in (departure[0], destination[0], stopover[0]),
-            stopover_tuple = (departure, stopover, destination),
-        )
-
-    def departure_changed(self, old_departure, result):
-        # checks that there is a new departure and it is not the same as old one;
-        departure_change = (
-            old_departure[0]
-            and result.get("travel_departure")
-            and (result.get("travel_departure"), result.get("iata_departure"))
-            != old_departure
-        )
-        return departure_change
-
-    def destination_changed(self, old_destination, result):
-        destination_change = (
-            old_destination[0]
-            and result.get("travel_destination")
-            and (result.get("travel_destination"), result.get("iata_destination"))
-            != old_destination
-        )
-        return destination_change
-
-
-    def submit(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+    async def run(
+        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
         url = tracker.get_slot("link_2_url")

@@ -112,6 +112,7 @@ slots:
     influence_conversation: true
 actions:
 - action_analyse_travelplan
+- action_calculate_offsets
 - action_disclaimer
 - action_explain_typical_emissions
 - action_restart

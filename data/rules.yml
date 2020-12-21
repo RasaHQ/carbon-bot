@@ -27,8 +27,21 @@ rules:
   - intent: inform_notunderstanding
   - action: utter_acknowledge_notunderstanding
 
-- rule: offsets form
+- rule: Activate offsets form
   steps:
   - intent: buy_offsets
   - action: airtravel_form
+  - active_loop: airtravel_form
 
+- rule: Submit form
+  condition:
+  # Condition that form is active.
+  - active_loop: airtravel_form
+  steps:
+  # Form is deactivated
+  - action: airtravel_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: action_calculate_offsets
