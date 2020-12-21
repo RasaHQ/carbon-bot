@@ -1,7 +1,30 @@
 rules:
 
+- rule: welcome message
+  conversation_start: true
+  steps:
+  - intent: greet
+  - action: utter_welcome
+
+
 - rule: Greet the user
   steps:
   - intent: greet
   - action: utter_greet
+
+- rule: Answer FAQ
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: User thanks
+  steps:
+  - intent: thank
+  - action: utter_express_positive-emo
+
+- rule: not understanding the user
+  steps:
+  - intent: inform_notunderstanding
+  - action: utter_acknowledge_notunderstanding
+
 

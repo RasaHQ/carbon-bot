@@ -150,3 +150,9 @@ forms:
 responses:
   utter_greet:
   - text: Hello!
+  utter_welcome:
+  - text: hi! I can help with carbon offsets
+  utter_express_positive-emo:
+  - text: :)
+  utter_acknowledge_notunderstanding:
+  - text: sounds like I'm not getting you, sorry about that
