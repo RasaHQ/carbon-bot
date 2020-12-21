@@ -27,4 +27,8 @@ rules:
   - intent: inform_notunderstanding
   - action: utter_acknowledge_notunderstanding
 
+- rule: offsets form
+  steps:
+  - intent: buy_offsets
+  - action: airtravel_form
 

@@ -144,9 +144,29 @@ actions:
 - utter_inquire-ask_reqmore
 - utter_insult
 - utter_vulgar
-- airtravel_form
 forms:
-  airtravel_form: {}
+  airtravel_form:
+    travel_flight_class:
+    - type: from_entity
+      entity: travel_flight_class
+    - type: from_intent
+      value: economy
+      intent: affirm
+    - type: from_intent
+      value: business
+      intent: deny      
+    travel_departure:
+    - type: from_entity
+      entity: city
+      role: from
+    - type: from_entity
+      entity: city      
+    travel_destination:
+    - type: from_entity
+      entity: city
+      role: to
+    - type: from_entity
+      entity: city     
 responses:
   utter_greet:
   - text: Hello!
@@ -156,3 +176,9 @@ responses:
   - text: :)
   utter_acknowledge_notunderstanding:
   - text: sounds like I'm not getting you, sorry about that
+  utter_ask_travel_flight_class:
+  - text: will you be traveling in economy class?
+  utter_ask_travel_departure:
+  - text: where are you traveling from?
+  utter_ask_travel_destination:
+  - text: where are you going?  
