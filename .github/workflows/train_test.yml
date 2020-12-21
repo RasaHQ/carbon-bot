@@ -1,0 +1,14 @@
+jobs:
+  my_first_job:
+    name: My first job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Run rasa train and rasa test
+      - name: My first step
+        uses: RasaHQ/rasa-train-test-gha@main
+        with:
+	  rasa_version: 2.2.1
+          test_type: nlu
+	  github_token: ${{ secrets.GITHUB_TOKEN }}
