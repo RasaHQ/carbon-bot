@@ -1,8 +1,7 @@
 language: en
 
 pipeline:
-- name: ConveRTTokenizer
-- name: ConveRTFeaturizer
+- name: WhitespaceTokenizer
 - name: CountVectorsFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: char_wb
@@ -11,22 +10,20 @@ pipeline:
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: DIETClassifier
-  epochs: 60
+  epochs: 10
   scale_loss: False
   weight_sparsity: 0.3
-  transformer_size: 512
+  transformer_size: 32
   BILOU_flag: True
 - name: ResponseSelector
-  epochs: 50
+  epochs: 1
 - name: EntitySynonymMapper
 
 policies:
-- name: MemoizationPolicy
-- name: EmbeddingPolicy
-  max_history: 5
-  batch_strategy: balanced
-  epochs: 50
-  random_seed: 666
-  evaluate_on_num_examples: 0
-- name: MappingPolicy
-- name: FormPolicy
+- name: RulePolicy
+#- name: TEDPolicy
+#  max_history: 5
+#  batch_strategy: balanced
+#  epochs: 1
+#  random_seed: 666
+#  evaluate_on_num_examples: 0
