@@ -1,0 +1,60 @@
+version: "2.0"
+responses:
+  utter_faq/meta_inquire-ask_bot-challenge:
+  - text: Yes, I am a bot! And I'm part of a research project.
+  utter_faq/ask_howdoing:
+  - text: I'm great! Thanks for asking.
+  utter_faq/meta_inquire_capabilities:
+  - text: I can help you calculate and buy carbon offsets for your flights.
+  utter_faq/oos-future_inquire-ask:
+  - text: That sounds like a relevant question, but I don't know the answer.
+  utter_faq/oos_inform:
+  - text: Good to know
+  utter_faq/oos_inquire:
+  - text: I'm afraid I have no idea
+  utter_faq/oos_request:
+  - text: that's not something I can help with
+  utter_faq/thank:
+  - text: You are welcome!
+  utter_faq/placeholder:
+  - text: so
+  utter_faq/takeacut:
+  - text: No, my creators don't get a cut from the offsets you buy. I'm just here to help!
+  utter_faq/opinion:
+  - text: That is your opinion.
+  utter_faq/ask_creators:
+  - text: The research team at Rasa is behind this. Check out rasa.com/research
+  utter_faq/research_project:
+  - text: This project is about creating a better AI assistant. Getting people to reduce their carbon footprint is a happy side effect :)
+  utter_faq/payment-details:
+  - text: I'm afraid I can't help you with payment details.
+  utter_faq/not-personally-responsible:
+  - text: We are all responsible for the choices we make as consumers. We can choose to fly less often, for example. Some airlines have already responded to consumer pressure and started buying offsets.
+  utter_faq/personal_question_for_bot:
+  - text: I love that you want to get to know me, but I don't have much of a personality. I'm just a bot.
+  utter_faq/specific-project-details:
+  - text: I'm not sure but hopefully you can find an answer at https://offset.earth/projects .
+  utter_faq/do-people-buy-offsets:
+  - text: More and more companies and individuals are voluntarily offsetting their carbon emissions. According to goldstandard.org, individual offsets grew fourfold last year.
+  utter_faq/accuse-scam:
+  - text: All this bot does is help you calculate the carbon emissions from your flight, and suggest projects you can donate to.
+  utter_faq/where-money-goes:
+  - text: When you buy certified emissions reductions (CERs) your payment goes directly to the project offering CERs. Projects have to pass a rigorous verification process set by https://goldstandard.org .
+  utter_faq/is-this-legit:
+  - text: All offset projects have to pass a rigorous verification process set by https://goldstandard.org .
+  utter_faq/deny-climate-change:
+  - text: "Climate change is absolutely real, and it's caused by humans: https://climate.nasa.gov/evidence/"
+  utter_faq/deny-offsets-work:
+  - text: By buying certified carbon offsets, you support a project which reduces the total amount of carbon dioxide we put into the atmosphere. Planting trees, installing renewable power, and making buildings more energy efficient are common examples. You can read what the UN says about offsets at https://offset.climateneutralnow.org/faq_offset_footprint#Buyers .
+  utter_faq/inquire-cost:
+  - text: The cost per ton depends on the project you donate to. Some projects can remove a ton of CO2 for less than $1!
+  utter_faq/layover:
+  - text: If you have a connecting flight, it's easiest if you ask me about each flight separately.
+  utter_faq/other-calculation:
+  - text: For now I can only calculate emissions from flying.
+  utter_faq/other-language:
+  - text: I can only do English for now.
+  utter_faq/general-emissions-reduction:
+  - text: There are many ways you can reduce your carbon footprint. Flying less is a great place to start!
+  utter_faq/more-details-process:
+  - text: I'd recommend checking out https://offset.earth for those details.
