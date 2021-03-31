@@ -7,43 +7,44 @@ stories:
 - story: faqs
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: thank
   - action: utter_express_positive-emo
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: thank
   - action: utter_express_positive-emo
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
+
 - story: give_travel_plan (1)
   steps:
   - intent: greet
@@ -63,6 +64,7 @@ stories:
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
+
 - story: give_travel_plan (2)
   steps:
   - intent: greet
@@ -267,6 +269,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+
 - story: manual_story_2
   steps:
   - intent: greet
@@ -351,6 +354,8 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+
+
 - story: interactive_story_6
   steps:
   - intent: greet
@@ -375,6 +380,8 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+
+
 - story: Story from conversation with 14e4c5ba-abba-4be1-8b22-e6e4f2fd2508 on October 26th 2019
   steps:
   - intent: greet
@@ -538,6 +545,8 @@ stories:
   - intent: thank
   - action: utter_express_positive-emo
   - action: utter_farewell
+
+
 - story: manual_story_3
   steps:
   - intent: greet
@@ -566,13 +575,15 @@ stories:
   - action: action_explain_typical_emissions
   - action: utter_ask_detailed_estimate
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: farewell
   - action: utter_farewell
+
+
 - story: manual_story_4
   steps:
   - intent: greet
@@ -702,7 +713,7 @@ stories:
   - slot_was_set:
     - requested_slot: travel_destination
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: airtravel_form
   - slot_was_set:
     - requested_slot: travel_destination
@@ -714,9 +725,9 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
 - story: interactive_story_9
   steps:
   - intent: greet
@@ -741,7 +752,7 @@ stories:
   - action: action_explain_typical_emissions
   - action: utter_ask_detailed_estimate
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: utter_ask_detailed_estimate
   - intent: affirm
   - action: airtravel_form
@@ -759,9 +770,9 @@ stories:
   - slot_was_set:
     - requested_slot: travel_destination
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: airtravel_form
   - slot_was_set:
     - requested_slot: travel_destination
@@ -773,9 +784,9 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
 - story: interactive_story_10
   steps:
   - intent: greet
@@ -823,9 +834,9 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: thank
@@ -837,17 +848,17 @@ stories:
   - intent: affirm
   - action: utter_acknowledge
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: why
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: inform
@@ -867,6 +878,7 @@ stories:
     - iata_departure: AUS
   - slot_was_set:
     - requested_slot: travel_destination
+
 - story: interactive_story_12
   steps:
   - intent: greet
@@ -923,7 +935,7 @@ stories:
   - intent: deny_flying
   - action: utter_acknowledge
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
 - story: interactive_story_14
   steps:
   - intent: SCENARIO
@@ -948,7 +960,7 @@ stories:
   - intent: deny
   - action: utter_acknowledge
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
 - story: interactive_story_15
   steps:
   - intent: greet
@@ -969,7 +981,7 @@ stories:
   - action: action_disclaimer
   - action: utter_holiday-travel_offer_help
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: buy_offsets
@@ -995,9 +1007,9 @@ stories:
   - action: action_disclaimer
   - action: utter_holiday-travel_offer_help
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: buy_offsets
@@ -1005,9 +1017,9 @@ stories:
 - story: interactive_story_17
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: buy_offsets
@@ -1032,10 +1044,11 @@ stories:
   - intent: deny
   - action: utter_acknowledge
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: farewell
   - action: utter_acknowledge
   - action: utter_farewell
+
 - story: interactive_story_19
   steps:
   - intent: greet
@@ -1060,9 +1073,10 @@ stories:
   - intent: deny
   - action: utter_acknowledge
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: buy_offsets
   - action: airtravel_form
+
 - story: interactive_story_20
   steps:
   - intent: greet
@@ -1087,9 +1101,10 @@ stories:
   - intent: deny
   - action: utter_acknowledge
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: buy_offsets
   - action: airtravel_form
+
 - story: interactive_story_21
   steps:
   - intent: greet
@@ -1115,6 +1130,7 @@ stories:
   - action: utter_ask_detailed_estimate
   - intent: deny
   - action: utter_acknowledge
+
 - story: Story from conversation with 14e4c5ba-abba-4be1-8b22-e6e4f2fd2508 on October 26th 2019 (1)
   steps:
   - intent: greet
@@ -1283,6 +1299,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+
 - story: manual_story_5
   steps:
   - intent: greet
@@ -1368,19 +1385,21 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: thank
   - action: utter_express_positive-emo
+
+
 - story: interactive_story_24
   steps:
   - intent: greet
@@ -1407,6 +1426,7 @@ stories:
   - intent: inquire-ask_clarification-offsets
   - action: utter_explain_how_offsets_work
   - action: utter_ask_detailed_estimate
+
 - story: interactive_story_25
   steps:
   - intent: greet
@@ -1427,7 +1447,7 @@ stories:
   - action: action_disclaimer
   - action: utter_holiday-travel_offer_help
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: estimate_emissions
@@ -1435,6 +1455,7 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+
 - story: interactive_story_26
   steps:
   - intent: SCENARIO
@@ -1453,13 +1474,14 @@ stories:
   - action: action_disclaimer
   - action: utter_holiday-travel_offer_help
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
   - intent: estimate_emissions
   - action: airtravel_form
+
 - story: interactive_story_27
   steps:
   - intent: greet
@@ -1488,6 +1510,7 @@ stories:
   - intent: thank
   - action: utter_express_positive-emo
   - action: utter_farewell
+
 - story: interactive_story_28
   steps:
   - intent: greet
@@ -1548,6 +1571,7 @@ stories:
   - action: utter_explain_no_payment
   - intent: affirm
   - action: utter_acknowledge
+
 - story: interactive_story_29
   steps:
   - intent: greet
@@ -1666,10 +1690,12 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: thank
   - action: utter_express_positive-emo
   - action: utter_farewell
+
+
 - story: interactive_story_30
   steps:
   - intent: greet
@@ -1757,9 +1783,9 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: inform
     entities:
     - city: Singapore
@@ -1781,38 +1807,41 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: thank
   - action: utter_express_positive-emo
   - action: utter_farewell
+
 - story: interactive 33
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: inform_notunderstanding
   - action: utter_acknowledge_notunderstanding
   - intent: inform_notunderstanding
   - action: action_restart
+
 - story: interactive 34
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: inform_notunderstanding
   - action: utter_acknowledge_notunderstanding
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: inform_notunderstanding
   - action: utter_acknowledge_notunderstanding
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
+
 - story: interactive_story_35
   steps:
   - intent: greet
@@ -1836,6 +1865,7 @@ stories:
   - action: utter_acknowledge_notunderstanding
   - intent: buy_offsets
   - action: airtravel_form
+
 - story: Story from conversation with 2485257761521706 on December 1st 2019
   steps:
   - intent: greet
@@ -1953,15 +1983,16 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: inquire-ask_clarification-offsets
   - action: utter_explain_how_offsets_work
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
+
 - story: Story from conversation with 3afca642-97d5-4197-9252-a738c40604f1 on December 2nd 2019
   steps:
   - intent: inform
@@ -2039,9 +2070,10 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
+
 - story: Story from conversation with 3259187940789816 on December 4th 2019
   steps:
   - intent: SCENARIO
@@ -2151,6 +2183,7 @@ stories:
   - action: utter_explain_offset_calculation
   - intent: express_positive-emo
   - action: utter_express_positive-emo
+
 - story: Story from conversation with 2524603660920240 on December 12th 2019
   steps:
   - intent: SCENARIO
@@ -2174,10 +2207,12 @@ stories:
   - intent: why
   - action: utter_explain_why_offset_travel
   - action: utter_ask_detailed_estimate
+
 - story: RUDE USER 1
   steps:
   - intent: insult
   - action: utter_insult
+
 - story: RUDE USER 2
   steps:
   - intent: vulgar
