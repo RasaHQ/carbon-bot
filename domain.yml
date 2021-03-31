@@ -157,7 +157,7 @@ responses:
 
   utter_SCENARIOCHECK:
   - buttons:
-    - payload: '/SCENARIO{"context_scenario": "holiday", "holiday_name": "christmas"}'
+    - payload: '/SCENARIO{{"context_scenario": "holiday", "holiday_name": "christmas"}}'
       title: start
     text: Hi, thanks for testing! Please press start.
   utter_about:
