@@ -23,10 +23,10 @@ pipeline:
 
 policies:
 - name: MemoizationPolicy
-- name: EmbeddingPolicy
+- name: TEDPolicy
   max_history: 5
   batch_strategy: balanced
-  epochs: 50
+  epochs: 300 
   random_seed: 666
   evaluate_on_num_examples: 0
-- name: FormPolicy
+- name: RulePolicy
