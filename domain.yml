@@ -53,37 +53,37 @@ slots:
   correct_city:
     type: text
   explanation:
-    type: unfeaturized
+    type: any
   holiday_name:
-    type: unfeaturized
+    type: any
   iata_departure:
-    type: unfeaturized
+    type: any
   iata_destination:
-    type: unfeaturized
+    type: any
   iata_stopover:
-    type: unfeaturized
+    type: any
   incorrect_city:
     type: text
   link_1_url:
-    type: unfeaturized
+    type: any
   link_2_url:
-    type: unfeaturized
+    type: any
   listed_objects:
     type: list
   mention:
-    type: unfeaturized
+    type: any
   requested_slot:
-    type: unfeaturized
+    type: any
   previous_entered_flight:
-    type: unfeaturized
+    type: any
   travel_departure:
-    type: unfeaturized
+    type: any
   travel_destination:
-    type: unfeaturized
+    type: any
   travel_stopover:
-    type: unfeaturized
+    type: any
   travel_flight_class:
-    type: unfeaturized
+    type: any
   travel_flight_distancecategory:
     type: categorical
     values:
