@@ -29,5 +29,4 @@ policies:
   epochs: 50
   random_seed: 666
   evaluate_on_num_examples: 0
-- name: MappingPolicy
 - name: FormPolicy
