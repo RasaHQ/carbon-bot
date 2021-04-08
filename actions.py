@@ -12,10 +12,11 @@ import csv
 import collections
 
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.forms import FormAction
+from rasa_sdk.forms import FormAction, FormValidationAction
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet, Restarted
 from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
+from rasa_sdk.types import DomainDict
 
 
 logger = logging.getLogger(__name__)
@@ -278,49 +279,73 @@ class StartAction(Action):
 AIRPORT_KB = AirportsKnowledgeBase("data/airports.csv")
 
 
-class AirTravelForm(FormAction):
+class ValidateAirTravelForm(FormValidationAction):
     def __init__(self):
         self.kb = AIRPORT_KB
-        super(AirTravelForm, self).__init__()
+        super(ValidateAirTravelForm, self).__init__()
 
     def name(self) -> Text:
-        return "airtravel_form"
+        return "validate_airtravel_form"
 
-    @staticmethod
-    def required_slots(tracker: Tracker) -> List[Text]:
-        return ["travel_flight_class", "travel_departure", "travel_destination"]
+    async def required_slots(
+        self,
+        slots_mapped_in_domain: List[Text],
+        dispatcher: "CollectingDispatcher",
+        tracker: "Tracker",
+        domain: "DomainDict",
+    ) -> Optional[List[Text]]:
 
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        return {
-            "travel_departure": [
-                self.from_entity(entity="city", role="from"),
-                self.from_entity(entity="iata", role="from"),
-                self.from_entity(entity="city"),
-                self.from_entity(entity="iata"),
-                self.from_text(intent="inform"),
-            ],
-            "travel_destination": [
-                self.from_entity(entity="city", role="to"),
-                self.from_entity(entity="iata", role="to"),
-                self.from_entity(entity="city"),
-                self.from_entity(entity="iata"),
-                self.from_text(intent="inform"),
-            ],
-            "previous_entered_flight": [
-                self.from_text(intent="inform"),
-            ],
-            "travel_flight_class": [
-                self.from_intent(intent="affirm", value="economy"),
-                self.from_intent(intent="deny", value="business"),
-                self.from_entity("travel_flight_class"),
-            ],
-        }
+        return [
+            "travel_flight_class", 
+            "travel_departure", 
+            "travel_destination",
+        ]
 
-    def validate_travel_departure(self, value, dispatcher, tracker, domain):
-        return self._location_to_slot_dict(value, "departure")
+#    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+#        return {
+#            "travel_departure": [
+#                self.from_entity(entity="city", role="from"),
+#                self.from_entity(entity="iata", role="from"),
+#                self.from_entity(entity="city"),
+#                self.from_entity(entity="iata"),
+#                self.from_text(intent="inform"),
+#            ],
+#            "travel_destination": [
+#                self.from_entity(entity="city", role="to"),
+#                self.from_entity(entity="iata", role="to"),
+#                self.from_entity(entity="city"),
+#                self.from_entity(entity="iata"),
+#                self.from_text(intent="inform"),
+#            ],
+#            "previous_entered_flight": [
+#                self.from_text(intent="inform"),
+#            ],
+#            "travel_flight_class": [
+#                self.from_intent(intent="affirm", value="economy"),
+#                self.from_intent(intent="deny", value="business"),
+#                self.from_entity("travel_flight_class"),
+#            ],
+#        }
+#
+    def validate_travel_departure(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
 
-    def validate_travel_destination(self, value, dispatcher, tracker, domain):
-        return self._location_to_slot_dict(value, "destination")
+        return self._location_to_slot_dict(slot_value, "departure")
+
+    def validate_travel_destination(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+
+        return self._location_to_slot_dict(slot_value, "destination")
 
     @staticmethod
     def _location_to_slot_dict(location: Text, kind: Text) -> Dict:
@@ -343,7 +368,6 @@ class AirTravelForm(FormAction):
         else:
             result = {f"travel_{kind}": None, f"iata_{kind}": None}
         return result
-
 
     def check_stopover(
         self,
@@ -425,67 +449,81 @@ class AirTravelForm(FormAction):
         return destination_change
 
 
-    def submit(
+
+class CalculateOffsets(Action):
+    """Attempts to calculate CO2 usage and display link to purchase offsets."""
+
+    def name(self) -> Text:
+        return "action_calculate_offsets"
+
+    def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any],
+        domain: DomainDict
     ) -> List[Dict[Text, Any]]:
 
         url = tracker.get_slot("link_2_url")
         try:
-            co2_in_tons = self.kb.calculate_emissions(tracker, unit="short_tons")
+            co2_in_tons = AIRPORT_KB.calculate_emissions(
+                tracker, 
+                unit="short_tons"
+            )
 
         except ValueError as e:
             logger.error(f"calculate_emissions failed with: {e}")
             dispatcher.utter_message("Sorry, I was unable to calculate that.")
             return []
+
         departure_airport = tracker.get_slot("travel_departure")
         departure_iata = tracker.get_slot("iata_departure")
         destination_airport = tracker.get_slot("travel_destination")
         destination_iata = tracker.get_slot("iata_destination")
-        stopover_airport = tracker.get_slot("travel_stopover")
-        stopover_iata = tracker.get_slot("iata_stopover")
-        previous_entered_flight = tracker.get_slot("previous_entered_flight")
-
-        if not stopover_iata:
+#        stopover_airport = tracker.get_slot("travel_stopover")
+#        stopover_iata = tracker.get_slot("iata_stopover")
+#        previous_entered_flight = tracker.get_slot("previous_entered_flight")
+#
+#        if not stopover_iata:
+        if True:
             message = (
                 f"A one-way flight from {departure_airport} ({departure_iata}) to {destination_airport} ({destination_iata}) "
                 f"emits {co2_in_tons[0]} of CO2. "
                 f"It would be amazing if you bought offsets for that carbon! "
                 f"There are some great, UN-certified projects you can pick from."
             )
-        else:
-            message = (
-                f"The trip from {departure_airport} ({departure_iata}) to {destination_airport} ({destination_iata}) "
-                f"via {stopover_airport} ({stopover_iata}) emits {float(co2_in_tons[0].split()[0])+float(co2_in_tons[1].split()[0]):.1f} {co2_in_tons[0].split()[1]} of CO2. "
-                f"The first leg emits {co2_in_tons[0]} of CO2. "
-                f"The second leg emits {co2_in_tons[1]} of CO2."
-                f"It would be amazing if you bought offsets for that carbon! "
-                f"There are some great, UN-certified projects you can pick from."
-            )
-
+#        else:
+#            message = (
+#                f"The trip from {departure_airport} ({departure_iata}) to {destination_airport} ({destination_iata}) "
+#                f"via {stopover_airport} ({stopover_iata}) emits {float(co2_in_tons[0].split()[0])+float(co2_in_tons[1].split()[0]):.1f} {co2_in_tons[0].split()[1]} of CO2. "
+#                f"The first leg emits {co2_in_tons[0]} of CO2. "
+#                f"The second leg emits {co2_in_tons[1]} of CO2."
+#                f"It would be amazing if you bought offsets for that carbon! "
+#                f"There are some great, UN-certified projects you can pick from."
+#            )
+#
         if tracker.get_latest_input_channel() == "facebook":
             payload = hyperlink_payload(tracker, message, "Buy Offsets", url)
             dispatcher.utter_custom_json(payload)
         else:
             dispatcher.utter_message(message + f" [Buy Offsets]({url})")
 
-        slots_to_set = [SlotSet("travel_departure"), 
-                SlotSet("iata_departure"), 
-                SlotSet("travel_destination"),
-                SlotSet("iata_destination"),
-                SlotSet("travel_stopover"),
-                SlotSet("iata_stopover"),
-                SlotSet("travel_flight_class"),
-                ]
+        slots_to_set = [
+            SlotSet("travel_departure"), 
+            SlotSet("iata_departure"), 
+            SlotSet("travel_destination"),
+            SlotSet("iata_destination"),
+            SlotSet("travel_stopover"),
+            SlotSet("iata_stopover"),
+            SlotSet("travel_flight_class"),
+        ]
 
-        if tracker.get_slot("travel_stopover"):
-            return slots_to_set + [
-                SlotSet("previous_entered_flight"),
-            ]
-        else:
-            return slots_to_set
+#        if tracker.get_slot("travel_stopover"):
+#            return slots_to_set + [
+#                SlotSet("previous_entered_flight"),
+#            ]
+#        else:
+#            return slots_to_set
+        return slots_to_set
 
 class ExplainTypicalEmissions(Action):
     def name(self):
