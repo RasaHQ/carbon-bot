@@ -96,6 +96,8 @@ slots:
     type: text
 
 responses:
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
   utter_faq/meta_inquire-ask_bot-challenge:
   - text: Yes, I am a bot! And I'm part of a research project.
   utter_faq/ask_howdoing:
