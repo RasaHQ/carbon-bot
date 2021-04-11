@@ -12,21 +12,21 @@ pipeline:
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: DIETClassifier
-  epochs: 60
+  epochs: 9
   scale_loss: False
   weight_sparsity: 0.3
   transformer_size: 512
   BILOU_flag: True
 - name: ResponseSelector
-  epochs: 50
+  epochs: 10
 - name: EntitySynonymMapper
 
 policies:
 - name: MemoizationPolicy
 - name: TEDPolicy
-  max_history: 5
+  max_history: 3
   batch_strategy: balanced
-  epochs: 300 
+  epochs: 10
   random_seed: 666
   evaluate_on_num_examples: 0
 - name: RulePolicy
