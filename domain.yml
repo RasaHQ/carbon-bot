@@ -5,6 +5,7 @@ actions:
 - action_restart
 - action_start
 - action_travel_inform_flight_emission_single
+- action_calculate_offsets
 entities:
 - city
 - conference_name

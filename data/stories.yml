@@ -64,6 +64,7 @@ stories:
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
+  - action: action_calculate_offsets
 
 - story: give_travel_plan (2)
   steps:
@@ -88,6 +89,7 @@ stories:
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
+  - action: action_calculate_offsets
 - story: interactive_story_1
   steps:
   - intent: greet
@@ -111,6 +113,7 @@ stories:
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
+  - action: action_calculate_offsets
   - intent: thank
   - action: utter_express_positive-emo
   - action: utter_farewell
@@ -139,6 +142,7 @@ stories:
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
+  - action: action_calculate_offsets
   - intent: thank
   - action: utter_express_positive-emo
   - action: utter_farewell
@@ -239,6 +243,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inform
     entities:
     - city: vancouver
@@ -269,6 +274,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
 
 - story: manual_story_2
   steps:
@@ -331,6 +337,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inform
     entities:
     - city: seattle
@@ -354,6 +361,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
 
 
 - story: interactive_story_6
@@ -441,6 +449,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inform
     entities:
     - city: new york
@@ -450,6 +459,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: express_surprise
   - action: utter_explain_offset_calculation
 - story: Story from conversation with 35ebdd5a-34a3-4707-89f2-4748c4997620 on October 27th 2019
@@ -540,6 +550,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: express_surprise
   - action: utter_explain_offset_calculation
   - intent: thank
@@ -615,6 +626,7 @@ stories:
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
+  - action: action_calculate_offsets
   - intent: thank
   - action: utter_express_positive-emo
   - action: utter_farewell
@@ -671,6 +683,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: affirm
   - action: utter_express_positive-emo
   - action: utter_farewell
@@ -724,6 +737,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: faq
   - action: utter_faq
   - intent: faq
@@ -783,6 +797,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: faq
   - action: utter_faq
   - intent: faq
@@ -833,6 +848,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: faq
   - action: utter_faq
   - intent: faq
@@ -1190,6 +1206,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inform
   - action: airtravel_form
   - slot_was_set:
@@ -1197,6 +1214,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: how_calculated
   - action: utter_explain_offset_calculation
 - story: interactive_story_22
@@ -1269,6 +1287,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inform
     entities:
     - city: vancouver
@@ -1299,6 +1318,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
 
 - story: manual_story_5
   steps:
@@ -1361,6 +1381,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inform
     entities:
     - city: seattle
@@ -1384,6 +1405,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: faq
   - action: utter_faq
   - intent: faq
@@ -1505,6 +1527,7 @@ stories:
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
+  - action: action_calculate_offsets
   - intent: buy_offsets
   - action: utter_explain_no_payment
   - intent: thank
@@ -1564,6 +1587,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: affirm
   - action: utter_express_positive-emo
   - action: utter_farewell
@@ -1627,6 +1651,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inform
     entities:
     - city: Seattle
@@ -1657,6 +1682,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: affirm
   - action: utter_acknowledge
   - intent: inform
@@ -1689,6 +1715,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: faq
   - action: utter_faq
   - intent: thank
@@ -1746,6 +1773,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inform
     entities:
     - iata: EWR
@@ -1782,6 +1810,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: faq
   - action: utter_faq
   - intent: faq
@@ -1806,6 +1835,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: faq
   - action: utter_faq
   - intent: thank
@@ -1921,6 +1951,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: SCENARIO
     entities:
     - context_scenario: holiday
@@ -1982,6 +2013,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: faq
   - action: utter_faq
   - intent: faq
@@ -2028,6 +2060,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inquire-ask_clarification-offsets
   - action: utter_explain_how_offsets_work
   - action: utter_ask_detailed_estimate
@@ -2069,6 +2102,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: faq
   - action: utter_faq
   - intent: faq
@@ -2137,6 +2171,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: inform
     entities:
     - city: Newark
@@ -2179,6 +2214,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_calculate_offsets
   - intent: express_positive-emo
   - action: utter_explain_offset_calculation
   - intent: express_positive-emo
