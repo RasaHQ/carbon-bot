@@ -16,7 +16,37 @@ entities:
 - travel_destination
 - travel_flight_class
 forms:
-- airtravel_form
+  airtravel_form:
+    travel_departure:
+      - type: from_entity
+        entity: city
+        role: from
+      - type: from_entity
+        entity: iata
+        role: from
+      - type: from_entity
+        entity: city
+      - type: from_entity
+        entity: iata
+    travel_destination:
+      - type: from_entity
+        entity: city
+        role: to
+      - type: from_entity
+        entity: iata
+        role: to
+      - type: from_entity
+        entity: city
+      - type: from_entity
+        entity: iata
+    travel_flight_class:
+      - type: from_intent
+        intent: affirm
+        value: economy
+      - type: from_intent
+        value: business
+      - type: from_entity
+        entity: travel_flight_class
 intents:
 - inquire-ask_clarification-offsets
 - greet
