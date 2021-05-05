@@ -50,9 +50,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -71,9 +68,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -95,9 +89,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -122,9 +113,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -137,8 +125,6 @@ stories:
   - action: action_explain_typical_emissions
   - action: utter_ask_detailed_estimate
   - intent: inform
-    entities:
-    - city: Berlin
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
@@ -151,9 +137,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -169,9 +152,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -187,9 +167,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -229,8 +206,6 @@ stories:
   - slot_was_set:
     - requested_slot: travel_departure
   - intent: inform
-    entities:
-    - city: vancouver
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
@@ -245,8 +220,6 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: inform
-    entities:
-    - city: vancouver
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -258,16 +231,12 @@ stories:
   - slot_was_set:
     - requested_slot: travel_departure
   - intent: inform
-    entities:
-    - city: berlin
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
   - slot_was_set:
     - requested_slot: travel_destination
   - intent: inform
-    entities:
-    - city: seattle
   - action: airtravel_form
   - slot_was_set:
     - travel_destination: Berlin
@@ -281,9 +250,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -300,8 +266,6 @@ stories:
     - holiday_name: thanksgiving
   - action: utter_ask_detailed_estimate
   - intent: inform
-    entities:
-    - city: seattle
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -339,16 +303,12 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: inform
-    entities:
-    - city: seattle
   - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
   - intent: inform
-    entities:
-    - city: Paris
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
@@ -369,9 +329,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -395,9 +352,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -422,8 +376,6 @@ stories:
     - holiday_name: thanksgiving
   - action: utter_ask_detailed_estimate
   - intent: inform
-    entities:
-    - city: Berlin
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -435,8 +387,6 @@ stories:
   - slot_was_set:
     - requested_slot: travel_departure
   - intent: inform
-    entities:
-    - city: Berlin
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: Berlin
@@ -451,8 +401,6 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: inform
-    entities:
-    - city: new york
   - action: airtravel_form
   - slot_was_set:
     - travel_destination: Dublin
@@ -467,9 +415,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -492,9 +437,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -542,8 +484,6 @@ stories:
   - slot_was_set:
     - requested_slot: travel_destination
   - intent: inform
-    entities:
-    - city: Grand Rapids
   - action: airtravel_form
   - slot_was_set:
     - travel_destination: Grand Rapids
@@ -563,9 +503,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -600,9 +537,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -635,9 +569,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -692,9 +623,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -747,9 +675,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -807,9 +732,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -878,8 +800,6 @@ stories:
   - intent: affirm
   - action: utter_acknowledge
   - intent: inform
-    entities:
-    - city: Boston
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -900,9 +820,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -930,9 +847,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -955,9 +869,6 @@ stories:
 - story: interactive_story_14
   steps:
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -982,9 +893,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1008,9 +916,6 @@ stories:
 - story: interactive_story_16
   steps:
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1043,9 +948,6 @@ stories:
 - story: interactive_story_18
   steps:
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1070,9 +972,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1098,9 +997,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1126,9 +1022,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1152,9 +1045,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1179,8 +1069,6 @@ stories:
     - holiday_name: thanksgiving
   - action: utter_ask_detailed_estimate
   - intent: inform
-    entities:
-    - city: Berlin
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -1192,8 +1080,6 @@ stories:
   - slot_was_set:
     - requested_slot: travel_departure
   - intent: inform
-    entities:
-    - city: Berlin
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: Berlin
@@ -1222,9 +1108,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1237,9 +1120,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1289,8 +1169,6 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: inform
-    entities:
-    - city: vancouver
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -1325,9 +1203,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1344,8 +1219,6 @@ stories:
     - holiday_name: thanksgiving
   - action: utter_ask_detailed_estimate
   - intent: inform
-    entities:
-    - city: seattle
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -1383,16 +1256,12 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: inform
-    entities:
-    - city: seattle
   - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
   - intent: inform
-    entities:
-    - city: Paris
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
@@ -1427,9 +1296,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1454,9 +1320,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1481,9 +1344,6 @@ stories:
 - story: interactive_story_26
   steps:
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1509,9 +1369,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1539,9 +1396,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1601,9 +1455,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1653,8 +1504,6 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: inform
-    entities:
-    - city: Seattle
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -1686,8 +1535,6 @@ stories:
   - intent: affirm
   - action: utter_acknowledge
   - intent: inform
-    entities:
-    - city: Dallas
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -1728,9 +1575,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1743,9 +1587,6 @@ stories:
   - action: action_disclaimer
   - action: utter_holiday-travel_offer_help
   - intent: inform
-    entities:
-    - city: Chicago
-    - iata: EWR
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -1775,8 +1616,6 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: inform
-    entities:
-    - iata: EWR
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -1816,8 +1655,6 @@ stories:
   - intent: faq
   - action: utter_faq
   - intent: inform
-    entities:
-    - city: Singapore
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -1877,9 +1714,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1901,9 +1735,6 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1931,8 +1762,6 @@ stories:
   - slot_was_set:
     - requested_slot: travel_departure
   - intent: inform
-    entities:
-    - city: Los Angeles
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: Los Angeles International Airport
@@ -1941,8 +1770,6 @@ stories:
   - slot_was_set:
     - requested_slot: travel_destination
   - intent: inform
-    entities:
-    - city: Chicago
   - action: airtravel_form
   - slot_was_set:
     - travel_destination: Chicago Midway International Airport
@@ -1953,9 +1780,6 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1989,8 +1813,6 @@ stories:
   - intent: affirm
   - action: utter_acknowledge
   - intent: inform
-    entities:
-    - city: Los Angeles
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: General Edward Lawrence Logan International Airport
@@ -2028,9 +1850,6 @@ stories:
 - story: Story from conversation with 3afca642-97d5-4197-9252-a738c40604f1 on December 2nd 2019
   steps:
   - intent: inform
-    entities:
-    - city: new york
-    - travel_flight_class: economy
   - slot_was_set:
     - travel_flight_class: economy
   - action: airtravel_form
@@ -2111,9 +1930,6 @@ stories:
 - story: Story from conversation with 3259187940789816 on December 4th 2019
   steps:
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -2141,8 +1957,6 @@ stories:
   - slot_was_set:
     - requested_slot: travel_departure
   - intent: inform
-    entities:
-    - city: Austin
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: Austin Bergstrom International Airport
@@ -2151,8 +1965,6 @@ stories:
   - slot_was_set:
     - requested_slot: travel_destination
   - intent: inform
-    entities:
-    - city: New York
   - action: airtravel_form
   - slot_was_set:
     - travel_destination: John F Kennedy International Airport
@@ -2173,8 +1985,6 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: inform
-    entities:
-    - city: Newark
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
@@ -2194,8 +2004,6 @@ stories:
   - slot_was_set:
     - requested_slot: travel_departure
   - intent: inform
-    entities:
-    - city: Austin
   - action: airtravel_form
   - slot_was_set:
     - travel_departure: Austin Bergstrom International Airport
@@ -2223,9 +2031,6 @@ stories:
 - story: Story from conversation with 2524603660920240 on December 12th 2019
   steps:
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
