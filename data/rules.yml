@@ -1,0 +1,16 @@
+rules:
+- rule: activate form
+  steps:
+    - action: utter_ask_detailed_estimate
+    - intent: affirm
+    - action: airtravel_form
+    - active_loop: airtravel_form
+
+- rule: submit form
+  condition:
+    - active_loop: airtravel_fornm
+  steps:
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_calculate_offsets
