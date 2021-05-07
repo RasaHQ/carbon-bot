@@ -177,42 +177,26 @@ stories:
   - intent: affirm
   - action: utter_explain_why_offset_travel
   - action: action_explain_typical_emissions
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
   - action: utter_ask_detailed_estimate
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Berlin
   - active_loop: null
@@ -224,20 +208,20 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Berlin
   - active_loop: null
@@ -270,32 +254,20 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
-  - slot_was_set:
-    - holiday_name: thanksgiving
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Bearskin Lake
   - active_loop: null
@@ -304,18 +276,23 @@ stories:
   - action: action_calculate_offsets
   - intent: inform
   - action: airtravel_form
+  - active_loop: airtravel_form
   - slot_was_set:
-    - travel_flight_class: economy
+      - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+      - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Bearskin Lake
   - active_loop: null
@@ -345,6 +322,7 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
 
 
 - story: Story from conversation with 14e4c5ba-abba-4be1-8b22-e6e4f2fd2508 on October 26th 2019
@@ -365,35 +343,27 @@ stories:
   - action: utter_holiday-travel_offer_help
   - intent: affirm
   - action: utter_explain_why_offset_travel
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
   - action: action_explain_typical_emissions
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
   - action: utter_ask_detailed_estimate
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: Berlin
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Dublin
   - active_loop: null
@@ -461,6 +431,7 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
@@ -468,23 +439,22 @@ stories:
     - requested_slot: travel_flight_class
   - intent: why
   - action: utter_explain_economy_class
-  - action: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: Seattle
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Grand Rapids
   - active_loop: null
@@ -643,6 +613,7 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
@@ -655,7 +626,6 @@ stories:
     - requested_slot: travel_destination
   - intent: faq
   - action: utter_faq
-  - action: airtravel_form
   - slot_was_set:
     - requested_slot: travel_destination
   - slot_was_set:
@@ -712,7 +682,6 @@ stories:
   - action: utter_faq
   - intent: faq
   - action: utter_faq
-  - action: airtravel_form
   - slot_was_set:
     - requested_slot: travel_destination
   - slot_was_set:
@@ -1058,43 +1027,27 @@ stories:
   - action: utter_holiday-travel_offer_help
   - intent: affirm
   - action: utter_explain_why_offset_travel
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
   - action: action_explain_typical_emissions
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
   - action: utter_ask_detailed_estimate
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: Berlin
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
-  - slot_was_set:
-    - travel_destination: Dublin
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_calculate_offsets
-  - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Dublin
   - active_loop: null
@@ -1223,32 +1176,20 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
-  - slot_was_set:
-    - holiday_name: thanksgiving
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: thanksgiving
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Bearskin Lake
   - active_loop: null
@@ -1256,19 +1197,19 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: inform
-  - action: airtravel_form
+  - active_loop: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: London
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Bearskin Lake
   - active_loop: null
@@ -1755,22 +1696,22 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: Los Angeles International Airport
   - slot_was_set:
     - iata_departure: LAX
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: Chicago Midway International Airport
   - slot_was_set:
@@ -1813,7 +1754,6 @@ stories:
   - intent: affirm
   - action: utter_acknowledge
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: General Edward Lawrence Logan International Airport
   - slot_was_set:
@@ -1891,19 +1831,16 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: General Edward Lawrence Logan International Airport
   - slot_was_set:
     - iata_departure: BOS
   - slot_was_set:
     - requested_slot: travel_destination
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: John F Kennedy International Airport
   - slot_was_set:
@@ -1950,22 +1887,22 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: Austin Bergstrom International Airport
   - slot_was_set:
     - iata_departure: AUS
   - slot_was_set:
     - requested_slot: travel_destination
+  - action: utter_ask_travel_destination
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_destination: John F Kennedy International Airport
   - slot_was_set:
@@ -1997,14 +1934,14 @@ stories:
     - iata_destination: EWR
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - action: utter_ask_travel_flight_class
   - intent: affirm
-  - action: airtravel_form
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - action: utter_ask_travel_departure
   - intent: inform
-  - action: airtravel_form
   - slot_was_set:
     - travel_departure: Austin Bergstrom International Airport
   - slot_was_set:
