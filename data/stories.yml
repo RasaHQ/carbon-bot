@@ -522,8 +522,6 @@ stories:
   - action: utter_explain_why_offset_travel
   - action: action_explain_typical_emissions
   - action: utter_ask_detailed_estimate
-  - intent: why
-  - action: utter_explain_economy_class
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
@@ -1352,3 +1350,66 @@ stories:
   steps:
   - intent: vulgar
   - action: utter_vulgar
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_SCENARIOCHECK
+  - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: christmas
+  - slot_was_set:
+    - context_scenario: holiday
+  - slot_was_set:
+    - holiday_name: christmas
+  - action: action_start
+  - slot_was_set:
+    - link_1_url: https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=b86f93aebca2460fb4b8368171f77a46&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea&label=link-1-clicked
+  - slot_was_set:
+    - link_2_url: https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=b86f93aebca2460fb4b8368171f77a46&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea&label=link-2-clicked
+  - action: action_disclaimer
+  - action: utter_holiday-travel_offer_help
+  - intent: affirm
+  - action: utter_explain_why_offset_travel
+  - action: action_explain_typical_emissions
+  - action: utter_ask_detailed_estimate
+  - action: airtravel_form
+  - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - slot_was_set:
+    - travel_departure: London Luton Airport
+  - slot_was_set:
+    - iata_departure: LTN
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: Munich Airport
+  - slot_was_set:
+    - iata_destination: MUC
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_calculate_offsets
+  - slot_was_set:
+    - travel_departure: null
+  - slot_was_set:
+    - iata_departure: null
+  - slot_was_set:
+    - travel_destination: null
+  - slot_was_set:
+    - iata_destination: null
+  - slot_was_set:
+    - travel_stopover: null
+  - slot_was_set:
+    - iata_stopover: null
+  - slot_was_set:
+    - travel_flight_class: null
+  - intent: affirm
+  - action: utter_express_positive-emo
+  - action: utter_farewell

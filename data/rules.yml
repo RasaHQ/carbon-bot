@@ -8,9 +8,18 @@ rules:
 
 - rule: submit form
   condition:
-    - active_loop: airtravel_fornm
+    - active_loop: airtravel_form
   steps:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
     - action: action_calculate_offsets
+
+- rule: explain economy
+  condition:
+    - active_loop: airtravel_form
+  steps:
+    - slot_was_set:
+        - requested_slot: travel_flight_class
+    - intent: why
+    - action: utter_explain_economy_class

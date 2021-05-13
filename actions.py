@@ -287,46 +287,6 @@ class ValidateAirTravelForm(FormValidationAction):
     def name(self) -> Text:
         return "validate_airtravel_form"
 
-    async def required_slots(
-        self,
-        slots_mapped_in_domain: List[Text],
-        dispatcher: "CollectingDispatcher",
-        tracker: "Tracker",
-        domain: "DomainDict",
-    ) -> Optional[List[Text]]:
-
-        return [
-            "travel_flight_class", 
-            "travel_departure", 
-            "travel_destination",
-        ]
-
-#    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-#        return {
-#            "travel_departure": [
-#                self.from_entity(entity="city", role="from"),
-#                self.from_entity(entity="iata", role="from"),
-#                self.from_entity(entity="city"),
-#                self.from_entity(entity="iata"),
-#                self.from_text(intent="inform"),
-#            ],
-#            "travel_destination": [
-#                self.from_entity(entity="city", role="to"),
-#                self.from_entity(entity="iata", role="to"),
-#                self.from_entity(entity="city"),
-#                self.from_entity(entity="iata"),
-#                self.from_text(intent="inform"),
-#            ],
-#            "previous_entered_flight": [
-#                self.from_text(intent="inform"),
-#            ],
-#            "travel_flight_class": [
-#                self.from_intent(intent="affirm", value="economy"),
-#                self.from_intent(intent="deny", value="business"),
-#                self.from_entity("travel_flight_class"),
-#            ],
-#        }
-#
     def validate_travel_departure(
         self,
         slot_value: Any,
@@ -334,7 +294,6 @@ class ValidateAirTravelForm(FormValidationAction):
         tracker: Tracker,
         domain: DomainDict,
     ) -> Dict[Text, Any]:
-
         return self._location_to_slot_dict(slot_value, "departure")
 
     def validate_travel_destination(

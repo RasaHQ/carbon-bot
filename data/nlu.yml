@@ -1412,6 +1412,8 @@ nlu:
     - [Savannah](city)
     - [Bogota](city)
     - [Prague](city)
+    - [London](city)
+    - [Munich](city)
 - intent: inquire-ask_clarification
   examples: |
     - ?

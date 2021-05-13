@@ -1,67 +1,23 @@
-actions:
-- action_analyse_travelplan
-- action_disclaimer
-- action_explain_typical_emissions
-- action_restart
-- action_start
-- action_travel_inform_flight_emission_single
-- action_calculate_offsets
-entities:
-- city
-- conference_name
-- context_scenario
-- holiday_name
-- iata
-- mention
-- travel_destination
-- travel_flight_class
-forms:
-  airtravel_form:
-    travel_departure:
-      - type: from_entity
-        entity: city
-        role: from
-      - type: from_entity
-        entity: iata
-        role: from
-      - type: from_entity
-        entity: city
-      - type: from_entity
-        entity: iata
-    travel_destination:
-      - type: from_entity
-        entity: city
-        role: to
-      - type: from_entity
-        entity: iata
-        role: to
-      - type: from_entity
-        entity: city
-      - type: from_entity
-        entity: iata
-    travel_flight_class:
-      - type: from_intent
-        intent: affirm
-        value: economy
-      - type: from_intent
-        value: business
-      - type: from_entity
-        entity: travel_flight_class
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-- inquire-ask_clarification-offsets
 - greet
+- inform
 - SCENARIO
-- how_calculated
 - affirm
+- faq:
+    is_retrieval_intent: true
+- inquire-ask_clarification-offsets
+- how_calculated
 - deny
 - buy_offsets
-- faq
 - express_uncertainty
 - farewell
 - deny_flying
 - express_negative-emo
 - inquire-ask_clarification
-- inform
 - why
 - resolve_entity
 - meta_inform_problem_bad-link
@@ -72,51 +28,64 @@ intents:
 - estimate_emissions
 - insult
 - vulgar
-
+entities:
+- city
+- conference_name
+- context_scenario
+- holiday_name
+- iata
+- mention
+- travel_destination
+- travel_flight_class
 slots:
   context_scenario:
     type: categorical
+    influence_conversation: true
     values:
     - conference
     - holiday
-  contradictive_items:
-    type: list
-  correct_city:
-    type: text
-  explanation:
-    type: any
   holiday_name:
     type: any
+    influence_conversation: false
   iata_departure:
     type: any
+    influence_conversation: false
   iata_destination:
     type: any
+    influence_conversation: false
   iata_stopover:
     type: any
-  incorrect_city:
-    type: text
+    influence_conversation: false
   link_1_url:
     type: any
+    influence_conversation: false
   link_2_url:
     type: any
-  listed_objects:
-    type: list
+    influence_conversation: false
   mention:
     type: any
+    influence_conversation: false
   requested_slot:
     type: any
+    influence_conversation: false
   previous_entered_flight:
     type: any
+    influence_conversation: false
   travel_departure:
     type: any
+    influence_conversation: false
   travel_destination:
     type: any
+    influence_conversation: false
   travel_stopover:
     type: any
+    influence_conversation: false
   travel_flight_class:
     type: any
+    influence_conversation: false
   travel_flight_distancecategory:
     type: categorical
+    influence_conversation: true
     values:
     - short
     - medium
@@ -125,7 +94,7 @@ slots:
     - unknown
   travel_flight_km:
     type: text
-
+    influence_conversation: true
 responses:
   utter_faq/meta_inquire-ask_bot-challenge:
   - text: Yes, I am a bot! And I'm part of a research project.
@@ -185,7 +154,6 @@ responses:
   - text: There are many ways you can reduce your carbon footprint. Flying less is a great place to start!
   utter_faq/more-details-process:
   - text: I'd recommend checking out https://offset.earth for those details.
-
   utter_SCENARIOCHECK:
   - buttons:
     - payload: '/SCENARIO{{"context_scenario": "holiday", "holiday_name": "christmas"}}'
@@ -241,8 +209,7 @@ responses:
   utter_greet:
   - text: Hello!
   utter_holiday-travel_offer_help:
-  - text: I take it you are traveling somewhere and cannot avoid
-      flying there. I can help you purchase certified carbon offsets against any flights you take. Would you be interested in that?
+  - text: I take it you are traveling somewhere and cannot avoid flying there. I can help you purchase certified carbon offsets against any flights you take. Would you be interested in that?
   utter_inform_flight_emission_single_long:
   - text: A single extended flight (longer than 4830 km) typically emits 855 kilograms of CO2. So if you take the plane both ways, thats 1.7 metric tons.
   utter_inform_flight_emission_single_short:
@@ -256,8 +223,8 @@ responses:
   - text: I am just a chatbot.
   - text: I'm still figuring out how to answer that.
   - text: I don't think I need to answer that one.
-  - text: ...
-  - text: ""
+  - text: '...'
+  - text: ''
   - text: Do you kiss your mother with that mouth?
   - text: That's really not appropriate.
   - text: You shouldn't say things like that.
@@ -284,15 +251,15 @@ responses:
   - text: I'll never forget the first time we met. But I'll keep trying.
   - text: You are like a cloud. When you disappear it's a beautiful day.
   - text: You bring everyone so much joy, when you leave the room.
-  - text: "What would you do if someone said that to someone you care about?"
-  - text: "What if someone said that to you?"
-  - text: "If someone said that to you, what would you say to them?"
+  - text: What would you do if someone said that to someone you care about?
+  - text: What if someone said that to you?
+  - text: If someone said that to you, what would you say to them?
   utter_vulgar:
   - text: I am just a chatbot.
   - text: I'm still figuring out how to answer that.
   - text: I don't think I need to answer that one.
-  - text: ...
-  - text: ""
+  - text: '...'
+  - text: ''
   - text: Do you kiss your mother with that mouth?
   - text: That's really not appropriate.
   - text: You shouldn't say things like that.
@@ -320,7 +287,56 @@ responses:
   - text: You bring everyone so much joy, when you leave the room.
   - text: I'm really jealous of all the people who have never met you.
   - text: I bet you were up all night trying to come up with that one.
-  - text: "What would you do if someone said that to someone you care about?"
-  - text: "What if someone said that to you?"
-  - text: "If someone said that to you, what would you say to them?"
-
+  - text: What would you do if someone said that to someone you care about?
+  - text: What if someone said that to you?
+  - text: If someone said that to you, what would you say to them?
+actions:
+- action_analyse_travelplan
+- action_calculate_offsets
+- action_disclaimer
+- action_explain_typical_emissions
+- action_restart
+- action_start
+- action_travel_inform_flight_emission_single
+- utter_SCENARIOCHECK
+- utter_ask_detailed_estimate
+- utter_explain_why_offset_travel
+- utter_express_positive-emo
+- utter_faq
+- utter_farewell
+- utter_holiday-travel_offer_help
+- validate_airtravel_form
+- airtravel_form
+forms:
+  airtravel_form:
+    required_slots:
+      travel_flight_class:
+      - type: from_intent
+        intent: affirm
+        value: economy
+      - type: from_intent
+        value: business
+      - type: from_entity
+        entity: travel_flight_class
+      travel_departure:
+      - type: from_entity
+        entity: city
+        role: from
+      - type: from_entity
+        entity: iata
+        role: from
+      - type: from_entity
+        entity: city
+      - type: from_entity
+        entity: iata
+      travel_destination:
+      - type: from_entity
+        entity: city
+        role: to
+      - type: from_entity
+        entity: iata
+        role: to
+      - type: from_entity
+        entity: city
+      - type: from_entity
+        entity: iata
