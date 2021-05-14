@@ -23,3 +23,4 @@ rules:
         - requested_slot: travel_flight_class
     - intent: why
     - action: utter_explain_economy_class
+    - action: airtravel_form

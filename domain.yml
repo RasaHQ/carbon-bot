@@ -308,12 +308,17 @@ actions:
 - validate_airtravel_form
 forms:
   airtravel_form:
+    ignored_intents:
+    - faq
+    - why
+    - inquire-ask_clarification
     required_slots:
       travel_flight_class:
       - type: from_intent
         intent: affirm
         value: economy
       - type: from_intent
+        intent: deny
         value: business
       - type: from_entity
         entity: travel_flight_class
