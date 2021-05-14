@@ -23,6 +23,7 @@ pipeline:
 
 policies:
 - name: MemoizationPolicy
+  max_history: 5
 - name: TEDPolicy
   max_history: 5
   batch_strategy: balanced

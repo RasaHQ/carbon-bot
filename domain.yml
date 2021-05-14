@@ -306,7 +306,6 @@ actions:
 - utter_farewell
 - utter_holiday-travel_offer_help
 - validate_airtravel_form
-- airtravel_form
 forms:
   airtravel_form:
     required_slots:

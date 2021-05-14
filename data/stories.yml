@@ -522,6 +522,7 @@ stories:
   - action: utter_explain_why_offset_travel
   - action: action_explain_typical_emissions
   - action: utter_ask_detailed_estimate
+  - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
@@ -1374,6 +1375,7 @@ stories:
   - action: utter_explain_why_offset_travel
   - action: action_explain_typical_emissions
   - action: utter_ask_detailed_estimate
+  - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
   - slot_was_set:
