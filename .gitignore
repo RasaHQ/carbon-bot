@@ -15,3 +15,5 @@ story_graph.dot
 events.db
 rasa.db
 help-scripts/*.csv
+.idea/*
+.idea
