@@ -14,6 +14,7 @@ rules:
     - slot_was_set:
       - requested_slot: null
     - action: action_calculate_offsets
+    - action: action_rate_conversation
 
 - rule: explain economy
   condition:

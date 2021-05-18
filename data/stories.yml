@@ -62,6 +62,10 @@ stories:
   - active_loop: airtravel_form
   - active_loop: null
   - action: action_calculate_offsets
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
+  - action: utter_farewell
 
 - story: give_travel_plan (2)
   steps:
@@ -84,6 +88,10 @@ stories:
   - active_loop: airtravel_form
   - active_loop: null
   - action: action_calculate_offsets
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
+  - action: utter_farewell
 
 - story: interactive_story_1
   steps:
@@ -106,7 +114,8 @@ stories:
   - active_loop: airtravel_form
   - active_loop: null
   - action: action_calculate_offsets
-  - intent: thank
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
   - action: utter_farewell
 
@@ -131,7 +140,8 @@ stories:
   - active_loop: airtravel_form
   - active_loop: null
   - action: action_calculate_offsets
-  - intent: thank
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
   - action: utter_farewell
 
@@ -150,6 +160,10 @@ stories:
   - intent: deny
   - action: utter_acknowledge
   - action: action_explain_typical_emissions
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
+  - action: utter_farewell
 
 - story: interactive_story_4
   steps:
@@ -166,6 +180,10 @@ stories:
   - intent: deny_flying
   - action: utter_acknowledge
   - action: action_explain_typical_emissions
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
+  - action: utter_farewell
 
 - story: manual_story_1
   steps:
@@ -197,6 +215,10 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
+  - action: utter_farewell
 
 - story: manual_story_2
   steps:
@@ -231,6 +253,10 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
+  - action: utter_farewell
 
 - story: interactive_story_6
   steps:
@@ -251,6 +277,10 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
+  - action: utter_farewell
 
 - story: Story from conversation with 14e4c5ba-abba-4be1-8b22-e6e4f2fd2508 on October 26th 2019
   steps:
@@ -279,7 +309,6 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
-  - intent: inform
   - action: airtravel_form
   - slot_was_set:
     - travel_destination: Dublin
@@ -289,6 +318,9 @@ stories:
   - action: action_calculate_offsets
   - intent: express_surprise
   - action: utter_explain_offset_calculation
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farwell
 
 - story: Story from conversation with 35ebdd5a-34a3-4707-89f2-4748c4997620 on October 27th 2019
   steps:
@@ -312,6 +344,9 @@ stories:
   - action: utter_ask_detailed_estimate
   - intent: inform
   - action: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farwell
 
 - story: Story from conversation with b59c8f85-caea-4143-bae0-62421e93b664 on October 27th 2019
   steps:
@@ -345,6 +380,9 @@ stories:
   - intent: thank
   - action: utter_express_positive-emo
   - action: utter_farewell
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farwell
 
 - story: manual_story_3
   steps:
@@ -372,7 +410,8 @@ stories:
   - action: utter_faq
   - intent: affirm
   - action: utter_acknowledge
-  - intent: farewell
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_farewell
 
 - story: manual_story_4
@@ -400,7 +439,8 @@ stories:
   - active_loop: airtravel_form
   - active_loop: null
   - action: action_calculate_offsets
-  - intent: thank
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
   - action: utter_farewell
 
@@ -431,7 +471,8 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
-  - intent: affirm
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
   - action: utter_farewell
 
@@ -466,6 +507,9 @@ stories:
   - action: utter_faq
   - intent: faq
   - action: utter_faq
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_9
   steps:
@@ -501,6 +545,10 @@ stories:
   - action: utter_faq
   - intent: faq
   - action: utter_faq
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farwell
+
 
 - story: interactive_story_10
   steps:
@@ -539,6 +587,9 @@ stories:
   - action: utter_express_positive-emo
   - intent: farewell
   - action: utter_farewell
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
 
 - story: interactive_story_11
   steps:
@@ -561,6 +612,9 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_12
   steps:
@@ -587,7 +641,9 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
-
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_13
   steps:
@@ -613,6 +669,9 @@ stories:
   - action: utter_acknowledge
   - intent: faq
   - action: utter_faq
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_14
   steps:
@@ -636,6 +695,9 @@ stories:
   - action: utter_acknowledge
   - intent: faq
   - action: utter_faq
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_15
   steps:
@@ -660,6 +722,9 @@ stories:
   - intent: buy_offsets
   - action: airtravel_form
   - active_loop: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_16
   steps:
@@ -683,6 +748,9 @@ stories:
   - action: utter_acknowledge
   - intent: buy_offsets
   - action: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_17
   steps:
@@ -694,6 +762,9 @@ stories:
   - action: utter_acknowledge
   - intent: buy_offsets
   - action: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_18
   steps:
@@ -715,6 +786,9 @@ stories:
   - action: utter_faq
   - intent: farewell
   - action: utter_acknowledge
+  - action: utter_farewell
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_farewell
 
 - story: interactive_story_19
@@ -741,6 +815,9 @@ stories:
   - action: utter_faq
   - intent: buy_offsets
   - action: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_20
   steps:
@@ -766,6 +843,9 @@ stories:
   - action: utter_faq
   - intent: buy_offsets
   - action: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_21
   steps:
@@ -789,6 +869,9 @@ stories:
   - action: utter_ask_detailed_estimate
   - intent: deny
   - action: utter_acknowledge
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: Story from conversation with 14e4c5ba-abba-4be1-8b22-e6e4f2fd2508 on October 26th 2019 (1)
   steps:
@@ -819,6 +902,9 @@ stories:
   - action: action_calculate_offsets
   - intent: how_calculated
   - action: utter_explain_offset_calculation
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
 
 - story: interactive_story_22
   steps:
@@ -832,6 +918,9 @@ stories:
   - action: action_start
   - action: action_disclaimer
   - action: utter_holiday-travel_offer_help
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_23
   steps:
@@ -867,6 +956,9 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: manual_story_5
   steps:
@@ -912,6 +1004,9 @@ stories:
   - action: utter_faq
   - intent: thank
   - action: utter_express_positive-emo
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_24
   steps:
@@ -936,6 +1031,9 @@ stories:
   - intent: inquire-ask_clarification-offsets
   - action: utter_explain_how_offsets_work
   - action: utter_ask_detailed_estimate
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_25
   steps:
@@ -960,6 +1058,9 @@ stories:
   - intent: estimate_emissions
   - action: airtravel_form
   - active_loop: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_26
   steps:
@@ -983,6 +1084,9 @@ stories:
   - action: utter_acknowledge
   - intent: estimate_emissions
   - action: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_27
   steps:
@@ -1008,6 +1112,8 @@ stories:
   - intent: buy_offsets
   - action: utter_explain_no_payment
   - intent: thank
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
   - action: utter_farewell
 
@@ -1045,6 +1151,9 @@ stories:
   - action: utter_explain_no_payment
   - intent: affirm
   - action: utter_acknowledge
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
 
 - story: interactive_story_29
   steps:
@@ -1092,9 +1201,10 @@ stories:
   - intent: faq
   - action: utter_faq
   - intent: thank
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
   - action: utter_farewell
-
 
 - story: interactive_story_30
   steps:
@@ -1140,6 +1250,8 @@ stories:
   - intent: faq
   - action: utter_faq
   - intent: thank
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
   - action: utter_farewell
 
@@ -1155,6 +1267,9 @@ stories:
   - action: utter_acknowledge_notunderstanding
   - intent: inform_notunderstanding
   - action: action_restart
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive 34
   steps:
@@ -1172,6 +1287,9 @@ stories:
   - action: utter_acknowledge_notunderstanding
   - intent: faq
   - action: utter_faq
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: interactive_story_35
   steps:
@@ -1193,6 +1311,9 @@ stories:
   - action: utter_acknowledge_notunderstanding
   - intent: buy_offsets
   - action: airtravel_form
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: Story from conversation with 2485257761521706 on December 1st 2019
   steps:
@@ -1254,6 +1375,9 @@ stories:
   - action: utter_explain_how_offsets_work
   - intent: faq
   - action: utter_faq
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_express_positive-emo
 
 - story: Story from conversation with 3afca642-97d5-4197-9252-a738c40604f1 on December 2nd 2019
   steps:
@@ -1283,6 +1407,9 @@ stories:
   - action: utter_faq
   - intent: faq
   - action: utter_faq
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: Story from conversation with 3259187940789816 on December 4th 2019
   steps:
@@ -1320,6 +1447,9 @@ stories:
   - action: utter_explain_offset_calculation
   - intent: express_positive-emo
   - action: utter_express_positive-emo
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: Story from conversation with 2524603660920240 on December 12th 2019
   steps:
@@ -1341,6 +1471,9 @@ stories:
   - intent: why
   - action: utter_explain_why_offset_travel
   - action: utter_ask_detailed_estimate
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
+  - action: utter_farewell
 
 - story: RUDE USER 1
   steps:
@@ -1414,4 +1547,6 @@ stories:
     - travel_flight_class: null
   - intent: affirm
   - action: utter_express_positive-emo
+  - action: action_rate_conversation
+  - intent: provide_dialogue_rating
   - action: utter_farewell

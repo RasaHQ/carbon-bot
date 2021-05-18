@@ -408,6 +408,17 @@ class ValidateAirTravelForm(FormValidationAction):
         return destination_change
 
 
+class RateConversation(Action):
+    """Collects a subjective rating of the user for the conversation."""
+
+    def name(self) -> Text:
+        return "action_rate_conversation"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> List[Dict[Text, Any]]:
+        logger.info('Collecting dialogue rating...')
+        dispatcher.utter_message(f"\nPlease rate the conversation on a scale of 1-5 (1='really bad', 5='really good')!\n")
+        return []
+
 
 class CalculateOffsets(Action):
     """Attempts to calculate CO2 usage and display link to purchase offsets."""
