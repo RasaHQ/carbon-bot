@@ -82,6 +82,23 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+      - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+      - travel_flight_class: economy
+  - slot_was_set:
+      - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+      - travel_departure: London Luton Airport
+  - slot_was_set:
+      - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+      - travel_destination: Munich Airport
+  - slot_was_set:
+      - requested_slot: null
   - active_loop: null
   - action: action_calculate_offsets
 
@@ -104,9 +121,26 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+    - travel_departure: London Luton Airport
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+    - travel_destination: Munich Airport
+  - slot_was_set:
+    - requested_slot: null
   - active_loop: null
   - action: action_calculate_offsets
-  - intent: thank
+  - intent: affirm
   - action: utter_express_positive-emo
   - action: utter_farewell
 
@@ -193,6 +227,21 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+     - travel_flight_class: economy
+  - slot_was_set:
+     - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+     - travel_departure: London
+  - slot_was_set:
+     - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+     - travel_destination: Berlin
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -220,6 +269,7 @@ stories:
   - action: utter_ask_detailed_estimate
   - intent: inform
   - action: airtravel_form
+  - active_loop: airtravel_form
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -227,6 +277,37 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+      - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+      - travel_departure: London
+  - slot_was_set:
+      - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+      - travel_destination: Bearskin Lake
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_calculate_offsets
+  - intent: inform
+  - action: airtravel_form
+  - active_loop: airtravel_form
+  - slot_was_set:
+      - travel_flight_class: economy
+  - slot_was_set:
+      - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+      - travel_departure: London
+  - slot_was_set:
+      - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+      - travel_destination: Bearskin Lake
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -251,6 +332,8 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
 
 - story: Story from conversation with 14e4c5ba-abba-4be1-8b22-e6e4f2fd2508 on October 26th 2019
   steps:
@@ -281,11 +364,25 @@ stories:
   - action: action_calculate_offsets
   - intent: inform
   - action: airtravel_form
+  - active_loop: airtravel_form
   - slot_was_set:
-    - travel_destination: Dublin
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+      - travel_flight_class: economy
+  - slot_was_set:
+      - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+      - travel_departure: Berlin
+  - slot_was_set:
+      - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+      - travel_destination: Dublin
   - active_loop: null
   - slot_was_set:
-    - requested_slot: null
+      - requested_slot: null
   - action: action_calculate_offsets
   - intent: express_surprise
   - action: utter_explain_offset_calculation
@@ -312,6 +409,7 @@ stories:
   - action: utter_ask_detailed_estimate
   - intent: inform
   - action: airtravel_form
+  - active_loop: airtravel_form
 
 - story: Story from conversation with b59c8f85-caea-4143-bae0-62421e93b664 on October 27th 2019
   steps:
@@ -336,6 +434,26 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - intent: why
+  - action: utter_explain_economy_class
+  - action: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+    - travel_departure: Seattle
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+    - travel_destination: Grand Rapids
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -427,6 +545,30 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - slot_was_set:
+    - travel_departure: San Francisco International Airport
+  - slot_was_set:
+    - iata_departure: SFO
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: null
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: null
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: San Diego International Airport
+  - slot_was_set:
+    - iata_destination: SAN
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -458,6 +600,27 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - slot_was_set:
+    - travel_departure: Los Angeles International Airport
+  - slot_was_set:
+    - iata_departure: LAX
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - intent: faq
+  - action: utter_faq
+  - action: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: Pittsburgh International Airport
+  - slot_was_set:
+    - iata_destination: PIT
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -493,6 +656,29 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+      - travel_flight_class: economy
+  - slot_was_set:
+      - requested_slot: travel_departure
+  - slot_was_set:
+      - travel_departure: Los Angeles International Airport
+  - slot_was_set:
+      - iata_departure: LAX
+  - slot_was_set:
+      - requested_slot: travel_destination
+  - intent: faq
+  - action: utter_faq
+  - intent: faq
+  - action: utter_faq
+  - action: airtravel_form
+  - slot_was_set:
+      - requested_slot: travel_destination
+  - slot_was_set:
+      - travel_destination: Pittsburgh International Airport
+  - slot_was_set:
+      - iata_destination: PIT
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -525,6 +711,22 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+      - travel_flight_class: economy
+  - slot_was_set:
+      - requested_slot: travel_departure
+  - slot_was_set:
+      - travel_departure: Detroit Metropolitan Wayne County Airport
+  - slot_was_set:
+      - iata_departure: DTW
+  - slot_was_set:
+      - requested_slot: travel_destination
+  - slot_was_set:
+      - travel_destination: Dallas Fort Worth International Airport
+  - slot_was_set:
+      - iata_destination: DFW
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -561,6 +763,18 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - slot_was_set:
+    - travel_departure: Austin Bergstrom International Airport
+  - slot_was_set:
+    - iata_departure: AUS
+  - slot_was_set:
+    - requested_slot: travel_destination
 
 - story: interactive_story_12
   steps:
@@ -587,7 +801,6 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
-
 
 - story: interactive_story_13
   steps:
@@ -741,6 +954,7 @@ stories:
   - action: utter_faq
   - intent: buy_offsets
   - action: airtravel_form
+  - active_loop: airtravel_form
 
 - story: interactive_story_20
   steps:
@@ -813,6 +1027,30 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+    - travel_departure: Berlin
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+    - travel_destination: Dublin
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_calculate_offsets
+  - intent: inform
+  - action: airtravel_form
+  - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_destination: Dublin
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -856,6 +1094,20 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - slot_was_set:
+    - travel_departure: Berlin-Schönefeld Airport
+  - slot_was_set:
+    - iata_departure: SXF
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: John F Kennedy International Airport
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -894,6 +1146,21 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+    - travel_departure: London
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+    - travel_destination: Bearskin Lake
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -983,6 +1250,7 @@ stories:
   - action: utter_acknowledge
   - intent: estimate_emissions
   - action: airtravel_form
+  - active_loop: airtravel_form
 
 - story: interactive_story_27
   steps:
@@ -1034,6 +1302,30 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - slot_was_set:
+    - travel_departure: San Francisco International Airport
+  - slot_was_set:
+    - iata_departure: SFO
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: null
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: null
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: San Diego International Airport
+  - slot_was_set:
+    - iata_destination: SAN
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1069,6 +1361,22 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - slot_was_set:
+    - travel_departure: Berlin-Schönefeld Airport
+  - slot_was_set:
+    - iata_departure: SXF
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: Charles de Gaulle International Airport
+  - slot_was_set:
+    - iata_destination: CDG
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1076,6 +1384,18 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_departure: Charles de Gaulle International Airport
+  - slot_was_set:
+    - travel_destination: Boeing Field King County International Airport
+  - slot_was_set:
+    - iata_departure: CDG
+  - slot_was_set:
+    - iata_destination: BFI
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1085,6 +1405,18 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_departure: Charles de Gaulle International Airport
+  - slot_was_set:
+    - travel_destination: Boeing Field King County International Airport
+  - slot_was_set:
+    - iata_departure: CDG
+  - slot_was_set:
+    - iata_destination: BFI
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1094,7 +1426,6 @@ stories:
   - intent: thank
   - action: utter_express_positive-emo
   - action: utter_farewell
-
 
 - story: interactive_story_30
   steps:
@@ -1115,6 +1446,18 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_departure: Chicago Midway International Airport
+  - slot_was_set:
+    - travel_destination: Newark Liberty International Airport
+  - slot_was_set:
+    - iata_departure: MDW
+  - slot_was_set:
+    - iata_destination: EWR
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1122,6 +1465,24 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_departure: Newark Liberty International Airport
+  - slot_was_set:
+    - travel_destination: null
+  - slot_was_set:
+    - iata_departure: EWR
+  - slot_was_set:
+    - iata_destination: null
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: Chicago Midway International Airport
+  - slot_was_set:
+    - iata_destination: MDW
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1133,6 +1494,18 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_departure: John F Kennedy International Airport
+  - slot_was_set:
+    - travel_destination: Singapore Changi Airport
+  - slot_was_set:
+    - iata_departure: JFK
+  - slot_was_set:
+    - iata_destination: SIN
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - slot_was_set:
+    - travel_flight_class: economy
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1217,6 +1590,25 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+    - travel_departure: Los Angeles International Airport
+  - slot_was_set:
+    - iata_departure: LAX
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+    - travel_destination: Chicago Midway International Airport
+  - slot_was_set:
+    - iata_destination: MDW
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1240,6 +1632,28 @@ stories:
   - intent: meta_inform_problem_bad-link
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - travel_departure: null
+  - slot_was_set:
+    - travel_destination: null
+  - slot_was_set:
+    - iata_departure: null
+  - slot_was_set:
+    - iata_destination: null
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - intent: affirm
+  - action: utter_acknowledge
+  - intent: inform
+  - action: airtravel_form
+  - slot_was_set:
+    - travel_departure: General Edward Lawrence Logan International Airport
+  - slot_was_set:
+    - iata_departure: BOS
+  - slot_was_set:
+    - travel_destination: Los Angeles International Airport
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1262,6 +1676,16 @@ stories:
     - travel_flight_class: economy
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - travel_departure: General Edward Lawrence Logan International Airport
+  - slot_was_set:
+    - travel_destination: John F Kennedy International Airport
+  - slot_was_set:
+    - iata_departure: BOS
+  - slot_was_set:
+    - iata_destination: JFK
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1275,6 +1699,18 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - slot_was_set:
+    - travel_departure: General Edward Lawrence Logan International Airport
+  - slot_was_set:
+    - iata_departure: BOS
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - slot_was_set:
+    - travel_destination: John F Kennedy International Airport
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1305,6 +1741,25 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+    - travel_departure: Austin Bergstrom International Airport
+  - slot_was_set:
+    - iata_departure: AUS
+  - slot_was_set:
+    - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+    - travel_destination: John F Kennedy International Airport
+  - slot_was_set:
+    - iata_destination: JFK
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1312,6 +1767,22 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - slot_was_set:
+    - travel_destination: Newark Liberty International Airport
+  - slot_was_set:
+    - iata_destination: EWR
+  - slot_was_set:
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+    - travel_flight_class: economy
+  - slot_was_set:
+    - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+    - travel_departure: Austin Bergstrom International Airport
+  - slot_was_set:
+    - iata_departure: AUS
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1351,67 +1822,3 @@ stories:
   steps:
   - intent: vulgar
   - action: utter_vulgar
-
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_SCENARIOCHECK
-  - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
-  - slot_was_set:
-    - context_scenario: holiday
-  - slot_was_set:
-    - holiday_name: christmas
-  - action: action_start
-  - slot_was_set:
-    - link_1_url: https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=b86f93aebca2460fb4b8368171f77a46&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea&label=link-1-clicked
-  - slot_was_set:
-    - link_2_url: https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=b86f93aebca2460fb4b8368171f77a46&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea&label=link-2-clicked
-  - action: action_disclaimer
-  - action: utter_holiday-travel_offer_help
-  - intent: affirm
-  - action: utter_explain_why_offset_travel
-  - action: action_explain_typical_emissions
-  - action: utter_ask_detailed_estimate
-  - intent: affirm
-  - action: airtravel_form
-  - active_loop: airtravel_form
-  - slot_was_set:
-    - requested_slot: travel_flight_class
-  - slot_was_set:
-    - travel_flight_class: economy
-  - slot_was_set:
-    - requested_slot: travel_departure
-  - slot_was_set:
-    - travel_departure: London Luton Airport
-  - slot_was_set:
-    - iata_departure: LTN
-  - slot_was_set:
-    - requested_slot: travel_destination
-  - slot_was_set:
-    - travel_destination: Munich Airport
-  - slot_was_set:
-    - iata_destination: MUC
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_calculate_offsets
-  - slot_was_set:
-    - travel_departure: null
-  - slot_was_set:
-    - iata_departure: null
-  - slot_was_set:
-    - travel_destination: null
-  - slot_was_set:
-    - iata_destination: null
-  - slot_was_set:
-    - travel_stopover: null
-  - slot_was_set:
-    - iata_stopover: null
-  - slot_was_set:
-    - travel_flight_class: null
-  - intent: affirm
-  - action: utter_express_positive-emo
-  - action: utter_farewell

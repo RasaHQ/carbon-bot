@@ -6,6 +6,12 @@ rules:
     - action: airtravel_form
     - active_loop: airtravel_form
 
+- rule: activate form with intent
+  steps:
+    - intent: estimate_emissions
+    - action: airtravel_form
+    - active_loop: airtravel_form
+
 - rule: submit form
   condition:
     - active_loop: airtravel_form
