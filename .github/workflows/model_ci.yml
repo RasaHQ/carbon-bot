@@ -24,7 +24,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install --upgrade "pip<20"
         pip install -r requirements.txt
 
     - name: Check stories are consistent
@@ -37,7 +37,7 @@ jobs:
 
     - name: Run Through Test Stories
       run: |
-        rasa test core --stories test_stories/stories.md --fail-on-prediction-errors
+        rasa test core --stories test_stories/stories.yaml --fail-on-prediction-errors
 
     - name: Cross-validate NLU model
       if: github.event_name == 'pull_request'
@@ -99,7 +99,7 @@ jobs:
           IMAGE_TAG=$(basename ${{ github.ref }})
         fi
 
-        echo "::set-env name=IMAGE_TAG::${IMAGE_TAG}-${{ github.sha }}"
+        echo "IMAGE_TAG=${IMAGE_TAG}-${{ github.sha }}" >> $GITHUB_ENV
 
     - name: GCP Auth
       env:
@@ -141,7 +141,7 @@ jobs:
           IMAGE_TAG=$(basename ${{ github.ref }})
         fi
 
-        echo "::set-env name=IMAGE_TAG::${IMAGE_TAG}-${{ github.sha }}"
+        echo "IMAGE_TAG=${IMAGE_TAG}-${{ github.sha }}" >> $GITHUB_ENV
 
     - name: GCP Auth
       env:
@@ -220,7 +220,7 @@ jobs:
     - name: Get path to model
       run: |
         ls -R
-        echo "::set-env name=MODELNAME::${{ env.MODEL_DIRECTORY }}/$(ls ${{ env.MODEL_DIRECTORY }})"
+        echo "MODELNAME=${{ env.MODEL_DIRECTORY }}/$(ls ${{ env.MODEL_DIRECTORY }})" >> $GITHUB_ENV
 
     - name: GCP Auth
       env:
