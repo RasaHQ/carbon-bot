@@ -438,6 +438,7 @@ class CalculateOffsets(Action):
         departure_iata = tracker.get_slot("iata_departure")
         destination_airport = tracker.get_slot("travel_destination")
         destination_iata = tracker.get_slot("iata_destination")
+        travel_flight_class = tracker.get_slot("travel_flight_class")
 #        stopover_airport = tracker.get_slot("travel_stopover")
 #        stopover_iata = tracker.get_slot("iata_stopover")
 #        previous_entered_flight = tracker.get_slot("previous_entered_flight")
@@ -446,7 +447,7 @@ class CalculateOffsets(Action):
         if True:
             message = (
                 f"A one-way flight from {departure_airport} ({departure_iata}) to {destination_airport} ({destination_iata}) "
-                f"emits {co2_in_tons[0]} of CO2. "
+                f"in {travel_flight_class} class emits {co2_in_tons[0]} of CO2. "
                 f"It would be amazing if you bought offsets for that carbon! "
                 f"There are some great, UN-certified projects you can pick from."
             )
