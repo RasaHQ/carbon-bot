@@ -50,6 +50,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -68,6 +71,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -90,11 +96,15 @@ stories:
   - slot_was_set:
       - requested_slot: travel_departure
   - intent: inform
+    entities:
+     - city: London
   - slot_was_set:
       - travel_departure: London Luton Airport
   - slot_was_set:
       - requested_slot: travel_destination
   - intent: inform
+    entities:
+      - city: Munich
   - slot_was_set:
       - travel_destination: Munich Airport
   - slot_was_set:
@@ -107,6 +117,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -149,6 +162,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -174,6 +190,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -190,6 +209,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -206,6 +228,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -252,6 +277,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -282,6 +310,8 @@ stories:
   - slot_was_set:
       - requested_slot: travel_departure
   - intent: inform
+    entities:
+      - city: London
   - slot_was_set:
       - travel_departure: London
   - slot_was_set:
@@ -301,11 +331,15 @@ stories:
   - slot_was_set:
       - requested_slot: travel_departure
   - intent: inform
+    entities:
+    - city: London
   - slot_was_set:
       - travel_departure: London
   - slot_was_set:
       - requested_slot: travel_destination
   - intent: inform
+    entities:
+      - city: Bearskin Lake
   - slot_was_set:
       - travel_destination: Bearskin Lake
   - active_loop: null
@@ -318,6 +352,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -340,6 +377,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -373,11 +413,15 @@ stories:
   - slot_was_set:
       - requested_slot: travel_departure
   - intent: inform
+    entities:
+      - city: Berlin
   - slot_was_set:
       - travel_departure: Berlin
   - slot_was_set:
       - requested_slot: travel_destination
   - intent: inform
+    entities:
+      - city: Dublin
   - slot_was_set:
       - travel_destination: Dublin
   - active_loop: null
@@ -392,6 +436,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -416,6 +463,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -469,6 +519,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -498,6 +551,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -527,6 +583,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -582,6 +641,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -635,6 +697,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -693,6 +758,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -781,6 +849,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -807,6 +878,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -830,6 +904,9 @@ stories:
 - story: interactive_story_14
   steps:
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -855,6 +932,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -877,6 +957,9 @@ stories:
 - story: interactive_story_16
   steps:
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -911,6 +994,9 @@ stories:
 - story: interactive_story_18
   steps:
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -935,6 +1021,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -961,6 +1050,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -986,6 +1078,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1009,6 +1104,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1063,6 +1161,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1076,6 +1177,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1125,6 +1229,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1185,6 +1292,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1209,6 +1319,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1231,6 +1344,9 @@ stories:
 - story: interactive_story_26
   steps:
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1257,6 +1373,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1284,6 +1403,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1343,6 +1465,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1432,6 +1557,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1551,6 +1679,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1572,6 +1703,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1614,6 +1748,9 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1723,6 +1860,9 @@ stories:
 - story: Story from conversation with 3259187940789816 on December 4th 2019
   steps:
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -1795,6 +1935,9 @@ stories:
 - story: Story from conversation with 2524603660920240 on December 12th 2019
   steps:
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
