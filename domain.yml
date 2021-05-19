@@ -333,6 +333,8 @@ forms:
         entity: city
       - type: from_entity
         entity: iata
+      - type: from_text
+        entity: city
       travel_destination:
       - type: from_entity
         entity: city
@@ -344,3 +346,5 @@ forms:
         entity: city
       - type: from_entity
         entity: iata
+      - type: from_text
+        entity: city
