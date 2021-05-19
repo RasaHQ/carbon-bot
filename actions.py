@@ -162,7 +162,6 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         departure_iata = tracker.get_slot("iata_departure")
         destination_iata = tracker.get_slot("iata_destination")
         flight_class = tracker.get_slot("travel_flight_class")
-        stopover_iata = tracker.get_slot("iata_stopover")
 
         if not departure_iata:
             raise ValueError("Departure IATA code unknown.")
@@ -173,14 +172,6 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
 
         departure_airport = self.find_airport_by_ref(departure_iata)
         destination_airport = self.find_airport_by_ref(destination_iata)
-        if stopover_iata:
-            stopover_airport = self.find_airport_by_ref(stopover_iata)
-            if not stopover_airport:
-                raise ValueError(
-                    f"Could not find stopover airport with IATA code '{stopover_iata}'"
-                )
-            lat_stopover = stopover_airport["latitude_deg"]
-            lon_stopover = stopover_airport["longitude_deg"]
 
         if not departure_airport:
             raise ValueError(
@@ -198,24 +189,9 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         lon_b = destination_airport["longitude_deg"]
         distance_km = self.great_circle_distance_km(lat_a, lon_a, lat_b, lon_b)
 
-        if stopover_iata:
-            distance_km_leg1 = self.great_circle_distance_km(
-                lat_a, lon_a, lat_stopover, lon_stopover
-            )
-            distance_km_leg2 = self.great_circle_distance_km(
-                lat_stopover, lon_stopover, lat_b, lon_b
-            )
-
         co2_kg = self.co2_kg_interpolation(distance_km, flight_class)
         if not co2_kg:
             raise ValueError("CO2 amount could not be calculated.")
-        if stopover_iata:
-            co2_kg_leg1 = self.co2_kg_interpolation(distance_km_leg1, flight_class)
-            co2_kg_leg2 = self.co2_kg_interpolation(distance_km_leg2, flight_class)
-            if not co2_kg_leg2 or not co2_kg_leg1:
-                raise ValueError(
-                    "CO2 amount could not be calculated for one of the legs."
-                )
 
         kilos_per_unit = {
             "kilograms": 1.0,
@@ -230,23 +206,7 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         unit_string = "kg" if unit == "kilograms" else "tons"
 
         co2 = (f"{ceil(10 * co2_kg / kilos_per_unit) * 0.1:.1f} {unit_string}",)
-        if stopover_iata:
-            co2_leg1 = (
-                f"{ceil(10 * co2_kg_leg1 / kilos_per_unit) * 0.1:.1f} {unit_string}"
-            )
-            co2_leg2 = (
-                f"{ceil(10 * co2_kg_leg2 / kilos_per_unit) * 0.1:.1f} {unit_string}"
-            )
-            co2 = (co2_leg1, co2_leg2)
         return co2
-
-
-ordinal_mention_mapping = {
-    "1": lambda l: l[0],
-    "2": lambda l: l[1],
-    "3": lambda l: l[2],
-    "LAST": lambda l: l[-1],
-}
 
 
 class StartAction(Action):
@@ -328,85 +288,6 @@ class ValidateAirTravelForm(FormValidationAction):
             result = {f"travel_{kind}": None, f"iata_{kind}": None}
         return result
 
-    def check_stopover(
-        self,
-        old_departure: Tuple,
-        old_destination: Tuple,
-        current_result: Dict,
-        tracker: Tracker,
-    ) -> Tuple[bool, Tuple]:
-        """
-        Checks whether the most recent trip is a connecting flight with the previous one;
-
-        Args: 
-            old_departure: (departure airport name, departure IATA code) tuple with departure airport
-            entered within this form
-            old destination: (destination airport name, destination IATA code) tuple with destination airport
-            entered within this form
-            current_result: dictionary with slot values provided in the last utterance
-            tracker: state tracker containing current dialog state
-
-        Returns: 
-            second_leg_provided: a boolean flag of whether a connecting flight was found;
-            stopover_tuple: if it was found:
-                                a tuple of ((departure airport name, departure IATA code), (stopover airport name, stopover IATA code), 
-                                (destination airport name, destination IATA code))
-         
-        """
-        stopover_info = collections.namedtuple('Stopover_Info', ['second_leg_provided', 'stopover_tuple'])
-        departure, destination, stopover = (None, None), (None, None), (None, None)
-
-        if tracker.get_slot("previous_entered_flight")[1][0] in [
-            old_departure[0],
-            current_result.get("travel_departure"),
-        ]:
-            departure = tracker.get_slot("previous_entered_flight")[0]
-            stopover = tracker.get_slot("previous_entered_flight")[1]
-            if current_result.get("travel_destination"):
-                destination = (
-                    current_result["travel_destination"],
-                    current_result["iata_destination"],
-                )
-            elif old_destination:
-                destination = old_destination
-        elif tracker.get_slot("previous_entered_flight")[0][0] in [
-            old_destination[0],
-            current_result.get("travel_destination"),
-        ]:
-            destination = tracker.get_slot("previous_entered_flight")[1]
-            stopover = tracker.get_slot("previous_entered_flight")[0]
-            if current_result.get("travel_departure"):
-                departure = (
-                    current_result["travel_departure"],
-                    current_result["iata_departure"],
-                )
-            elif old_departure:
-                departure = old_departure
-
-        return stopover_info(
-            second_leg_provided = None not in (departure[0], destination[0], stopover[0]),
-            stopover_tuple = (departure, stopover, destination),
-        )
-
-    def departure_changed(self, old_departure, result):
-        # checks that there is a new departure and it is not the same as old one;
-        departure_change = (
-            old_departure[0]
-            and result.get("travel_departure")
-            and (result.get("travel_departure"), result.get("iata_departure"))
-            != old_departure
-        )
-        return departure_change
-
-    def destination_changed(self, old_destination, result):
-        destination_change = (
-            old_destination[0]
-            and result.get("travel_destination")
-            and (result.get("travel_destination"), result.get("iata_destination"))
-            != old_destination
-        )
-        return destination_change
-
 
 
 class CalculateOffsets(Action):
@@ -439,11 +320,6 @@ class CalculateOffsets(Action):
         destination_airport = tracker.get_slot("travel_destination")
         destination_iata = tracker.get_slot("iata_destination")
         travel_flight_class = tracker.get_slot("travel_flight_class")
-#        stopover_airport = tracker.get_slot("travel_stopover")
-#        stopover_iata = tracker.get_slot("iata_stopover")
-#        previous_entered_flight = tracker.get_slot("previous_entered_flight")
-#
-#        if not stopover_iata:
         if True:
             message = (
                 f"A one-way flight from {departure_airport} ({departure_iata}) to {destination_airport} ({destination_iata}) "
@@ -451,16 +327,6 @@ class CalculateOffsets(Action):
                 f"It would be amazing if you bought offsets for that carbon! "
                 f"There are some great, UN-certified projects you can pick from."
             )
-#        else:
-#            message = (
-#                f"The trip from {departure_airport} ({departure_iata}) to {destination_airport} ({destination_iata}) "
-#                f"via {stopover_airport} ({stopover_iata}) emits {float(co2_in_tons[0].split()[0])+float(co2_in_tons[1].split()[0]):.1f} {co2_in_tons[0].split()[1]} of CO2. "
-#                f"The first leg emits {co2_in_tons[0]} of CO2. "
-#                f"The second leg emits {co2_in_tons[1]} of CO2."
-#                f"It would be amazing if you bought offsets for that carbon! "
-#                f"There are some great, UN-certified projects you can pick from."
-#            )
-#
         if tracker.get_latest_input_channel() == "facebook":
             payload = hyperlink_payload(tracker, message, "Buy Offsets", url)
             dispatcher.utter_custom_json(payload)
@@ -472,17 +338,9 @@ class CalculateOffsets(Action):
             SlotSet("iata_departure"), 
             SlotSet("travel_destination"),
             SlotSet("iata_destination"),
-            SlotSet("travel_stopover"),
-            SlotSet("iata_stopover"),
             SlotSet("travel_flight_class"),
         ]
 
-#        if tracker.get_slot("travel_stopover"):
-#            return slots_to_set + [
-#                SlotSet("previous_entered_flight"),
-#            ]
-#        else:
-#            return slots_to_set
         return slots_to_set
 
 class ExplainTypicalEmissions(Action):

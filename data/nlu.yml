@@ -1260,7 +1260,7 @@ nlu:
     - How much for [New York](city) Sidney
     - I'm travelling from [New York]{"entity": "city", "role": "from"} to [Sydney]{"entity": "city", "role": "to"}
     - [Bombay](city)
-    - Rare from [Honolulu]{"entity": "city", "role": "from"} airport to [Takes Hale]{"entity": "city", "role": "to"} via
+    - Rare from [Honolulu]{"entity": "city", "role": "from"} airport to [Takes Hale]{"entity": "city", "role": "to"}
     - How about [first class]{"entity": "travel_flight_class", "value": "business"}?
     - The same
     - [BOM](iata)
@@ -1291,7 +1291,7 @@ nlu:
     - [Milpitas](city)
     - [Milan](city)
     - Uk
-    - [Nairobi](mention)
+    - [Nairobi](city)
     - how about one of the airports around [nyc](city)
     - i don't know, somewhere nice in florida
     - thinking about flying from [dallas]{"entity": "city", "role": "from"}
@@ -1305,7 +1305,7 @@ nlu:
     - To [Madrid]{"entity": "city", "role": "to"}
     - To [Paris]{"entity": "city", "role": "to"}
     - From Nerlin
-    - From [Berlin]{"entity": "city", "role": "from"} via [London](city)
+    - From [Berlin]{"entity": "city", "role": "from"}
     - From [New York]{"entity": "city", "role": "from"}
     - From [Bangalore]{"entity": "city", "role": "from"}
     - To [Bangalore]{"entity": "city", "role": "to"}
@@ -1316,8 +1316,8 @@ nlu:
     - To [London]{"entity": "city", "role": "to"}
     - From [Rome]{"entity": "city", "role": "from"}
     - From [LED]{"entity": "iata", "role": "from"} to [PIT]{"entity": "iata", "role": "to"}
-    - From [Berlin]{"entity": "city", "role": "from"} to [SFO]{"entity": "iata", "role": "to"} via [Singapore](city)
-    - From [London]{"entity": "city", "role": "from"} to [SFO]{"entity": "iata", "role": "to"} via [Singapore](city)
+    - From [Berlin]{"entity": "city", "role": "from"} to [SFO]{"entity": "iata", "role": "to"}
+    - From [London]{"entity": "city", "role": "from"} to [SFO]{"entity": "iata", "role": "to"}
     - [Mine](city)
     - [Kiev](city), Ukraine
     - [Economy class]{"entity": "travel_flight_class", "value": "economy"}
@@ -1653,28 +1653,6 @@ nlu:
     - hmm... the link doesn't work
     - That link is not working for me.
     - that link didn't work
-- intent: resolve_entity
-  examples: |
-    - I meant the [first]{"entity": "mention", "value": "1"} one
-    - Take the [first]{"entity": "mention", "value": "1"} one
-    - Take the [last]{"entity": "mention", "value": "LAST"} person
-    - Take the [second]{"entity": "mention", "value": "2"} one
-    - The [first]{"entity": "mention", "value": "1"} one
-    - The [last]{"entity": "mention", "value": "LAST"} one
-    - The [latter]{"entity": "mention", "value": "LAST"}
-    - The [second]{"entity": "mention", "value": "2"} one
-    - The [third]{"entity": "mention", "value": "3"} person
-    - [1](mention)
-    - [2](mention)
-    - [3](mention)
-    - [4](mention)
-    - [5](mention)
-    - number [one]{"entity": "mention", "value": "1"}
-    - take the [second]{"entity": "mention", "value": "2"} one
-    - that [last]{"entity": "mention", "value": "LAST"} one is right
-    - the [first]{"entity": "mention", "value": "1"} one
-    - the [last]{"entity": "mention", "value": "LAST"} one
-    - yeah the [last]{"entity": "mention", "value": "LAST"} one
 - intent: restart
   examples: |
     - restart

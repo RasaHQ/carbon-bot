@@ -19,7 +19,6 @@ intents:
 - express_negative-emo
 - inquire-ask_clarification
 - why
-- resolve_entity
 - meta_inform_problem_bad-link
 - express_positive-emo
 - express_surprise
@@ -34,7 +33,6 @@ entities:
 - context_scenario
 - holiday_name
 - iata
-- mention
 - travel_destination
 - travel_flight_class
 slots:
@@ -53,22 +51,13 @@ slots:
   iata_destination:
     type: any
     influence_conversation: false
-  iata_stopover:
-    type: any
-    influence_conversation: false
   link_1_url:
     type: any
     influence_conversation: false
   link_2_url:
     type: any
     influence_conversation: false
-  mention:
-    type: any
-    influence_conversation: false
   requested_slot:
-    type: any
-    influence_conversation: false
-  previous_entered_flight:
     type: any
     influence_conversation: false
   travel_departure:
@@ -77,24 +66,9 @@ slots:
   travel_destination:
     type: any
     influence_conversation: false
-  travel_stopover:
-    type: any
-    influence_conversation: false
   travel_flight_class:
     type: any
     influence_conversation: false
-  travel_flight_distancecategory:
-    type: categorical
-    influence_conversation: true
-    values:
-    - short
-    - medium
-    - long
-    - extended
-    - unknown
-  travel_flight_km:
-    type: text
-    influence_conversation: true
 responses:
   utter_faq/meta_inquire-ask_bot-challenge:
   - text: Yes, I am a bot! And I'm part of a research project.
