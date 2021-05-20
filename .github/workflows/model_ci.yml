@@ -8,6 +8,7 @@ on:
 
 env:
   DOMAIN: 'carbon.rasa-bots.com'
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build-model:
