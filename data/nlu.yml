@@ -2645,7 +2645,7 @@ nlu:
   examples: |
     - Carbon offsets will not affect climate !
     - So if I give you money its ok to destroy the climate, is that right
-intent: provide_dialogue_rating
+- intent: provide_dialogue_rating
   examples: |
     - 1
     - 3

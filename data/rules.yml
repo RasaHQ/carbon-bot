@@ -1,8 +1,14 @@
 rules:
-- rule: activate form
+#- rule: activate form
+#  steps:
+#    - action: utter_ask_detailed_estimate
+#    - intent: affirm
+#    - action: airtravel_form
+#    - active_loop: airtravel_form
+
+- rule: activate form with intent
   steps:
-    - action: utter_ask_detailed_estimate
-    - intent: affirm
+    - intent: estimate_emissions
     - action: airtravel_form
     - active_loop: airtravel_form
 
@@ -14,7 +20,6 @@ rules:
     - slot_was_set:
       - requested_slot: null
     - action: action_calculate_offsets
-    - action: action_rate_conversation
 
 - rule: explain economy
   condition:

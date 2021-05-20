@@ -62,6 +62,8 @@ stories:
   - active_loop: airtravel_form
   - active_loop: null
   - action: action_calculate_offsets
+  - action: action_listen
+  - intent: thank
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
@@ -88,6 +90,9 @@ stories:
   - active_loop: airtravel_form
   - active_loop: null
   - action: action_calculate_offsets
+  - action: action_listen
+  - intent: thank
+  - action: utter_express_positive-emo
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
@@ -114,6 +119,8 @@ stories:
   - active_loop: airtravel_form
   - active_loop: null
   - action: action_calculate_offsets
+  - action: action_listen
+  - intent: thank
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
@@ -140,6 +147,8 @@ stories:
   - active_loop: airtravel_form
   - active_loop: null
   - action: action_calculate_offsets
+  - action: action_listen
+  - intent: thank
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
@@ -215,6 +224,9 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
+  - action: action_listen
+  - intent: thank
+  - action: utter_express_positive-emo
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
@@ -253,6 +265,8 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
+  - action: action_listen
+  - intent: thank
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
@@ -277,6 +291,8 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
+  - action: action_listen
+  - intent: thank
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
@@ -309,18 +325,32 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
+  - intent: inform
   - action: airtravel_form
+  - active_loop: airtravel_form
   - slot_was_set:
-    - travel_destination: Dublin
+    - requested_slot: travel_flight_class
+  - intent: affirm
+  - slot_was_set:
+      - travel_flight_class: economy
+  - slot_was_set:
+      - requested_slot: travel_departure
+  - intent: inform
+  - slot_was_set:
+      - travel_departure: Berlin
+  - slot_was_set:
+      - requested_slot: travel_destination
+  - intent: inform
+  - slot_was_set:
+      - travel_destination: Dublin
   - active_loop: null
   - slot_was_set:
-    - requested_slot: null
+      - requested_slot: null
   - action: action_calculate_offsets
   - intent: express_surprise
   - action: utter_explain_offset_calculation
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
-  - action: utter_farwell
 
 - story: Story from conversation with 35ebdd5a-34a3-4707-89f2-4748c4997620 on October 27th 2019
   steps:
@@ -346,7 +376,7 @@ stories:
   - action: airtravel_form
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
-  - action: utter_farwell
+  - action: utter_farewell
 
 - story: Story from conversation with b59c8f85-caea-4143-bae0-62421e93b664 on October 27th 2019
   steps:
@@ -382,7 +412,7 @@ stories:
   - action: utter_farewell
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
-  - action: utter_farwell
+  - action: utter_farewell
 
 - story: manual_story_3
   steps:
@@ -438,11 +468,6 @@ stories:
   - action: airtravel_form
   - active_loop: airtravel_form
   - active_loop: null
-  - action: action_calculate_offsets
-  - action: action_rate_conversation
-  - intent: provide_dialogue_rating
-  - action: utter_express_positive-emo
-  - action: utter_farewell
 
 - story: interactive_story_7
   steps:
@@ -471,6 +496,8 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
+  - action: action_listen
+  - intent: thank
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_express_positive-emo
@@ -547,7 +574,7 @@ stories:
   - action: utter_faq
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
-  - action: utter_farwell
+  - action: utter_farewell
 
 
 - story: interactive_story_10
@@ -612,6 +639,8 @@ stories:
   - intent: inform
   - action: airtravel_form
   - active_loop: airtravel_form
+  - action: action_listen
+  - intent: thank
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_farewell
@@ -641,9 +670,6 @@ stories:
   - intent: affirm
   - action: airtravel_form
   - active_loop: airtravel_form
-  - action: action_rate_conversation
-  - intent: provide_dialogue_rating
-  - action: utter_farewell
 
 - story: interactive_story_13
   steps:
@@ -722,9 +748,6 @@ stories:
   - intent: buy_offsets
   - action: airtravel_form
   - active_loop: airtravel_form
-  - action: action_rate_conversation
-  - intent: provide_dialogue_rating
-  - action: utter_farewell
 
 - story: interactive_story_16
   steps:
@@ -956,6 +979,8 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - action: action_calculate_offsets
+  - action: action_listen
+  - intent: thank
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_farewell
@@ -1058,9 +1083,6 @@ stories:
   - intent: estimate_emissions
   - action: airtravel_form
   - active_loop: airtravel_form
-  - action: action_rate_conversation
-  - intent: provide_dialogue_rating
-  - action: utter_farewell
 
 - story: interactive_story_26
   steps:
@@ -1490,18 +1512,11 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
-    entities:
-    - context_scenario: holiday
-    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
-    - holiday_name: christmas
+    - holiday_name: thanksgiving
   - action: action_start
-  - slot_was_set:
-    - link_1_url: https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=b86f93aebca2460fb4b8368171f77a46&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea&label=link-1-clicked
-  - slot_was_set:
-    - link_2_url: https://rasa.com/carbon/index.html?&rasaxhost=https://carbon.rasa.com&conversationId=b86f93aebca2460fb4b8368171f77a46&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea&label=link-2-clicked
   - action: action_disclaimer
   - action: utter_holiday-travel_offer_help
   - intent: affirm
@@ -1513,40 +1528,26 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
+  - intent: affirm
   - slot_was_set:
     - travel_flight_class: economy
   - slot_was_set:
     - requested_slot: travel_departure
+  - intent: inform
   - slot_was_set:
     - travel_departure: London Luton Airport
   - slot_was_set:
-    - iata_departure: LTN
-  - slot_was_set:
     - requested_slot: travel_destination
+  - intent: inform
   - slot_was_set:
     - travel_destination: Munich Airport
-  - slot_was_set:
-    - iata_destination: MUC
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
   - action: action_calculate_offsets
-  - slot_was_set:
-    - travel_departure: null
-  - slot_was_set:
-    - iata_departure: null
-  - slot_was_set:
-    - travel_destination: null
-  - slot_was_set:
-    - iata_destination: null
-  - slot_was_set:
-    - travel_stopover: null
-  - slot_was_set:
-    - iata_stopover: null
-  - slot_was_set:
-    - travel_flight_class: null
   - intent: affirm
   - action: utter_express_positive-emo
+  - intent: thank
   - action: action_rate_conversation
   - intent: provide_dialogue_rating
   - action: utter_farewell
