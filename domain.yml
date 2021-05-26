@@ -27,6 +27,7 @@ intents:
 - estimate_emissions
 - insult
 - vulgar
+- help
 entities:
 - city
 - conference_name
@@ -189,7 +190,7 @@ responses:
   utter_inform_flight_emission_single_short:
   - text: A single passenger on a flight can be responsible for hundreds of kilograms of CO2
   utter_inquire-ask_rephrase:
-  - text: Not sure if I got that right. Could you please rephrase this?
+  - text: Not sure if I got that right. Could you please rephrase?
   utter_inquire-ask_reqmore:
   - text: What would you like to do now?
   - text: Can I help you with anything else?

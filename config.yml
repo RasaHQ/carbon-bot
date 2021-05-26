@@ -20,6 +20,8 @@ pipeline:
 - name: ResponseSelector
   epochs: 50
 - name: EntitySynonymMapper
+- name: FallbackClassifier
+  threshold: 0.7
 
 policies:
 - name: MemoizationPolicy
@@ -32,3 +34,9 @@ policies:
   evaluate_on_num_examples: 0
   enable_fallback_prediction: False
 - name: RulePolicy
+  # Confidence threshold for the `core_fallback_action_name` to apply.
+  # The action will apply if no other action was predicted with
+  # a confidence >= core_fallback_threshold
+  core_fallback_threshold: 0.4
+  core_fallback_action_name: "utter_inquire-ask_rephrase"
+  enable_fallback_prediction: True

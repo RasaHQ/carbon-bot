@@ -30,3 +30,8 @@ rules:
     - intent: why
     - action: utter_explain_economy_class
     - action: airtravel_form
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_inquire-ask_rephrase
