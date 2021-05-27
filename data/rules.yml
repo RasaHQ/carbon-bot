@@ -1,10 +1,10 @@
 rules:
-#- rule: activate form
-#  steps:
-#    - action: utter_ask_detailed_estimate
-#    - intent: affirm
-#    - action: airtravel_form
-#    - active_loop: airtravel_form
+- rule: activate form
+  steps:
+    - action: utter_ask_detailed_estimate
+    - intent: affirm
+    - action: airtravel_form
+    - active_loop: airtravel_form
 
 - rule: activate form with intent
   steps:
@@ -30,3 +30,19 @@ rules:
     - intent: why
     - action: utter_explain_economy_class
     - action: airtravel_form
+
+- rule: ask for feedback with form
+  steps:
+    - intent: farewell
+    - action: rating_form
+    - active_loop: rating_form
+
+#- rule: ask the user for feedback when they say goodbye
+#  steps:
+#    - intent: farewell
+#    - action: action_rate_conversation
+
+#- rule: say goodbye after the user left feedback
+#  steps:
+#    - intent: provide_dialogue_rating
+#    - action: utter_farewell

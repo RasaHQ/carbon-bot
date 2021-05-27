@@ -28,6 +28,7 @@ intents:
 - estimate_emissions
 - insult
 - vulgar
+- provide_dialogue_rating
 entities:
 - city
 - conference_name
@@ -37,6 +38,7 @@ entities:
 - mention
 - travel_destination
 - travel_flight_class
+- dialogue_rating
 slots:
   context_scenario:
     type: categorical
@@ -81,6 +83,9 @@ slots:
     type: any
     influence_conversation: false
   travel_flight_class:
+    type: any
+    influence_conversation: false
+  dialogue_rating:
     type: any
     influence_conversation: false
   travel_flight_distancecategory:
@@ -308,6 +313,11 @@ actions:
 - utter_holiday-travel_offer_help
 - validate_airtravel_form
 forms:
+  rating_form:
+    required_slots:
+      dialogue_rating:
+      - type: from_entity
+        entity: dialogue_rating
   airtravel_form:
     ignored_intents:
     - faq
