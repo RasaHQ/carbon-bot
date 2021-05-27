@@ -1,0 +1,70 @@
+repositories:
+- name: rasa-x
+  url: https://rasahq.github.io/rasa-x-helm
+
+
+releases:
+  - name: {{ requiredEnv "RELEASE_NAME" }}
+    namespace: {{ requiredEnv "NAMESPACE" }}
+    labels:
+        release: {{ requiredEnv "RELEASE_NAME" }}
+    chart: rasa-x/rasa-x
+    values:
+      - global:
+          postgresql:
+            postgresqlPassword: {{ requiredEnv "DB_PASSWORD" }}
+          redis:
+            password: {{ requiredEnv "REDIS_PASSWORD" }}
+      - dbMigrationService:
+          tag: {{ requiredEnv "RASA_X_VERSION" }}
+          ignoreVersionCheck: true
+
+      - rasax:
+          tag: {{ requiredEnv "RASA_X_VERSION" }}
+          passwordSalt: {{ requiredEnv "PASSWORD_SALT" }}
+          token: {{ requiredEnv "PASSWORD_SALT" }}
+          jwtSecret: {{ requiredEnv "PASSWORD_SALT" }}
+          disableTelemetry: true
+          initialUser:
+            username: {{ requiredEnv "RASA_X_USERNAME" }}
+            password: {{ requiredEnv "RASA_X_PASSWORD" }}
+          resources:
+            requests:
+              memory: 500M
+              cpu: 0.5
+
+      - rasa:
+          token: {{ requiredEnv "PASSWORD_SALT" }}
+          tag: {{ requiredEnv "RASA_VERSION" }}-full
+          versions:
+            rasaProduction:
+              resources:
+                requests:
+                  memory: 500M
+                  cpu: 0.5
+            rasaWorker:
+              resources:
+                resources:
+                  requests:
+                    memory: 500M
+                    cpu: 0.5
+      - rabbitmq:
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+          rabbitmq:
+            password: {{ requiredEnv "RABBITMQ_PASSWORD" }}
+      - eventService:
+          tag: {{ requiredEnv "RASA_X_VERSION" }}
+          name: {{ requiredEnv "RASA_X_IMAGE_NAME" }}
+      - ingress:
+          annotations:
+            kubernetes.io/ingress.class: nginx
+            nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+            nginx.ingress.kubernetes.io/enable-cors: "true"
+          hosts:
+            - host: {{ requiredEnv "DOMAIN" }}
+              paths:
+                - /
+      - debugMode: false
