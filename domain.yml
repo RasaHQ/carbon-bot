@@ -1,65 +1,24 @@
-actions:
-- action_analyse_travelplan
-- action_disclaimer
-- action_explain_typical_emissions
-- action_restart
-- action_start
-- action_travel_inform_flight_emission_single
-- respond_faq
-- utter_SCENARIOCHECK
-- utter_about
-- utter_acknowledge
-- utter_acknowledge_problem_badlink
-- utter_acknowledge_notunderstanding
-- utter_apologize
-- utter_ask_detailed_estimate
-- utter_ask_travel_departure
-- utter_ask_travel_destination
-- utter_conference-travel_offer_help
-- utter_deny
-- utter_deny_recommend-non-airtravel
-- utter_explain_economy_class
-- utter_explain_how_offsets_work
-- utter_explain_no_payment
-- utter_explain_offset_calculation
-- utter_explain_why_offset_travel
-- utter_express_negative-emo_disappointment
-- utter_express_positive-emo
-- utter_farewell
-- utter_greet
-- utter_holiday-travel_offer_help
-- utter_inquire-ask_rephrase
-- utter_inquire-ask_reqmore
-- utter_insult
-- utter_vulgar
-entities:
-- city
-- conference_name
-- context_scenario
-- holiday_name
-- iata
-- mention
-- travel_destination
-- travel_flight_class
-forms:
-- airtravel_form
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-- inquire-ask_clarification-offsets
 - greet
+- inform
 - SCENARIO
-- how_calculated
 - affirm
+- faq:
+    is_retrieval_intent: true
+- inquire-ask_clarification-offsets
+- how_calculated
 - deny
 - buy_offsets
-- faq
 - express_uncertainty
 - farewell
 - deny_flying
 - express_negative-emo
 - inquire-ask_clarification
-- inform
 - why
-- resolve_entity
 - meta_inform_problem_bad-link
 - express_positive-emo
 - express_surprise
@@ -68,64 +27,110 @@ intents:
 - estimate_emissions
 - insult
 - vulgar
-- restart:
-    triggers: action_restart
+entities:
+- city
+- conference_name
+- context_scenario
+- holiday_name
+- iata
+- travel_destination
+- travel_flight_class
 slots:
   context_scenario:
     type: categorical
+    influence_conversation: true
     values:
     - conference
     - holiday
-  contradictive_items:
-    type: list
-  correct_city:
-    type: text
-  explanation:
-    type: unfeaturized
   holiday_name:
-    type: unfeaturized
+    type: any
+    influence_conversation: false
   iata_departure:
-    type: unfeaturized
+    type: any
+    influence_conversation: false
   iata_destination:
-    type: unfeaturized
-  iata_stopover:
-    type: unfeaturized
-  incorrect_city:
-    type: text
+    type: any
+    influence_conversation: false
   link_1_url:
-    type: unfeaturized
+    type: any
+    influence_conversation: false
   link_2_url:
-    type: unfeaturized
-  listed_objects:
-    type: list
-  mention:
-    type: unfeaturized
+    type: any
+    influence_conversation: false
   requested_slot:
-    type: unfeaturized
-  previous_entered_flight:
-    type: unfeaturized
+    type: any
+    influence_conversation: false
   travel_departure:
-    type: unfeaturized
+    type: any
+    influence_conversation: false
   travel_destination:
-    type: unfeaturized
-  travel_stopover:
-    type: unfeaturized
+    type: any
+    influence_conversation: false
   travel_flight_class:
-    type: unfeaturized
-  travel_flight_distancecategory:
-    type: categorical
-    values:
-    - short
-    - medium
-    - long
-    - extended
-    - unknown
-  travel_flight_km:
-    type: text
-templates:
+    type: any
+    influence_conversation: false
+responses:
+  utter_faq/meta_inquire-ask_bot-challenge:
+  - text: Yes, I am a bot! And I'm part of a research project.
+  utter_faq/ask_howdoing:
+  - text: I'm great! Thanks for asking.
+  utter_faq/meta_inquire_capabilities:
+  - text: I can help you calculate and buy carbon offsets for your flights.
+  utter_faq/oos-future_inquire-ask:
+  - text: That sounds like a relevant question, but I don't know the answer.
+  utter_faq/oos_inform:
+  - text: Good to know
+  utter_faq/oos_inquire:
+  - text: I'm afraid I have no idea
+  utter_faq/oos_request:
+  - text: that's not something I can help with
+  utter_faq/thank:
+  - text: You are welcome!
+  utter_faq/placeholder:
+  - text: so
+  utter_faq/takeacut:
+  - text: No, my creators don't get a cut from the offsets you buy. I'm just here to help!
+  utter_faq/opinion:
+  - text: That is your opinion.
+  utter_faq/ask_creators:
+  - text: The research team at Rasa is behind this. Check out rasa.com/research
+  utter_faq/research_project:
+  - text: This project is about creating a better AI assistant. Getting people to reduce their carbon footprint is a happy side effect :)
+  utter_faq/payment-details:
+  - text: I'm afraid I can't help you with payment details.
+  utter_faq/not-personally-responsible:
+  - text: We are all responsible for the choices we make as consumers. We can choose to fly less often, for example. Some airlines have already responded to consumer pressure and started buying offsets.
+  utter_faq/personal_question_for_bot:
+  - text: I love that you want to get to know me, but I don't have much of a personality. I'm just a bot.
+  utter_faq/specific-project-details:
+  - text: I'm not sure but hopefully you can find an answer at https://offset.earth/projects .
+  utter_faq/do-people-buy-offsets:
+  - text: More and more companies and individuals are voluntarily offsetting their carbon emissions. According to goldstandard.org, individual offsets grew fourfold last year.
+  utter_faq/accuse-scam:
+  - text: All this bot does is help you calculate the carbon emissions from your flight, and suggest projects you can donate to.
+  utter_faq/where-money-goes:
+  - text: When you buy certified emissions reductions (CERs) your payment goes directly to the project offering CERs. Projects have to pass a rigorous verification process set by https://goldstandard.org .
+  utter_faq/is-this-legit:
+  - text: All offset projects have to pass a rigorous verification process set by https://goldstandard.org .
+  utter_faq/deny-climate-change:
+  - text: "Climate change is absolutely real, and it's caused by humans: https://climate.nasa.gov/evidence/"
+  utter_faq/deny-offsets-work:
+  - text: By buying certified carbon offsets, you support a project which reduces the total amount of carbon dioxide we put into the atmosphere. Planting trees, installing renewable power, and making buildings more energy efficient are common examples. You can read what the UN says about offsets at https://offset.climateneutralnow.org/faq_offset_footprint#Buyers .
+  utter_faq/inquire-cost:
+  - text: The cost per ton depends on the project you donate to. Some projects can remove a ton of CO2 for less than $1!
+  utter_faq/layover:
+  - text: If you have a connecting flight, it's easiest if you ask me about each flight separately.
+  utter_faq/other-calculation:
+  - text: For now I can only calculate emissions from flying.
+  utter_faq/other-language:
+  - text: I can only do English for now.
+  utter_faq/general-emissions-reduction:
+  - text: There are many ways you can reduce your carbon footprint. Flying less is a great place to start!
+  utter_faq/more-details-process:
+  - text: I'd recommend checking out https://offset.earth for those details.
   utter_SCENARIOCHECK:
   - buttons:
-    - payload: '/SCENARIO{"context_scenario": "holiday", "holiday_name": "christmas"}'
+    - payload: '/SCENARIO{{"context_scenario": "holiday", "holiday_name": "christmas"}}'
       title: start
     text: Hi, thanks for testing! Please press start.
   utter_about:
@@ -133,8 +138,7 @@ templates:
   utter_acknowledge:
   - text: ok
   utter_acknowledge_problem_badlink:
-  - text: Oh no! I am sorry the link doesn't work anymore. I'll let my developers
-      know.
+  - text: Oh no! I am sorry the link doesn't work anymore. I'll let my developers know.
   utter_acknowledge_notunderstanding:
   - text: Sounds like I'm not understanding you. Sorry about that!
   utter_apologize:
@@ -142,8 +146,7 @@ templates:
   utter_ask_correct_city:
   - text: Is one of these correct? {listed_objects}
   utter_ask_detailed_estimate:
-  - text: I can also get you a more accurate estimate of your flight's emissions,
-      sound good?
+  - text: I can also get you a more accurate estimate of your flight's emissions, sound good?
   utter_ask_incorrect_city:
   - text: Which city did I get wrong?
   utter_ask_travel_departure:
@@ -153,34 +156,24 @@ templates:
   utter_ask_travel_flight_class:
   - text: Will you be travelling in Economy Class?
   utter_conference-travel_offer_help:
-  - text: Can I help you offset the emissions of your flight to the {conference_name}
-      conference?
-  - text: I hear you'll attend {conference_name}. Can I help you offset your flight's
-      emissions?
+  - text: Can I help you offset the emissions of your flight to the {conference_name} conference?
+  - text: I hear you'll attend {conference_name}. Can I help you offset your flight's emissions?
   utter_could_not_find_airport:
   - text: I couldn't find an airport there.
   utter_deny:
   - text: No
   utter_deny_recommend-non-airtravel:
-  - text: It's great that you avoid flying! Unfortunately, I cannot yet help you with
-      other modes of travel. But you probably already do better than most!
+  - text: It's great that you avoid flying! Unfortunately, I cannot yet help you with other modes of travel. But you probably already do better than most!
   utter_explain_economy_class:
-  - text: You can fit more economy seats in an airplane, so each passenger is responible
-      for a smaller percentage of all the carbon emitted by the flight.
+  - text: You can fit more economy seats in an airplane, so each passenger is responible for a smaller percentage of all the carbon emitted by the flight.
   utter_explain_how_offsets_work:
-  - text: By buying certified carbon offsets, you support a project which reduces
-      the total amount of carbon dioxide we put into the atmosphere. Planting trees,
-      installing renewable power, and making buildings more energy efficient are common
-      examples. You can read what the UN says about offsets at https://offset.climateneutralnow.org/faq_offset_footprint#Buyers .
+  - text: By buying certified carbon offsets, you support a project which reduces the total amount of carbon dioxide we put into the atmosphere. Planting trees, installing renewable power, and making buildings more energy efficient are common examples. You can read what the UN says about offsets at https://offset.climateneutralnow.org/faq_offset_footprint#Buyers .
   utter_explain_no_payment:
-  - text: Unfortunately you can't buy offsets here directly, you'll have to follow
-      the link.
+  - text: Unfortunately you can't buy offsets here directly, you'll have to follow the link.
   utter_explain_offset_calculation:
   - text: You can find out more about how offsets are calculated at https://www.theguardian.com/travel/2019/jul/31/carbon-calculator-find-out-how-much-co2-your-flight-will-emit
   utter_explain_why_offset_travel:
-  - text: Traveling, especially by airplane, usually emits greenhouse gases which
-      are causing climate change. If you cannot avoid these emissions, you can buy
-      'offsets', i.e. donations to projects that reduce greenhouse gases.
+  - text: Traveling, especially by airplane, usually emits greenhouse gases which are causing climate change. If you cannot avoid these emissions, you can buy 'offsets', i.e. donations to projects that reduce greenhouse gases.
   utter_express_negative-emo_disappointment:
   - text: Too bad :-/
   utter_express_positive-emo:
@@ -190,15 +183,11 @@ templates:
   utter_greet:
   - text: Hello!
   utter_holiday-travel_offer_help:
-  - text: I take it you are traveling somewhere and cannot avoid
-      flying there. I can help you purchase certified carbon offsets against any
-      flights you take. Would you be interested in that?
+  - text: I take it you are traveling somewhere and cannot avoid flying there. I can help you purchase certified carbon offsets against any flights you take. Would you be interested in that?
   utter_inform_flight_emission_single_long:
-  - text: A single extended flight (longer than 4830 km) typically emits 855 kilograms
-      of CO2. So if you take the plane both ways, thats 1.7 metric tons.
+  - text: A single extended flight (longer than 4830 km) typically emits 855 kilograms of CO2. So if you take the plane both ways, thats 1.7 metric tons.
   utter_inform_flight_emission_single_short:
-  - text: A single passenger on a flight can be responsible for hundreds of kilograms
-      of CO2
+  - text: A single passenger on a flight can be responsible for hundreds of kilograms of CO2
   utter_inquire-ask_rephrase:
   - text: Not sure if I got that right. Could you please rephrase this?
   utter_inquire-ask_reqmore:
@@ -208,8 +197,8 @@ templates:
   - text: I am just a chatbot.
   - text: I'm still figuring out how to answer that.
   - text: I don't think I need to answer that one.
-  - text: ...
-  - text: 
+  - text: '...'
+  - text: ''
   - text: Do you kiss your mother with that mouth?
   - text: That's really not appropriate.
   - text: You shouldn't say things like that.
@@ -236,15 +225,15 @@ templates:
   - text: I'll never forget the first time we met. But I'll keep trying.
   - text: You are like a cloud. When you disappear it's a beautiful day.
   - text: You bring everyone so much joy, when you leave the room.
-  - text: "What would you do if someone said that to someone you care about?"
-  - text: "What if someone said that to you?"
-  - text: "If someone said that to you, what would you say to them?"
+  - text: What would you do if someone said that to someone you care about?
+  - text: What if someone said that to you?
+  - text: If someone said that to you, what would you say to them?
   utter_vulgar:
   - text: I am just a chatbot.
   - text: I'm still figuring out how to answer that.
   - text: I don't think I need to answer that one.
-  - text: ...
-  - text: 
+  - text: '...'
+  - text: ''
   - text: Do you kiss your mother with that mouth?
   - text: That's really not appropriate.
   - text: You shouldn't say things like that.
@@ -272,7 +261,64 @@ templates:
   - text: You bring everyone so much joy, when you leave the room.
   - text: I'm really jealous of all the people who have never met you.
   - text: I bet you were up all night trying to come up with that one.
-  - text: "What would you do if someone said that to someone you care about?"
-  - text: "What if someone said that to you?"
-  - text: "If someone said that to you, what would you say to them?"
-
+  - text: What would you do if someone said that to someone you care about?
+  - text: What if someone said that to you?
+  - text: If someone said that to you, what would you say to them?
+actions:
+- action_analyse_travelplan
+- action_calculate_offsets
+- action_disclaimer
+- action_explain_typical_emissions
+- action_restart
+- action_start
+- action_travel_inform_flight_emission_single
+- utter_SCENARIOCHECK
+- utter_ask_detailed_estimate
+- utter_explain_why_offset_travel
+- utter_express_positive-emo
+- utter_faq
+- utter_farewell
+- utter_holiday-travel_offer_help
+- validate_airtravel_form
+forms:
+  airtravel_form:
+    ignored_intents:
+    - faq
+    - why
+    - inquire-ask_clarification
+    required_slots:
+      travel_flight_class:
+      - type: from_intent
+        intent: affirm
+        value: economy
+      - type: from_intent
+        intent: deny
+        value: business
+      - type: from_entity
+        entity: travel_flight_class
+      travel_departure:
+      - type: from_entity
+        entity: city
+        role: from
+      - type: from_entity
+        entity: iata
+        role: from
+      - type: from_entity
+        entity: city
+      - type: from_entity
+        entity: iata
+      - type: from_text
+        entity: city
+      travel_destination:
+      - type: from_entity
+        entity: city
+        role: to
+      - type: from_entity
+        entity: iata
+        role: to
+      - type: from_entity
+        entity: city
+      - type: from_entity
+        entity: iata
+      - type: from_text
+        entity: city

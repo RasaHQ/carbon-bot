@@ -1,0 +1,32 @@
+rules:
+- rule: activate form
+  steps:
+    - action: utter_ask_detailed_estimate
+    - intent: affirm
+    - action: airtravel_form
+    - active_loop: airtravel_form
+
+- rule: activate form with intent
+  steps:
+    - intent: estimate_emissions
+    - action: airtravel_form
+    - active_loop: airtravel_form
+
+- rule: submit form
+  condition:
+    - active_loop: airtravel_form
+  steps:
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_calculate_offsets
+
+- rule: explain economy
+  condition:
+    - active_loop: airtravel_form
+  steps:
+    - slot_was_set:
+        - requested_slot: travel_flight_class
+    - intent: why
+    - action: utter_explain_economy_class
+    - action: airtravel_form

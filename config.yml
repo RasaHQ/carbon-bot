@@ -3,6 +3,7 @@ language: en
 pipeline:
 - name: ConveRTTokenizer
 - name: ConveRTFeaturizer
+  model_url: https://github.com/davidalami/ConveRT/releases/download/1.0/nocontext_tf_model.tar.gz
 - name: CountVectorsFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: char_wb
@@ -22,11 +23,12 @@ pipeline:
 
 policies:
 - name: MemoizationPolicy
-- name: EmbeddingPolicy
+  max_history: 5
+- name: TEDPolicy
   max_history: 5
   batch_strategy: balanced
-  epochs: 50
+  epochs: 300 
   random_seed: 666
   evaluate_on_num_examples: 0
-- name: MappingPolicy
-- name: FormPolicy
+  enable_fallback_prediction: False
+- name: RulePolicy
