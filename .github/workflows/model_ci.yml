@@ -179,11 +179,10 @@ jobs:
         # Install helm v3
         curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
-        helm repo add rasa-x https://rasahq.github.io/rasa-x-helm
-
         # Read and export variables from .env file
         set -o allexport; source .env; set +o allexport
 
+        cd .github/deployments; helmfile sync
         #helm upgrade --install carbon-assistant rasa-x/rasa-x --namespace carbon-assistant \
         #    --set global.postgresql.postgresqlPassword="${DB_PASSWORD}" \
         #    --set app.tag=$IMAGE_TAG \
