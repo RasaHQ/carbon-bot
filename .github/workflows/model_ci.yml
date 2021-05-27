@@ -109,8 +109,8 @@ jobs:
         set -o allexport; source .env; set +o allexport
         docker build . \
           --build-arg RASA_SDK_IMAGE=rasa/rasa-sdk:${RASA_SDK_VERSION} \
-          --tag gcr.io/rasa-ci/carbon-bot-actions:$IMAGE_TAG
-        gcloud docker -- push gcr.io/${{ secrets.GKE_PROJECT }}/carbon-bot-actions:$IMAGE_TAG
+          --tag gcr.io/${{ secrets.GKE_PROJECT }}/carbon-bot-actions:$IMAGE_TAG
+        docker push gcr.io/${{ secrets.GKE_PROJECT }}/carbon-bot-actions:$IMAGE_TAG
 
   deploy-to-cluster:
     name: Re-deploy the cluster with the latest action server
