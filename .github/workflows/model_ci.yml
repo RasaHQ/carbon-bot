@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize, reopened]
 
 env:
-  DOMAIN: 'carbon.rasa-bots.com'
+  DOMAIN: 'carbon.rasa.com'
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   RELEASE_NAME: carbon-assistant
   NAMESPACE: carbon-assistant
