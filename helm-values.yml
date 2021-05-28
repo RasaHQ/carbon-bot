@@ -7,17 +7,3 @@ rasax:
 
 app:
   name: gcr.io/rasa-platform/carbon-bot-actions
-
-nginx:
-  service:
-    port: 80
-    type: NodePort
-
-ingress:
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: "carbon-bot"
-    networking.gke.io/managed-certificates: "rasa-bots-certificate"
-  hosts:
-  - host: carbon.rasa-bots.com
-    paths:
-    - /*
