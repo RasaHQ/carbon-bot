@@ -72,5 +72,5 @@ releases:
           hosts:
             - host: {{ requiredEnv "DOMAIN" }}
               paths:
-                - /
+                - /*
       - debugMode: false
