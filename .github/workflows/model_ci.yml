@@ -60,7 +60,7 @@ jobs:
         path: results.md
 
     - name: Upload model
-      if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
+      #if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
       uses: actions/upload-artifact@v2
       with:
         name: model
