@@ -175,6 +175,7 @@ jobs:
         REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
         RABBITMQ_PASSWORD: ${{ secrets.RABBITMQ_PASSWORD }}
         RASA_X_ADMIN_PASSWORD: ${{ secrets.RASA_X_ADMIN_PASSWORD }}
+        GKE_PROJECT: ${{ secrets.GKE_PROJECT }}
 
       run: |
         # Install helm v3

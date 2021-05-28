@@ -1,9 +1,0 @@
-
-# Values which are supplied to the Helm for the Kubernetes deployment
-rasax:
-  name: gcr.io/rasa-platform/rasa-x-ee
-  initialUser:
-    username: "admin"
-
-app:
-  name: gcr.io/rasa-platform/carbon-bot-actions
