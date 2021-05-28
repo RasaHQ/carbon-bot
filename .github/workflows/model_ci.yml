@@ -60,7 +60,7 @@ jobs:
         path: results.md
 
     - name: Upload model
-      if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
+      #if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
       uses: actions/upload-artifact@v2
       with:
         name: model
@@ -120,7 +120,7 @@ jobs:
     needs:
     - build-images
 
-    if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
+    #if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
 
     steps:
     # Checkout repository because we need the content of the `.env` file later
@@ -206,7 +206,7 @@ jobs:
     env:
       MODEL_DIRECTORY: "models"
 
-    if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
+    #if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
     runs-on: ubuntu-latest
 
     steps:
