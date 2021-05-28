@@ -9,8 +9,8 @@ on:
 env:
   DOMAIN: 'carbon.rasa-bots.com'
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  RELEASE_NAME: carbon-bot
-  NAMESPACE: carbon-bot
+  RELEASE_NAME: carbon-assistant
+  NAMESPACE: carbon-assistant
   RASA_X_IMAGE_NAME: ${{ secrets.RASA_X_IMAGE_NAME }}
   RASA_X_USERNAME: admin
   RASA_X_PASSWORD: ${{ secrets.RASA_X_ADMIN_PASSWORD }}
@@ -203,7 +203,7 @@ jobs:
         #    --set rasa.tag="${RASA_VERSION}-full" \
         #    --values helm-values.yml
 
-        cat <<EOF | kubectl apply --namespace carbon-assistant -f  -
+        cat <<EOF | kubectl apply --namespace ${NAMESPACE} -f  -
         apiVersion: networking.gke.io/v1beta1
         kind: ManagedCertificate
         metadata:
