@@ -52,10 +52,9 @@ releases:
                   cpu: 0.5
             rasaWorker:
               resources:
-                resources:
-                  requests:
-                    memory: 500M
-                    cpu: 0.5
+                requests:
+                  memory: 500M
+                  cpu: 0.5
       - rabbitmq:
           resources:
             requests:
