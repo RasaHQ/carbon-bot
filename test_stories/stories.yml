@@ -38,11 +38,9 @@ stories:
   - active_loop: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
-  - intent: affirm
-  - slot_was_set:
-    - requested_slot: travel_flight_class
   - intent: why
   - action: utter_explain_economy_class
+  - action: airtravel_form
   - slot_was_set:
     - requested_slot: travel_flight_class
   - intent: affirm
@@ -149,7 +147,7 @@ stories:
     - requested_slot: null
   - action: action_calculate_offsets
 
-- story: stopover with via
+- story: was stopover with via
   steps:
   - intent: greet
   - action: utter_SCENARIOCHECK
@@ -183,8 +181,6 @@ stories:
     - iata_departure: SXF
     - travel_destination: Charles de Gaulle International Airport
     - iata_destination: CDG
-    - travel_stopover: John F Kennedy International Airport
-    - iata_stopover: JFK
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -193,7 +189,7 @@ stories:
   - action: utter_express_positive-emo
   - action: utter_farewell
 
-- story: stopover with second leg
+- story: was stopover with second leg
   steps:
   - intent: greet
   - action: utter_SCENARIOCHECK
@@ -231,12 +227,6 @@ stories:
   - slot_was_set:
     - travel_destination: Adolfo Suárez Madrid–Barajas Airport
     - iata_destination: MAD
-  - slot_was_set:
-    - previous_entered_flight:
-      - - London Luton Airport
-        - LTN
-      - - Adolfo Suárez Madrid–Barajas Airport
-        - MAD
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -249,13 +239,9 @@ stories:
   - slot_was_set:
     - travel_destination: John F Kennedy International Airport
   - slot_was_set:
-    - travel_stopover: Adolfo Suárez Madrid–Barajas Airport
-  - slot_was_set:
     - iata_departure: LTN
   - slot_was_set:
     - iata_destination: JFK
-  - slot_was_set:
-    - iata_stopover: MAD
   - slot_was_set:
     - requested_slot: travel_flight_class
   - slot_was_set:
