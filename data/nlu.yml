@@ -2645,27 +2645,12 @@ nlu:
   examples: |
     - Carbon offsets will not affect climate !
     - So if I give you money its ok to destroy the climate, is that right
-- intent: provide_dialogue_rating
+- intent: provide_conversation_rating
   examples: |
-    - 1
-    - 3
-    - 4
-    - 2
-    - 5
-    - 2.5
-    - Pi
-    - Horrible
-    - Very good
-    - you did awesome
-    - shite
-    - catastrophic
-    - loluwot?!
-    - no
-    - quite good actually
-    - insanely bad
-    - e
-    - -10000
-    - ridiculously exhausting
+    - [1]{"entity": "conversation_rating", "value": "1"}
+    - [3]{"entity": "conversation_rating", "value": "3"}
+    - [4]{"entity": "conversation_rating", "value": "4"}
+    - [2]{"entity": "conversation_rating", "value": "2"}
 - synonym: business
   examples: |
     - business class

@@ -544,9 +544,7 @@ stories:
   - intent: affirm
   - action: utter_acknowledge
   - intent: farewell
-  - action: action_rate_conversation
-  - intent: provide_dialogue_rating
-  - action: utter_farewell
+  - action: action_request_conversation_rating
 
 - story: manual_story_4
   steps:
@@ -810,9 +808,7 @@ stories:
   - intent: thank
   - action: utter_express_positive-emo
   - intent: farewell
-  - action: action_rate_conversation
-  - intent: provide_dialogue_rating
-  - action: utter_farewell
+  - action: action_request_conversation_rating
 
 - story: interactive_story_11
   steps:
@@ -1017,9 +1013,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - intent: farewell
-  - action: action_rate_conversation
-  - intent: provide_dialogue_rating
-  - action: utter_farewell
+  - action: action_request_conversation_rating
 
 - story: interactive_story_19
   steps:

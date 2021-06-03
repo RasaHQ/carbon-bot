@@ -31,18 +31,10 @@ rules:
     - action: utter_explain_economy_class
     - action: airtravel_form
 
-- rule: ask for feedback with form
+- rule: request a conversation rating
+  condition:
+  - slot_was_set:
+    - conversation_rating: 0
   steps:
     - intent: farewell
-    - action: rating_form
-    - active_loop: rating_form
-
-#- rule: ask the user for feedback when they say goodbye
-#  steps:
-#    - intent: farewell
-#    - action: action_rate_conversation
-
-#- rule: say goodbye after the user left feedback
-#  steps:
-#    - intent: provide_dialogue_rating
-#    - action: utter_farewell
+    - action: action_request_conversation_rating

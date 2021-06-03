@@ -408,15 +408,28 @@ class ValidateAirTravelForm(FormValidationAction):
         return destination_change
 
 
-class RateConversation(Action):
+class RequestConversationRating(Action):
     """Collects a subjective rating of the user for the conversation."""
 
     def name(self) -> Text:
-        return "action_rate_conversation"
+        return "action_request_conversation_rating"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> List[Dict[Text, Any]]:
-        logger.info('Collecting dialogue rating...')
-        dispatcher.utter_message(f"\nPlease rate the conversation on a scale of 1-5 (1='really bad', 5='really good')!\n")
+
+        print('SLOTS:', tracker.slots)
+        logging.info('SLOTS', tracker.slots)
+
+        if 1==2 and tracker.slots:
+            dispatcher.utter_message(response="utter_farewell")
+        else:
+            #buttons = [
+            #    {"title": "1", "payload": '/provide_conversation_rating{"conversation_rating": "1"}'},
+            #    {"title": "2", "payload": '/provide_conversation_rating{"conversation_rating": "2"}'},
+            #    {"title": "3", "payload": '/provide_conversation_rating{"conversation_rating": "3"}'},
+            #    {"title": "4", "payload": '/provide_conversation_rating{"conversation_rating": "4"}'}
+            #]
+            dispatcher.utter_message(response="utter_request_conversation_rating")
+
         return []
 
 
