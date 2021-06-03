@@ -87,7 +87,7 @@ slots:
     influence_conversation: false
   conversation_rating:
     type: categorical
-    influence_conversation: true
+    influence_conversation: false
     initial_value: 0
     values:
     - 1
