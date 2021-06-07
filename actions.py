@@ -289,6 +289,20 @@ class ValidateAirTravelForm(FormValidationAction):
         return result
 
 
+class RequestConversationRating(Action):
+    """Collects a subjective rating of the user for the conversation."""
+
+    def name(self) -> Text:
+        return "action_request_conversation_rating"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> List[Dict[Text, Any]]:
+        if tracker.slots.get("conversation_rating", 0) != 0:
+            dispatcher.utter_message(response="utter_farewell")
+        else:
+            dispatcher.utter_message(response="utter_request_conversation_rating")
+
+        return [SlotSet("conversation_rating")]
+
 
 class CalculateOffsets(Action):
     """Attempts to calculate CO2 usage and display link to purchase offsets."""

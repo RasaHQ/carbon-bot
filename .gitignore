@@ -17,3 +17,4 @@ rasa.db
 help-scripts/*.csv
 .idea/*
 .idea
+logs/*

@@ -30,3 +30,11 @@ rules:
     - intent: why
     - action: utter_explain_economy_class
     - action: airtravel_form
+
+- rule: request a conversation rating
+  condition:
+  - slot_was_set:
+    - conversation_rating: 0
+  steps:
+    - intent: farewell
+    - action: action_request_conversation_rating

@@ -27,6 +27,7 @@ intents:
 - estimate_emissions
 - insult
 - vulgar
+- provide_conversation_rating
 entities:
 - city
 - conference_name
@@ -35,6 +36,7 @@ entities:
 - iata
 - travel_destination
 - travel_flight_class
+- conversation_rating
 slots:
   context_scenario:
     type: categorical
@@ -69,6 +71,15 @@ slots:
   travel_flight_class:
     type: any
     influence_conversation: false
+  conversation_rating:
+    type: categorical
+    influence_conversation: false
+    initial_value: 0
+    values:
+    - 1
+    - 2
+    - 3
+    - 4
 responses:
   utter_faq/meta_inquire-ask_bot-challenge:
   - text: Yes, I am a bot! And I'm part of a research project.
@@ -179,7 +190,7 @@ responses:
   utter_express_positive-emo:
   - text: :-)
   utter_farewell:
-  - text: Goodbye then!
+  - text: Thank you and bye 👋!
   utter_greet:
   - text: Hello!
   utter_holiday-travel_offer_help:
@@ -264,6 +275,17 @@ responses:
   - text: What would you do if someone said that to someone you care about?
   - text: What if someone said that to you?
   - text: If someone said that to you, what would you say to them?
+  utter_request_conversation_rating:
+  - text: Please rate the conversation on a scale of 1-4 (1='really bad', 4='really good')!
+    buttons:
+    - title: "1"
+      payload: '/provide_conversation_rating{{"conversation_rating": "1"}}'
+    - title: "2"
+      payload: '/provide_conversation_rating{{"conversation_rating": "2"}}'
+    - title: "3"
+      payload: '/provide_conversation_rating{{"conversation_rating": "3"}}'
+    - title: "4"
+      payload: '/provide_conversation_rating{{"conversation_rating": "4"}}'
 actions:
 - action_analyse_travelplan
 - action_calculate_offsets
@@ -279,6 +301,8 @@ actions:
 - utter_faq
 - utter_farewell
 - utter_holiday-travel_offer_help
+- utter_request_conversation_rating
+- action_request_conversation_rating
 - validate_airtravel_form
 forms:
   airtravel_form:
