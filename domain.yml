@@ -80,18 +80,6 @@ slots:
     - 2
     - 3
     - 4
-  travel_flight_distancecategory:
-    type: categorical
-    influence_conversation: true
-    values:
-    - short
-    - medium
-    - long
-    - extended
-    - unknown
-  travel_flight_km:
-    type: text
-    influence_conversation: true
 responses:
   utter_faq/meta_inquire-ask_bot-challenge:
   - text: Yes, I am a bot! And I'm part of a research project.
