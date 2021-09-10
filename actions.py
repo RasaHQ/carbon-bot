@@ -7,6 +7,7 @@ from math import sin, cos, atan2, ceil, sqrt
 from typing import Any, Text, Dict, List, Union, Optional, Tuple
 import logging
 import re
+import os
 import requests
 import csv
 import collections
@@ -122,6 +123,43 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         return co2_kg_per_km * distance_km
 
     @staticmethod
+    def co2_kg_climatiq(distance_km, flight_class):
+        if distance_km < 866:  # longest possible UK domestic flight
+            emission_factor = "domestic-flight"
+        elif (
+            distance_km < 3700
+        ):  # borderline between short and long international flights
+            emission_factor = "short-haul-flight"
+        else:
+            emission_factor = "long-haul-flight"
+
+        if distance_km >= 866:
+            if flight_class == "business":
+                emission_factor += "-business"
+            elif flight_class == "economy":
+                emission_factor += "-economy"
+
+        payload = {
+            "emission_factor": emission_factor,
+            "parameters": {"distance": distance_km,},
+        }
+        headers = {
+            "Authorization": f"Bearer {os.getenv('CLIMATIQ_API_KEY')}",
+            "Content-Type": "application/json",
+        }
+
+        response = requests.post(
+            "https://beta.api.climatiq.io/estimate", json=payload, headers=headers
+        )
+        if response.status_code != 200:
+            raise ValueError(
+                f"Couldn't fetch a CO2 estimate. Error code: {response.status_code}"
+            )
+
+        data = dict(response.json())
+        return data.get("co2e")
+
+    @staticmethod
     def co2_kg_atmosfair(departure_iata, destination_iata, flight_class):
         payload = {
             "username": "kundentest",
@@ -189,7 +227,8 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         lon_b = destination_airport["longitude_deg"]
         distance_km = self.great_circle_distance_km(lat_a, lon_a, lat_b, lon_b)
 
-        co2_kg = self.co2_kg_interpolation(distance_km, flight_class)
+        # co2_kg = self.co2_kg_interpolation(distance_km, flight_class)
+        co2_kg = self.co2_kg_climatiq(distance_km, flight_class)
         if not co2_kg:
             raise ValueError("CO2 amount could not be calculated.")
 
@@ -225,10 +264,12 @@ class StartAction(Action):
         domain,  # type:  Dict[Text, Any]
     ):  # type: (...) -> List[Dict[Text, Any]]
 
-        url = f"https://rasa.com/carbon/index.html?" \
-              f"&rasaxhost=https://carbon.rasa.com" \
-              f"&conversationId={tracker.sender_id}" \
-              f"&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea"
+        url = (
+            f"https://rasa.com/carbon/index.html?"
+            f"&rasaxhost=https://carbon.rasa.com"
+            f"&conversationId={tracker.sender_id}"
+            f"&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea"
+        )
 
         link_1_url = url + f"&label=link-1-clicked"
         link_2_url = url + f"&label=link-2-clicked"
@@ -289,7 +330,6 @@ class ValidateAirTravelForm(FormValidationAction):
         return result
 
 
-
 class CalculateOffsets(Action):
     """Attempts to calculate CO2 usage and display link to purchase offsets."""
 
@@ -297,18 +337,12 @@ class CalculateOffsets(Action):
         return "action_calculate_offsets"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict
     ) -> List[Dict[Text, Any]]:
 
         url = tracker.get_slot("link_2_url")
         try:
-            co2_in_tons = AIRPORT_KB.calculate_emissions(
-                tracker, 
-                unit="short_tons"
-            )
+            co2_in_tons = AIRPORT_KB.calculate_emissions(tracker, unit="short_tons")
 
         except ValueError as e:
             logger.error(f"calculate_emissions failed with: {e}")
@@ -334,14 +368,15 @@ class CalculateOffsets(Action):
             dispatcher.utter_message(message + f" [Buy Offsets]({url})")
 
         slots_to_set = [
-            SlotSet("travel_departure"), 
-            SlotSet("iata_departure"), 
+            SlotSet("travel_departure"),
+            SlotSet("iata_departure"),
             SlotSet("travel_destination"),
             SlotSet("iata_destination"),
             SlotSet("travel_flight_class"),
         ]
 
         return slots_to_set
+
 
 class ExplainTypicalEmissions(Action):
     def name(self):
