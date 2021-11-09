@@ -54,7 +54,7 @@ jobs:
 
     - name: Generate dummy results file
       run: |
-        echo "Hi there, I hope you can see this comment now." > results.md
+        echo "Hi there, I hope you can see this comment now.." > results.md
 
     # - name: Upload Cross Validation Results
     #   if: github.event_name == 'pull_request'
