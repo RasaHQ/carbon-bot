@@ -20,6 +20,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving  
   - slot_was_set:
     - context_scenario: holiday
     - holiday_name: thanksgiving
@@ -71,6 +74,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -116,6 +122,9 @@ stories:
 - story: filling travel plan before airtravel_form
   steps:
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: thanksgiving
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
@@ -152,6 +161,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
     - holiday_name: christmas
@@ -194,6 +206,9 @@ stories:
   - intent: greet
   - action: utter_SCENARIOCHECK
   - intent: SCENARIO
+    entities:
+    - context_scenario: holiday
+    - holiday_name: christmas
   - slot_was_set:
     - context_scenario: holiday
   - slot_was_set:
