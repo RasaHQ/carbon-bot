@@ -1,4 +1,4 @@
 # Requirements for the action server should go in action-server-requirements.txt
 -r action-server-requirements.txt
-rasa[convert]==2.6.1
+rasa[convert]==2.8.12
 pytablewriter
