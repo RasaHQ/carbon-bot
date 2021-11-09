@@ -56,12 +56,12 @@ jobs:
       run: |
         echo "Hi there" > results.md
 
-    - name: Upload Cross Validation Results
-      if: github.event_name == 'pull_request'
-      uses: actions/upload-artifact@v2
-      with:
-        name: cross-validation-result
-        path: results.md
+    # - name: Upload Cross Validation Results
+    #   if: github.event_name == 'pull_request'
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: cross-validation-result
+    #     path: results.md
 
     - name: Upload model
       if: github.event_name == 'push' && (startsWith(github.event.ref, 'refs/tags') || github.ref == 'refs/heads/master')
@@ -71,7 +71,7 @@ jobs:
         path: models
 
     - name: Post cross-val results to PR
-      if: steps.cvnlu.outcome == 'success'
+      # if: steps.cvnlu.outcome == 'success'
       uses: amn41/comment-on-pr@comment-file-contents
       continue-on-error: true
       with:
