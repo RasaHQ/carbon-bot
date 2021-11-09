@@ -43,7 +43,7 @@ jobs:
 
     - name: Run Through Test Stories
       run: |
-        rasa test core --stories test_stories/stories.yaml --fail-on-prediction-errors
+        rasa test core --stories test_stories/stories.yml --fail-on-prediction-errors
 
     - name: Cross-validate NLU model
       id: cvnlu
