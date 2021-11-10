@@ -14,7 +14,7 @@ pipeline:
 - name: DIETClassifier
   epochs: 60
   scale_loss: False
-  weight_sparsity: 0.3
+  connection_density: 0.7
   transformer_size: 512
   BILOU_flag: True
 - name: ResponseSelector
