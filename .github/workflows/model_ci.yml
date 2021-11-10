@@ -176,6 +176,9 @@ jobs:
         RABBITMQ_PASSWORD: ${{ secrets.RABBITMQ_PASSWORD }}
         RASA_X_ADMIN_PASSWORD: ${{ secrets.RASA_X_ADMIN_PASSWORD }}
         GKE_PROJECT: ${{ secrets.GKE_PROJECT }}
+        FACEBOOK_VERIFY_TOKEN: ${{ secrets.FACEBOOK_VERIFY_TOKEN }}
+        FACEBOOK_APP_SECRET: ${{ secrets.FACEBOOK_APP_SECRET }}
+        FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
 
       run: |
         # Install helm v3
