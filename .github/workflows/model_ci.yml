@@ -110,6 +110,7 @@ jobs:
         set -o allexport; source .env; set +o allexport
         docker build . \
           --build-arg RASA_SDK_IMAGE=rasa/rasa-sdk:${RASA_SDK_VERSION} \
+          --build-arg CLIMATIQ_API_KEY=${{ secrets.CLIMATIQ_API_KEY }} \
           --tag gcr.io/${{ secrets.GKE_PROJECT }}/carbon-bot-actions:$IMAGE_TAG
         docker push gcr.io/${{ secrets.GKE_PROJECT }}/carbon-bot-actions:$IMAGE_TAG
 
