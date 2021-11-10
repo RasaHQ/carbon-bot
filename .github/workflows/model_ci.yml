@@ -43,7 +43,7 @@ jobs:
 
     - name: Run Through Test Stories
       run: |
-        rasa test core --stories test_stories/stories.yaml --fail-on-prediction-errors
+        rasa test core --stories test_stories/stories.yml --fail-on-prediction-errors
 
     - name: Cross-validate NLU model
       id: cvnlu
@@ -68,7 +68,7 @@ jobs:
 
     - name: Post cross-val results to PR
       if: steps.cvnlu.outcome == 'success'
-      uses: amn41/comment-on-pr@comment-file-contents
+      uses: samsucik/comment-on-pr@comment-file-contents
       continue-on-error: true
       with:
         msg: results.md
