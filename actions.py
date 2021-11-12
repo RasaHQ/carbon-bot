@@ -23,6 +23,21 @@ from rasa_sdk.types import DomainDict
 logger = logging.getLogger(__name__)
 
 URL_FLIGHT_EMISSION = "https://test-api.atmosfair.de/api/emission/flight"
+CLIMATIQ_EMISSION_FACTORS = {
+    "domestic": {
+        "economy": "passenger_flight-route_type_domestic-aircraft_type_na-distance_na-class_na-contrails_included",
+        "business": "passenger_flight-route_type_domestic-aircraft_type_na-distance_na-class_na-contrails_included",
+    },
+    "short-haul": {
+        "economy": "passenger_flight-route_type_international-aircraft_type_na-distance_short_haul_lt_3700km-class_economy-contrails_included",
+        "business": "passenger_flight-route_type_international-aircraft_type_na-distance_short_haul_lt_3700km-class_business-contrails_included",
+    },
+    "long-haul": {
+        "economy": "passenger_flight-route_type_international-aircraft_type_na-distance_long_haul_gt_3700km-class_economy-contrails_included",
+        "business": "passenger_flight-route_type_international-aircraft_type_na-distance_long_haul_gt_3700km-class_business-contrails_included",
+    },
+}
+CLIMATIQ_API_URL = "https://beta2.api.climatiq.io/estimate"
 
 
 def hyperlink_payload(tracker, message, title, url):
@@ -123,34 +138,27 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         return co2_kg_per_km * distance_km
 
     @staticmethod
-    def co2_kg_climatiq(distance_km, flight_class):
-        if distance_km < 866:  # longest possible UK domestic flight
-            emission_factor = "domestic-flight"
+    def co2_kg_climatiq(distance_km, flight_class, departure_iata, destination_iata):
+        if distance_km < 760:  # longest UK domestic flight (Inverness<->Gatwick)
+            emission_factor = CLIMATIQ_EMISSION_FACTORS["domestic"]
         elif (
             distance_km < 3700
-        ):  # borderline between short and long international flights
-            emission_factor = "short-haul-flight"
+        ):  # borderline between short- and long-haul international flights
+            emission_factor = CLIMATIQ_EMISSION_FACTORS["short-haul"]
         else:
-            emission_factor = "long-haul-flight"
-
-        if distance_km >= 866:
-            if flight_class == "business":
-                emission_factor += "-business"
-            elif flight_class == "economy":
-                emission_factor += "-economy"
+            emission_factor = CLIMATIQ_EMISSION_FACTORS["long-haul"]
+        emission_factor = emission_factor[flight_class]
 
         payload = {
             "emission_factor": emission_factor,
-            "parameters": {"distance": distance_km,},
+            "parameters": {"route": [departure_iata, destination_iata]},
         }
         headers = {
             "Authorization": f"Bearer {os.getenv('CLIMATIQ_API_KEY')}",
             "Content-Type": "application/json",
         }
 
-        response = requests.post(
-            "https://beta.api.climatiq.io/estimate", json=payload, headers=headers
-        )
+        response = requests.post(CLIMATIQ_API_URL, json=payload, headers=headers)
         if response.status_code != 200:
             raise ValueError(
                 f"Couldn't fetch a CO2 estimate. Error code: {response.status_code}"
@@ -207,6 +215,11 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
             raise ValueError("Destination IATA code unknown.")
         if not flight_class:
             raise ValueError("Flight class unknown.")
+        if flight_class not in ["business", "economy"]:
+            raise ValueError(
+                f"Flight class must be one of [business, economy] but was:"
+                f"{flight_class}."
+            )
 
         departure_airport = self.find_airport_by_ref(departure_iata)
         destination_airport = self.find_airport_by_ref(destination_iata)
@@ -227,8 +240,12 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         lon_b = destination_airport["longitude_deg"]
         distance_km = self.great_circle_distance_km(lat_a, lon_a, lat_b, lon_b)
 
-        # co2_kg = self.co2_kg_interpolation(distance_km, flight_class)
-        co2_kg = self.co2_kg_climatiq(distance_km, flight_class)
+        co2_kg = self.co2_kg_climatiq(
+            distance_km,
+            flight_class,
+            departure_airport["iata_code"],
+            destination_airport["iata_code"],
+        )
         if not co2_kg:
             raise ValueError("CO2 amount could not be calculated.")
 
