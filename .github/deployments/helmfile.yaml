@@ -43,6 +43,8 @@ releases:
             port: 80
             type: NodePort
       - rasa:
+          livenessProbe:
+            initialProbeDelay: 120
           token: {{ requiredEnv "RASA_X_TOKEN" }}
           tag: {{ requiredEnv "RASA_VERSION" }}-full
           versions:
@@ -56,6 +58,11 @@ releases:
                 requests:
                   memory: 500M
                   cpu: 0.5
+          additionalChannelCredentials:
+            facebook:
+              verify: {{ requiredEnv "FACEBOOK_VERIFY_TOKEN" }}
+              secret: {{ requiredEnv "FACEBOOK_APP_SECRET" }}
+              page-access-token: {{ requiredEnv "FACEBOOK_PAGE_ACCESS_TOKEN" }}
       - rabbitmq:
           resources:
             requests:
