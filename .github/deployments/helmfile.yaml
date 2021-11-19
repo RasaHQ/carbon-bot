@@ -18,6 +18,9 @@ releases:
       - app:
           name: gcr.io/{{ requiredEnv "GKE_PROJECT" }}/carbon-bot-actions
           tag: {{ requiredEnv "IMAGE_TAG" }}
+          extraEnvs:
+            - name: CLIMATIQ_API_KEY
+              value: {{ requiredEnv "CLIMATIQ_API_KEY" }}
       - dbMigrationService:
           tag: {{ requiredEnv "RASA_X_VERSION" }}.ee
           name: {{ requiredEnv "RASA_X_IMAGE_NAME" }}

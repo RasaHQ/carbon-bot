@@ -110,7 +110,6 @@ jobs:
         set -o allexport; source .env; set +o allexport
         docker build . \
           --build-arg RASA_SDK_IMAGE=rasa/rasa-sdk:${RASA_SDK_VERSION} \
-          --build-arg CLIMATIQ_API_KEY=${{ secrets.CLIMATIQ_API_KEY }} \
           --tag gcr.io/${{ secrets.GKE_PROJECT }}/carbon-bot-actions:$IMAGE_TAG
         docker push gcr.io/${{ secrets.GKE_PROJECT }}/carbon-bot-actions:$IMAGE_TAG
 
@@ -180,6 +179,7 @@ jobs:
         FACEBOOK_VERIFY_TOKEN: ${{ secrets.FACEBOOK_VERIFY_TOKEN }}
         FACEBOOK_APP_SECRET: ${{ secrets.FACEBOOK_APP_SECRET }}
         FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+        CLIMATIQ_API_KEY: ${{ secrets.CLIMATIQ_API_KEY }}
 
       run: |
         # Install helm v3
