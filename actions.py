@@ -39,6 +39,15 @@ CLIMATIQ_EMISSION_FACTORS = {
 }
 CLIMATIQ_API_URL = "https://beta2.api.climatiq.io/estimate"
 
+# Since UK institutions differentiate between emission factors for domestic vs
+# international flights, and short- vs long-haul international flights, to adapt this
+# approach to a global setting we need threshold distances that allow sorting flights
+# into the three buckets.
+# The longest UK domestic flight (Inverness<->Gatwick) has roughly 760km, flights longer
+# than that are considered "international".
+DOMESTIC_FLIGHT_MAX_DISTANCE = 760
+LONG_HAUL_FLIGHT_MIN_DISTANCE = 3700  # official threshold used by UK institutions
+
 
 def hyperlink_payload(tracker, message, title, url):
     return {
@@ -139,11 +148,9 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
 
     @staticmethod
     def co2_kg_climatiq(distance_km, flight_class, departure_iata, destination_iata):
-        if distance_km < 760:  # longest UK domestic flight (Inverness<->Gatwick)
+        if distance_km < DOMESTIC_FLIGHT_MAX_DISTANCE:
             emission_factor = CLIMATIQ_EMISSION_FACTORS["domestic"]
-        elif (
-            distance_km < 3700
-        ):  # borderline between short- and long-haul international flights
+        elif distance_km < LONG_HAUL_FLIGHT_MIN_DISTANCE:
             emission_factor = CLIMATIQ_EMISSION_FACTORS["short-haul"]
         else:
             emission_factor = CLIMATIQ_EMISSION_FACTORS["long-haul"]
@@ -213,8 +220,6 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
             raise ValueError("Departure IATA code unknown.")
         if not destination_iata:
             raise ValueError("Destination IATA code unknown.")
-        if not flight_class:
-            raise ValueError("Flight class unknown.")
         if flight_class not in ["business", "economy"]:
             raise ValueError(
                 f"Flight class must be one of [business, economy] but was:"
