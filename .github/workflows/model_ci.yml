@@ -179,6 +179,7 @@ jobs:
         FACEBOOK_VERIFY_TOKEN: ${{ secrets.FACEBOOK_VERIFY_TOKEN }}
         FACEBOOK_APP_SECRET: ${{ secrets.FACEBOOK_APP_SECRET }}
         FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+        CLIMATIQ_API_KEY: ${{ secrets.CLIMATIQ_API_KEY }}
 
       run: |
         # Install helm v3

@@ -7,6 +7,7 @@ from math import sin, cos, atan2, ceil, sqrt
 from typing import Any, Text, Dict, List, Union, Optional, Tuple
 import logging
 import re
+import os
 import requests
 import csv
 import collections
@@ -22,6 +23,30 @@ from rasa_sdk.types import DomainDict
 logger = logging.getLogger(__name__)
 
 URL_FLIGHT_EMISSION = "https://test-api.atmosfair.de/api/emission/flight"
+CLIMATIQ_EMISSION_FACTORS = {
+    "domestic": {
+        "economy": "passenger_flight-route_type_domestic-aircraft_type_na-distance_na-class_na-contrails_included",
+        "business": "passenger_flight-route_type_domestic-aircraft_type_na-distance_na-class_na-contrails_included",
+    },
+    "short-haul": {
+        "economy": "passenger_flight-route_type_international-aircraft_type_na-distance_short_haul_lt_3700km-class_economy-contrails_included",
+        "business": "passenger_flight-route_type_international-aircraft_type_na-distance_short_haul_lt_3700km-class_business-contrails_included",
+    },
+    "long-haul": {
+        "economy": "passenger_flight-route_type_international-aircraft_type_na-distance_long_haul_gt_3700km-class_economy-contrails_included",
+        "business": "passenger_flight-route_type_international-aircraft_type_na-distance_long_haul_gt_3700km-class_business-contrails_included",
+    },
+}
+CLIMATIQ_API_URL = "https://beta2.api.climatiq.io/estimate"
+
+# Since UK institutions differentiate between emission factors for domestic vs
+# international flights, and short- vs long-haul international flights, to adapt this
+# approach to a global setting we need threshold distances that allow sorting flights
+# into the three buckets.
+# The longest UK domestic flight (Inverness<->Gatwick) has roughly 760km, flights longer
+# than that are considered "international".
+DOMESTIC_FLIGHT_MAX_DISTANCE = 760
+LONG_HAUL_FLIGHT_MIN_DISTANCE = 3700  # official threshold used by UK institutions
 
 
 def hyperlink_payload(tracker, message, title, url):
@@ -122,6 +147,34 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         return co2_kg_per_km * distance_km
 
     @staticmethod
+    def co2_kg_climatiq(distance_km, flight_class, departure_iata, destination_iata):
+        if distance_km < DOMESTIC_FLIGHT_MAX_DISTANCE:
+            emission_factor = CLIMATIQ_EMISSION_FACTORS["domestic"]
+        elif distance_km < LONG_HAUL_FLIGHT_MIN_DISTANCE:
+            emission_factor = CLIMATIQ_EMISSION_FACTORS["short-haul"]
+        else:
+            emission_factor = CLIMATIQ_EMISSION_FACTORS["long-haul"]
+        emission_factor = emission_factor[flight_class]
+
+        payload = {
+            "emission_factor": emission_factor,
+            "parameters": {"route": [departure_iata, destination_iata]},
+        }
+        headers = {
+            "Authorization": f"Bearer {os.getenv('CLIMATIQ_API_KEY')}",
+            "Content-Type": "application/json",
+        }
+
+        response = requests.post(CLIMATIQ_API_URL, json=payload, headers=headers)
+        if response.status_code != 200:
+            raise ValueError(
+                f"Couldn't fetch a CO2 estimate. Error code: {response.status_code}"
+            )
+
+        data = dict(response.json())
+        return data.get("co2e")
+
+    @staticmethod
     def co2_kg_atmosfair(departure_iata, destination_iata, flight_class):
         payload = {
             "username": "kundentest",
@@ -167,8 +220,11 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
             raise ValueError("Departure IATA code unknown.")
         if not destination_iata:
             raise ValueError("Destination IATA code unknown.")
-        if not flight_class:
-            raise ValueError("Flight class unknown.")
+        if flight_class not in ["business", "economy"]:
+            raise ValueError(
+                f"Flight class must be one of [business, economy] but was:"
+                f"{flight_class}."
+            )
 
         departure_airport = self.find_airport_by_ref(departure_iata)
         destination_airport = self.find_airport_by_ref(destination_iata)
@@ -189,7 +245,12 @@ class AirportsKnowledgeBase(InMemoryKnowledgeBase):
         lon_b = destination_airport["longitude_deg"]
         distance_km = self.great_circle_distance_km(lat_a, lon_a, lat_b, lon_b)
 
-        co2_kg = self.co2_kg_interpolation(distance_km, flight_class)
+        co2_kg = self.co2_kg_climatiq(
+            distance_km,
+            flight_class,
+            departure_airport["iata_code"],
+            destination_airport["iata_code"],
+        )
         if not co2_kg:
             raise ValueError("CO2 amount could not be calculated.")
 
@@ -225,10 +286,12 @@ class StartAction(Action):
         domain,  # type:  Dict[Text, Any]
     ):  # type: (...) -> List[Dict[Text, Any]]
 
-        url = f"https://rasa.com/carbon/index.html?" \
-              f"&rasaxhost=https://carbon.rasa.com" \
-              f"&conversationId={tracker.sender_id}" \
-              f"&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea"
+        url = (
+            f"https://rasa.com/carbon/index.html?"
+            f"&rasaxhost=https://carbon.rasa.com"
+            f"&conversationId={tracker.sender_id}"
+            f"&destination=https://offset.earth%2F%3Fr%3D5de3ac5d7e813f00184649ea"
+        )
 
         link_1_url = url + f"&label=link-1-clicked"
         link_2_url = url + f"&label=link-2-clicked"
@@ -289,7 +352,6 @@ class ValidateAirTravelForm(FormValidationAction):
         return result
 
 
-
 class CalculateOffsets(Action):
     """Attempts to calculate CO2 usage and display link to purchase offsets."""
 
@@ -297,18 +359,12 @@ class CalculateOffsets(Action):
         return "action_calculate_offsets"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict
     ) -> List[Dict[Text, Any]]:
 
         url = tracker.get_slot("link_2_url")
         try:
-            co2_in_tons = AIRPORT_KB.calculate_emissions(
-                tracker, 
-                unit="short_tons"
-            )
+            co2_in_tons = AIRPORT_KB.calculate_emissions(tracker, unit="short_tons")
 
         except ValueError as e:
             logger.error(f"calculate_emissions failed with: {e}")
@@ -334,14 +390,15 @@ class CalculateOffsets(Action):
             dispatcher.utter_message(message + f" [Buy Offsets]({url})")
 
         slots_to_set = [
-            SlotSet("travel_departure"), 
-            SlotSet("iata_departure"), 
+            SlotSet("travel_departure"),
+            SlotSet("iata_departure"),
             SlotSet("travel_destination"),
             SlotSet("iata_destination"),
             SlotSet("travel_flight_class"),
         ]
 
         return slots_to_set
+
 
 class ExplainTypicalEmissions(Action):
     def name(self):
