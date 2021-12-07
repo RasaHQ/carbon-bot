@@ -264,6 +264,8 @@ responses:
   - text: What would you do if someone said that to someone you care about?
   - text: What if someone said that to you?
   - text: If someone said that to you, what would you say to them?
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
 actions:
 - action_analyse_travelplan
 - action_calculate_offsets
