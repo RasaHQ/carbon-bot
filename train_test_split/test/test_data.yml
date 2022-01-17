@@ -1,0 +1,689 @@
+version: "3.0"
+nlu:
+- intent: faq/deny-offsets-work
+  examples: |
+    - So if I give you money its ok to destroy the climate, is that right
+- intent: faq/opinion
+  examples: |
+    - but I love flying
+- intent: faq/ask_creators
+  examples: |
+    - who built you and why?
+- intent: faq/general-emissions-reduction
+  examples: |
+    - What if I plant a tree on my backyard?
+- intent: faq/more-details-process
+  examples: |
+    - What is the process for me to buy offsets?
+    - any more details you can provide?
+- intent: faq/other-language
+  examples: |
+    - תל אביב
+- intent: faq/layover
+  examples: |
+    - connecting
+    - i have a connection
+- intent: faq/do-people-buy-offsets
+  examples: |
+    - does anyone actually buy them?
+    - are carbon offsets popular?
+- intent: faq/is-this-legit
+  examples: |
+    - How do I know someone is actually doing something for my offsets?
+    - is this real?
+    - Is there any transparency?
+- intent: faq/meta_inquire-ask_bot-challenge
+  examples: |
+    - am i taking to bot
+    - are you a bot?
+    - who do you work for?
+    - What is Carbon bot
+- intent: faq/takeacut
+  examples: |
+    - what you get out of it?
+    - what are you getting from this?
+    - how does this benefit you?
+    - Does the company take any of the money I pay for offsets?
+- intent: faq/research_project
+  examples: |
+    - so everything I write is gonna be read by a bunch of researchers?
+    - okay which research team?
+    - wtf is this
+    - ok tell me something about it
+- intent: faq/ask_howdoing
+  examples: |
+    - how are you doing
+    - wassup
+    - Whats up?
+    - are you well?
+- intent: faq/not-personally-responsible
+  examples: |
+    - So the passengers are paying more to help offset the damage airplanes are doing to the environment, yet the airlines themselves are not held accountable. Got it.
+    - who is responsible for the most emissions?
+    - but it's too late for the planet, why should i bother?
+    - Does that mean I pay less?
+    - I understand but the companies are making money off my flight
+- intent: faq/deny-climate-change
+  examples: |
+    - It's been changing for millions of years because the earth shifts on its axis while spinning in space. Things are going to change naturally, that's why Ohio was a glacier a million years ago and I can find salt water fossils in my backyard in middle Ga.
+    - You do know that global warming is bullshit right
+    - Not worried
+    - NO!  Who benefits?  Who gets the money it is going to cost me?  I despise the UN and all it embodies.  I also do not believe there is such a thing as global warming, and I sure don't agree with your climate change policy either.
+    - No, I just wanted to tell you to stay the fuck off my feed you ignorant fuck. Climate change is a hoax , and your suggestion that I can BUY SOMETHING to offset my fossil fuel use proves it. EAT SHIT AND DIE!!!!
+- intent: faq/oos_inquire
+  examples: |
+    - What is christmas?
+    - Rasa
+    - how fast the bot move?
+    - Is this just for american flights?
+    - What is the answer to life, the universe, and everything?
+    - Please tell him i want to meet him soon
+- intent: faq/personal_question_for_bot
+  examples: |
+    - What's your age
+    - who are you
+    - what is your name ?
+    - i want to love you
+    - Have you ever been a fight
+    - Did you know that?
+- intent: faq/other-calculation
+  examples: |
+    - How many trees need to be planted to off set [2200](number) miles of flying?
+    - how does that compare to driving an SUV?
+    - What about trains?
+    - How much gas does it take to get from [Tallahassee]{"entity": "city", "role": "from"} Florida to [Oakland]{"entity": "city", "role": "to"} California in a [2016](number) Kia soul
+    - By train actually.
+    - How much Carbon Dioxide is released when a Boeing 787 Dreamliner takes a full crew and full cabin of passengers to Rome from JFK airport?
+- intent: faq/oos_request
+  examples: |
+    - Can you fyling him here please i love him so much
+    - How long will it take a letter to get from [new milford]{"entity": "city", "role": "from"} pa to [huntingdon]{"entity": "city", "role": "to"} pa
+    - can I pay with credit card
+    - What would you suggest where to go for a romance places
+    - Marietta ohio please i mean shane brolly i love him so much
+    - He from underworld movie please flying him here
+    - Get me coffee
+- intent: faq/specific-project-details
+  examples: |
+    - Biomass Energy Conservation Programme
+    - Are there cheaper options?
+    - Who is the UN Climate Change secretariat?
+    - Will I own the CERs after my purchase has been completed?
+    - 5 MW Wind Power Project at Baramsar and Soda Mada, district Jaisalmer, Rajasthan, India
+    - Will I get a certificate for the cancellation of the CERs?
+- intent: faq/meta_inquire_capabilities
+  examples: |
+    - What is this
+    - Thanks anything else that you can do
+    - so, what can you do?
+    - how can you help me?
+    - So what can you help me with?
+    - Hmm... I don't know. What can you do?
+    - Well... I thought you could tell me how I could offset my emissions!
+- intent: faq/accuse-scam
+  examples: |
+    - so no one is making profit  off of me?
+    - Like I said...it's a scam.
+    - Isn't it just a big scam
+    - Whatever. It's ridiculous.
+    - Can't get any more stupid than this Hahahahaha
+    - What is the money paid used for?
+    - So let me see if I understand this. If you believe the climate change spiel, you can buy your way out of your hypocrisy for flying in those carbon farting containers by lining the pockets of the corrupt UN for "credits"? Seriously? People actually believe this crap?
+- intent: faq/inquire-cost
+  examples: |
+    - how much would it cost?
+    - How much do they cost
+    - Ok.  How much would that cost?
+    - What's the price?
+    - how much are they?
+    - how much does a carbon offset cost?
+    - how much should I spend on that?
+    - How much are offsets
+- intent: faq/oos-future_inquire-ask
+  examples: |
+    - why do you think we had anything to do with climate change?
+    - do you have anymore information?
+    - what is global warming?
+    - Hi. Do you know about climate change?
+    - what is today's Bangalore CO2 emission?
+    - Why does climate change matter?
+    - What emits CO2?
+    - why is climate change bad?
+- intent: faq/placeholder
+  examples: |
+    - so what do I do?
+    - Same
+    - Well
+    - KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+    - Your lunch
+    - Test
+    - what about you
+    - ok so same
+    - What do you want to talk about.
+- intent: faq/where-money-goes
+  examples: |
+    - ok so with what i buy where does the money go?
+    - then who gets the cut?
+    - And who gets the money ???
+    - where does my money go?
+    - How gets the money from the purchases?
+    - Then where does that money go?
+    - who sponsored it?
+    - who gets the money?
+    - Who is managing carbon offsets?
+- intent: faq/oos_inform
+  examples: |
+    - It's cold outside.
+    - Hello, I think you have an interesting profile, I wonder if you would like to participate in production of content with me. I do interviews, skits, commercials, pranks, fashion and music videos. To see examples what I do please see my yt  I want to grow my audience and find more projects with a budget. more fb pages on various subjects with backlink purposes to reach different markets. I also do remote interviews.
+    - My name is Andre's gonzalez
+    - Buying carbon oddsets for a Christmas oresent
+    - Because I know you like to send me these joke apps
+    - Oh Darling I love you and want to be near you and having fun together ❤ I love 💘 you
+    - No, it's not ok; over 50 million human beings are being slaughtered each year worldwide.
+    - I'm drunk how about u
+    - I dont really trust the UN
+    - I will consider purchasing offsets next time I fly.
+- intent: help
+  examples: |
+    - what i need to do
+    - Help
+- intent: SCENARIO
+  examples: |
+    - SCENARIO
+    - hello christmas
+- intent: meta_inform_problem_bad-link
+  examples: |
+    - link doesn't work
+    - that link didn't work
+- intent: restart
+  examples: |
+    - Let's start again
+    - let's go back to the start
+    - Start
+    - That's ok, can we start over?
+- intent: express_negative-emo
+  examples: |
+    - Don't dismiss that! It was a really cool flight! We had a look at one of the last glaciers in New Zealand.
+    - you are not nice
+    - You haven't helped _me_ yet
+    - 😭
+    - You are mediocre
+- intent: deny_flying
+  examples: |
+    - I'm staying put
+    - no I'll drive there
+    - As I said, I don't fly at all. I wish that the Liberal Hypocrites that claim to care about our Planet wouldn't fly in their private planes. That would be Huge
+    - NO FLIGHTS
+    - no, I take the train
+- intent: how_calculated
+  examples: |
+    - what is that based on?
+    - how do you get to that answer?
+    - how do you get that answer?
+    - How is [business class]{"entity": "travel_flight_class", "value": "business"} emission calculated?
+    - How do you calculate carbon emmission?
+    - whats the math behind that?
+- intent: buy_offsets
+  examples: |
+    - buy co2 credits
+    - help buying Carbon offsets.
+    - how to buy offsets
+    - ok lets buy some offsets
+    - let me buy offsets
+    - buy co2 offsets
+    - ok thank you. i will buy carbon offset then
+- intent: inquire-ask_clarification
+  examples: |
+    - Tell me more
+    - what is co2
+    - What is Rasa?
+    - lol what?
+    - what is carbon offsets
+    - What are carbon offsets
+    - what is it?
+    - okay what?
+- intent: express_surprise
+  examples: |
+    - Wow thats a lot!
+    - ?!
+    - Wow!
+    - huh
+    - that is messed up
+    - woah!
+    - that's insane
+    - damn!
+- intent: express_uncertainty
+  examples: |
+    - sorta
+    - don't know. you tell me
+    - sort of
+    - i don't know yet
+    - I guess that's a good thing?
+    - err
+    - i dont know yet
+    - I'm skeptical that can really work
+    - i am not sure
+- intent: vulgar
+  examples: |
+    - The worms and the crabs are fighting over the mushrooms growing on my genital area
+    - Does your dad still have sex with your sister
+    - And if there are any Dingle berries on first approach a curteousy wipe is never turned down. Of course you can always scarf that crap up 😜
+    - Cum sucker
+    - Donate this asshole
+    - My balls kinda itch too
+    - My cock itches
+    - You wanna scratch my cock ?
+    - I'm fucking your mom
+- intent: express_positive-emo
+  examples: |
+    - no problem
+    - Very cool. I will check it out.
+    - spiffing
+    - hahahahaha
+    - prosper
+    - no problemo
+    - That is neat.
+    - 😀
+    - Cool
+    - you are fantastic
+- intent: thank
+  examples: |
+    - okay thanks for helping
+    - That shall be it for today. Thank you for the conversation and the link that you have provided.
+    - I will do that, thank you!
+    - Thank you for instrction
+    - thanks for that
+    - oh ok thanks any way
+    - Thanks
+    - Joselico gracias Dois 🙏🇺🇸🏦🛠🔥⭐️🦅👑💪🏻
+    - Thank you
+    - Thank you for the information.
+- intent: farewell
+  examples: |
+    - bye then
+    - end the conversation
+    - see you
+    - go awy
+    - sleep!
+    - bye!
+    - gg
+    - Discontinue my name. Thank you.
+    - Hang up
+    - Bye!!
+    - See you later alligator
+    - I need a donate but I'll do it when I get a little bit more head of money you have a good day
+- intent: inform_notunderstanding
+  examples: |
+    - I said yes!?
+    - you dont understand right
+    - you don't understand
+    - Are you there?
+    - no you're not getting me
+    - I understand so how can I help you learn how to answer my questions if you have standard responses
+    - are you there?
+    - that's not what I said
+    - so why can't you answer my questions
+    - You are not well trained bro
+    - You are not doing great sorry
+- intent: why
+  examples: |
+    - why
+    - why do you ask?
+    - Why should I buy offsets?
+    - tell me more here
+    - why should I?
+    - how does that make a difference
+    - Yes, so why is one greater than the other?
+    - why do you offer offsets?
+    - Yes. But why should I buy carbon offsets
+    - what's it matter?
+    - what does it matter if I fly [economy](travel_flight_class)
+    - I don't see the point from this
+- intent: greet
+  examples: |
+    - 👋
+    - good evening
+    - HELLO
+    - Hi bot
+    - Good Morning
+    - Hi
+    - Hello!
+    - good morning
+    - ahoy
+    - Hello??
+    - hEllo
+    - hey yo
+    - hi there
+- intent: insult
+  examples: |
+    - o hate you
+    - fuck off you crooked bastard
+    - fuk u
+    - fuck off robot
+    - FUCK YOU THERE IS NO SUCH THING AS CLIMATE CHANGE AND WE KNOW IT YOU CUNTS !
+    - shithead
+    - F off George Soros puppets
+    - LOL, ask Greta, LOL
+    - Get off my phone you crooked fucking idiots
+    - And your family pelosi
+    - Fuck you very much🤭
+    - Fuck you Fuck them
+- intent: deny
+  examples: |
+    - no thanks, i'm good
+    - no!
+    - Nah, thanks.
+    - NO
+    - nah
+    - I don't need a link
+    - I'll keep the money I have earned.
+    - No thanks
+    - I don't like that
+    - n
+    - no, i want you to buy it
+    - not really
+    - no thank you
+    - nah thanks
+- intent: estimate_emissions
+  examples: |
+    - ok, but what about estimating my flight's emissions?
+    - Hello I want to feel guilty about flying a plane
+    - How do I offset 100000 miles
+    - how bad is it if I fly across the country?
+    - how much carbon does a flight from [düsseldorf]{"entity": "city", "role": "from"} to [new york]{"entity": "city", "role": "to"} emit
+    - what about my offsets
+    - I have another trip
+    - Emissions
+    - ok how much carbon does a flight create?
+    - hoe many pounds of carbon for a flight
+    - how much does this emit?
+    - Calculate my offsets
+    - does it matter how long the flight is?
+    - How much for 135000 milea
+    - That's cool. Can you calculate another flight for me?
+- intent: inquire-ask_clarification-offsets
+  examples: |
+    - How much of an impact can offsets have on the environment?
+    - how do offsets work
+    - are offsets better than not flying?
+    - Yeah but I'm skeptical. How do offsets work, anyway?
+    - do you want me to feel guilty about flying?
+    - Can you tell me anything else about the offsets?
+    - how do offsets workr
+    - what kind of offsets?
+    - What do they do with the offsets
+    - What exactly is an UN-certified carbon offset?
+    - how that works?
+    - Yes but how does it work?
+    - but is that actually equivalent to me staying at home?
+    - so tell me about c02
+    - but I would like to know where the donations go
+    - What are certified emission reductions or CERs?
+    - Me neither. So does the offset clean the air?
+    - How offsets works usually ?
+    - do offsets really work?
+    - What is the working principle
+    - carbon offset
+    - how does it even work?
+    - How do the offsets work?
+    - sure i guess. First can you tell me some more about carbon offsets?
+    - Does that mean if I pay this, then the plane doesn't pollute the air?
+- intent: affirm
+  examples: |
+    - **YES**
+    - gotta love [economy](travel_flight_class)
+    - yeah [LAX](iata)
+    - sounds good. thanks
+    - okay, do it
+    - Yeah sounds good
+    - Sure.
+    - do it
+    - Sounds good
+    - that sounds good
+    - Yes, I am
+    - I would like to have a more accurate estimate
+    - i think so
+    - ohh ok ok super
+    - _YES_!
+    - I already said ya
+    - ok, then let's do that.
+    - umm ok
+    - Yes, it does.
+    - That sounds interesting.
+    - yea i will
+    - ok i am got it
+    - Yes,
+    - why not
+    - sounds fantastic!
+    - Totally
+    - sounds great
+    - of course!
+    - Okay.
+    - *YES*
+    - Yep
+    - without a doubt
+    - Of course
+    - Yes pls
+    - yeah let's do that!
+    - Yes, please
+    - Sounds fantastic
+    - i do not know the name of the airport in [new york](city)
+    - yea, I'm broke
+    - ja
+    - I want
+    - Oh yeah
+    - yup
+    - Okay. done
+    - ya
+    - yes please!
+    - ya sure
+    - sure!
+    - i think so yea
+    - Ok!
+    - accurate would be nice
+- intent: inform
+  examples: |
+    - [Oklahoma City](city)
+    - to [Bangalore]{"entity": "city", "role": "to"}
+    - [KNP](iata)
+    - [Johannesburg](city)
+    - need to book a flight for christmas from [boston]{"entity": "city", "role": "from"} to [new york]{"entity": "city", "role": "to"}, [economy class]{"entity": "travel_flight_class", "value": "economy"} but i need to know about carbon offsets
+    - From Nerlin
+    - [Philadelphia](city)
+    - [Arlington](city)
+    - from [Paris]{"entity": "city", "role": "from"} to [London]{"entity": "city", "role": "to"}
+    - [Corvallis](city)
+    - [Baltimore](city)
+    - [London](city) [Heathrow]{"entity": "iata", "value": "LHR"}
+    - [Munich](city)
+    - [Delhi]{"entity": "city", "value": "New Delhi"}
+    - [Heraklion](city)
+    - [Memphis](city)
+    - [Palestine](city)?
+    - sea
+    - [Pittsburgh](city), PA
+    - [London](city), [Gatwick]{"entity": "iata", "value": "LGW"} airport
+    - [Delux Class]{"entity": "travel_flight_class", "value": "business"} please
+    - united states of america
+    - i don't know, somewhere nice in florida
+    - [San Diego](city)
+    - [Ny](city)
+    - [Seattle](city).
+    - from [New York]{"entity": "city", "role": "from"} to [London]{"entity": "city", "role": "to"}
+    - [NY](city)
+    - [Larnaca](city)
+    - [bogota](city) colombia
+    - [NDF](iata)
+    - [Charlotte](city)
+    - that'll be [business class]{"entity": "travel_flight_class", "value": "business"}
+    - [Virginia Beach](city)
+    - united states
+    - [san francisco](city)
+    - To [London]{"entity": "city", "role": "to"}
+    - Oh Darling lets you and me having fun together ❤ I love 💘 you
+    - Yep how much is a flight from [berlin]{"entity": "city", "role": "from"} to [new york]{"entity": "city", "role": "to"}?
+    - Illinois
+    - tell me about carbon offsets from [boston]{"entity": "city", "role": "from"} to [new york]{"entity": "city", "role": "to"}
+    - [JFK](iata)
+    - Yes! I am planning to fly from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}. I would like to fly [Economy Class]{"entity": "city", "value": "economy"}.
+    - I fly with [economy class]{"entity": "travel_flight_class", "value": "economy"}
+    - Yes, I'd like information on a flight from [Boston]{"entity": "city", "role": "from"} to [New York]{"entity": "city", "role": "to"}
+    - [Chandler](city)
+    - for thanksgiving we always go to see family
+    - [Durham](city)
+    - [san diego](city)
+    - from [London]{"entity": "city", "role": "from"} to [Sydney]{"entity": "city", "role": "to"}
+    - [sf](city)
+    - always [first class]{"entity": "travel_flight_class", "value": "business"} for me!
+    - [Shanghai](city)
+    - [denver](city)
+    - [berlin](city)
+    - [Ahmedabad](city)
+    - destination vermont
+    - [Henderson](city)
+    - [New York](city) City
+    - [Anchorage](city) Alaska
+    - [Hong Kong](city)
+    - [Phoenix](city)
+    - back to [Chicago]{"entity": "city", "role": "to"}
+    - [Bombay](city)
+    - Shedang boi I'm [first class]{"entity": "travel_flight_class", "value": "business"}
+    - I don't know any other way to describe the city [Tel Aviv](city)
+    - my grandparents are from texas so I'm heading there like every year
+    - [Detroit]{"entity": "city", "role": "to"}, with layover in [Amsterdam](city)
+    - [Stockton](city)
+    - Amsterda
+    - [Beijing](city)
+    - Maybe to [Romę]{"entity": "city", "role": "to"}
+    - ok, so I'll fly from [Seattle]{"entity": "city", "role": "from"} to [Madrid]{"entity": "city", "role": "to"}
+    - i already said [Los Angeles](city)
+    - Singaporea
+    - [PIT](iata)
+    - [Saint Paul](city)
+    - [new york](city)
+    - btv
+    - [auckland](city)
+    - [san fran](city)
+    - [Tel Aviv](city) Israel
+    - Uk
+    - [Santiago](city) de chile
+    - [Kansas City](city)
+    - BtV
+    - Texas
+    - [Anaheim](city)
+    - What about from [Paris]{"entity": "city", "role": "from"} to [Berlin]{"entity": "city", "role": "to"}?
+    - [St. Petersburg](city)
+    - [paris](city)
+    - [Kaunas](city)
+    - [nyc](city)
+    - [STL](iata)
+    - I'm sorry. I would like to travel to [New York]{"entity": "city", "role": "to"} from [Boston]{"entity": "city", "role": "from"}.
+    - from [Berlin]{"entity": "city", "role": "from"}
+    - [business class]{"entity": "travel_flight_class", "value": "business"}
+    - [Stuttgart](city)
+    - [Luton]{"entity": "iata", "value": "LTN"}
+    - I'll go and see my parents in Arizona
+    - [Cebu](city) City
+    - ok what about from [EWR]{"entity": "iata", "role": "from"} back?
+    - I'm traveling from [SJO]{"entity": "iata", "role": "from"}
+    - [yvr](iata)
+    - [Aarhus](city)
+    - [SFO](iata)
+    - [New york](city)
+    - Israel
+    - [LA](city)
+    - [Washington](city)
+    - The next class above [Economy](travel_flight_class).
+    - [Berlin](city)
+    - [mexico city](city)
+    - [AQY](iata)
+    - [Buenos Aires](city)
+    - No.  [Business class]{"entity": "travel_flight_class", "value": "business"}.
+    - [boston](city)
+    - I have a flight from [Berlin]{"entity": "city", "role": "from"} to [Abu Dhabi]{"entity": "city", "role": "to"}
+    - [Bari](city)
+    - [bangalore](city)
+    - [Portland](city)
+    - [Long Beach](city)
+    - Rare from [Honolulu]{"entity": "city", "role": "from"} airport to [Takes Hale]{"entity": "city", "role": "to"}
+- synonym: business
+  examples: |
+    - business class
+    - first class
+    - Business class
+    - Delux Class
+    - First class
+- synonym: '1'
+  examples: |
+    - one
+    - first
+    - a week
+- synonym: economy
+  examples: |
+    - economy class
+    - Economy Class
+    - Economy class
+- synonym: premium
+  examples: |
+    - premium economy
+- synonym: New Delhi
+  examples: |
+    - Delhi
+    - delhi
+- synonym: LHR
+  examples: |
+    - Heathrow
+    - heathrow
+- synonym: LGW
+  examples: |
+    - Gatwick
+    - gatwick
+- synonym: LCY
+  examples: |
+    - London City
+- synonym: SXF
+  examples: |
+    - Schonefeld
+    - Schoenefeld
+- synonym: TXL
+  examples: |
+    - Tegel
+- synonym: LTN
+  examples: |
+    - Luton
+- synonym: LGA
+  examples: |
+    - La Guardia
+- synonym: San Francisco
+  examples: |
+    - SF
+- synonym: TRN
+  examples: |
+    - torino caselle
+    - Caselle
+- synonym: KBP
+  examples: |
+    - borispol
+- synonym: Edinburgh
+  examples: |
+    - Edinburg
+- synonym: Los Angeles
+  examples: |
+    - LA
+    - la
+- synonym: LAST
+  examples: |
+    - last
+    - latter
+- synonym: '2'
+  examples: |
+    - second
+- synonym: '3'
+  examples: |
+    - third
+- synonym: '7'
+  examples: |
+    - 7 hour
+- synonym: Madrid
+  examples: |
+    - madrid

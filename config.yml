@@ -1,7 +1,7 @@
 language: en
 
 pipeline:
-- name: ConveRTTokenizer
+- name: WhitespaceTokenizer
 - name: ConveRTFeaturizer
   model_url: https://github.com/davidalami/ConveRT/releases/download/1.0/nocontext_tf_model.tar.gz
 - name: CountVectorsFeaturizer
