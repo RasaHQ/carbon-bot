@@ -1305,7 +1305,6 @@ nlu:
     - To [Madrid]{"entity": "city", "role": "to"}
     - To [Paris]{"entity": "city", "role": "to"}
     - From Nerlin
-    - From [Berlin]{"entity": "city", "role": "from"}
     - From [New York]{"entity": "city", "role": "from"}
     - From [Bangalore]{"entity": "city", "role": "from"}
     - To [Bangalore]{"entity": "city", "role": "to"}
@@ -1317,7 +1316,6 @@ nlu:
     - From [Rome]{"entity": "city", "role": "from"}
     - From [LED]{"entity": "iata", "role": "from"} to [PIT]{"entity": "iata", "role": "to"}
     - From [Berlin]{"entity": "city", "role": "from"} to [SFO]{"entity": "iata", "role": "to"}
-    - From [London]{"entity": "city", "role": "from"} to [SFO]{"entity": "iata", "role": "to"}
     - [Mine](city)
     - [Kiev](city), Ukraine
     - [Economy class]{"entity": "travel_flight_class", "value": "economy"}
@@ -1412,8 +1410,6 @@ nlu:
     - [Savannah](city)
     - [Bogota](city)
     - [Prague](city)
-    - [London](city)
-    - [Munich](city)
 - intent: inquire-ask_clarification
   examples: |
     - ?
@@ -2684,6 +2680,10 @@ nlu:
 - synonym: Edinburgh
   examples: |
     - Edinburg
+- synonym: Los Angeles
+  examples: |
+    - LA
+    - la
 - synonym: LAST
   examples: |
     - last
@@ -2694,10 +2694,6 @@ nlu:
 - synonym: '3'
   examples: |
     - third
-- synonym: Los Angeles
-  examples: |
-    - LA
-    - la
 - synonym: '7'
   examples: |
     - 7 hour

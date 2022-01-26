@@ -7,8 +7,7 @@ intents:
 - inform
 - SCENARIO
 - affirm
-- faq:
-    is_retrieval_intent: true
+- faq
 - inquire-ask_clarification-offsets
 - how_calculated
 - deny
@@ -27,6 +26,8 @@ intents:
 - estimate_emissions
 - insult
 - vulgar
+- help
+- restart
 entities:
 - city
 - conference_name
@@ -35,6 +36,7 @@ entities:
 - iata
 - travel_destination
 - travel_flight_class
+- number
 slots:
   context_scenario:
     type: categorical
