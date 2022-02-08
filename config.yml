@@ -12,12 +12,14 @@ pipeline:
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: DIETClassifier
+  random_seed: 666
   epochs: 60
   scale_loss: False
   connection_density: 0.7
   transformer_size: 512
   BILOU_flag: True
 - name: ResponseSelector
+  random_seed: 666
   epochs: 50
 - name: EntitySynonymMapper
 
