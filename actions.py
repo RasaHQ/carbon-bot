@@ -13,7 +13,7 @@ import csv
 import collections
 
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.forms import FormAction, FormValidationAction
+from rasa_sdk.forms import FormValidationAction
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet, Restarted
 from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase

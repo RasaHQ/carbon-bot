@@ -1,36 +1,61 @@
+recipe: default.v1
+
 language: en
 
 pipeline:
-- name: ConveRTTokenizer
-- name: ConveRTFeaturizer
-  model_url: https://github.com/davidalami/ConveRT/releases/download/1.0/nocontext_tf_model.tar.gz
-- name: CountVectorsFeaturizer
-- name: CountVectorsFeaturizer
-  analyzer: char_wb
-  min_ngram: 1
-  max_ngram: 4
-- name: RegexFeaturizer
-- name: LexicalSyntacticFeaturizer
-- name: DIETClassifier
-  random_seed: 666
-  epochs: 60
-  scale_loss: False
-  connection_density: 0.7
-  transformer_size: 512
+- name: WhitespaceTokenizer
+- name: LanguageModelFeaturizer
+  alias: "lmf"
+- name: LogisticRegressionClassifier
+  random_state: 42
+  max_iter: 100
+- name: CRFEntityExtractor
+  # BILOU_flag determines whether to use BILOU tagging or not.
   BILOU_flag: True
-- name: ResponseSelector
-  random_seed: 666
-  epochs: 50
+  # features to extract in the sliding window
+  features: [
+    ["low", "title", "upper"],
+    [
+      "bias",
+      "low",
+      "prefix5",
+      "prefix2",
+      "suffix5",
+      "suffix3",
+      "suffix2",
+      "upper",
+      "title",
+      "digit",
+      "pattern",
+      "text_dense_features"
+    ],
+    ["low", "title", "upper"],
+  ]
+  # The maximum number of iterations for optimization algorithms.
+  "max_iterations": 50
+  # weight of the L1 regularization
+  "L1_c": 0.1
+  # weight of the L2 regularization
+  "L2_c": 0.1
+  # Name of dense featurizers to use.
+  # If list is empty all available dense features are used.
+  "featurizers": []
+  # Indicated whether a list of extracted entities should be split into individual entities for a given entity type
+  "split_entities_by_comma":
+      address: False
+      email: True
+
+#- name: ResponseSelector
+#  random_seed: 666
+#  epochs: 1
 - name: EntitySynonymMapper
 
 policies:
 - name: MemoizationPolicy
   max_history: 5
-- name: TEDPolicy
-  max_history: 5
-  batch_strategy: balanced
-  epochs: 300 
-  random_seed: 666
-  evaluate_on_num_examples: 0
-  enable_fallback_prediction: False
+  use_nlu_confidence_as_score: True
 - name: RulePolicy
+  use_nlu_confidence_as_score: True
+  core_fallback_threshold: 0.22
+- name: rasa_plus.llm.llm_policy.LLMPolicy
+  nlu_abstention_threshold: 0.9
