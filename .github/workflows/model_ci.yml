@@ -215,7 +215,7 @@ jobs:
 
     steps:
     - name: Download Model
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
       with:
         name: model
         path: ${{ env.MODEL_DIRECTORY }}
