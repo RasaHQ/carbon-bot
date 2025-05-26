@@ -1,9 +1,7 @@
 language: en
 
 pipeline:
-- name: ConveRTTokenizer
-- name: ConveRTFeaturizer
-  model_url: https://github.com/davidalami/ConveRT/releases/download/1.0/nocontext_tf_model.tar.gz
+- name: WhitespaceTokenizer
 - name: CountVectorsFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: char_wb
@@ -14,10 +12,10 @@ pipeline:
 - name: DIETClassifier
   random_seed: 666
   epochs: 60
-  scale_loss: False
+  scale_loss: false
   connection_density: 0.7
   transformer_size: 512
-  BILOU_flag: True
+  BILOU_flag: true
 - name: ResponseSelector
   random_seed: 666
   epochs: 50
@@ -29,8 +27,9 @@ policies:
 - name: TEDPolicy
   max_history: 5
   batch_strategy: balanced
-  epochs: 300 
+  epochs: 300
   random_seed: 666
   evaluate_on_num_examples: 0
-  enable_fallback_prediction: False
+  enable_fallback_prediction: false
 - name: RulePolicy
+assistant_id: 20250526-124928-quick-ricotta
