@@ -42,33 +42,93 @@ slots:
     values:
     - conference
     - holiday
+    mappings:
+      - type: from_entity
+        entity: context_scenario
   holiday_name:
     type: any
     influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: holiday_name
   iata_departure:
     type: any
     influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: iata
   iata_destination:
     type: any
     influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: iata
   link_1_url:
     type: any
     influence_conversation: false
+    mappings:
+      - type: custom
+        entity: action_explain_typical_emissions
+      - type: custom
+        entity: action_start
   link_2_url:
     type: any
     influence_conversation: false
+    mappings:
+      - type: custom
+        entity: action_explain_typical_emissions
+      - type: custom
+        entity: action_start
   requested_slot:
     type: any
     influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: entity_name
   travel_departure:
     type: any
     influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: city
+        role: from
+      - type: from_entity
+        entity: iata
+        role: from
+      - type: from_entity
+        entity: city
+      - type: from_entity
+        entity: iata
+      - type: from_text
+        entity: city
   travel_destination:
     type: any
     influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: city
+        role: to
+      - type: from_entity
+        entity: iata
+        role: to
+      - type: from_entity
+        entity: city
+      - type: from_entity
+        entity: iata
+      - type: from_text
+        entity: city
   travel_flight_class:
     type: any
     influence_conversation: false
+    mappings:
+      - type: from_intent
+        intent: affirm
+        value: economy
+      - type: from_intent
+        intent: deny
+        value: business
+      - type: from_entity
+        entity: travel_flight_class
 responses:
   utter_faq/meta_inquire-ask_bot-challenge:
   - text: Yes, I am a bot! And I'm part of a research project.
@@ -289,38 +349,6 @@ forms:
     - why
     - inquire-ask_clarification
     required_slots:
-      travel_flight_class:
-      - type: from_intent
-        intent: affirm
-        value: economy
-      - type: from_intent
-        intent: deny
-        value: business
-      - type: from_entity
-        entity: travel_flight_class
-      travel_departure:
-      - type: from_entity
-        entity: city
-        role: from
-      - type: from_entity
-        entity: iata
-        role: from
-      - type: from_entity
-        entity: city
-      - type: from_entity
-        entity: iata
-      - type: from_text
-        entity: city
-      travel_destination:
-      - type: from_entity
-        entity: city
-        role: to
-      - type: from_entity
-        entity: iata
-        role: to
-      - type: from_entity
-        entity: city
-      - type: from_entity
-        entity: iata
-      - type: from_text
-        entity: city
+      - travel_flight_class
+      - travel_departure
+      - travel_destination
